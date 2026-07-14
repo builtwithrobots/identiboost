@@ -1,5 +1,7 @@
 # IdentiBoost in Plain English
 
+*Positioning note: this document predates the IdentiBoost pivot to the universal professional presence platform. Brand and domain references are updated; the market framing below is the original recruiting-vertical analysis.*
+
 **Purpose:** the no-jargon explanation of what IdentiBoost is and why it matters, written so
 anyone (a customer, an investor's spouse, a landing-page visitor) gets it in one read. Use it
 as source material for landing pages, demo scripts, investor conversations, onboarding
@@ -13,8 +15,13 @@ emails, and social copy. Claims here are backed by the evidence in
 
 ## The one-sentence version
 
-IdentiBoost gives every job seeker a personal spokesperson that never sleeps, is built to be
-incapable of exaggerating, and gets a little smarter after every conversation it has.
+IdentiBoost gives every professional -- job candidate, sales rep, consultant, freelancer,
+speaker, exhibitor, coach, or founder -- a personal spokesperson that never sleeps, is built
+to be incapable of exaggerating, and gets a little smarter after every conversation it has.
+It is the universal professional presence platform: your identity, boosted; the profile that
+answers back. The business card has not changed in 150 years; this is the first one that can
+answer a question, and it delivers a full transcript to both sides so you finally know what
+happened after you handed it over.
 
 ---
 

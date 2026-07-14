@@ -1,4 +1,7 @@
 # IdentiBoost -- Supporting Market Research
+
+*Positioning note: this document predates the IdentiBoost pivot to the universal professional presence platform. Brand and domain references are updated; the market framing below is the original recruiting-vertical analysis.*
+
 **Version:** 1.2
 **Date:** June 2026
 **Purpose:** Evidence base for IdentiBoost product, vision, and investor conversations

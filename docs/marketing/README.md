@@ -1,5 +1,7 @@
 # Marketing Docs
 
+*Positioning note: this document predates the IdentiBoost pivot to the universal professional presence platform. Brand and domain references are updated; the market framing below is the original recruiting-vertical analysis.*
+
 Everything marketing-facing lives here: positioning, evidence, and the build spec for the
 public site. Product and founder documents stay one level up in `docs/` (they are inputs to
 marketing, not marketing).

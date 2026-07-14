@@ -1,4 +1,7 @@
 # IdentiBoost Marketing Site, Claude Code Build Prompt
+
+*Positioning note: this document predates the IdentiBoost pivot to the universal professional presence platform. Brand and domain references are updated; the market framing below is the original recruiting-vertical analysis.*
+
 **Version:** 1.4
 **Date:** June 2026
 **Purpose:** Drop this file into Claude Code to build the identiboost.com marketing homepage.
