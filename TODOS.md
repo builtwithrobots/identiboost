@@ -4,6 +4,14 @@ Generated from a full audit of the RoleBoost codebase (builtwithrobots/roleboost
 
 Source of truth for the rebrand rules: the IdentiBoost Pivot Brief (this repo's current README.md).
 
+## Decisions log (founder, 2026-07-14)
+
+1. Clerk: NEW application for IdentiBoost (not reusing the RoleBoost app).
+2. Data: IdentiBoost starts empty; the rob-ramos profile is rebuilt fresh in Phase 10 (no migration from the old Supabase project).
+3. Evaluator side: light rename for v1 (Candidates→Professionals, Hiring→Evaluating, etc.); structural rethink of the evaluator workspace deferred to the roadmap.
+4. ai-brain-architecture-snapshot.md: rebrand it (find and replace brand/domain strings), do not delete or freeze.
+5. Public-card chat openers: context-neutral copy now. Roadmap feature: owner-created conversation starters managed in the dashboard and shown as chips in their chat (needs a schema addition; post-launch).
+
 Audit numbers, for reference:
 - 96 files contain "roleboost" in some casing (468 occurrences); roughly 55 are product code, the rest are docs and sample assets.
 - 10 environment variables exist in the live roleboost Vercel project; `RESEND_API_KEY` and all `PADDLE_*` vars are absent from the Project tab.
@@ -17,8 +25,8 @@ External service setup and verification. Nothing in later phases works until the
 
 ### Repo
 
-- [ ] Copy the RoleBoost codebase into the builtwithrobots/identiboost repo. The identiboost repo currently contains only README.md (the pivot brief) and .gitignore. Copy every tracked file from builtwithrobots/roleboost at its current main HEAD, excluding `.git/`. Preserve the pivot brief by moving it to `IDENTIBOOST_PIVOT_README.md` before the copy so the incoming RoleBoost README.md does not collide with it. Verify: `git status` shows the full app tree; `npm install && npm run build` succeeds with placeholder env values.
-- [ ] Delete `templates/catalyst-ui-kit.zip` and `templates/opsfluency-main.zip` (~7 MB of unreferenced UI-kit archives, already flagged in roleboost todo.md P3). Verify: `grep -r "templates/" app components lib` returns nothing that references them.
+- [x] Copy the RoleBoost codebase into the builtwithrobots/identiboost repo. The identiboost repo currently contains only README.md (the pivot brief) and .gitignore. Copy every tracked file from builtwithrobots/roleboost at its current main HEAD, excluding `.git/`. Preserve the pivot brief by moving it to `IDENTIBOOST_PIVOT_README.md` before the copy so the incoming RoleBoost README.md does not collide with it. Verify: `git status` shows the full app tree; `npm install && npm run build` succeeds with placeholder env values. (Done 2026-07-14; copied from roleboost main HEAD, pivot brief preserved as IDENTIBOOST_PIVOT_README.md, build verified.)
+- [x] Delete `templates/catalyst-ui-kit.zip` and `templates/opsfluency-main.zip` (~7 MB of unreferenced UI-kit archives, already flagged in roleboost todo.md P3). Verify: `grep -r "templates/" app components lib` returns nothing that references them. (Done 2026-07-14.)
 
 ### Domain
 
@@ -27,7 +35,7 @@ External service setup and verification. Nothing in later phases works until the
 
 ### Clerk
 
-- [ ] Decide: new Clerk application for IdentiBoost, or reuse the RoleBoost Clerk app. A new production Clerk instance requires DNS records on identiboost.com (Clerk Dashboard > Domains). Document the decision here.
+- [x] Decide: new Clerk application for IdentiBoost, or reuse the RoleBoost Clerk app. A new production Clerk instance requires DNS records on identiboost.com (Clerk Dashboard > Domains). DECIDED 2026-07-14: new Clerk application.
 - [ ] Create/configure the Clerk application, and add identiboost.com as the production domain. Verify: Clerk Frontend API URL resolves and the hosted sign-in page loads.
 - [ ] Customize the Clerk session token: Clerk Dashboard > Configure > Sessions > Customize session token, add `{ "role": "authenticated" }`. Required for Supabase third-party auth RLS. Verify: decode a session JWT and confirm the `role` claim is present.
 - [ ] Create the Clerk webhook endpoint pointing at `https://identiboost.com/api/webhooks/clerk` subscribed to `user.created` (and `user.deleted` if used). Record the signing secret for `CLERK_WEBHOOK_SECRET`. Verify after deploy: sign up a test user and confirm a row appears in the Supabase `users` table with NULL role.
@@ -38,7 +46,7 @@ External service setup and verification. Nothing in later phases works until the
 - [ ] Configure Clerk as third-party auth provider: Supabase Dashboard > Authentication > Sign In / Providers > Third-party Auth > Clerk, set Domain to the Clerk Frontend API URL. Verify: the provider shows as enabled.
 - [ ] Apply all migrations (see Phase 2 for the exact ordered list and per-migration verification).
 - [ ] Confirm the four storage buckets exist after migrations run: candidate-audio, candidate-video, candidate-documents, candidate-images (the 20260704 migration creates them; bucket names are schema, do NOT rename them). Verify: Supabase Dashboard > Storage lists all four, all private.
-- [ ] Decide: does any data migrate from the RoleBoost Supabase project (e.g. the existing rob-ramos profile), or does IdentiBoost start empty? Document the decision. If migrating, plan a pg_dump/restore of the relevant rows AFTER schema migrations are applied.
+- [x] Decide: does any data migrate from the RoleBoost Supabase project (e.g. the existing rob-ramos profile), or does IdentiBoost start empty? DECIDED 2026-07-14: starts empty; rob-ramos is rebuilt fresh in Phase 10. No pg_dump/restore needed.
 
 ### Resend
 
@@ -58,7 +66,7 @@ External service setup and verification. Nothing in later phases works until the
 - [ ] Confirm the 5 cron jobs from vercel.json are registered after first deploy: deliver-transcripts (*/15), process-audio (*/5), prune-rate-limits (daily 03:00), meeting-request-reminders (daily 15:00), weekly-digest (Mon 15:00). Verify: Vercel Dashboard > Cron Jobs lists all five.
 - [ ] Create the Vercel WAF rules named exactly "chat", "schedule", and "deliver" (Firewall > Rules); the code no-ops until they exist. Verify: rules listed in Firewall settings.
 - [ ] Enable BotID Deep Analysis (Firewall > Rules) for stronger bot detection on the public chat. Verify: setting shows enabled.
-- [ ] Update the GitHub CI placeholder env: `.github/workflows/ci.yml` line 53 sets `NEXT_PUBLIC_APP_URL: https://roleboost.app`; change to `https://identiboost.com`. Verify: CI build passes on the rebrand PR.
+- [x] Update the GitHub CI placeholder env: `.github/workflows/ci.yml` line 53 sets `NEXT_PUBLIC_APP_URL: https://roleboost.app`; change to `https://identiboost.com`. Verify: CI build passes on the rebrand PR. (Done 2026-07-14 in the Phase 0 copy commit.)
 
 ---
 
@@ -212,7 +220,7 @@ Files listed with the specific strings found in the audit. Line numbers are curr
 ### components/chat and components/modal (public profile surface)
 
 - [ ] `components/chat/ChatPanel.tsx`: assistantName (83) `${firstName}'s Personal Assistant`→`${firstName}'s AI`; header (356) live variant `Ask ${assistantName} anything` then reads "Ask [Name]'s AI anything" (pivot spec) and preview variant "How ${assistantName} responds to recruiters"→"...responds to contacts"; empty-state preview (396) "Try a hard recruiter question..."→"Try a hard question..."; disclaimer (752-754) "Powered by RoleBoost. {assistantName} represents {firstName}'s career history and may not reflect every detail."→"Powered by IdentiBoost. {firstName}'s AI represents their verified professional identity and may not reflect every detail."; input placeholder (740) "Ask ${firstName} anything about their career"→"Ask ${firstName}'s AI anything"; download filename (323) `roleboost-conversation-`→`identiboost-conversation-`; transcript download header (314) follows assistantName change automatically.
-- [ ] `components/modal/CallingCard.tsx`: ShareButton title (88) "on RoleBoost"→"on IdentiBoost"; ShareButton text (89) "Ask ${firstName}'s Personal Assistant anything about their career"→"Ask ${firstName}'s AI anything"; offline copy (164) "{firstName}'s Personal Assistant is offline right now."→"{firstName}'s AI is offline right now."; "Career snapshot" (188)→"Professional snapshot"; OPENERS (36-41): review "Why are you exploring new roles?" and "What are you looking for next?" for universal framing (decision: openers may need to be context-neutral, e.g. "What do you do?", "Walk me through your most recent work.").
+- [ ] `components/modal/CallingCard.tsx`: ShareButton title (88) "on RoleBoost"→"on IdentiBoost"; ShareButton text (89) "Ask ${firstName}'s Personal Assistant anything about their career"→"Ask ${firstName}'s AI anything"; offline copy (164) "{firstName}'s Personal Assistant is offline right now."→"{firstName}'s AI is offline right now."; "Career snapshot" (188)→"Professional snapshot"; OPENERS (36-41): DECIDED 2026-07-14: rewrite context-neutral (e.g. "Walk me through your most recent work.", "What's a win you're proud of?", "What do you do best?", "What are you focused on right now?"). Roadmap (post-launch): owner-created conversation starters managed in the dashboard, shown as chips in their chat.
 - [ ] `components/modal/AssetGallery.tsx`: aria/alt (118, 131) `${firstName}'s career video` / `career infographic`→professional video/infographic.
 
 ### components/employer
@@ -337,7 +345,7 @@ All senders change from `RoleBoost <transcripts@roleboost.app>` to `IdentiBoost 
 - [ ] `docs/architecture/` tree: update brand/domain references in 11-anti-spam.md (1), 12-security.md (1), 13-automations.md (2, includes a `https://roleboost.app` example), README.md (3), specs/DASHBOARD_POLISH_BUILD.md (4), specs/ELITE_SYSTEM_PROMPT_BUILD_SPEC.md (2), specs/README.md (1), specs/SUPERADMIN_DASHBOARD.md (1).
 - [ ] `docs/marketing/`: MARKETING_SITE_BUILD.md (22 refs incl. domain), MARKET-RESEARCH.md (26), PLAIN-ENGLISH-OVERVIEW.md (8), README.md (2). These are positioning docs; rebrand names/domains and add a note that positioning has pivoted (full rewrite optional).
 - [ ] `docs/sample-users/`: PERSONA_NARRATIVE_GUIDE.md (18 refs incl. 9 getroleboost.com/c/ URLs→identiboost.com/i/), README.md (1), and the three asset-package .md files (claire-hutchins 12, jordan-mills 10, ryan-kowalski 10, each with "Learn more at roleboost.app" spoken-pitch lines→identiboost.com).
-- [ ] `ai-brain-architecture-snapshot.md` (528 KB historical archive, 63 RoleBoost + ~15 domain refs): decide to (a) mark as historical with a one-line banner and leave contents as a point-in-time record, or (b) delete from the IdentiBoost repo. Recommend (a) or (b) over find-and-replace; a rewritten "snapshot" is no longer a snapshot. Document the choice.
+- [ ] `ai-brain-architecture-snapshot.md` (528 KB historical archive, 63 RoleBoost + ~15 domain refs): DECIDED 2026-07-14: rebrand it. Find and replace all RoleBoost/roleboost.app/getroleboost.com/transcripts@ strings and the `/c/[slug]` URL patterns per the global rules; contents otherwise unchanged.
 - [ ] `public/boosts/README.md` and `docs/marketing/README.md` link text: sweep for brand strings.
 
 ---
@@ -401,7 +409,7 @@ The founder profile is the platform's flagship asset. Run every learning loop en
 ## Open risks and decisions (tracked; not blocking checkbox generation)
 
 1. Demo media is brand-baked: `public/boosts/*.mp3` audio scripts end with "Learn more ... at roleboost.app" spoken aloud, and the visual-boost PNGs/resume JPGs likely show RoleBoost branding. Find-and-replace cannot fix binaries. Options: regenerate the demo Boosts for IdentiBoost, or temporarily pull the /boosts examples.
-2. Employer-side depth: the evaluator dashboard (Jobs, Board, Candidates, hiring pipeline stages) is structurally a recruiting product. The pivot renames the words but not the workflow. Decide v1 scope: light rename vs. rethink.
+2. Employer-side depth: DECIDED 2026-07-14: light rename for v1 (Candidates→Professionals, Hiring→Evaluating); the structural rethink of the evaluator workspace (contacts/CRM framing, CRM export) moves to the post-launch roadmap alongside the embed widget.
 3. Paddle pricing names vs. schema: new tiers "Business" and "Team" are not in the `users.subscription_tier` CHECK constraint; wiring billing later will need a migration, conflicting with "schema stays as-is". Defer billing (recommended) and resolve then.
 4. `RESEND_API_KEY` absent from the old project's env: email delivery has possibly never worked in RoleBoost production. Treat all email flows as first-time verification, not regression testing.
 5. Known P0 security items inherited from roleboost todo.md (Paddle webhook stub, anon INSERT policy on chat_sessions, transcript_sent flipped before send, check_rate_limit PUBLIC grant (fixed by migration 29), defensive writes for late migrations, which a fresh DB makes moot). The rebrand does not fix these; carry them into the IdentiBoost backlog.
