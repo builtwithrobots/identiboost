@@ -32,7 +32,7 @@ Let candidates bring external career sources, by **upload** (PDF/DOCX/TXT) or **
 3. **Profile enhancement**, (later) pre-fill profile metadata.
 
 Non-goal (handled by NotebookLM, explicitly out of scope per CLAUDE.md): media assets
-(audio/video/deck/infographic). Those are recruiter-facing display media, never AI inputs, and are
+(audio/video/deck/infographic). Those are contact-facing display media, never AI inputs, and are
 **not** part of this feature.
 
 ## What counts as a "source"

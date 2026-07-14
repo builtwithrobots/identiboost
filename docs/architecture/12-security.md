@@ -17,9 +17,9 @@
    with Zod before touching the database.
 4. **Fail safe, fail closed on data, fail open on friction.** Data-exposure
    decisions default to denying; abuse controls default to letting a real user
-   through (an infra blip should not lock out a legitimate recruiter).
-5. **Retain only what serves the user.** Recruiter transcripts are kept solely
-   to power the candidate's own AI and reference; uploaded third-party
+   through (an infra blip should not lock out a legitimate contact).
+5. **Retain only what serves the user.** Contact transcripts are kept solely
+   to power the professional's own AI and reference; uploaded third-party
    transcripts are analyzed and discarded.
 
 ## Authentication (Clerk)
@@ -78,7 +78,7 @@ exposed to anon.
 ## Public endpoints & abuse control
 
 The public chatbot (`/i/[slug]` → `/api/chat`, `/api/chat/schedule`,
-`/api/transcripts/deliver`) is open to anonymous recruiters and is the primary
+`/api/transcripts/deliver`) is open to anonymous contacts and is the primary
 abuse surface. Each message can trigger up to three Anthropic calls, so **token
 burn** is the core risk. It is protected by layered controls, all fail-open:
 
@@ -91,16 +91,16 @@ burn** is the core risk. It is protected by layered controls, all fail-open:
    with no WAF rule live: **per conversation** (40/hr; a fresh chat resets it via
    a one-tap restart) and **per source IP** (100/hr; clears a corporate NAT while
    stopping a script). A tripped cap returns a graceful in-thread message with a
-   `degraded` flag, never an HTTP error, so the recruiter always has a next step.
+   `degraded` flag, never an HTTP error, so the contact always has a next step.
 4. **Meeting-invitation nudge** in the system prompt: after a few exchanges the
    assistant warmly invites a live meeting, so genuine conversations convert to a
    booking well before any hard cap. A soft, on-brand throttle that is also the
-   product's recruiter-conversion loop.
+   product's contact-conversion loop.
 5. **Per-candidate transcript-email throttle** so session-flooding cannot bury a
-   candidate's inbox.
+   professional's inbox.
 
 Design stance: bots are caught at the edge (1–2); token burn from a single source
-or one runaway conversation is bounded durably (3); real recruiters are steered to
+or one runaway conversation is bounded durably (3); real contacts are steered to
 convert, not walled (4). A distributed multi-IP flood against one popular profile
 is a **known gap** (see below), consciously deferred behind BotID.
 
@@ -125,9 +125,9 @@ Abuse](./11-anti-spam.md).
 
 ## Data retention & privacy
 
-- **Recruiter conversations** are persisted in `chat_messages` and retained for
-  the candidate's own AI training and reference. They are the candidate's data,
-  surfaced only to that candidate and to the employer team on the session.
+- **Contact conversations** are persisted in `chat_messages` and retained for
+  the professional's own AI training and reference. They are the professional's
+  data, surfaced only to that professional and to the business team on the session.
 - **Uploaded external transcripts** (the AI-Studio "sharpen" flow) are analyzed
   in-request and discarded; only the resulting plan + counts persist. This
   protects third-party interview content.

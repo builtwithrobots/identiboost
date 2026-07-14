@@ -27,8 +27,8 @@ All scheduled routes live under `app/api/cron/*` and are registered in
 |---|---|---|
 | `deliver-transcripts` | `*/15 * * * *` | Safety-net sweep for the transcript pipeline: delivers idle/abandoned sessions the browser beacon missed (see [07](./07-chat-and-transcripts.md)). |
 | `prune-rate-limits` | `0 3 * * *` | Deletes `rate_limits` rows whose window started > 30 days ago, so the abuse-counter table (and the cron idempotency keys) never grow unbounded. |
-| `meeting-request-reminders` | `0 15 * * *` | Emails a candidate once about a live-meeting request still `new` 2–14 days after a recruiter submitted it. The highest-intent signal on the platform; a dropped request is a dropped hire. |
-| `weekly-digest` | `0 15 * * 1` | Monday re-engagement email to each candidate with real recruiter activity that week: views, conversations, questions asked. Zero-activity candidates are skipped. |
+| `meeting-request-reminders` | `0 15 * * *` | Emails a professional once about a live-meeting request still `new` 2–14 days after a contact submitted it. The highest-intent signal on the platform; a dropped request is a dropped opportunity. |
+| `weekly-digest` | `0 15 * * 1` | Monday re-engagement email to each professional with real contact activity that week: views, conversations, questions asked. Zero-activity profiles are skipped. |
 
 ### Idempotency without new schema
 
@@ -50,8 +50,8 @@ prune never clears a marker that still matters.
 The digest tallies views/conversations/questions in-process over three capped
 scans (`profile_views`, `chat_sessions`, `chat_messages`) rather than a SQL
 `GROUP BY`, to stay inside the untyped service-role client the rest of the
-pipeline uses. Sandbox sessions are excluded so a candidate's own testing never
-inflates their numbers. `SCAN_LIMIT` bounds each scan; revisit if candidate
+pipeline uses. Sandbox sessions are excluded so a professional's own testing never
+inflates their numbers. `SCAN_LIMIT` bounds each scan; revisit if profile
 volume outgrows it (move to an RPC with server-side aggregation).
 
 ### Deferred: trial-expiry sweep
