@@ -479,36 +479,36 @@ From the profile modal (Connect button) or the saved-profile card action menu.
 
 ### 6.1 Chat Session Lifecycle
 
-1. Recruiter opens modal and sends first message -- `chat_sessions` row created
+1. Contact opens modal and sends first message -- `chat_sessions` row created
 2. Messages logged in real time to `chat_messages`
 3. Session ends when modal closes OR 30 minutes of inactivity
 4. `POST /api/transcripts/deliver` called
 5. Transcript built from all `chat_messages` in session
-6. Email sent to candidate via Resend
-7. Email sent to employer if logged in via Resend
+6. Email sent to the professional via Resend
+7. Email sent to the business user if logged in via Resend
 8. `chat_sessions.transcript_sent` set to true
 
-### 6.2 Candidate Transcript Email
+### 6.2 Professional Transcript Email
 
-**Subject:** A recruiter just chatted with your IdentiBoost AI
+**Subject:** Someone just chatted with your IdentiBoost AI
 
 **Body:**
-- Company name (or "An anonymous recruiter") viewed your profile
+- Company name (or "An anonymous contact") viewed your profile
 - Date and time, number of questions asked
 - Full conversation transcript
 - Pattern insight if same question asked 3+ times this week
 - CTA: Fine-tune your AI
 - CTA: View full analytics
 
-### 6.3 Employer Transcript Email
+### 6.3 Contact Transcript Email
 
-**Subject:** Your IdentiBoost conversation with [Candidate Name]
+**Subject:** Your IdentiBoost conversation with [Name]
 
 **Body:**
 - Summary -- N questions asked, duration
 - Full conversation transcript
 - CTA: View full profile
-- CTA: Save candidate
+- CTA: Save this professional
 - CTA: Send feedback
 
 ### 6.4 Feedback Notification Email
@@ -520,9 +520,9 @@ From the profile modal (Connect button) or the saved-profile card action menu.
 - CTA: Read full feedback
 
 **Acceptance criteria:**
-- [ ] Transcript email sent to candidate after every session
-- [ ] Transcript email sent to logged-in employer after every session
-- [ ] Feedback email sent to candidate on every feedback submission
+- [ ] Transcript email sent to the professional after every session
+- [ ] Transcript email sent to the logged-in business user after every session
+- [ ] Feedback email sent to the professional on every feedback submission
 - [ ] All emails from `transcripts@identiboost.com`
 - [ ] Email templates mobile responsive
 - [ ] Unsubscribe link included per CAN-SPAM
@@ -603,9 +603,9 @@ Custom answers injected into system prompt above base career data -- they take p
 
 ---
 
-## 8. Candidate Context Form -- Deep Career Questions
+## 8. Professional Context Form -- Deep Career Questions
 
-The intake form that trains the AI. Shown after initial onboarding. Guided by Resume Intelligence recommendations so candidates know which fields matter most for their specific resume.
+The intake form that trains the AI. Shown after initial onboarding. Guided by Resume Intelligence recommendations so professionals know which fields matter most for their specific resume.
 
 **Section 1 -- Career highlights:**
 - Paste your full resume or upload it (required)
@@ -618,11 +618,11 @@ The intake form that trains the AI. Shown after initial onboarding. Guided by Re
 - What does your ideal team look like?
 - What do you need from a manager to do your best work?
 
-**Section 3 -- Honest answers recruiters appreciate:**
+**Section 3 -- Honest answers contacts appreciate:**
 - Why did you leave each of your last 3 roles?
 - What is your biggest professional failure and what did you learn?
 - What are you not good at -- be honest?
-- What question do you wish recruiters would ask you?
+- What question do you wish contacts would ask you?
 
 **Section 4 -- Your story:**
 - What defines your career in one sentence?
