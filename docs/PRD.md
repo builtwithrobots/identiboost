@@ -1240,10 +1240,10 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Set up Vercel under `builtwithrobots`
 - [ ] Configure all environment variables
 
-### Phase 1 -- Candidate Profiles and Modal (Week 2-4)
+### Phase 1 -- Professional Profiles and Modal (Week 2-4)
 - [ ] Onboarding -- role selection
-- [ ] Candidate onboarding -- 3 steps
-- [ ] Candidate dashboard layout and navigation
+- [ ] Professional onboarding -- 3 steps
+- [ ] Professional dashboard layout and navigation
 - [ ] Profile editor (Section 3.1)
 - [ ] Asset upload (Section 3.2)
 - [ ] Public modal at `/i/[slug]` (Section 4, without chat tab)
@@ -1251,11 +1251,11 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] QR code generation
 - [ ] Badge download
 
-### Phase 2 -- Employer Dashboard (Week 4-7)
-- [ ] Employer onboarding -- 2 steps
-- [ ] Employer dashboard layout
-- [ ] Candidates tab (Section 5.1)
-- [ ] Save candidate from modal
+### Phase 2 -- Business Dashboard (Week 4-7)
+- [ ] Business onboarding -- 2 steps
+- [ ] Business dashboard layout
+- [ ] Saved professionals tab (Section 5.1)
+- [ ] Save professional from modal
 - [ ] Jobs tab (Section 5.2)
 - [ ] Board tab (Section 5.3)
 - [ ] Stage assignment
@@ -1264,29 +1264,29 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Feedback notification email via Resend
 
 ### Phase 3 -- AI Chatbot, Transcripts, Resume Intelligence (Week 7-10)
-- [ ] Candidate context form (Section 8)
+- [ ] Professional context form (Section 8)
 - [ ] Resume Intelligence -- Claude Sonnet analysis (Section 8A)
 - [ ] Resume Intelligence panel UI in AI tab
 - [ ] System prompt builder -- `lib/ai/build-system-prompt.ts`
 - [ ] Claude Haiku chat endpoint -- `/api/chat`
 - [ ] Chat UI in modal -- Chat tab (Section 4.5)
 - [ ] Chat session and message logging
-- [ ] Candidate AI tab -- full management interface (Section 3.3)
+- [ ] Identity AI tab -- full management interface (Section 3.3)
 - [ ] Fine-tuning interface -- custom QA pairs
 - [ ] Privacy controls -- redirect topics and `ai_enabled` toggle
-- [ ] Testing sandbox -- candidate tests their own AI
+- [ ] Testing sandbox -- the professional tests their own AI
 - [ ] Transcript delivery endpoint -- `/api/transcripts/deliver`
-- [ ] Candidate transcript email template
-- [ ] Employer transcript email template
-- [ ] Transcripts tab for candidates (Section 3.4)
-- [ ] Transcripts tab for employers (Section 5.4)
+- [ ] Professional transcript email template
+- [ ] Contact transcript email template
+- [ ] Transcripts tab for professionals (Section 3.4)
+- [ ] Transcripts tab for businesses (Section 5.4)
 - [ ] Pattern recognition -- most asked questions
 - [ ] Mobile responsive audit
 - [ ] WCAG 2.1 AA audit
 
 ### Phase 4 -- Payments and Polish (Week 10-12)
-- [ ] Paddle JS integration for employer tiers
-- [ ] Employer upgrade prompts at free tier limits
+- [ ] Paddle JS integration for team tiers
+- [ ] Business-side upgrade prompts at free tier limits
 - [ ] Checkout flow
 - [ ] Paddle webhook handler (Section 10)
 - [ ] Subscription status gates on features
@@ -1294,7 +1294,7 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Error states and empty states for all screens
 - [ ] Loading and skeleton screens
 - [ ] Analytics tab (Section 3.5)
-- [ ] Candidate pricing decision and tier implementation (TBD)
+- [ ] Individual professional tier implementation (Pro $29 / Business $99)
 
 ---
 
@@ -1304,7 +1304,7 @@ Do not build. Push back if asked.
 
 - AI asset generation on platform -- NotebookLM is the production engine
 - Drag and drop Kanban -- dropdown stage assignment only
-- Employer candidate browse directory -- save via shared links only
+- Business-side browse directory -- professionals are saved via shared links only
 - Resume parsing or ATS keyword optimization (distinct from Resume Intelligence)
 - Video or audio recording in browser
 - Real-time chat notifications -- email transcripts are the delivery mechanism
