@@ -269,16 +269,16 @@ Full history of all contact AI conversations.
 **Acceptance criteria:**
 - [ ] All metrics pulled from `profile_views` and `chat_sessions` tables
 - [ ] Asset play counts tracked per asset type
-- [ ] Anonymous views shown separately from employer views
+- [ ] Anonymous views shown separately from business-user views
 
 ### 3.6 Preview Tab
 
-Shows the candidate exactly what recruiters see.
+Shows the professional exactly what contacts see.
 
 - Full modal rendered in preview frame
-- "This is how recruiters see your profile" label
+- "This is how contacts see your profile" label
 - Draft banner if profile is unpublished
-- Chat tab functional in preview using candidate's own AI
+- Chat tab functional in preview using the professional's own AI
 
 **Acceptance criteria:**
 - [ ] Modal renders identically to public `/i/[slug]`
@@ -287,9 +287,9 @@ Shows the candidate exactly what recruiters see.
 
 ---
 
-## 4. Public Candidate Profile -- The Modal
+## 4. Public Professional Profile -- The Modal
 
-Core recruiter-facing experience at `/i/[slug]`.
+Core contact-facing experience at `/i/[slug]`.
 
 ### 4.1 Modal Behavior
 
@@ -300,7 +300,7 @@ Core recruiter-facing experience at `/i/[slug]`.
 
 ### 4.2 Modal Header
 
-- Candidate initials avatar (colored circle, generated from name)
+- Professional's initials avatar (colored circle, generated from name)
 - Full name
 - Headline
 - Location and target role
@@ -326,27 +326,27 @@ Only tabs with uploaded assets are shown.
 
 All assets stream from signed Supabase Storage URLs (1-hour TTL, generated server-side).
 
-### 4.5 Chat Tab -- Career AI
+### 4.5 Chat Tab -- Identity AI
 
 The AI chat interface embedded in the modal.
 
 **Interface:**
-- "Ask [Name]'s career AI anything" header
+- "Ask [Name]'s AI anything" header
 - Message input field
 - Send button
 - Conversation history in chat bubbles
 - "Powered by IdentiBoost AI" footer label
-- Disclaimer: "This AI represents [Name]'s career history and may not reflect all details"
+- Disclaimer: "This AI represents [Name]'s verified professional identity and may not reflect every detail"
 
 **Behavior:**
 - Chat session created on first message
 - All messages logged to `chat_messages`
-- System prompt built from candidate's career data and custom QA pairs
+- System prompt built from the professional's data and custom QA pairs
 - Claude Haiku generates all responses (fast, cheap, conversational)
 - Session ends on modal close or 30 minutes of inactivity
 - Transcript delivered by email to both sides on session end
 
-**If AI disabled by candidate:**
+**If AI disabled by the professional:**
 - Chat tab hidden entirely
 
 **Acceptance criteria:**
@@ -355,15 +355,15 @@ The AI chat interface embedded in the modal.
 - [ ] Conversation history persists within session
 - [ ] Session logged to `chat_sessions`
 - [ ] All messages logged to `chat_messages`
-- [ ] Transcript email sent to candidate after session ends
-- [ ] Transcript email sent to logged-in employer after session ends
-- [ ] Tab hidden if candidate has disabled AI
+- [ ] Transcript email sent to the professional after session ends
+- [ ] Transcript email sent to logged-in business user after session ends
+- [ ] Tab hidden if the professional has disabled AI
 - [ ] Fully keyboard navigable
 - [ ] Screen reader accessible
 
-### 4.6 Employer Actions
+### 4.6 Business User Actions
 
-Shown when employer is logged in:
+Shown when a business user is logged in:
 - Save button -- saves to pool, changes to Saved with filled icon
 - Connect button -- opens feedback compose
 - Status dropdown -- assign stage (shown if already saved)
@@ -374,7 +374,7 @@ Unauthenticated viewers see Save and Connect -- clicking prompts sign up first.
 ### 4.7 View and Chat Tracking
 
 Every modal open logs a view in `profile_views`.
-Every chat session logs to `chat_sessions` with `employer_account_id` if logged in.
+Every chat session logs to `chat_sessions` with `employer_account_id` if a business user is logged in.
 Duration tracked on modal close.
 
 **Acceptance criteria:**
