@@ -60,7 +60,7 @@ the Supabase branching integration. This doc is a map, not the schema.
 | `resume_documents` | Parsed résumé | `canonical_json`, **`canonical_markdown`** (the AI's résumé source), `status` (`draft`/`generating`/`ready`/`approved`), `docx_asset_id`, `pdf_asset_id`; one per profile | owner |
 | `career_sources` | External career material (LinkedIn/GitHub/reviews) | `source_type`, `extracted_text` (text only, never the binary), `ingest_method`, `is_active`; feeds intake + context generation, **not** the live prompt directly | owner |
 | `intake_answers` | Raw intake-interview answers | `pass_number` (1–3), `category`, `answer_source` | owner (via profile) |
-| `chat_sessions` | One recruiter (or sandbox) conversation | `viewer_clerk_user_id`, `employer_account_id`, `employer_company_name`, `is_sandbox`, `transcript_sent` | candidate-read + employer-team-read; insert open (service-role writes) |
+| `chat_sessions` | One contact (or sandbox) conversation | `viewer_clerk_user_id`, `employer_account_id`, `employer_company_name`, `is_sandbox`, `transcript_sent` | candidate-read + employer-team-read; insert open (service-role writes) |
 | `chat_messages` | One chat turn | `role`, `content`, `model_used`, `was_complex`, `was_validated` (`20260627…`) | via owning session |
 | `sandbox_sessions` | Candidate self-test results | `verdict` (`strong`/`adequate`/`weak`/`hallucinated`), `diagnosis`, `prescription`, `brain_field_target`, `pattern_signal` | owner |
 | `transcript_gaps` | Gaps mined from real recruiter chats | `gap_type` (`deflection`/`weak`/`new_topic`), `suggested_prompt`, `priority`, `pattern_count`, `is_addressed` | owner |
