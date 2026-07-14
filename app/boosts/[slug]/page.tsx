@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const first = persona.name.split(' ')[0]
   const description = `See ${persona.name}, ${persona.role} (${persona.careerStage}), through three Boosts: the Visual Boost, the Short Boost Audio, and the Podcast Style Boost.`
   return {
-    // The template appends " | RoleBoost", so this reads "Ryan's Boosts | RoleBoost".
+    // The template appends " | IdentiBoost", so this reads "Ryan's Boosts | IdentiBoost".
     title: `${first}'s Boosts`,
     description,
     alternates: { canonical: `/boosts/${persona.slug}` },
-    openGraph: { url: `/boosts/${persona.slug}`, title: `${persona.name} on RoleBoost`, description },
+    openGraph: { url: `/boosts/${persona.slug}`, title: `${persona.name} on IdentiBoost`, description },
   }
 }
 

@@ -59,7 +59,7 @@ function formatDate(iso: string): string {
 
 export default function TranscriptsList({ transcripts, candidateName, taughtQuestions }: Props) {
   const firstName = candidateName.split(' ')[0] || candidateName;
-  const assistantName = `${firstName}'s Personal Assistant`;
+  const assistantName = `${firstName}'s AI`;
   const [filter, setFilter] = useState<Filter>('all');
   const [infoOpen, setInfoOpen] = useState(false);
   const [toDelete, setToDelete] = useState<TranscriptItem | null>(null);
@@ -89,7 +89,7 @@ export default function TranscriptsList({ transcripts, candidateName, taughtQues
 
   const tabs: { key: Filter; label: string; show: boolean }[] = [
     { key: 'all', label: `All ${counts.all}`, show: true },
-    { key: 'recruiter', label: `Recruiters ${counts.recruiter}`, show: counts.test > 0 },
+    { key: 'recruiter', label: `Contacts ${counts.recruiter}`, show: counts.test > 0 },
     { key: 'test', label: `Your tests ${counts.test}`, show: counts.test > 0 },
     { key: 'archived', label: `Archived ${counts.archived}`, show: counts.archived > 0 },
   ];
@@ -178,13 +178,13 @@ function TranscriptCard({
       `# Conversation with ${assistantName}`,
       `${t.label} · ${formatDate(t.date)}`,
       '',
-      ...t.messages.flatMap((m) => [`**${m.role === 'user' ? 'Recruiter' : assistantName}:** ${m.content}`, '']),
+      ...t.messages.flatMap((m) => [`**${m.role === 'user' ? 'Contact' : assistantName}:** ${m.content}`, '']),
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/markdown;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `roleboost-transcript-${t.id.slice(0, 8)}.md`;
+    a.download = `identiboost-transcript-${t.id.slice(0, 8)}.md`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -429,7 +429,7 @@ function TeachComposer({
         onChange={(e) => setAnswer(e.target.value)}
         rows={3}
         autoFocus
-        placeholder="The answer you'd want a recruiter to hear…"
+        placeholder="The answer you'd want a contact to hear…"
         className="w-full resize-none rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-3 py-2 text-sm text-[var(--rb-text)] outline-none placeholder:text-[var(--rb-text-muted)] focus-visible:border-[var(--rb-brand)] focus-visible:ring-2 focus-visible:ring-[var(--rb-brand)]/30"
       />
       {error && <p className="mt-1 text-xs text-[var(--color-error)]">{error}</p>}
@@ -495,12 +495,12 @@ function InfoModal({
     {
       Icon: MessageSquare,
       title: 'Review every conversation',
-      body: `Each chat your Personal Assistant has, with recruiters or in your own tests, is saved here in full so you can see exactly how it answered and carry the context into a meeting.`,
+      body: `Each chat your AI has, with contacts or in your own tests, is saved here in full so you can see exactly how it answered and carry the context into a meeting.`,
     },
     {
       Icon: GraduationCap,
       title: 'Teach a better answer',
-      body: `Under any recruiter question, tap "Teach a better answer" and write what you wish your AI had said. It saves as a custom answer, the highest-priority layer of your AI, and applies from the next conversation on. The question is then badged "AI trained".`,
+      body: `Under any contact question, tap "Teach a better answer" and write what you wish your AI had said. It saves as a custom answer, the highest-priority layer of your AI, and applies from the next conversation on. The question is then badged "AI trained".`,
     },
     {
       Icon: Archive,

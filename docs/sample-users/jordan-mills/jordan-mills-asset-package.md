@@ -1,4 +1,4 @@
-# RoleBoost -- Candidate Asset Package
+# IdentiBoost -- Candidate Asset Package
 Candidate: Jordan Mills
 Slug: jordan-mills
 Date: July 8, 2026
@@ -14,7 +14,7 @@ Package tier:
 
 **Name:** Jordan Mills
 **Slug:** jordan-mills
-**Public URL:** roleboost.app/c/jordan-mills
+**Public URL:** identiboost.com/i/jordan-mills
 **Location:** Phoenix, AZ
 **Target role:** Customer Service Team Lead
 **Headline:** Two years in. Promoted early. Already running the floor.
@@ -25,7 +25,7 @@ Package tier:
 
 ## 2. The Narrative
 
-Jordan Mills did not wait for a title to start leading. In two years at First Western Bank, Jordan earned a promotion two months ahead of the standard timeline, maintained a 97% customer satisfaction score in a branch averaging 91%, and became the first non-lead ever selected by management to run floor operations during a supervisor absence. RoleBoost exists for exactly this candidate: the one whose resume looks like everyone else's in the stack but whose actual track record makes them the clearest hire in the room.
+Jordan Mills did not wait for a title to start leading. In two years at First Western Bank, Jordan earned a promotion two months ahead of the standard timeline, maintained a 97% customer satisfaction score in a branch averaging 91%, and became the first non-lead ever selected by management to run floor operations during a supervisor absence. IdentiBoost exists for exactly this candidate: the one whose resume looks like everyone else's in the stack but whose actual track record makes them the clearest hire in the room.
 
 ---
 
@@ -96,7 +96,7 @@ Close the evidence section with the mentorship proof: Jordan onboarded and infor
 
 Narrative close: Two years in, Jordan Mills has done what most candidates claim and very few can document. The numbers are in the file. The trend is clear.
 
-End with a direct closing pitch, spoken in this exact sequence: This is the hire for a retail banking team that needs a team lead with a proven floor record, not a candidate who is still building one. Jordan maintained a 97% CSAT score, hit cross-sell targets 8 of 10 months, and resolved 12 escalated complaints without further escalation. Two years of documented performance. Learn more about Jordan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch, spoken in this exact sequence: This is the hire for a retail banking team that needs a team lead with a proven floor record, not a candidate who is still building one. Jordan maintained a 97% CSAT score, hit cross-sell targets 8 of 10 months, and resolved 12 escalated complaints without further escalation. Two years of documented performance. Learn more about Jordan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Jordan Mills."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -114,7 +114,7 @@ Jordan Mills is a Customer Service Team Lead candidate in Phoenix, Arizona. Two 
 
 Deliver two proof points in tight sequence. First: promoted from Teller to Senior CSR in 14 months, two months ahead of the standard timeline. Second: 8 of 10 months exceeding monthly cross-sell targets, zero cash discrepancies across a 14-month teller tenure, and 12 escalated customer complaints personally resolved without further escalation.
 
-End with a direct closing pitch, spoken in this exact sequence: This is the hire for a team that needs a high-performing floor presence who has already demonstrated what the data shows. 97% CSAT. Promoted early. Results in hand. Learn more about Jordan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch, spoken in this exact sequence: This is the hire for a team that needs a high-performing floor presence who has already demonstrated what the data shows. 97% CSAT. Promoted early. Results in hand. Learn more about Jordan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Jordan Mills."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -161,7 +161,7 @@ Beat 2 -- First proof point: "Promoted from Teller to Senior CSR. 14 months. 2 m
 Beat 3 -- Second proof point: "8 of 10 months exceeding cross-sell targets. Zero cash discrepancies. 12 escalated complaints resolved." Rapid sequence, one line per beat.
 Beat 4 -- Closing frame: Full name, target role, and final action line.
 
-End with a direct closing pitch in this exact sequence: For a team that needs a floor-ready team lead with a documented performance record -- Jordan Mills is the hire. 97% CSAT. Promoted early. Results already in file. Final frame: Jordan Mills, Customer Service Team Lead. Learn more about Jordan at roleboost.app. Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: For a team that needs a floor-ready team lead with a documented performance record -- Jordan Mills is the hire. 97% CSAT. Promoted early. Results already in file. Final frame: Jordan Mills, Customer Service Team Lead. Learn more about Jordan at identiboost.com. Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -199,7 +199,7 @@ Add the mentorship layer: in Q1 2025, Jordan onboarded and informally mentored t
 
 Narrative close: The team lead coverage was not a coincidence. It was the result of two years of consistent, specific, documented performance -- and a branch manager who understood exactly what they had.
 
-End with a direct closing pitch, spoken in this exact sequence: This is the hire for a retail bank that needs a team lead who has already demonstrated what the job requires under real conditions. A 97% CSAT score. Promoted two months ahead of timeline. Twelve escalated complaints resolved without further escalation. First non-lead in branch history trusted to run the floor. Learn more about Jordan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch, spoken in this exact sequence: This is the hire for a retail bank that needs a team lead who has already demonstrated what the job requires under real conditions. A 97% CSAT score. Promoted two months ahead of timeline. Twelve escalated complaints resolved without further escalation. First non-lead in branch history trusted to run the floor. Learn more about Jordan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Jordan Mills."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -217,7 +217,7 @@ Jordan Mills is a Customer Service Team Lead candidate in Phoenix, Arizona. Two 
 
 Two proof points that explain why: 97% customer satisfaction score, six points above the branch average of 91%, top 10% of 40+ staff. And when 12 customer complaints arrived escalated and flagged for management, Jordan personally resolved all 12 without a single one going further.
 
-End with a direct closing pitch, spoken in this exact sequence: For a team lead opening at a retail bank -- this is the candidate whose branch trusted them with the floor before the title existed. 97% CSAT. Promoted early. Team lead responsibility already on the record. Learn more about Jordan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch, spoken in this exact sequence: For a team lead opening at a retail bank -- this is the candidate whose branch trusted them with the floor before the title existed. 97% CSAT. Promoted early. Team lead responsibility already on the record. Learn more about Jordan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Jordan Mills."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -264,7 +264,7 @@ Beat 2 -- First proof point: "97% customer satisfaction score. Branch average: 9
 Beat 3 -- Second proof point: "12 escalated complaints. All 12 resolved. Zero went further." Brief pause after each line.
 Beat 4 -- Closing frame: Full name, target role, and final action line.
 
-End with a direct closing pitch in this exact sequence: For a team lead opening at a retail bank -- Jordan Mills is the candidate whose branch trusted them with the floor before the title existed. 97% CSAT. Promoted early. Team lead responsibility already documented. Final frame: Jordan Mills, Customer Service Team Lead. Learn more about Jordan at roleboost.app. Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: For a team lead opening at a retail bank -- Jordan Mills is the candidate whose branch trusted them with the floor before the title existed. 97% CSAT. Promoted early. Team lead responsibility already documented. Final frame: Jordan Mills, Customer Service Team Lead. Learn more about Jordan at identiboost.com. Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -278,4 +278,4 @@ Do NOT use the words "passionate," "journey," or "innovative."
 
 ---
 
-*RoleBoost Candidate Asset Package -- jordan-mills -- July 8, 2026 -- roleboost.app*
+*IdentiBoost Candidate Asset Package -- jordan-mills -- July 8, 2026 -- identiboost.com*

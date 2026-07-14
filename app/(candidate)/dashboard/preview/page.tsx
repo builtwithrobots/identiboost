@@ -23,19 +23,19 @@ export default async function CandidatePreviewPage() {
 
   if (!profile) redirect('/dashboard/profile');
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app';
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com';
 
   return (
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Preview"
-        description="See your profile exactly as employers experience it, on any device."
+        description="See your profile exactly as your contacts experience it, on any device."
       />
 
       <div className="mx-auto max-w-6xl px-6 py-8">
         <PreviewFrame
           previewUrl="/preview"
-          liveUrl={`${appUrl}/c/${profile.slug}`}
+          liveUrl={`${appUrl}/i/${profile.slug}`}
           slug={profile.slug}
           isPublished={profile.is_published}
         />

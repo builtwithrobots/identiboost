@@ -38,7 +38,7 @@ export default function EmployerTranscriptsList({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `roleboost-transcript-${t.id.slice(0, 8)}.md`;
+    a.download = `identiboost-transcript-${t.id.slice(0, 8)}.md`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -61,7 +61,7 @@ export default function EmployerTranscriptsList({
             </div>
             {t.candidateSlug && (
               <Link
-                href={`/c/${t.candidateSlug}`}
+                href={`/i/${t.candidateSlug}`}
                 onClick={(e) => e.stopPropagation()}
                 className="inline-flex items-center gap-1.5 rounded-[var(--radius-md)] border border-[var(--rb-border)] px-2.5 py-1.5 text-xs font-medium text-[var(--rb-text-secondary)] transition-colors hover:text-[var(--rb-brand)]"
               >

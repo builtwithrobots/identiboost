@@ -58,7 +58,7 @@ type SaveStatus = 'idle' | 'saving' | 'saved' | 'error';
 const TEXT_FIELDS = [
   {
     key: 'key_wins',
-    label: 'Top career wins (with real numbers)',
+    label: 'Top professional wins (with real numbers)',
     Icon: Trophy,
     placeholder: 'e.g. Rebuilt the third-shift operation at Brightship: cut order errors 38% and hired/trained a 24-person team in 90 days.',
   },
@@ -72,7 +72,7 @@ const TEXT_FIELDS = [
     key: 'departure_reasons',
     label: 'Why you left each of your recent roles',
     Icon: DoorOpen,
-    placeholder: 'A calm, honest reason for each move. This is the first thing recruiters probe.',
+    placeholder: 'A calm, honest reason for each move. This is the first thing contacts probe.',
   },
   {
     key: 'biggest_challenge',
@@ -100,7 +100,7 @@ const TEXT_FIELDS = [
   },
   {
     key: 'wish_questions',
-    label: 'Questions you wish recruiters would ask',
+    label: 'Questions you wish contacts would ask',
     Icon: HelpCircle,
     placeholder: 'The questions that let you show your best.',
   },
@@ -113,7 +113,7 @@ type StudioTab = 'context' | 'build' | 'test' | 'harden';
 // Key 'context' is kept for the tab so existing ?tab=context deep links work;
 // only the label changed to the candidate-facing name.
 const TABS: { key: StudioTab; label: string; Icon: typeof Hammer }[] = [
-  { key: 'context', label: 'Career Story', Icon: FileText },
+  { key: 'context', label: 'Professional Story', Icon: FileText },
   { key: 'build', label: 'Build', Icon: Hammer },
   { key: 'harden', label: 'Harden', Icon: ShieldCheck },
   { key: 'test', label: 'Test', Icon: FlaskConical },
@@ -223,7 +223,7 @@ export default function AIStudio({
               AI Studio
             </h1>
             <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-              Arm the career AI that answers recruiters on your behalf, then test it live.
+              Arm the Identity AI that answers contacts on your behalf, then test it live.
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-3">
@@ -287,7 +287,7 @@ export default function AIStudio({
           aria-labelledby="studio-tab-build"
           className="flex flex-col gap-6"
         >
-          <TabIntro Icon={Hammer} title="Teach your AI about your career">
+          <TabIntro Icon={Hammer} title="Teach your AI about your work">
             This is where your AI learns who you are, your wins, the hard questions, the things a
             résumé can&apos;t say. Use the guided interview to do it fast, or fill in the details
             yourself. Everything here saves automatically and applies to your AI right away.
@@ -336,7 +336,7 @@ export default function AIStudio({
           <section className="rb-card p-6">
             <h2 className="mb-1 flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
               <Sparkles className="size-4 text-[var(--rb-brand)]" />
-              Career context
+              Professional context
             </h2>
             <p className="mb-5 text-xs text-[var(--rb-text-muted)]">
               The more honest detail you give, the better your AI answers the hard questions. Everything
@@ -397,7 +397,7 @@ export default function AIStudio({
                     value={pair.question}
                     onChange={(e) => updateQa(i, 'question', e.target.value)}
                     onBlur={() => save()}
-                    placeholder="Recruiter question, e.g. Why did you leave Bedgear?"
+                    placeholder="Contact question, e.g. Why did you leave Bedgear?"
                     maxLength={500}
                     className={`${inputClass} mb-2`}
                     aria-label={`Question for custom answer ${i + 1}`}
@@ -476,7 +476,7 @@ export default function AIStudio({
         </div>
         )}
 
-        {/* ── Career Story (tab key 'context' for deep-link stability) ─────── */}
+        {/* ── Professional Story (tab key 'context' for deep-link stability) ── */}
         {tab === 'context' && (
           <div role="tabpanel" id="studio-panel-context" aria-labelledby="studio-tab-context">
             <ContextDocumentPanel
@@ -494,8 +494,8 @@ export default function AIStudio({
           aria-labelledby="studio-tab-test"
           className="flex flex-col gap-4"
         >
-          <TabIntro Icon={FlaskConical} title="Try your AI before recruiters do">
-            Ask your AI the tough questions a recruiter would, about a gap, a short stint, a big
+          <TabIntro Icon={FlaskConical} title="Try your AI before your contacts do">
+            Ask your AI the tough questions a contact would, about a gap, a short stint, a big
             number, and see exactly how it answers. Anything that comes out weak points you to the
             field to strengthen. Edits in Build apply here instantly.
           </TabIntro>
@@ -507,7 +507,7 @@ export default function AIStudio({
             />
           ) : (
             <div className="rb-card p-6 text-center text-sm text-[var(--rb-text-muted)]">
-              Turn your AI on to test it. While it is off, the chat tab is hidden from recruiters.
+              Turn your AI on to test it. While it is off, the chat tab is hidden from your contacts.
             </div>
           )}
         </div>
@@ -522,7 +522,7 @@ export default function AIStudio({
           className="flex flex-col gap-4"
         >
           <TabIntro Icon={ShieldCheck} title="Sharpen with real conversations">
-            Already had recruiter calls or practice interviews? Paste a transcript and your AI finds
+            Already had real conversations or practice interviews? Paste a transcript and your AI finds
             the exact questions it isn&apos;t ready for yet, then shows you how to close each gap.
             Anything you paste here is analyzed and never stored, only the plan is saved.
           </TabIntro>

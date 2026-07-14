@@ -1,6 +1,6 @@
-# RoleBoost Architecture, The Build Bible
+# IdentiBoost Architecture, The Build Bible
 
-> The authoritative, living reference for how RoleBoost is built and works.
+> The authoritative, living reference for how IdentiBoost is built and works.
 > The **code is always the source of truth**; this folder explains how the pieces
 > fit, why decisions were made, and where to look. When code and docs disagree,
 > the code wins, then fix the doc.
@@ -8,11 +8,11 @@
 
 ---
 
-## What RoleBoost Is
+## What IdentiBoost Is
 
 An AI-powered candidate intelligence platform. A job seeker uploads a résumé and
 career context; the platform builds a **personal career AI** ("the brain") that
-represents them to recruiters 24/7 over one shareable link (`/c/[slug]`). Every
+represents them to recruiters 24/7 over one shareable link (`/i/[slug]`). Every
 conversation emails a transcript to both sides and feeds a growth loop that makes
 the brain sharper over time. Employers get a dashboard to save candidates, run a
 pipeline, and send feedback.
@@ -56,7 +56,7 @@ Candidate uploads résumé + career sources
    → résumé parsed to resume_documents.canonical_markdown
    → AI Studio: intake interview / manual fields / career context document
                 build the brain (candidate_profiles brain columns + context_package_md)
-   → /c/[slug] public calling card: recruiter chats with the brain (/api/chat)
+   → /i/[slug] public calling card: recruiter chats with the brain (/api/chat)
         · system prompt assembled from the brain (lib/ai/build-system-prompt.ts)
         · Haiku for simple Q, Sonnet for hard Q (complexity router)
         · numeric/credential claims grounded against the brain before returning

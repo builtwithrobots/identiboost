@@ -339,7 +339,7 @@ export default function HeroDemoCard({ chatPairs = QA_PAIRS }: { chatPairs?: QaP
   return (
     <div
       className="bg-[#FFFBF5] border border-[rgba(30,58,95,0.1)] rounded-xl shadow-md p-4 sm:p-6"
-      aria-label="Preview of a RoleBoost candidate profile: career Boost assets and an AI chat"
+      aria-label="Preview of a IdentiBoost candidate profile: career Boost assets and an AI chat"
     >
       {/* Boost asset stack, full-width tiles matching the chat window */}
       <div className="space-y-3">

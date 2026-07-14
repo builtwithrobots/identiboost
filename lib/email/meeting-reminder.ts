@@ -1,7 +1,7 @@
 import 'server-only';
 import { getResend } from './client';
 
-const FROM = 'RoleBoost <transcripts@roleboost.app>';
+const FROM = 'IdentiBoost <transcripts@identiboost.com>';
 
 interface MeetingReminderEmail {
   candidateName: string;
@@ -41,7 +41,7 @@ export async function sendMeetingReminderEmail({
   const html = `
     <div style="font-family: ui-sans-serif, system-ui, sans-serif; color: #1E3A5F; line-height: 1.6;">
       <h2 style="margin: 0 0 12px;">A recruiter is still waiting to hear from you</h2>
-      <p>${escapeHtml(who)} asked to meet with you through your RoleBoost Personal Assistant, and the request has been open for ${escapeHtml(waited)}.</p>
+      <p>${escapeHtml(who)} asked to meet with you through your IdentiBoost Personal Assistant, and the request has been open for ${escapeHtml(waited)}.</p>
       <p><strong>Their availability:</strong></p>
       <p style="white-space: pre-wrap; background: #F5F0E8; padding: 12px; border-radius: 8px;">${escapeHtml(availability)}</p>
       <p style="margin: 20px 0;">

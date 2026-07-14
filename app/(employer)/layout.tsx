@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getUserContext, AuthError, getAdminPreviewRole } from '@/lib/auth/user-context';
 import { SidebarLayout } from '@/components/ui/sidebar-layout';
 import { Sidebar, SidebarBody, SidebarFooter, SidebarHeader, SidebarSpacer } from '@/components/ui/sidebar';
-import RoleBoostLogo from '@/components/layout/RoleBoostLogo';
+import IdentiBoostLogo from '@/components/layout/IdentiBoostLogo';
 import EmployerNav from '@/components/layout/EmployerNav';
 import SubscriptionBadge from '@/components/layout/SubscriptionBadge';
 import UserMenu from '@/components/layout/UserMenu';
@@ -30,7 +30,7 @@ export default async function EmployerLayout({ children }: { children: React.Rea
   const sidebar = (
     <Sidebar>
       <SidebarHeader>
-        <RoleBoostLogo />
+        <IdentiBoostLogo />
       </SidebarHeader>
 
       <SidebarBody>
@@ -55,7 +55,7 @@ export default async function EmployerLayout({ children }: { children: React.Rea
       {ctx.isAdmin && (previewRole || impersonating) && (
         <AdminCommandBar previewRole={previewRole} impersonating={impersonating} />
       )}
-      <SidebarLayout navbar={<RoleBoostLogo compact />} sidebar={sidebar}>
+      <SidebarLayout navbar={<IdentiBoostLogo compact />} sidebar={sidebar}>
         {children}
       </SidebarLayout>
     </>

@@ -27,7 +27,7 @@ export interface SignedCallingCardAssets {
 
 /**
  * Signs the active assets for a candidate profile for the calling card, shared by
- * the public `/c/[slug]` page and the owner preview. The avatar is returned
+ * the public `/i/[slug]` page and the owner preview. The avatar is returned
  * separately so the header can render it; every other asset flows into the
  * gallery. Assets that can't be signed (e.g. a bucket that doesn't exist yet) are
  * skipped rather than failing the whole card.

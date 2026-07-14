@@ -14,7 +14,7 @@ export default function SuspendedPage() {
           Your account is suspended
         </h1>
         <p className="mt-2 text-sm text-[var(--rb-text-secondary)]">
-          Access to RoleBoost has been paused for this account. If you think this is a mistake, reach
+          Access to IdentiBoost has been paused for this account. If you think this is a mistake, reach
           out to support and we&apos;ll take a look.
         </p>
         <div className="mt-6">

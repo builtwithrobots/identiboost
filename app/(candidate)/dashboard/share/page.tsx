@@ -22,8 +22,8 @@ export default async function ShareHubPage() {
 
   if (!profile) redirect('/dashboard/profile');
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app';
-  const profileUrl = `${appUrl}/c/${profile.slug}`;
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com';
+  const profileUrl = `${appUrl}/i/${profile.slug}`;
 
   return (
     <DashboardPage>

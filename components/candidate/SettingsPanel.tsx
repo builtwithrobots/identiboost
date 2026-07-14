@@ -44,7 +44,7 @@ interface Props {
   };
 }
 
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com';
 
 function planLabel(tier: string | null, status: string): string {
   if (tier) return tier.charAt(0).toUpperCase() + tier.slice(1);
@@ -265,7 +265,7 @@ export default function SettingsPanel({ account, settings }: Props) {
   const [dangerError, setDangerError] = useState<string | null>(null);
   const [dangerBusy, setDangerBusy] = useState(false);
 
-  const publicUrl = `${APP_URL.replace(/\/$/, '')}/c/${account.slug}`;
+  const publicUrl = `${APP_URL.replace(/\/$/, '')}/i/${account.slug}`;
   const publicHost = publicUrl.replace(/^https?:\/\//, '');
 
   function saveToggle(key: 'is_published' | 'ai_enabled' | 'search_discoverable', next: boolean) {
@@ -306,7 +306,7 @@ export default function SettingsPanel({ account, settings }: Props) {
       a.href = url;
       const disposition = res.headers.get('Content-Disposition') ?? '';
       const match = disposition.match(/filename="?([^"]+)"?/);
-      a.download = match?.[1] ?? `roleboost-export.${format}`;
+      a.download = match?.[1] ?? `identiboost-export.${format}`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -345,7 +345,7 @@ export default function SettingsPanel({ account, settings }: Props) {
         icon={<UserRound className="size-4.5 text-indigo-600 dark:text-indigo-400" strokeWidth={1.75} />}
         tint="bg-indigo-100 dark:bg-indigo-950/50"
         title="Account"
-        description="Your identity and plan on RoleBoost."
+        description="Your identity and plan on IdentiBoost."
       >
         <dl className="divide-y divide-[var(--rb-border)]">
           <InfoRow label="Name">{account.fullName || 'Not set'}</InfoRow>
@@ -354,7 +354,7 @@ export default function SettingsPanel({ account, settings }: Props) {
           </InfoRow>
           <InfoRow label="Public link">
             <a
-              href={`/c/${account.slug}`}
+              href={`/i/${account.slug}`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1 font-medium text-[var(--rb-brand)] hover:underline"
@@ -401,7 +401,7 @@ export default function SettingsPanel({ account, settings }: Props) {
               </span>
             </Label>
             <Description>
-              When on, recruiters can chat with your AI on your page. Turn off to hide the chat.
+              When on, anyone can chat with your AI on your page. Turn off to hide the chat.
             </Description>
             <Switch
               color="amber"
@@ -419,7 +419,7 @@ export default function SettingsPanel({ account, settings }: Props) {
               </span>
             </Label>
             <Description>
-              When on, your page can appear in Google and other search engines, so recruiters can
+              When on, your page can appear in Google and other search engines, so contacts can
               find you without a link. Off by default: your page then works only for people you share
               the link with. Your profile must be live for this to take effect.
             </Description>
@@ -450,11 +450,11 @@ export default function SettingsPanel({ account, settings }: Props) {
         icon={<Download className="size-4.5 text-emerald-600 dark:text-emerald-400" strokeWidth={1.75} />}
         tint="bg-emerald-100 dark:bg-emerald-950/50"
         title="Your data"
-        description="Export everything RoleBoost holds for you, anytime."
+        description="Export everything IdentiBoost holds for you, anytime."
       >
         <p className="text-sm text-[var(--rb-text-secondary)]">
-          Your export includes your profile, career brain, custom answers, intake, self-tests,
-          recruiter conversations, career sources, and a manifest of your media assets. Choose a
+          Your export includes your profile, professional brain, custom answers, intake, self-tests,
+          contact conversations, professional sources, and a manifest of your media assets. Choose a
           data-only file, or a full archive with your media bundled in.
         </p>
         <div className="mt-4 flex flex-col gap-3 sm:flex-row">
@@ -541,16 +541,16 @@ export default function SettingsPanel({ account, settings }: Props) {
         title="Reset your AI training?"
         intro="Your AI will forget everything it learned and everything you taught it, and you will build it again from your résumé. This cannot be undone."
         removes={[
-          'Your career brain fields and custom answers',
+          'Your professional brain fields and custom answers',
           'Intake interview answers and readiness score',
           'Sandbox self-tests and coaching',
-          'Recruiter chat history and surfaced gaps',
-          'Your generated career story',
+          'Contact chat history and surfaced gaps',
+          'Your generated professional story',
         ]}
         keeps={[
           'Your account and public link',
           'Your name, headline, and profile details',
-          'Your résumé and career sources',
+          'Your résumé and professional sources',
           'Your uploaded and generated media',
         ]}
         confirmWord="RESET"
@@ -565,13 +565,13 @@ export default function SettingsPanel({ account, settings }: Props) {
         onClose={() => setDeleteOpen(false)}
         tone="red"
         title="Delete everything and start over?"
-        intro="This permanently deletes your entire RoleBoost profile and sends you back through onboarding as a brand-new user. Your public link will change, and anyone who saved you will lose access. This cannot be undone."
+        intro="This permanently deletes your entire IdentiBoost profile and sends you back through onboarding as a brand-new user. Your public link will change, and anyone who saved you will lose access. This cannot be undone."
         removes={[
           'Your whole profile and public link',
           'Your AI, brain, and all learning',
-          'Your résumé, career sources, and media files',
-          'All recruiter conversations and meeting requests',
-          "Your place in any employer's saved pool",
+          'Your résumé, professional sources, and media files',
+          'All contact conversations and meeting requests',
+          "Your place in any business's saved pool",
         ]}
         confirmWord="DELETE"
         confirmLabel="Delete everything"

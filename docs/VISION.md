@@ -1,4 +1,4 @@
-# RoleBoost -- Vision Document
+# IdentiBoost -- Vision Document
 **Version 3.2 | June 2026 | Rob Ramos, Founder**
 
 ---
@@ -35,13 +35,13 @@ The process was not designed to be cruel. It just was not designed with the cand
 
 Most hiring technology has been built for employers. ATS systems rank candidates for recruiters. Scheduling tools save recruiters time. AI screening tools reduce recruiter workload. The candidate's job in this system is to survive the filters, answer the questions, and hope the signal gets through.
 
-RoleBoost is the first platform built from the other side of that table.
+IdentiBoost is the first platform built from the other side of that table.
 
 Not to game the system. Not to polish the document. To make sure the candidate's real story -- the one that does not fit in a resume, the one that explains the gap, the one that puts the numbers in context -- is available to every recruiter who looks, at any hour, before the first call ever happens.
 
 You build your context once. Your AI handles the hard questions forever.
 
-That is not a feature. That is RoleBoost empowering your voice to be heard before the algorithm decides you are not worth a conversation.
+That is not a feature. That is IdentiBoost empowering your voice to be heard before the algorithm decides you are not worth a conversation.
 
 ---
 
@@ -55,11 +55,11 @@ The industry has named this the ["resume illusion"](https://blog.theinterviewguy
 
 Every tool in the market is making this worse. AI resume builders help candidates optimize, polish, and keyword-match -- which produces more look-alike documents with less signal and more risk of inflation. The candidate who uses these tools gains a short-term ATS advantage and a long-term credibility problem.
 
-RoleBoost goes the opposite direction.
+IdentiBoost goes the opposite direction.
 
 Most candidates have a meaningful disconnect between how they perceive their own career and what their documented experience actually shows. The story they tell in interviews is often bigger, more polished, or differently framed than what appears on paper. Sometimes it is the opposite: a candidate undersells because their resume was never built to reflect the full scope of what they actually did.
 
-RoleBoost uses AI to create a non-biased mirror.
+IdentiBoost uses AI to create a non-biased mirror.
 
 When a candidate uploads their resume and career context, the platform reads what is actually there -- without ego, without the narrative the candidate has been telling themselves for years, without the inflation of a sales pitch or the deflation of imposter syndrome. It makes a clear, evidence-based determination of who this person is based on what they have documented.
 
@@ -71,7 +71,7 @@ Second, it gives the candidate something they rarely get: an objective reflectio
 
 Third, it trains the AI chatbot on the same honest read. So when a recruiter asks the chatbot anything -- at any hour, before any call -- they get a consistent, grounded answer in the candidate's voice that matches what the evidence supports. Not the inflated pitch. Not the thin resume. The real person.
 
-This is not a feature. It is the foundation of trust that makes the entire platform work -- for candidates, for recruiters, and for the employers who need to make real hiring decisions. In a market drowning in AI-generated noise, the honest candidate is the differentiated one. RoleBoost makes that possible.
+This is not a feature. It is the foundation of trust that makes the entire platform work -- for candidates, for recruiters, and for the employers who need to make real hiring decisions. In a market drowning in AI-generated noise, the honest candidate is the differentiated one. IdentiBoost makes that possible.
 
 ---
 
@@ -79,7 +79,7 @@ This is not a feature. It is the foundation of trust that makes the entire platf
 
 The world's first AI-powered candidate intelligence platform. Job seekers upload their resume and context, receive a complete multi-format career narrative produced by AI, and get a personal career chatbot that represents them to recruiters 24 hours a day -- without ever having to be on camera, record their voice, or perform under pressure.
 
-RoleBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm.
+IdentiBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm.
 
 One shareable link. Every version of you. Your AI available around the clock.
 
@@ -340,4 +340,4 @@ Where the best candidate actually gets found -- and where recruiters know exactl
 
 ---
 
-*Document version 3.2 -- RoleBoost -- roleboost.app -- Built by Rob Ramos*
+*Document version 3.2 -- IdentiBoost -- identiboost.com -- Built by Rob Ramos*

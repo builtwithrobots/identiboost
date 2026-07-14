@@ -1,6 +1,6 @@
-# RoleBoost in Plain English
+# IdentiBoost in Plain English
 
-**Purpose:** the no-jargon explanation of what RoleBoost is and why it matters, written so
+**Purpose:** the no-jargon explanation of what IdentiBoost is and why it matters, written so
 anyone (a customer, an investor's spouse, a landing-page visitor) gets it in one read. Use it
 as source material for landing pages, demo scripts, investor conversations, onboarding
 emails, and social copy. Claims here are backed by the evidence in
@@ -13,7 +13,7 @@ emails, and social copy. Claims here are backed by the evidence in
 
 ## The one-sentence version
 
-RoleBoost gives every job seeker a personal spokesperson that never sleeps, is built to be
+IdentiBoost gives every job seeker a personal spokesperson that never sleeps, is built to be
 incapable of exaggerating, and gets a little smarter after every conversation it has.
 
 ---
@@ -24,7 +24,7 @@ Imagine you could clone the best version of yourself, the one who is rested, pre
 has a great answer ready for every hard question, and leave that clone standing at your
 front door 24/7, ready to talk to any recruiter who stops by.
 
-That's what RoleBoost is.
+That's what IdentiBoost is.
 
 You upload your resume and answer some honest questions about your career: why you left
 each job, what you're genuinely not good at, the wins you're proudest of, the questions you
@@ -56,7 +56,7 @@ The pitch to recruiters is literally that it's honest by design.
 
 ## It gets smarter every time someone talks to it
 
-After each recruiter conversation, RoleBoost re-reads the transcript and asks: where did
+After each recruiter conversation, IdentiBoost re-reads the transcript and asks: where did
 your AI come up short? Which question got a thin answer? Which topic came up that your
 brain doesn't cover?
 
@@ -67,7 +67,7 @@ That's it. The next recruiter who asks gets the strong answer.
 So the loop is: recruiter asks something hard → your AI stumbles → the system drafts the
 fix → you approve with one tap → your AI never stumbles on that question again. You can
 also stress-test it yourself in a private sandbox, or paste in a transcript from a real
-screening call and have RoleBoost find every question your AI isn't ready for yet.
+screening call and have IdentiBoost find every question your AI isn't ready for yet.
 
 ## Why both sides actually want this
 
@@ -76,7 +76,7 @@ the "walk me through your last role", answered once, well, on your terms, and de
 perfectly every time after. You play offense with your story instead of defense.
 
 **For recruiters:** the resume pile all sounds the same now that everyone writes theirs
-with AI. RoleBoost gives them something no resume can: a live, interrogable source who
+with AI. IdentiBoost gives them something no resume can: a live, interrogable source who
 answers the real screening questions before the first call is ever booked. Ten minutes
 with a candidate's AI replaces the first phone screen, and they can do it for an entire
 shortlist in an evening.
@@ -91,7 +91,7 @@ shortlist in an evening.
 - "Every conversation makes it smarter."
 - "Stop surviving screening calls. Start skipping them."
 
-## What RoleBoost is NOT (keep the copy honest too)
+## What IdentiBoost is NOT (keep the copy honest too)
 
 - It is not a resume optimizer or an ATS keyword hack.
 - It does not apply to jobs for you or spam recruiters.

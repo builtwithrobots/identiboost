@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getUserContext, AuthError } from '@/lib/auth/user-context';
 import { SidebarLayout } from '@/components/ui/sidebar-layout';
 import { Sidebar, SidebarBody, SidebarFooter, SidebarHeader, SidebarSpacer } from '@/components/ui/sidebar';
-import RoleBoostLogo from '@/components/layout/RoleBoostLogo';
+import IdentiBoostLogo from '@/components/layout/IdentiBoostLogo';
 import AdminNav from '@/components/layout/AdminNav';
 import AdminViewLaunchers from '@/components/layout/AdminViewLaunchers';
 import AdminPaletteLauncher from '@/components/admin/AdminPaletteLauncher';
@@ -30,7 +30,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   const sidebar = (
     <Sidebar>
       <SidebarHeader>
-        <RoleBoostLogo />
+        <IdentiBoostLogo />
       </SidebarHeader>
 
       <SidebarBody>
@@ -49,7 +49,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   );
 
   return (
-    <SidebarLayout navbar={<RoleBoostLogo compact />} sidebar={sidebar}>
+    <SidebarLayout navbar={<IdentiBoostLogo compact />} sidebar={sidebar}>
       {children}
     </SidebarLayout>
   );

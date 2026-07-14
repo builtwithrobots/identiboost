@@ -138,15 +138,15 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
   async function generate() {
     const offPlatform = mode === 'offplatform';
     if (offPlatform && !offName.trim()) {
-      setError('Enter the candidate’s full name.');
+      setError('Enter the professional’s full name.');
       return;
     }
     if (!offPlatform && !selected) {
-      setError('Pick a candidate first.');
+      setError('Pick a professional first.');
       return;
     }
     if (offPlatform && !resumeOverride.trim()) {
-      setError('Paste the candidate’s résumé for an off-platform order.');
+      setError('Paste the professional’s résumé for an off-platform order.');
       return;
     }
     if (!targetRole.trim()) {
@@ -205,7 +205,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
       <div className="flex gap-1 rounded-[var(--radius-md)] border border-[var(--rb-border)] p-1 self-start">
         {(
           [
-            { key: 'platform', label: 'Platform candidate', Icon: User },
+            { key: 'platform', label: 'Platform professional', Icon: User },
             { key: 'offplatform', label: 'Off-platform order', Icon: UserPlus },
           ] as const
         ).map(({ key, label, Icon }) => (
@@ -234,7 +234,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
           {mode === 'platform' ? (
             <>
               <label htmlFor="ap-search" className="sr-only">
-                Search candidates
+                Search professionals
               </label>
               <div className="relative">
                 <Search className="pointer-events-none absolute left-3 top-1/2 size-3.5 -translate-y-1/2 text-[var(--rb-text-muted)]" />
@@ -247,7 +247,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                   className={`${inputClass} pl-9`}
                 />
               </div>
-              <ul className="flex max-h-96 flex-col gap-1 overflow-y-auto" aria-label="Candidates">
+              <ul className="flex max-h-96 flex-col gap-1 overflow-y-auto" aria-label="Professionals">
                 {filtered.slice(0, 50).map((c) => (
                   <li key={c.id}>
                     <button
@@ -285,7 +285,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                   </li>
                 ))}
                 {filtered.length === 0 && (
-                  <li className="px-3 py-2 text-xs text-[var(--rb-text-muted)]">No candidates match.</li>
+                  <li className="px-3 py-2 text-xs text-[var(--rb-text-muted)]">No professionals match.</li>
                 )}
               </ul>
             </>
@@ -295,7 +295,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                 htmlFor="ap-offname"
                 className="text-xs font-medium text-[var(--rb-text-secondary)]"
               >
-                Candidate full name
+                Professional full name
               </label>
               <input
                 id="ap-offname"
@@ -307,7 +307,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                 className={inputClass}
               />
               <p className="text-xs text-[var(--rb-text-muted)]">
-                For orders from candidates who are not on RoleBoost yet. Paste their résumé on the
+                For orders from professionals who are not on IdentiBoost yet. Paste their résumé on the
                 right; the slug is derived from the name.
               </p>
             </>
@@ -346,7 +346,7 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                 id="ap-jd"
                 value={jobDescription}
                 onChange={(e) => setJobDescription(e.target.value.slice(0, MAX_JD))}
-                placeholder="Paste the job posting the candidate is targeting."
+                placeholder="Paste the job posting the professional is targeting."
                 rows={5}
                 className={`${inputClass} resize-none`}
               />
@@ -386,8 +386,8 @@ export default function AdminAssetPackageTool({ candidates }: Props) {
                   onChange={(e) => setResumeOverride(e.target.value.slice(0, MAX_RESUME))}
                   placeholder={
                     mode === 'offplatform'
-                      ? 'Paste the candidate’s full résumé text.'
-                      : 'Paste résumé text to use INSTEAD of the candidate’s stored résumé.'
+                      ? 'Paste the professional’s full résumé text.'
+                      : 'Paste résumé text to use INSTEAD of the professional’s stored résumé.'
                   }
                   rows={6}
                   className={`${inputClass} mt-2 resize-none`}
@@ -463,7 +463,7 @@ function PackageResult({
           className="flex items-start gap-2 rounded-[var(--radius-md)] bg-[var(--color-warning-bg,#FEF3C7)] px-3 py-2.5 text-xs text-[var(--rb-text)]"
         >
           <AlertTriangle className="mt-0.5 size-3.5 shrink-0 text-[var(--color-warning,#B45309)]" />
-          The package was generated but could not be saved to the candidate&apos;s profile (the
+          The package was generated but could not be saved to the professional&apos;s profile (the
           asset_package migration may not be applied yet). Download it now; it is not stored.
         </p>
       )}

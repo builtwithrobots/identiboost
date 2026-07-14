@@ -1,15 +1,15 @@
-# PRD.md -- RoleBoost Product Requirements Document
+# PRD.md -- IdentiBoost Product Requirements Document
 
 **Version:** 3.0
 **Last updated:** June 2026
 **Author:** Rob Ramos
-**Domain:** roleboost.app
+**Domain:** identiboost.com
 
 ---
 
 ## 1. Overview
 
-RoleBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Candidates upload their resume and career context, receive a full suite of AI-produced career assets, and get a personal career AI chatbot that represents them to recruiters 24/7. Resume Intelligence analyzes the resume and coaches candidates on exactly what context to add so their AI is armed before the first recruiter question. Every AI conversation generates a transcript delivered by email to both sides. Candidates fine-tune their AI over time. Employers get a candidate management dashboard with pipeline tracking, job postings, stage assignment, team collaboration, and AI chat access.
+IdentiBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Candidates upload their resume and career context, receive a full suite of AI-produced career assets, and get a personal career AI chatbot that represents them to recruiters 24/7. Resume Intelligence analyzes the resume and coaches candidates on exactly what context to add so their AI is armed before the first recruiter question. Every AI conversation generates a transcript delivered by email to both sides. Candidates fine-tune their AI over time. Employers get a candidate management dashboard with pipeline tracking, job postings, stage assignment, team collaboration, and AI chat access.
 
 **Core user types:**
 - **Candidate** -- job seeker uploading career assets, managing their AI, and sharing their profile link
@@ -37,7 +37,7 @@ RoleBoost empowers the candidate's voice to be heard before easy or automatic el
 
 After first sign-up, every user lands on the onboarding screen before any dashboard.
 
-**Screen:** "How are you using RoleBoost?"
+**Screen:** "How are you using IdentiBoost?"
 
 Two large tappable cards:
 - "I am looking for my next role" -- sets role to `candidate`
@@ -71,7 +71,7 @@ Three-step flow before reaching the dashboard.
 **Step 3 -- Profile slug:**
 - Auto-generated from full name (e.g. `robert-ramos`)
 - Editable -- unique, lowercase, alphanumeric and hyphens only
-- Live preview: `roleboost.app/c/[slug]`
+- Live preview: `identiboost.com/i/[slug]`
 
 On completion:
 - Insert row into `candidate_profiles`
@@ -126,10 +126,10 @@ The main hub for managing profile content and sharing.
 - Profile visibility toggle (Published / Draft)
 
 **Shareable assets section:**
-- Full public URL: `roleboost.app/c/[slug]`
+- Full public URL: `identiboost.com/i/[slug]`
 - Copy link button with confirmation toast
 - QR code download button
-- RoleBoost badge download button
+- IdentiBoost badge download button
 
 **Acceptance criteria:**
 - [ ] All fields editable and auto-saved on blur
@@ -279,7 +279,7 @@ Shows the candidate exactly what recruiters see.
 - Chat tab functional in preview using candidate's own AI
 
 **Acceptance criteria:**
-- [ ] Modal renders identically to public `/c/[slug]`
+- [ ] Modal renders identically to public `/i/[slug]`
 - [ ] Chat interface functional in preview mode
 - [ ] Draft banner shown for unpublished profiles
 
@@ -287,7 +287,7 @@ Shows the candidate exactly what recruiters see.
 
 ## 4. Public Candidate Profile -- The Modal
 
-Core recruiter-facing experience at `/c/[slug]`.
+Core recruiter-facing experience at `/i/[slug]`.
 
 ### 4.1 Modal Behavior
 
@@ -333,7 +333,7 @@ The AI chat interface embedded in the modal.
 - Message input field
 - Send button
 - Conversation history in chat bubbles
-- "Powered by RoleBoost AI" footer label
+- "Powered by IdentiBoost AI" footer label
 - Disclaimer: "This AI represents [Name]'s career history and may not reflect all details"
 
 **Behavior:**
@@ -488,7 +488,7 @@ From candidate modal (Connect button) or candidate card action menu.
 
 ### 6.2 Candidate Transcript Email
 
-**Subject:** A recruiter just chatted with your RoleBoost AI
+**Subject:** A recruiter just chatted with your IdentiBoost AI
 
 **Body:**
 - Company name (or "An anonymous recruiter") viewed your profile
@@ -500,7 +500,7 @@ From candidate modal (Connect button) or candidate card action menu.
 
 ### 6.3 Employer Transcript Email
 
-**Subject:** Your RoleBoost conversation with [Candidate Name]
+**Subject:** Your IdentiBoost conversation with [Candidate Name]
 
 **Body:**
 - Summary -- N questions asked, duration
@@ -511,7 +511,7 @@ From candidate modal (Connect button) or candidate card action menu.
 
 ### 6.4 Feedback Notification Email
 
-**Subject:** You have new feedback from [Company Name] on RoleBoost
+**Subject:** You have new feedback from [Company Name] on IdentiBoost
 
 **Body:**
 - Company name and message preview
@@ -521,7 +521,7 @@ From candidate modal (Connect button) or candidate card action menu.
 - [ ] Transcript email sent to candidate after every session
 - [ ] Transcript email sent to logged-in employer after every session
 - [ ] Feedback email sent to candidate on every feedback submission
-- [ ] All emails from `transcripts@roleboost.app`
+- [ ] All emails from `transcripts@identiboost.com`
 - [ ] Email templates mobile responsive
 - [ ] Unsubscribe link included per CAN-SPAM
 
@@ -1243,7 +1243,7 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Candidate dashboard layout and navigation
 - [ ] Profile editor (Section 3.1)
 - [ ] Asset upload (Section 3.2)
-- [ ] Public modal at `/c/[slug]` (Section 4, without chat tab)
+- [ ] Public modal at `/i/[slug]` (Section 4, without chat tab)
 - [ ] View tracking
 - [ ] QR code generation
 - [ ] Badge download

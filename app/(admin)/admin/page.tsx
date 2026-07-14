@@ -33,8 +33,8 @@ export default async function AdminOverviewPage() {
 
   const stats = [
     { label: 'Total users', value: totalRes.count ?? 0 },
-    { label: 'Candidates', value: candidateRes.count ?? 0 },
-    { label: 'Employers', value: employerRes.count ?? 0 },
+    { label: 'Professionals', value: candidateRes.count ?? 0 },
+    { label: 'Businesses', value: employerRes.count ?? 0 },
     { label: 'Admins', value: adminRes.count ?? 0 },
   ];
 
@@ -83,7 +83,7 @@ export default async function AdminOverviewPage() {
                 Preview a dashboard
               </h2>
               <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-                Step into the candidate or employer dashboard with your own data. Exit any time from
+                Step into the professional or business dashboard with your own data. Exit any time from
                 the banner at the top. To view a specific user&apos;s real data, impersonate them from
                 the command palette (read-only).
               </p>
@@ -105,7 +105,7 @@ export default async function AdminOverviewPage() {
                 type="submit"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-[var(--rb-brand)] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[var(--rb-brand-hover)] transition-colors"
               >
-                View as Candidate
+                View as Professional
               </button>
             </form>
             <form action={previewAsEmployer}>
@@ -113,7 +113,7 @@ export default async function AdminOverviewPage() {
                 type="submit"
                 className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-5 py-2.5 text-sm font-semibold text-[var(--rb-text)] hover:bg-[var(--rb-bg-surface-raised)] transition-colors"
               >
-                View as Employer
+                View as Business
               </button>
             </form>
           </div>

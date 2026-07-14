@@ -34,14 +34,14 @@ const STEPS: Step[] = [
   {
     key: 'resumeAdded',
     title: 'Add your résumé',
-    blurb: 'This is what your AI learns your career from. Upload it once and we do the rest.',
+    blurb: 'This is what your AI learns your story from. Upload it once and we do the rest.',
     cta: 'Add résumé',
     href: '/dashboard/assets',
     Icon: FileText,
   },
   {
     key: 'brainBuilt',
-    title: 'Build your career AI',
+    title: 'Build your Identity AI',
     blurb: 'Answer a few questions (or fill in the details) so your AI can speak for you, gaps, wins, the hard stuff.',
     cta: 'Open AI Studio',
     href: '/dashboard/ai?tab=build',
@@ -49,16 +49,16 @@ const STEPS: Step[] = [
   },
   {
     key: 'contextReady',
-    title: 'Create your career story',
+    title: 'Create your professional story',
     blurb: 'We write the story your AI leads with. Pick the version that sounds most like you.',
-    cta: 'Go to Career Story',
+    cta: 'Go to Professional Story',
     href: '/dashboard/ai?tab=context',
     Icon: Sparkles,
   },
   {
     key: 'tested',
     title: 'Try your AI',
-    blurb: 'Ask it the tough questions a recruiter would, and see how it answers, before they do.',
+    blurb: 'Ask it the tough questions a contact would, and see how it answers, before they do.',
     cta: 'Test your AI',
     href: '/dashboard/ai?tab=test',
     Icon: FlaskConical,
@@ -155,7 +155,7 @@ export default function GettingStarted({ progress }: Props) {
           </span>
         </div>
         <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
-          Five steps to a live career AI that answers recruiters for you, 24/7.
+          Five steps to a live Identity AI that answers contacts for you, 24/7.
         </p>
         <div
           className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-[var(--rb-bg-surface-raised)]"

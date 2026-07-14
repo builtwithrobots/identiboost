@@ -1,4 +1,4 @@
-# CLAUDE.md, RoleBoost
+# CLAUDE.md, IdentiBoost
 
 > Project memory for Claude Code. Read at the start of every session.
 > Holds durable rules and decisions you can't infer from the code. It does **not** mirror
@@ -14,14 +14,20 @@
 
 ## What This Project Is
 
-RoleBoost is an AI-powered candidate intelligence platform. Job seekers upload a resume and career
-context, receive a multi-format career narrative (produced via Google NotebookLM), get a personal
-career AI chatbot trained on their data, and share one link that gives hiring managers everything:
-audio, video, infographic, slide deck, ATS resume, and a live AI they can interrogate 24/7. Every AI
-conversation emails a transcript to both sides. Candidates fine-tune their AI over time.
+IdentiBoost is a universal professional presence platform. Any professional (job candidate, sales
+rep, consultant, speaker, trade show exhibitor, coach, founder) uploads a resume and professional
+context, receives a multi-format narrative (produced via Google NotebookLM), gets a personal
+Identity AI trained on their data, and shares one link that gives anyone everything: audio, video,
+infographic, slide deck, ATS resume, and a live AI they can interrogate 24/7. Every AI conversation
+emails a transcript to both sides. Professionals fine-tune their AI over time.
 
-**Pitch:** "Your career. Your AI. Finally heard."
-**Domain:** roleboost.app **GitHub org:** builtwithrobots. Independent codebase; no shared infra.
+Terminology: the primary user is a "professional" (was "candidate"), the evaluator is a "contact"
+(was "recruiter"), the buyer is a "business" (was "employer"). This applies to user-facing copy
+ONLY; database tables, columns, TypeScript types, and route groups keep the original names
+(candidate_profiles, recruiter_email, (candidate), (employer), etc.). Do not rename schema.
+
+**Pitch:** "Your identity. Boosted." Secondary: "The profile that answers back."
+**Domain:** identiboost.com **GitHub org:** builtwithrobots. Independent codebase; no shared infra.
 
 ---
 
@@ -67,7 +73,8 @@ app/
   (candidate)/dashboard/   profile · assets · ai · transcripts · analytics · feedback
                            guide · meeting-requests · settings · share · preview
   (employer)/dashboard/    candidates · jobs · board · conversations · team
-  c/[slug]/                Public candidate calling card (chat-first experience)
+  i/[slug]/                Public calling card (chat-first experience)
+  c/[slug]/                Legacy URL, permanent redirect to /i/[slug]
   api/                     chat (+ identify · schedule) · transcripts/deliver
                            cron/deliver-transcripts · career-context/{generate,augment}
                            intake · sandbox · resume · transcript/harden · sources
@@ -84,7 +91,7 @@ lib/
 components/
   modal/ · chat/ · candidate/ · employer/ · onboarding/ · landing/ · marketing/
   layout/ · ui/
-design-system/roleboost/   MASTER.md, the visual design system reference
+design-system/identiboost/   MASTER.md, the visual design system reference
 supabase/migrations/       all database migrations (source of truth for schema)
 ```
 
@@ -138,14 +145,14 @@ AS $$ SELECT auth.jwt() ->> 'sub'; $$;
 
 ### AI Chatbot Architecture
 
-The candidate career AI is a single Claude API call with a layered, XML-structured system prompt.
+The professional's Identity AI is a single Claude API call with a layered, XML-structured system prompt.
 No fine-tuning, embeddings, or vector DB for MVP. Resume text is sourced from
 `resume_documents.canonical_markdown` and passed to the builder as a **separate argument**, there is
 **no `resume_text` column** in active use (the prompt builder reads the markdown, not the candidate record).
 
 **Prompt structure (`lib/ai/build-system-prompt.ts`), data near the top, rules near the bottom:**
 
-1. `<role>`, third-person "Personal Assistant" identity, speaks ABOUT the candidate; not a FAQ bot
+1. `<role>`, third-person personal-AI identity ("[Name]'s AI"), speaks ABOUT the professional; not a FAQ bot
 2. `<career_information>`, full resume markdown
 3. `<context>`, named career-context fields
 4. `<custom_answers priority="highest">`, candidate-refined QA pairs; highest priority
@@ -204,7 +211,7 @@ independently on `candidate_profiles`.
 
 ### Meeting Requests
 
-When the Personal Assistant cannot answer a recruiter's question, it offers to schedule a live
+When the AI cannot answer a contact's question, it offers to schedule a live
 conversation. The recruiter submits availability ranges + email from the chat via
 `POST /api/chat/schedule`; that lands in `meeting_requests` (service-role insert, the recruiter is
 anonymous). The candidate reads/actions their own requests on `/dashboard/meeting-requests`; the
@@ -254,7 +261,7 @@ Two hard rules for audio Boosts, both learned from real breakage:
    auth-protected and returns an HTML 404, so the asset never loads (this is why the PNG worked but the
    audio 404'd until audio extensions were added).
 
-### Candidate Calling Card (public `/c/[slug]`)
+### Candidate Calling Card (public `/i/[slug]`)
 
 The core employer-facing experience, chat-first (`CallingCard` + `ChatOverlay` + `AssetGallery`),
 replacing the old modal. Opens without page navigation. Tabs: Audio · Debate · Video · Deck ·
@@ -509,7 +516,7 @@ sequential draft PRs into `main`.
   per-turn `model_used`/`was_complex`/`was_validated` tracking.
 - **C, Sandbox self-testing:** `sandbox_sessions`; 20-question library; `analyze-sandbox.ts`;
   `/api/sandbox/analyze`; `SandboxPanel` with verdicts + "Strengthen <field>" deep-links.
-- **Calling card (UX):** chat-first public `/c/[slug]`; replaced the old modal. No token streaming.
+- **Calling card (UX):** chat-first public `/i/[slug]`; replaced the old modal. No token streaming.
 - **D, AI intake interview:** `intake_answers` + readiness columns; `lib/ai/intake.ts`;
   `/api/intake/analyze` + `/assemble`; `IntakeInterview` dialog.
 - **E1, Transcript email:** Resend client + branded candidate/employer emails;
@@ -534,7 +541,7 @@ sequential draft PRs into `main`.
   `lib/security/`; `docs/architecture/11-anti-spam.md`.
 - **Candidate self-management (July 2026):** transcript archive/delete (`chat_sessions.archived_at`),
   Settings page with data export (`/api/candidate/data-export`) and fresh-start controls.
-- **Design system:** `design-system/roleboost/MASTER.md` now committed as the visual reference.
+- **Design system:** `design-system/identiboost/MASTER.md` now committed as the visual reference.
 
 ### Next-session TODO (in order)
 1. **A11y + empty/loading-states audit** *(partially done: chat/calling-card/AI-Studio surfaces +
@@ -542,7 +549,7 @@ sequential draft PRs into `main`.
 2. **Brain intelligence follow-ups** *(designed, not built)*: voice profile column (Sonnet-derived
    tone descriptors injected into `<voice>`); cross-session question clustering + answer-rate metric;
    returning-recruiter memory (needs founder steer on privacy).
-3. **Distinctive visual refresh** *(design system committed at `design-system/roleboost/MASTER.md`;
+3. **Distinctive visual refresh** *(design system committed at `design-system/identiboost/MASTER.md`;
    apply, don't redesign)*, roll the documented direction across surfaces; propose before any
    deviation from MASTER.md.
 4. **Phase F, voice input (Whisper)** *(held)*, browser audio → `/api/transcribe` (OpenAI Whisper) →

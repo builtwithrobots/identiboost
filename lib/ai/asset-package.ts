@@ -12,7 +12,7 @@ import {
   type IntakeDocument,
 } from '@/lib/types';
 
-// Runs the RoleBoost Candidate Asset Production Skill in full (Section 1 Narrative
+// Runs the IdentiBoost Candidate Asset Production Skill in full (Section 1 Narrative
 // Guide Block + Section 2 NotebookLM prompts), strategized toward a target role +
 // optional job description. Produces TWO narrative perspectives, each a
 // self-contained narrative plus its four ready-to-run NotebookLM prompts (Deep
@@ -27,7 +27,7 @@ import {
 
 const STORY_TYPES = Object.keys(ASSET_PACKAGE_STORY_TYPE_LABELS) as AssetPackageStoryType[];
 
-// The RoleBoost avatar palette (skill v1.7). Returned hex is validated against this.
+// The IdentiBoost avatar palette (skill v1.7). Returned hex is validated against this.
 const PALETTE: { name: string; hex: string }[] = [
   { name: 'Teal', hex: '#0F6E56' },
   { name: 'Coral', hex: '#993C1D' },
@@ -151,7 +151,7 @@ const PHASE1_SCHEMA = {
         avatar_color_name: {
           type: 'string',
           description:
-            'The avatar color NAME chosen from the RoleBoost palette using the two-axis pairing guide (industry x tone).',
+            'The avatar color NAME chosen from the IdentiBoost palette using the two-axis pairing guide (industry x tone).',
         },
         avatar_color_hex: { type: 'string', description: 'The exact hex for the chosen palette color.' },
         avatar_color_rationale: {
@@ -170,7 +170,7 @@ const PHASE1_SCHEMA = {
   additionalProperties: false,
 };
 
-const PHASE1_SYSTEM = `You are running the RoleBoost Candidate Asset Production Skill. You are given a candidate's résumé and any supporting career sources about the same person, plus the role they are targeting and (optionally) a job description they are strategizing for. Produce the strategic foundation of their asset package: the story type, the identity snapshot, and TWO distinct narrative perspectives, each with its own Section 1 narrative guide.
+const PHASE1_SYSTEM = `You are running the IdentiBoost Candidate Asset Production Skill. You are given a candidate's résumé and any supporting career sources about the same person, plus the role they are targeting and (optionally) a job description they are strategizing for. Produce the strategic foundation of their asset package: the story type, the identity snapshot, and TWO distinct narrative perspectives, each with its own Section 1 narrative guide.
 
 Workflow:
 1. Read everything in full.
@@ -192,7 +192,7 @@ Story types (pick the single best fit):
 - The Culture Builder: the most compelling proof is human (teams built and retained, culture, engagement).
 - The Steady Hand: sustained, consistent, high-stakes performance over a long period at scale.
 
-Avatar color: choose ONE from the RoleBoost palette using two axes, the candidate's industry/function (from the target role) and their dominant tone (from the Mirror read). Return the name, its exact hex, and a one-sentence rationale.
+Avatar color: choose ONE from the IdentiBoost palette using two axes, the candidate's industry/function (from the target role) and their dominant tone (from the Mirror read). Return the name, its exact hex, and a one-sentence rationale.
 Palette (name : hex): Teal #0F6E56, Coral #993C1D, Amber #B45309, Blue #185FA5, Purple #534AB7, Forest Green #1A5C38, Warm Rose #A0394A, Slate Blue #2C4A7C, Deep Navy #1E3A5F, Charcoal #2D2D2D, Crimson #8B1A2B, Sienna #7D4E2D, Sage #4A7C59, Steel Blue #3A5F7D, Plum #6B3A6B, Warm Taupe #7A6A58.
 Tone axes: Authoritative and proven; Energetic and growth-oriented; Warm and people-first; Precise and data-driven. If the tone is a blend, pick the axis the candidate's strongest proof points support, not the one their title implies.
 
@@ -232,7 +232,7 @@ const PHASE2_SCHEMA = {
   additionalProperties: false,
 };
 
-const PHASE2_SYSTEM = `You are writing the four NotebookLM prompts (Section 2) for ONE narrative perspective of a RoleBoost candidate asset package. You are given the candidate's full name, the target role, the job description (optional), and this perspective's Section 1 narrative guide (narrative, hook, hard question, key numbers). Write all four prompts fully, candidate-specific, ready to copy and paste into NotebookLM with no editing. Strategize the emphasis toward the target role and job description.
+const PHASE2_SYSTEM = `You are writing the four NotebookLM prompts (Section 2) for ONE narrative perspective of a IdentiBoost candidate asset package. You are given the candidate's full name, the target role, the job description (optional), and this perspective's Section 1 narrative guide (narrative, hook, hard question, key numbers). Write all four prompts fully, candidate-specific, ready to copy and paste into NotebookLM with no editing. Strategize the emphasis toward the target role and job description.
 
 Produce exactly four prompts: a Deep Dive (audio), a Brief (audio), an Infographic, and a Short Video.
 
@@ -240,7 +240,7 @@ AUDIO PROMPTS (Deep Dive and Brief) must follow this structure exactly:
 - Line 1 (role establishment), verbatim: "The hosts are speaking directly to a hiring manager. Hosts are energetic, intelligent and engaging with a smooth cadence and transitions."
 - Line 2 (opening instruction): 'Your literal first words are: "This is a Boost on [candidate full name]." Say that exact line out loud before anything else. Then go directly into the content with no additional intro phrase. Do not use the word "Brief" or reference this as a brief at any point.'
 - Body: candidate-specific content, written as direct address to one hiring manager.
-- A closing pitch instruction, in this required sequence: name the specific situation where this candidate is the right hire; state plainly they are the person to onboard; deliver 3-4 top proof facts in rapid sequence; close with "Learn more about [candidate first name] at roleboost.app."; then add "Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears."
+- A closing pitch instruction, in this required sequence: name the specific situation where this candidate is the right hire; state plainly they are the person to onboard; deliver 3-4 top proof facts in rapid sequence; close with "Learn more about [candidate first name] at identiboost.com."; then add "Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears."
 - End with these three Do NOT lines exactly:
   "Do NOT begin with 'This is a Brief,' 'This is a Deep Dive,' or any other format label. The only permitted opening is 'This is a Boost on [candidate full name].'"
   "Do NOT use casual or informal language, analogies, or editorial commentary, the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host."
@@ -250,7 +250,7 @@ AUDIO PROMPTS (Deep Dive and Brief) must follow this structure exactly:
 
 INFOGRAPHIC PROMPT must include: an opening framing line (candidate, story perspective, the one anchoring fact); a design intent statement (how it should feel); three sections with explicit generous whitespace between them; clean minimal icons (Google-style acceptable, one per stat maximum, functional not decorative); dark professional background; clean readable authoritative fonts; a typography hierarchy by role (hero stat, section label, body); no more than three accent colors with the primary accent named on one element. Close with these Do NOT lines: no light or pastel colors; no more than three accent colors; no decorative dividers/textures/ornaments; no photo placeholder; do not crowd sections (whitespace is part of the design); no decorative or display fonts.
 
-SHORT VIDEO PROMPT (NotebookLM Custom Topic field, Short format) must include: an anchor statement (candidate, story perspective, the single fact the video delivers); a four-beat visual sequence in order (hook stat, first proof point, second proof point, closing frame); a closing pitch opened with "End with a direct closing pitch in this exact sequence:" naming the situation, 2-3 rapid proof facts, and a final frame with full name, target role, and "Learn more about [candidate first name] at roleboost.app", then "Do not soften this. The closing frame is the last thing the hiring manager sees." Close with the full Do NOT list: no casual/consumer/lifestyle visuals; no distracting animated text; do not crowd the screen; no generic office/handshake stock footage; no competing music; no light/pastel treatments; no photo placeholder; do not run longer than 60 seconds; do not use "passionate," "journey," or "innovative."
+SHORT VIDEO PROMPT (NotebookLM Custom Topic field, Short format) must include: an anchor statement (candidate, story perspective, the single fact the video delivers); a four-beat visual sequence in order (hook stat, first proof point, second proof point, closing frame); a closing pitch opened with "End with a direct closing pitch in this exact sequence:" naming the situation, 2-3 rapid proof facts, and a final frame with full name, target role, and "Learn more about [candidate first name] at identiboost.com", then "Do not soften this. The closing frame is the last thing the hiring manager sees." Close with the full Do NOT list: no casual/consumer/lifestyle visuals; no distracting animated text; do not crowd the screen; no generic office/handshake stock footage; no competing music; no light/pastel treatments; no photo placeholder; do not run longer than 60 seconds; do not use "passionate," "journey," or "innovative."
 
 Global rules:
 - Every claim must trace to the supplied Section 1 / résumé material. Never invent facts.
@@ -367,7 +367,7 @@ export function renderAssetPackageMarkdown(
   const id = pkg.identity;
 
   const header = [
-    '# RoleBoost -- Candidate Asset Package',
+    '# IdentiBoost -- Candidate Asset Package',
     `Candidate: ${fullName}`,
     `Slug: ${id.slug}`,
     `Date: ${date}`,
@@ -386,7 +386,7 @@ export function renderAssetPackageMarkdown(
     '',
     `**Name:** ${id.name}`,
     `**Slug:** ${id.slug}`,
-    `**Public URL:** roleboost.app/c/${id.slug}`,
+    `**Public URL:** identiboost.com/i/${id.slug}`,
     `**Location:** ${id.location}`,
     `**Target role:** ${id.target_role}`,
     `**Headline:** ${id.headline}`,
@@ -438,7 +438,7 @@ export function renderAssetPackageMarkdown(
     '',
     '---',
     '',
-    `*RoleBoost Candidate Asset Package -- ${id.slug} -- ${date} -- roleboost.app*`,
+    `*IdentiBoost Candidate Asset Package -- ${id.slug} -- ${date} -- identiboost.com*`,
     '',
   ];
 

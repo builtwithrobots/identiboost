@@ -11,7 +11,7 @@ import type {
   IntakeDocument,
 } from '@/lib/types';
 
-// Runs the RoleBoost Candidate Asset Production Skill (Section 1 -- the Narrative
+// Runs the IdentiBoost Candidate Asset Production Skill (Section 1 -- the Narrative
 // Guide Block only; the NotebookLM prompt sets in Section 2 are intentionally
 // omitted here). Reads the candidate's résumé + career sources, applies the AI
 // Mirror, selects a story type, and produces TWO distinct narrative angles plus a
@@ -131,7 +131,7 @@ const SUBMIT_SCHEMA = {
   additionalProperties: false,
 };
 
-const SYSTEM = `You are running the RoleBoost Candidate Asset Production Skill (the career-context document portion only). You are given a candidate's résumé and any supporting career sources about the same person. Produce the narrative foundation for their career-context document.
+const SYSTEM = `You are running the IdentiBoost Candidate Asset Production Skill (the career-context document portion only). You are given a candidate's résumé and any supporting career sources about the same person. Produce the narrative foundation for their career-context document.
 
 Workflow:
 1. Read everything in full.

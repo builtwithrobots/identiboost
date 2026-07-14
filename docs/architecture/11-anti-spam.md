@@ -1,6 +1,6 @@
 # 11 · Anti-Spam & Abuse Control
 
-The public chatbot (`/c/[slug]` → `/api/chat`) is open to anonymous recruiters,
+The public chatbot (`/i/[slug]` → `/api/chat`) is open to anonymous recruiters,
 which makes it an abuse surface: each message triggers up to three Anthropic
 calls, and each conversation can email the candidate. Three layers protect it,
 all low-friction for real recruiters and all fail-open so an infra blip or
@@ -73,7 +73,7 @@ that pattern ever appears).
 
 The hard interaction caps are the abuse backstop; the meeting nudge is the
 low-friction ceiling that real recruiters actually hit first. It reframes "stop
-spending tokens" as "book a meeting," which is what RoleBoost wants anyway.
+spending tokens" as "book a meeting," which is what IdentiBoost wants anyway.
 
 - **Trigger:** `/api/chat` counts completed exchanges from the server-rebuilt
   history. Once past `NUDGE_AFTER_EXCHANGES` (3), it passes

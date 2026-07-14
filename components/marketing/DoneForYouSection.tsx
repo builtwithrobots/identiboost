@@ -24,7 +24,7 @@ const packages = [
   {
     name: 'Elite',
     price: '$397',
-    included: 'Everything + 30 min career interview + AI chatbot setup',
+    included: 'Everything + 30 min deep-dive interview + AI chatbot setup',
   },
 ]
 
@@ -56,9 +56,9 @@ export default function DoneForYouSection() {
             Want us to build it for you?
           </h2>
           <p className="font-inter text-lg text-gray-600 leading-relaxed">
-            Not ready to DIY? We build RoleBoost profiles for candidates directly, the same way we
-            built our own. Specialized in operations, logistics, and warehouse leadership. Available
-            through Fiverr or direct.
+            Not ready to DIY? We build IdentiBoost profiles for professionals directly, the same way
+            we built our own. Specialized in operations, logistics, and warehouse leadership.
+            Available through Fiverr or direct.
           </p>
         </motion.div>
 

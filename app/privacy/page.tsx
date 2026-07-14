@@ -5,13 +5,13 @@ import Footer from '@/components/marketing/Footer'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How RoleBoost collects, uses, and protects your information. We never sell your data, the AI never trains on it, and you can export or delete it anytime.',
+    'How IdentiBoost collects, uses, and protects your information. We never sell your data, the AI never trains on it, and you can export or delete it anytime.',
   alternates: { canonical: '/privacy' },
-  openGraph: { url: '/privacy', title: 'Privacy Policy | RoleBoost' },
+  openGraph: { url: '/privacy', title: 'Privacy Policy | IdentiBoost' },
 }
 
-const EFFECTIVE_DATE = 'July 9, 2026'
-const CONTACT_EMAIL = 'privacy@roleboost.app'
+const EFFECTIVE_DATE = 'July 14, 2026'
+const CONTACT_EMAIL = 'privacy@identiboost.com'
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
@@ -60,26 +60,26 @@ export default function PrivacyPage() {
           </div>
 
           <p className="mt-8 font-inter text-[15px] leading-relaxed text-gray-700">
-            This policy explains what RoleBoost (&ldquo;RoleBoost&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
-            collects, how we use it, and the choices you have. It covers candidates who build a profile,
-            employers and recruiters who use the platform, and visitors who chat with a candidate&rsquo;s
-            assistant. By using RoleBoost you agree to this policy.
+            This policy explains what IdentiBoost (&ldquo;IdentiBoost&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;)
+            collects, how we use it, and the choices you have. It covers professionals who build a profile,
+            businesses and contacts who use the platform, and visitors who chat with a professional&rsquo;s
+            assistant. By using IdentiBoost you agree to this policy.
           </p>
 
           <Section id="collect" title="Information we collect">
-            <p>We collect only what we need to build and run your career profile and AI:</p>
+            <p>We collect only what we need to build and run your professional profile and AI:</p>
             <ul className="ml-5 list-disc space-y-2">
               <li>
                 <strong>Account information</strong>, such as your name and email, handled through our
                 authentication provider when you sign up.
               </li>
               <li>
-                <strong>Career materials you give us</strong>, such as your resume, career context,
+                <strong>Professional materials you give us</strong>, such as your resume, professional context,
                 recommendations, custom answers, and any audio, video, images, or documents you upload
                 to your profile.
               </li>
               <li>
-                <strong>Conversations</strong> between recruiters and your assistant, which we log so we
+                <strong>Conversations</strong> between your contacts and your assistant, which we log so we
                 can email a transcript to both sides and help you improve your assistant over time.
               </li>
               <li>
@@ -95,25 +95,25 @@ export default function PrivacyPage() {
 
           <Section id="use" title="How we use your information">
             <ul className="ml-5 list-disc space-y-2">
-              <li>To build your profile, generate your Boosts, and run your personal career AI.</li>
-              <li>To deliver conversation transcripts to you and to the recruiters you speak with.</li>
+              <li>To build your profile, generate your Boosts, and run your personal AI.</li>
+              <li>To deliver conversation transcripts to you and to the contacts you speak with.</li>
               <li>To communicate with you about your account and the service.</li>
               <li>
-                To improve RoleBoost using only generic, aggregated patterns, never the content of your
-                career materials or conversations.
+                To improve IdentiBoost using only generic, aggregated patterns, never the content of your
+                professional materials or conversations.
               </li>
               <li>To keep the platform secure and to prevent abuse and spam.</li>
             </ul>
             <p>
               We do not sell your information, and we do not use it for third-party advertising. We do
-              not mine your career materials or conversations for any purpose beyond providing the
+              not mine your professional materials or conversations for any purpose beyond providing the
               service to you.
             </p>
           </Section>
 
           <Section id="assistant" title="Your AI assistant, and how it stays honest">
             <p>
-              You train your assistant from your own information: your resume, career context,
+              You train your assistant from your own information: your resume, professional context,
               recommendations, and the answers you refine. Your assistant answers{' '}
               <strong>only</strong> from what you have provided.
             </p>
@@ -121,19 +121,19 @@ export default function PrivacyPage() {
               Guardrails are built in to prevent the assistant from making things up. It is restricted
               to what you have verified through your training input and uploads, and when a question
               cannot be answered from your information, it says so honestly and offers to connect the
-              recruiter with you directly rather than guessing.
+              contact with you directly rather than guessing.
             </p>
           </Section>
 
-          <Section id="recruiters" title="Recruiters and visitors">
+          <Section id="recruiters" title="Contacts and visitors">
             <p>
-              When someone chats with a candidate&rsquo;s assistant, we log the conversation so we can
-              email a transcript to both the visitor and the candidate. A visitor may optionally share
-              their name, company, and email so the candidate knows who reached out and can follow up;
+              When someone chats with a professional&rsquo;s assistant, we log the conversation so we can
+              email a transcript to both the visitor and the professional. A visitor may optionally share
+              their name, company, and email so the professional knows who reached out and can follow up;
               this is never required to use the assistant.
             </p>
             <p>
-              To protect candidates from abuse, the public assistant is rate-limited and screened for
+              To protect professionals from abuse, the public assistant is rate-limited and screened for
               automated traffic. We do not build advertising profiles of visitors.
             </p>
           </Section>
@@ -141,7 +141,7 @@ export default function PrivacyPage() {
           <Section id="sharing" title="How we share information">
             <p>
               We never sell your data. We share it only with a short list of trusted service providers
-              (&ldquo;sub-processors&rdquo;) that we rely on to run RoleBoost. They process your data
+              (&ldquo;sub-processors&rdquo;) that we rely on to run IdentiBoost. They process your data
               only on our instructions, only to provide their part of the service, and never for their
               own purposes:
             </p>
@@ -186,7 +186,7 @@ export default function PrivacyPage() {
                 database level with Row-Level Security, so one user can never see another&rsquo;s data.
               </li>
               <li>
-                <strong>Encryption in transit</strong> for data moving between you and RoleBoost.
+                <strong>Encryption in transit</strong> for data moving between you and IdentiBoost.
               </li>
               <li>
                 <strong>Private storage.</strong> Your uploaded files are stored privately and served
@@ -229,7 +229,7 @@ export default function PrivacyPage() {
                 including your media, at any time.
               </li>
               <li>
-                <strong>Correct or update</strong> your profile and career information.
+                <strong>Correct or update</strong> your profile and professional information.
               </li>
               <li>
                 <strong>Delete</strong> your data, or your entire account, permanently.
@@ -262,7 +262,7 @@ export default function PrivacyPage() {
 
           <Section id="children" title="Children">
             <p>
-              RoleBoost is intended for working professionals and is not directed to anyone under 16. We
+              IdentiBoost is intended for working professionals and is not directed to anyone under 16. We
               do not knowingly collect information from children. If you believe a child has provided us
               information, contact us and we will delete it.
             </p>
@@ -270,8 +270,8 @@ export default function PrivacyPage() {
 
           <Section id="international" title="International users">
             <p>
-              RoleBoost is operated from the United States, and your information may be processed there
-              and in the regions where our service providers operate. By using RoleBoost, you understand
+              IdentiBoost is operated from the United States, and your information may be processed there
+              and in the regions where our service providers operate. By using IdentiBoost, you understand
               your information may be transferred to and processed in these locations.
             </p>
           </Section>
@@ -279,7 +279,7 @@ export default function PrivacyPage() {
           <Section id="changes" title="Changes to this policy">
             <p>
               We may update this policy from time to time. When we make material changes, we will update
-              the date above and, where appropriate, let you know. Your continued use of RoleBoost after
+              the date above and, where appropriate, let you know. Your continued use of IdentiBoost after
               an update means you accept the revised policy.
             </p>
           </Section>

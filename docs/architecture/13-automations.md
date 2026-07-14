@@ -1,6 +1,6 @@
 # 13, Automations & Scheduled Jobs
 
-> How RoleBoost runs work on a clock and enforces quality automatically:
+> How IdentiBoost runs work on a clock and enforces quality automatically:
 > Vercel Cron jobs, GitHub CI, dependency + security scanning, and the local
 > typecheck hook. Code is the source of truth; this doc explains the wiring.
 
@@ -110,4 +110,4 @@ No new variables. The jobs use existing ones:
 - `RESEND_API_KEY`: the reminder and digest jobs no-op when email is unconfigured
   (`isEmailConfigured()`).
 - `NEXT_PUBLIC_APP_URL`: absolute links in the emails (falls back to
-  `https://roleboost.app`).
+  `https://identiboost.com`).

@@ -31,7 +31,7 @@ export default function FinalCTA() {
             transition={{ delay: prefersReduced ? 0 : 0.15 }}
             className="font-inter text-lg text-blue-200 leading-relaxed mb-10"
           >
-            Join RoleBoost free. Build your profile in under an hour. Share one link that gives
+            Join IdentiBoost free. Build your profile in under an hour. Share one link that gives
             hiring managers everything they need.
           </motion.p>
 

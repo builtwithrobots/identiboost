@@ -1,6 +1,6 @@
 // lib/motion-dashboard.ts
 // v1.0.0
-// Framer Motion variants for the RoleBoost dashboard shell and content components.
+// Framer Motion variants for the IdentiBoost dashboard shell and content components.
 // Separate from lib/motion.ts (marketing page variants) -- do not merge.
 // All variants respect prefers-reduced-motion via useReducedMotion() at the call site.
 

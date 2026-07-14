@@ -63,7 +63,7 @@ function BadgeSVG({ fullName, headline }: { fullName: string; headline: string }
   const displayName = fullName || 'Your Name';
   const displayRole = headline
     ? headline.slice(0, 60) + (headline.length > 60 ? '…' : '')
-    : 'Career Professional';
+    : 'Professional';
 
   return (
     <svg
@@ -72,7 +72,7 @@ function BadgeSVG({ fullName, headline }: { fullName: string; headline: string }
       height="80"
       viewBox="0 0 320 80"
       role="img"
-      aria-label="RoleBoost profile badge"
+      aria-label="IdentiBoost profile badge"
     >
       <defs>
         <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
@@ -81,9 +81,9 @@ function BadgeSVG({ fullName, headline }: { fullName: string; headline: string }
         </linearGradient>
       </defs>
       <rect width="320" height="80" rx="12" fill="url(#bg)" />
-      {/* RoleBoost wordmark */}
+      {/* IdentiBoost wordmark */}
       <text x="16" y="22" fontFamily="system-ui, sans-serif" fontSize="10" fontWeight="700" fill="rgba(255,255,255,0.65)" letterSpacing="1">
-        ROLEBOOST
+        IDENTIBOOST
       </text>
       {/* Name */}
       <text x="16" y="44" fontFamily="system-ui, sans-serif" fontSize="16" fontWeight="700" fill="white">
@@ -104,13 +104,13 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
   const [qrSize, setQrSize] = useState<200 | 300 | 400>(200);
   const linkCopy = useCopy(profileUrl);
 
-  const embedCode = `<a href="${profileUrl}"><img src="https://roleboost.app/api/badge/${slug}" alt="${fullName} on RoleBoost" width="320" height="80" /></a>`;
+  const embedCode = `<a href="${profileUrl}"><img src="https://identiboost.com/api/badge/${slug}" alt="${fullName} on IdentiBoost" width="320" height="80" /></a>`;
   const embedCopy = useCopy(embedCode);
 
   const downloadQR = () => {
     const link = document.createElement('a');
     link.href = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}x${qrSize}&data=${encodeURIComponent(profileUrl)}&margin=2&format=png`;
-    link.download = `roleboost-qr-${slug}.png`;
+    link.download = `identiboost-qr-${slug}.png`;
     link.click();
   };
 
@@ -128,21 +128,21 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
         <div className="rb-card p-6">
           <h2 className="text-sm font-semibold text-[var(--rb-text)] mb-1">Your Profile Link</h2>
           <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-            Share this link with recruiters and hiring managers.
+            Share this link with anyone who should know you.
           </p>
 
           {!isPublished && (
             <div className="flex items-center gap-2 rounded-[var(--radius-md)] bg-[var(--color-warning-bg)] border border-amber-200 px-3 py-2 mb-4">
               <EyeOff className="size-3.5 shrink-0 text-[var(--color-warning)]" />
               <span className="text-xs text-[var(--color-warning)] font-medium">
-                Your profile is a draft. Publish it so employers can view this link.
+                Your profile is a draft. Publish it so your contacts can view this link.
               </span>
             </div>
           )}
 
           <div className="flex items-center gap-2">
             <div className="flex-1 min-w-0 rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface-raised)] px-3 py-2 text-sm text-[var(--rb-text-secondary)] font-data truncate">
-              roleboost.app/c/{slug}
+              identiboost.com/i/{slug}
             </div>
             <button
               onClick={linkCopy.copy}
@@ -153,8 +153,8 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
             </button>
             <ShareButton
               url={profileUrl}
-              title={`${fullName} on RoleBoost`}
-              text={`Chat with ${fullName}'s career AI`}
+              title={`${fullName} on IdentiBoost`}
+              text={`Ask ${fullName}'s AI anything`}
               className="shrink-0 inline-flex items-center gap-1.5 rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-3 py-2 text-xs font-semibold text-[var(--rb-text-secondary)] hover:border-[var(--rb-brand)] hover:text-[var(--rb-text)] transition-colors duration-[var(--duration-fast)]"
             />
           </div>
@@ -177,7 +177,7 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
         <div className="rb-card p-6">
           <h2 className="text-sm font-semibold text-[var(--rb-text)] mb-1">QR Code</h2>
           <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-            Add to your resume or email signature. Scan to open your profile.
+            Add to your business card or email signature. Scan to open your profile.
           </p>
 
           <div className="flex flex-col items-center gap-4">
@@ -216,7 +216,7 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
         <div className="md:col-span-2 rb-card p-6">
           <h2 className="text-sm font-semibold text-[var(--rb-text)] mb-1">Digital Badge</h2>
           <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-            Add to your LinkedIn profile, email signature, or portfolio. Links directly to your RoleBoost profile.
+            Add to your LinkedIn profile, email signature, or portfolio. Links directly to your IdentiBoost profile.
           </p>
 
           <div className="flex flex-col lg:flex-row gap-6 items-start">
@@ -234,7 +234,7 @@ export default function ShareHub({ profileUrl, slug, fullName, headline, isPubli
                   <li>Download the badge image below</li>
                   <li>Go to LinkedIn → Me → Edit Profile</li>
                   <li>Add the image to your Featured section</li>
-                  <li>Set the link to your RoleBoost profile URL</li>
+                  <li>Set the link to your IdentiBoost profile URL</li>
                 </ol>
               </div>
 

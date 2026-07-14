@@ -1,9 +1,9 @@
-# RoleBoost -- Supporting Market Research
+# IdentiBoost -- Supporting Market Research
 **Version:** 1.2
 **Date:** June 2026
-**Purpose:** Evidence base for RoleBoost product, vision, and investor conversations
+**Purpose:** Evidence base for IdentiBoost product, vision, and investor conversations
 
-This document compiles supporting market research for every major claim in the RoleBoost vision and PRD. Organized by theme. Each claim is followed by the supporting data, source, and direct link.
+This document compiles supporting market research for every major claim in the IdentiBoost vision and PRD. Organized by theme. Each claim is followed by the supporting data, source, and direct link.
 
 **Version 1.2 update:** Sections 10, 12, and 13 updated and added to reflect the product pivot -- the candidate AI brain is the flagship product. The asset suite (audio, infographic, slide deck, resume) is value-added. The market research supporting this framing is documented in the new sections below.
 
@@ -20,7 +20,7 @@ This document compiles supporting market research for every major claim in the R
 7. Candidate Distrust of AI Screening
 8. Skills-Based Hiring Shift
 9. The Resume as a Broken Tool
-10. The RoleBoost Opportunity Gap (updated v1.2)
+10. The IdentiBoost Opportunity Gap (updated v1.2)
 11. Employment Gaps and RIF Explanations -- What the Research Says
 12. The Candidate-Owned AI Chatbot Gap (new v1.2)
 13. Recruiter and Candidate Screening Call Fatigue (new v1.2)
@@ -91,7 +91,7 @@ URL: https://onehour.digital/blog/recruiter-screening-behavior-statistics
 
 **Claim: LinkedIn sees 11,000 applications submitted every minute.**
 
-Source: LinkedIn platform data, widely cited across multiple HR industry reports including MSH Candidate Experience Statistics 2026 and RoleBoost vision document.
+Source: LinkedIn platform data, widely cited across multiple HR industry reports including MSH Candidate Experience Statistics 2026 and IdentiBoost vision document.
 
 ---
 
@@ -463,7 +463,7 @@ URL: https://www.demandsage.com/ai-recruitment-statistics/
 
 **Claim: All employer-side AI hiring technology has been built for employers -- not for candidates.**
 
-This is the RoleBoost insight. The data above shows near-universal employer adoption of AI screening tools, while candidate-facing AI tools remain limited to resume polishing (which creates the arms race described in Section 4). No platform has productized a candidate-owned career AI that arms the candidate before the employer screening process begins.
+This is the IdentiBoost insight. The data above shows near-universal employer adoption of AI screening tools, while candidate-facing AI tools remain limited to resume polishing (which creates the arms race described in Section 4). No platform has productized a candidate-owned career AI that arms the candidate before the employer screening process begins.
 
 ---
 
@@ -574,7 +574,7 @@ URL: https://resumeoptimizerpro.com/blog/best-ats-friendly-resume-templates-2026
 
 **Claim: The resume was never designed to represent a three-dimensional human being.**
 
-This is the RoleBoost thesis, supported by the structural evidence above: a flat text document evaluated in 11.2 seconds by a recruiter and filtered by keyword-matching software is not a hiring system designed for accuracy. It is a system designed for volume reduction.
+This is the IdentiBoost thesis, supported by the structural evidence above: a flat text document evaluated in 11.2 seconds by a recruiter and filtered by keyword-matching software is not a hiring system designed for accuracy. It is a system designed for volume reduction.
 
 ---
 
@@ -604,17 +604,17 @@ Source: Multiple HR industry reports. Phone screening time-per-candidate of 20-3
 
 ---
 
-## 10. The RoleBoost Opportunity Gap (updated v1.2)
+## 10. The IdentiBoost Opportunity Gap (updated v1.2)
 
 **The candidate AI brain is the flagship. The asset suite is value-added. No commercial product exists in this lane.**
 
 ---
 
-**Claim: The entire recruiting AI market has been built for employers. RoleBoost is the first platform built from the candidate's side.**
+**Claim: The entire recruiting AI market has been built for employers. IdentiBoost is the first platform built from the candidate's side.**
 
 Supporting evidence: Every AI recruitment statistic in Section 6 describes employer-facing tools -- resume screening, candidate ranking, scheduling automation, video interview analysis. The candidate's experience of these tools is to be filtered, ranked, and rejected at speed. No platform has productized a candidate-owned AI that represents the candidate to employers and gets smarter with each recruiter interaction.
 
-The market gap is not a gap in resume tools -- Jobscan, Teal, Rezi, Kickresume, and dozens of others compete in that lane. The gap is in candidate representation after interest exists. Once a recruiter finds a candidate, nothing currently exists to bridge the gap between "interested" and "ready to schedule a call" except email back and forth that takes days. RoleBoost puts a live AI in that gap, available instantly, delivering a full transcript to both sides.
+The market gap is not a gap in resume tools -- Jobscan, Teal, Rezi, Kickresume, and dozens of others compete in that lane. The gap is in candidate representation after interest exists. Once a recruiter finds a candidate, nothing currently exists to bridge the gap between "interested" and "ready to schedule a call" except email back and forth that takes days. IdentiBoost puts a live AI in that gap, available instantly, delivering a full transcript to both sides.
 
 ---
 
@@ -632,7 +632,7 @@ None of the asset suite items are the product. They are all reasons the product 
 
 ---
 
-**Claim: Every existing candidate tool stops at the document. RoleBoost starts where they stop.**
+**Claim: Every existing candidate tool stops at the document. IdentiBoost starts where they stop.**
 
 The competitive landscape as of June 2026:
 
@@ -644,7 +644,7 @@ The competitive landscape as of June 2026:
 - Eightfold/HiredScore (employer-owned): AI ranking systems that score candidates against employer criteria. No candidate control.
 - DIY chatbots (Curry/Patil): individual developers who built personal chatbots for themselves. Not available to non-technical candidates. Not a product.
 
-RoleBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.
+IdentiBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.
 
 ---
 
@@ -661,7 +661,7 @@ The transcript loop -- delivering full AI chat transcripts to both sides after e
 Source: CareerKit (citing Harvard/Accenture Hidden Workers report)
 URL: https://www.careerkit.me/blog/how-to-create-an-ats-friendly-resume-pass-every-scanner-in-2026
 
-These are precisely the candidate profiles RoleBoost's eight example personas represent: Jordan Mills (no degree), Ray Castillo (trades, thin resume), Tanya Patel (career pivot), Marcus Webb (no degree, floor-to-manager), Claire Hutchins (caregiving gap), Ryan Kowalski (layoff/RIF). Every one of them is disproportionately harmed by ATS keyword filters -- and every one of them has a story that cannot be told in a document but can be told by an AI that knows them.
+These are precisely the candidate profiles IdentiBoost's eight example personas represent: Jordan Mills (no degree), Ray Castillo (trades, thin resume), Tanya Patel (career pivot), Marcus Webb (no degree, floor-to-manager), Claire Hutchins (caregiving gap), Ryan Kowalski (layoff/RIF). Every one of them is disproportionately harmed by ATS keyword filters -- and every one of them has a story that cannot be told in a document but can be told by an AI that knows them.
 
 ---
 
@@ -669,7 +669,7 @@ These are precisely the candidate profiles RoleBoost's eight example personas re
 
 ## 11. Employment Gaps and RIF Explanations -- What the Research Says
 
-**The old rule was to hide gaps. The research in 2026 says the opposite -- but with important nuance depending on gap length and cause. This directly informs the Resume Intelligence feature and the resume formatting decisions across the RoleBoost example personas.**
+**The old rule was to hide gaps. The research in 2026 says the opposite -- but with important nuance depending on gap length and cause. This directly informs the Resume Intelligence feature and the resume formatting decisions across the IdentiBoost example personas.**
 
 ---
 
@@ -767,14 +767,14 @@ URL: https://www.resumeadapter.com/post-layoff-resume/employment-gap
 
 ---
 
-**How this applies to RoleBoost example personas:**
+**How this applies to IdentiBoost example personas:**
 
 | Persona | Gap Type | Gap Length | Resume Treatment | AI Chatbot Role |
 |---|---|---|---|---|
 | Ryan Kowalski | RIF / layoff | 4 months | Year-only dates; one neutral sentence in summary | Handles the full story in recruiter's voice before the call |
 | Claire Hutchins | Caregiving | 20 months | Explicit labeled "Career Pause" entry with dates in experience section | Addresses the gap with context, what she maintained, why it does not diminish her record |
 
-**The key insight for RoleBoost:** The resume handles the structural requirement of acknowledging the gap. The AI chatbot handles the human story behind it. These are two different jobs, and trying to do both on the resume creates an over-explained document. The correct split is: resume acknowledges, AI contextualizes.
+**The key insight for IdentiBoost:** The resume handles the structural requirement of acknowledging the gap. The AI chatbot handles the human story behind it. These are two different jobs, and trying to do both on the resume creates an over-explained document. The correct split is: resume acknowledges, AI contextualizes.
 
 ---
 
@@ -804,7 +804,7 @@ These two examples are the entire commercial landscape for candidate-owned AI ch
 Source: CNBC, Job seekers are building their own AI to talk to recruiters for them, 2025
 URL: https://www.cnbc.com/2025/04/15/job-seekers-are-building-their-own-ai-to-talk-to-recruiters.html
 
-This framing validates the RoleBoost product thesis: the employer side has deployed AI to screen candidates at scale. The candidate side has nothing equivalent. RoleBoost is the first platform to give non-technical candidates a personal AI that operates at the same level.
+This framing validates the IdentiBoost product thesis: the employer side has deployed AI to screen candidates at scale. The candidate side has nothing equivalent. IdentiBoost is the first platform to give non-technical candidates a personal AI that operates at the same level.
 
 ---
 
@@ -819,11 +819,11 @@ The billion-dollar acquisition confirms that conversational AI in hiring is not 
 
 ---
 
-**Claim: The DIY candidate chatbots are version 0.1 -- FAQ bots that answer basic background questions. RoleBoost's brain is structurally different.**
+**Claim: The DIY candidate chatbots are version 0.1 -- FAQ bots that answer basic background questions. IdentiBoost's brain is structurally different.**
 
 The Curry and Patil chatbots pull from a resume and LinkedIn profile and answer basic questions -- "where did you work," "what are your skills." They cannot handle the hard questions that actually determine hiring outcomes: "why did you leave," "walk me through that gap," "what actually happened at your last company," "what are you not good at."
 
-RoleBoost's brain is built from three layers of verified context that no resume-scraping chatbot can access:
+IdentiBoost's brain is built from three layers of verified context that no resume-scraping chatbot can access:
 
 - Cross-document analysis across all uploaded career materials
 - A 2 to 3 pass AI intake interview that probes specifically what the candidate's documents revealed -- including gaps, inconsistencies, and thin areas
@@ -860,7 +860,7 @@ The sequence is precise:
 4. Candidates are more exhausted and more invisible than at any prior point in the data.
 5. No tool exists to arm the candidate with verified, accurate representation before the screening call.
 
-RoleBoost enters at the exact moment this problem is at peak severity and peak visibility. The employer side created the conditions. The candidate side has no solution. That is the market.
+IdentiBoost enters at the exact moment this problem is at peak severity and peak visibility. The employer side created the conditions. The candidate side has no solution. That is the market.
 
 ---
 
@@ -868,7 +868,7 @@ RoleBoost enters at the exact moment this problem is at peak severity and peak v
 
 ## 13. Recruiter and Candidate Screening Call Fatigue (new v1.2)
 
-**The screening call is the most expensive, most time-consuming, and most frustrating step in hiring for both sides. It is also the step RoleBoost eliminates or dramatically compresses.**
+**The screening call is the most expensive, most time-consuming, and most frustrating step in hiring for both sides. It is also the step IdentiBoost eliminates or dramatically compresses.**
 
 ---
 
@@ -878,7 +878,7 @@ Source: Multiple HR industry reports. Phone screening time-per-candidate of 20 t
 
 At 250 applications per role and a 3% interview rate, a recruiter conducts roughly 7 to 8 screening calls per open role. At 30 minutes each, that is 3.5 to 4 hours of screening calls per role before a single first-round interview is scheduled. For a recruiter managing 10 open roles simultaneously -- common at scale -- that is 35 to 40 hours per month in screening calls alone.
 
-RoleBoost replaces the information-gathering portion of that call with an AI conversation the recruiter can conduct asynchronously, at any time, in 5 to 10 minutes. The screening call that does happen is a confirmation conversation, not an information-gathering one. That is a structural time savings.
+IdentiBoost replaces the information-gathering portion of that call with an AI conversation the recruiter can conduct asynchronously, at any time, in 5 to 10 minutes. The screening call that does happen is a confirmation conversation, not an information-gathering one. That is a structural time savings.
 
 ---
 
@@ -886,7 +886,7 @@ RoleBoost replaces the information-gathering portion of that call with an AI con
 
 Source: Greenhouse Recruiting Benchmarks Report 2025, citing median time-to-first-interview across 4,000+ companies.
 
-This delay -- caused by email tag, calendar coordination, and timezone friction -- is where candidate interest fades and recruiter pipelines stall. RoleBoost eliminates it entirely. A recruiter who lands on a candidate profile at 10pm can interrogate the AI, get a full transcript, and have everything they need to make a scheduling decision before the candidate even knows they visited.
+This delay -- caused by email tag, calendar coordination, and timezone friction -- is where candidate interest fades and recruiter pipelines stall. IdentiBoost eliminates it entirely. A recruiter who lands on a candidate profile at 10pm can interrogate the AI, get a full transcript, and have everything they need to make a scheduling decision before the candidate even knows they visited.
 
 ---
 
@@ -908,7 +908,7 @@ At 30 to 40 open roles, even a 10-minute AI conversation per candidate -- replac
 Source: MSH / Candidate Experience Statistics 2026 (citing Greenhouse)
 URL: https://www.talentmsh.com/insights/candidate-experience-statistics
 
-The ghosting epidemic is not primarily a cultural failure -- it is a bandwidth failure. Recruiters managing 30 to 40 requisitions cannot maintain personalized communication across hundreds of candidates per role. RoleBoost's transcript delivery automates the communication loop: the recruiter does not need to follow up manually because both sides received the transcript automatically. That closes the communication gap without adding recruiter workload.
+The ghosting epidemic is not primarily a cultural failure -- it is a bandwidth failure. Recruiters managing 30 to 40 requisitions cannot maintain personalized communication across hundreds of candidates per role. IdentiBoost's transcript delivery automates the communication loop: the recruiter does not need to follow up manually because both sides received the transcript automatically. That closes the communication gap without adding recruiter workload.
 
 ---
 
@@ -919,7 +919,7 @@ The ghosting epidemic is not primarily a cultural failure -- it is a bandwidth f
 Source: Paradox, The Candidate Experience Report 2025
 URL: https://www.paradox.ai/resources/candidate-experience-report
 
-RoleBoost removes scheduling from the information-gathering phase entirely. The recruiter gets the information they need without scheduling anything. Scheduling only happens when both sides are ready to move forward -- which is a fundamentally different and more efficient trigger than "let us schedule a call to find out if this candidate is worth a follow-up call."
+IdentiBoost removes scheduling from the information-gathering phase entirely. The recruiter gets the information they need without scheduling anything. Scheduling only happens when both sides are ready to move forward -- which is a fundamentally different and more efficient trigger than "let us schedule a call to find out if this candidate is worth a follow-up call."
 
 ---
 
@@ -998,5 +998,5 @@ A candidate AI that a recruiter can interrogate at any hour, get a full transcri
 
 ---
 
-*Document version 1.2 -- RoleBoost -- roleboost.app -- Built by Rob Ramos*
+*Document version 1.2 -- IdentiBoost -- identiboost.com -- Built by Rob Ramos*
 *Research compiled June 2026 | Updated June 2026 -- v1.2: Section 10 updated, Sections 12 and 13 added to reflect AI brain as flagship product*

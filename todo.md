@@ -1,4 +1,4 @@
-# RoleBoost TODO: complete the recruiter conversation loop
+# IdentiBoost TODO: complete the recruiter conversation loop
 
 Build plan from the flagship review (the recruiter-facing personal career AI).
 The brain itself is well aligned with the vision; this list closes the conversion
@@ -151,8 +151,8 @@ The SEO foundation is shipped in code (site metadata + title template, `robots.t
 JSON-LD, canonical URLs). Candidate calling cards are `noindex` by default, with a
 per-candidate "Discoverable in search" opt-in in Settings. Remaining manual steps:
 
-- [x] Set `NEXT_PUBLIC_APP_URL=https://roleboost.app` in the Vercel production env.
-- [ ] Submit `https://roleboost.app/sitemap.xml` in **Google Search Console** (and
+- [x] Set `NEXT_PUBLIC_APP_URL=https://identiboost.com` in the Vercel production env.
+- [ ] Submit `https://identiboost.com/sitemap.xml` in **Google Search Console** (and
       **Bing Webmaster Tools**). Then use Search Console's URL Inspection to request
       indexing of `/` and `/boosts` so they are picked up quickly.
 - [ ] After a candidate opts into discovery, their `/c/<slug>` becomes indexable and
@@ -168,10 +168,10 @@ they are drafts, not legal advice. Before relying on them publicly:
 
 - [ ] Have a lawyer review both `/privacy` and `/terms` (confirm GDPR / CCPA-CPRA
       coverage for your user base).
-- [ ] Confirm the contact addresses forward to a real inbox: `privacy@roleboost.app`
-      and `legal@roleboost.app`.
+- [ ] Confirm the contact addresses forward to a real inbox: `privacy@identiboost.com`
+      and `legal@identiboost.com`.
 - [ ] Fill in specifics in Terms: your governing-law **state** (currently "the state in
-      which RoleBoost is established") and your formal **legal entity** name.
+      which IdentiBoost is established") and your formal **legal entity** name.
 - [ ] Confirm the defaults suit you: liability cap (greater of 12-month fees or $100)
       and the no-refund-by-default clause.
 - [ ] Keep both pages' "Last updated" date current whenever the policy/terms change.

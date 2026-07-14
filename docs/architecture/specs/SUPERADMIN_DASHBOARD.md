@@ -1,6 +1,6 @@
 # Super Admin Dashboard, Build Plan & Checklist
 
-> Owner control center for RoleBoost. Tracks platform health, growth, engagement,
+> Owner control center for IdentiBoost. Tracks platform health, growth, engagement,
 > revenue, and operations, and surfaces silent failures before they cost you users.
 > Gated by `users.is_admin = TRUE`. All reads via the service-role admin client.
 

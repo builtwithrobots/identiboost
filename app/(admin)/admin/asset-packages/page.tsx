@@ -66,7 +66,7 @@ export default async function AdminAssetPackagesPage() {
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Asset Packages"
-        description="Produce a done-for-you Asset Package for a candidate: pick them (or paste a résumé for an off-platform order), enter the target role and job description, generate, and deliver the file."
+        description="Produce a done-for-you Asset Package for a professional: pick them (or paste a résumé for an off-platform order), enter the target role and job description, generate, and deliver the file."
       />
       <div className="mx-auto max-w-6xl px-6 py-8">
         <AdminAssetPackageTool candidates={candidates} />

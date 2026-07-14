@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════════════════════════════════
-   ROLEBOOST DESIGN SYSTEM
+   IDENTIBOOST DESIGN SYSTEM
    Style: Enterprise SaaS - Linear × Notion × Spotify
    Stack: Next.js 16 · Tailwind v4 · Catalyst UI Kit · Headless UI
    ═══════════════════════════════════════════════════════════════════ */
@@ -320,7 +320,7 @@ a {
 }
 
 /* ── Brand Gradient Text ────────────────────────────────────────────
-   Usage: <h1 class="gradient-text">Your career. Your AI.</h1>
+   Usage: <h1 class="gradient-text">Your identity. Boosted.</h1>
 ────────────────────────────────────────────────────────────────── */
 .gradient-text {
   background: var(--rb-brand-gradient);

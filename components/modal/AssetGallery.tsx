@@ -115,7 +115,7 @@ function AssetBody({ type, asset, firstName }: { type: AssetType; asset: Asset; 
           preload="metadata"
           onLoadedMetadata={() => setLoaded(true)}
           className={`w-full rounded-[var(--radius-md)] ${loaded ? '' : 'h-0 opacity-0'}`}
-          aria-label={`${firstName}'s career video`}
+          aria-label={`${firstName}'s professional video`}
         />
       </div>
     );
@@ -127,7 +127,7 @@ function AssetBody({ type, asset, firstName }: { type: AssetType; asset: Asset; 
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={asset.signed_url}
-          alt={`${firstName}'s career infographic`}
+          alt={`${firstName}'s professional infographic`}
           onLoad={() => setLoaded(true)}
           className={`w-full rounded-[var(--radius-md)] ${loaded ? '' : 'h-0 opacity-0'}`}
         />

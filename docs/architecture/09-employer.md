@@ -47,7 +47,7 @@ their own profile and mark it read (`feedback_candidate_read` /
 ## How employers connect to the brain
 
 Employers don't browse a directory, they discover candidates via shared
-`/c/[slug]` links and **save** them into the pool. When a logged-in employer chats
+`/i/[slug]` links and **save** them into the pool. When a logged-in employer chats
 with a candidate's AI, the `chat_session` records `employer_account_id` and
 `employer_company_name`, which is what powers the employer-side transcript email
 and lets the employer team read those sessions. See

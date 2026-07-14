@@ -80,7 +80,7 @@ export default function ChatPanel({
   const [rEmail, setREmail] = useState('');
 
   const firstName = candidateName.split(' ')[0] || candidateName;
-  const assistantName = `${firstName}'s Personal Assistant`;
+  const assistantName = `${firstName}'s AI`;
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: 'smooth' });
@@ -320,7 +320,7 @@ export default function ChatPanel({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `roleboost-conversation-${candidateSlug}.md`;
+    a.download = `identiboost-conversation-${candidateSlug}.md`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -353,7 +353,7 @@ export default function ChatPanel({
         </span>
         <div className="min-w-0 flex-1">
           <p className="truncate text-sm font-semibold text-[var(--rb-text)]">
-            {mode === 'preview' ? `How ${assistantName} responds to recruiters` : `Ask ${assistantName} anything`}
+            {mode === 'preview' ? `How ${assistantName} responds to your contacts` : `Ask ${assistantName} anything`}
           </p>
           {mode === 'preview' ? (
             <p className="text-xs text-[var(--rb-text-muted)]">Private test, nothing is sent.</p>
@@ -394,7 +394,7 @@ export default function ChatPanel({
           <div className="flex h-full flex-col items-center justify-center gap-4 text-center">
             <p className="max-w-xs text-sm text-[var(--rb-text-muted)]">
               {mode === 'preview'
-                ? `Try a hard recruiter question and see how ${assistantName} answers.`
+                ? `Try a hard question a contact might ask and see how ${assistantName} answers.`
                 : `Ask about ${firstName}'s experience, decisions, and what they're looking for next.`}
             </p>
             {suggestedQuestions && suggestedQuestions.length > 0 && (
@@ -737,7 +737,7 @@ export default function ChatPanel({
             }}
             onKeyDown={onKeyDown}
             rows={1}
-            placeholder={`Ask ${firstName} anything about their career`}
+            placeholder={`Ask ${firstName}'s AI anything`}
             className="max-h-32 min-h-[44px] flex-1 resize-none rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-3 py-2.5 text-sm text-[var(--rb-text)] outline-none placeholder:text-[var(--rb-text-muted)] focus-visible:border-[var(--rb-brand)] focus-visible:ring-2 focus-visible:ring-[var(--rb-brand)]/30"
           />
           <button
@@ -750,8 +750,8 @@ export default function ChatPanel({
           </button>
         </div>
         <p className="mt-2 text-center text-[11px] text-[var(--rb-text-muted)]">
-          Powered by RoleBoost. {assistantName} represents {firstName}&apos;s career history and may
-          not reflect every detail.
+          Powered by IdentiBoost. {firstName}&apos;s AI represents their verified professional identity
+          and may not reflect every detail.
         </p>
       </form>
     </div>

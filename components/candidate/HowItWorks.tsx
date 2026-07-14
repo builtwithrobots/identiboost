@@ -17,11 +17,11 @@ interface Props {
   onLinkClick?: () => void;
 }
 
-// The loop, drawn once. Plain-language stages of how RoleBoost works end to end.
+// The loop, drawn once. Plain-language stages of how IdentiBoost works end to end.
 const LOOP = [
   { label: 'You build your AI', Icon: Bot },
   { label: 'You share your link', Icon: Share2 },
-  { label: 'Recruiters chat with it', Icon: MessagesSquare },
+  { label: 'Contacts chat with it', Icon: MessagesSquare },
   { label: 'You see what they asked', Icon: FileText },
   { label: 'Your AI gets sharper', Icon: Sparkles },
 ];
@@ -31,14 +31,14 @@ const STEPS = [
   {
     n: 1,
     title: 'Add your résumé',
-    body: 'It’s how your AI learns your career. Upload it once.',
+    body: 'It’s how your AI learns your story. Upload it once.',
     href: '/dashboard/assets',
     cta: 'Assets',
     Icon: FileText,
   },
   {
     n: 2,
-    title: 'Build your career AI',
+    title: 'Build your Identity AI',
     body: 'Answer a few questions so it can speak for you, gaps, wins, the hard stuff.',
     href: '/dashboard/ai?tab=build',
     cta: 'AI Studio',
@@ -46,16 +46,16 @@ const STEPS = [
   },
   {
     n: 3,
-    title: 'Create your career story',
+    title: 'Create your professional story',
     body: 'We write the story your AI leads with. Pick the version that sounds like you.',
     href: '/dashboard/ai?tab=context',
-    cta: 'Career Story',
+    cta: 'Professional Story',
     Icon: Sparkles,
   },
   {
     n: 4,
     title: 'Try it yourself',
-    body: 'Ask the tough questions a recruiter would, before they do.',
+    body: 'Ask the tough questions a contact would, before they do.',
     href: '/dashboard/ai?tab=test',
     cta: 'Test',
     Icon: FlaskConical,
@@ -75,16 +75,16 @@ export default function HowItWorks({ onLinkClick }: Props) {
     <div className="flex flex-col gap-8">
       <header>
         <h1 className="font-display text-xl font-bold tracking-tight text-[var(--rb-text)]">
-          How RoleBoost works
+          How IdentiBoost works
         </h1>
         <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-          You build a personal career AI once. It answers recruiters for you, 24/7, over a single
+          You build your Identity AI once. It answers contacts for you, 24/7, over a single
           link, and it gets smarter every time someone uses it.
         </p>
       </header>
 
       {/* The loop */}
-      <section aria-label="The RoleBoost loop" className="rb-card p-5">
+      <section aria-label="The IdentiBoost loop" className="rb-card p-5">
         <div className="flex flex-col flex-wrap items-stretch gap-2 sm:flex-row sm:items-center">
           {LOOP.map((s, i) => (
             <div key={s.label} className="flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function HowItWorks({ onLinkClick }: Props) {
         <p className="text-xs leading-relaxed text-[var(--rb-text-secondary)]">
           <span className="font-semibold text-[var(--rb-text)]">Why this beats a résumé alone:</span>{' '}
           a résumé can’t answer “why did you leave?” or “walk me through that gap.” Your AI can, using
-          only what you’ve told it, never invented, and every recruiter conversation teaches you
+          only what you’ve told it, never invented, and every conversation teaches you
           exactly where to add more. The longer you use it, the stronger it gets.
         </p>
       </section>

@@ -7,7 +7,7 @@ const navLinks = [
   { href: '/boosts', label: 'Boosts' },
   { href: '/#how-it-works', label: 'How It Works' },
   { href: '/#pricing', label: 'Pricing' },
-  { href: '/#for-employers', label: 'For Employers' },
+  { href: '/#for-employers', label: 'For Teams' },
 ]
 
 export default function Nav() {
@@ -45,9 +45,9 @@ export default function Nav() {
           <Link
             href="/"
             className="font-jakarta text-xl font-bold text-[#1E3A5F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A5F] focus-visible:ring-offset-2 rounded"
-            aria-label="RoleBoost home"
+            aria-label="IdentiBoost home"
           >
-            RoleBoost
+            IdentiBoost
           </Link>
 
           {/* Desktop nav */}

@@ -53,7 +53,7 @@ is also surfaced on `/dashboard/assets` for upload/download via
 `AssetPackageCard` + `package-actions.ts`; that upload path and the AI Studio
 generate/select path write the **same** column.
 
-## The public calling card (`app/c/[slug]/page.tsx`)
+## The public calling card (`app/i/[slug]/page.tsx`)
 
 The core employer-facing experience, chat-first, no login, no page navigation.
 

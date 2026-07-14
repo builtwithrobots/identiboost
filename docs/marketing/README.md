@@ -6,9 +6,9 @@ marketing, not marketing).
 
 | File | What it is | Use it for |
 |---|---|---|
-| [`PLAIN-ENGLISH-OVERVIEW.md`](PLAIN-ENGLISH-OVERVIEW.md) | The no-jargon explanation of the product: the clone-at-your-door story, the honesty rule, the learning loop, tested one-liners | Landing pages, demo scripts, onboarding emails, social copy, explaining RoleBoost to anyone in one read |
+| [`PLAIN-ENGLISH-OVERVIEW.md`](PLAIN-ENGLISH-OVERVIEW.md) | The no-jargon explanation of the product: the clone-at-your-door story, the honesty rule, the learning loop, tested one-liners | Landing pages, demo scripts, onboarding emails, social copy, explaining IdentiBoost to anyone in one read |
 | [`MARKET-RESEARCH.md`](MARKET-RESEARCH.md) | Sourced evidence for every major claim (broken hiring, ATS failure, candidate exhaustion, the candidate-owned-AI gap) | Investor conversations, backing up any stat used in copy |
-| [`MARKETING_SITE_BUILD.md`](MARKETING_SITE_BUILD.md) | The complete build spec for the roleboost.app homepage: design system, palette, section-by-section copy | Building or revising the public marketing site |
+| [`MARKETING_SITE_BUILD.md`](MARKETING_SITE_BUILD.md) | The complete build spec for the identiboost.com homepage: design system, palette, section-by-section copy | Building or revising the public marketing site |
 
 Related reading in `docs/`:
 

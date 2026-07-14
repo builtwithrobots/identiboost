@@ -77,7 +77,7 @@ export default function AssetPackageCard({ initialMarkdown, updatedAt, slug }: P
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `roleboost-context-${slug}.md`;
+    a.download = `identiboost-context-${slug}.md`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -109,7 +109,7 @@ export default function AssetPackageCard({ initialMarkdown, updatedAt, slug }: P
         <div>
           <div className="text-sm font-semibold text-[var(--rb-text)]">Asset Package</div>
           <div className="text-xs text-[var(--rb-text-muted)] leading-relaxed mt-0.5">
-            Your done-for-you career package, produced by RoleBoost. Drop the file in here when you
+            Your done-for-you career package, produced by IdentiBoost. Drop the file in here when you
             receive it; it becomes the context your AI leads from.
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function AssetPackageCard({ initialMarkdown, updatedAt, slug }: P
               Don&apos;t have one yet?
             </span>
             <p className="mt-1 text-[var(--rb-text-muted)]">
-              Asset Packages are produced for you by RoleBoost from your résumé and career details:
+              Asset Packages are produced for you by IdentiBoost from your résumé and career details:
               your strategized narrative plus ready-to-run scripts for every Boost format. Order one
               and drop the file in here when it arrives.
             </p>

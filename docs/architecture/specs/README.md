@@ -11,7 +11,7 @@ time.
 
 | File | Original scope |
 |---|---|
-| `ROLEBOOST_AI_BRAIN_SPEC.md` | The AI-brain + calling-card product reframe; intake, transcript loop, sandbox, hardening specs |
+| `IDENTIBOOST_AI_BRAIN_SPEC.md` | The AI-brain + calling-card product reframe; intake, transcript loop, sandbox, hardening specs |
 | `ELITE_SYSTEM_PROMPT_BUILD_SPEC.md` | The layered system-prompt builder design |
 | `CANDIDATE_TOOLS_BUILD.md` | Candidate dashboard tooling build spec |
 | `DASHBOARD_POLISH_BUILD.md` | Dashboard polish/UX build spec |

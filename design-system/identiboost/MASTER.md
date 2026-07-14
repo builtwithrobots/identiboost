@@ -1,7 +1,7 @@
-# RoleBoost Design System — MASTER
+# IdentiBoost Design System — MASTER
 **Version:** 1.0
 **Last updated:** June 2026
-**Source of truth for all RoleBoost UI decisions. Read this before building any page or component.**
+**Source of truth for all IdentiBoost UI decisions. Read this before building any page or component.**
 
 ---
 
@@ -9,7 +9,7 @@
 
 The two reference sites (Loom and Homerun) share the same core principles:
 - **Whitespace is the design.** Sections breathe. Content is never cramped. When in doubt, add more padding.
-- **The product is the hero.** Real UI screenshots and mock interfaces outperform stock photography every time. Show what RoleBoost actually looks like.
+- **The product is the hero.** Real UI screenshots and mock interfaces outperform stock photography every time. Show what IdentiBoost actually looks like.
 - **Bold headlines, quiet body copy.** Section headings are large and confident. Body text is comfortable and readable, never competing with headings for attention.
 - **One action per section.** Every section has one primary CTA. Never two competing buttons at the same visual weight.
 - **Clean over clever.** No decorative gradients, no glassmorphism, no drop shadows on everything. Restraint is the brand.
@@ -33,7 +33,7 @@ Use these exact values as Tailwind arbitrary values (`text-[#1E3A5F]`) or extend
 | Navy hover | Navy Dark | `#162d4a` | Navy button hover state |
 | Amber hover | Amber Dark | `#B45309` | Amber button hover state |
 
-**Why this palette:** Deep navy anchors the brand with credibility and authority. Amber replaces the previous gold — it is a darker, warmer tone that passes WCAG AA contrast checks on the warm white base (unlike the previous `#B8860B` which failed on white). The warm white and warm gray surfaces give the page a human, editorial feel that distinguishes RoleBoost from cold blue-and-white SaaS tools — which is intentional.
+**Why this palette:** Deep navy anchors the brand with credibility and authority. Amber replaces the previous gold — it is a darker, warmer tone that passes WCAG AA contrast checks on the warm white base (unlike the previous `#B8860B` which failed on white). The warm white and warm gray surfaces give the page a human, editorial feel that distinguishes IdentiBoost from cold blue-and-white SaaS tools — which is intentional.
 
 **Contrast rule:** Amber (`#D97706`) on warm white (`#FFFBF5`) passes 4.5:1 contrast for normal text — it is safe to use for functional text and buttons. Never use the previous `#B8860B` value anywhere. Never place secondary text (`#6B7280`) on any surface darker than `#F5F0E8`.
 
@@ -300,7 +300,7 @@ animate={prefersReduced ? 'visible' : (isInView ? 'visible' : 'hidden')}
 
 ## What Loom Does That We Are Copying
 
-1. **Product UI as the visual.** Loom never uses lifestyle photography. The UI is the image. For RoleBoost, the mock chat interface and product screenshots carry all the visual weight.
+1. **Product UI as the visual.** Loom never uses lifestyle photography. The UI is the image. For IdentiBoost, the mock chat interface and product screenshots carry all the visual weight.
 2. **Minimal nav.** Logo, 3-4 links, and one button. No mega-menus, no dropdowns, no utility links cluttering the bar.
 3. **Stats as trust signals.** Big stat, small description, clean dividers. Leads with numbers, not testimonials.
 4. **Generous section padding.** 96px vertical padding on major sections (`py-24`). It feels luxurious and professional.

@@ -29,7 +29,7 @@ export default function ProblemSection() {
             id="problem-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug"
           >
-            AI broke hiring. For everyone.
+            The business card has not changed in 150 years.
           </h2>
         </motion.div>
 
@@ -43,22 +43,23 @@ export default function ProblemSection() {
         >
           <motion.div variants={fadeUp}>
             <h3 className="font-jakarta text-lg font-semibold text-[#1E3A5F] mb-4">
-              For candidates
+              For you
             </h3>
             <p className="font-inter text-lg text-gray-700 leading-relaxed">
-              Candidates use AI to write resumes. Every resume sounds the same. The best people get
-              filtered out by keyword algorithms before a human ever sees their name.
+              Your card, your resume, your LinkedIn: a name, a title, a few lines that sound like
+              everyone else&apos;s. The moment someone has a real question, the page goes silent,
+              and the follow-up never comes.
             </p>
           </motion.div>
 
           <motion.div variants={fadeUp}>
             <h3 className="font-jakarta text-lg font-semibold text-[#1E3A5F] mb-4">
-              For employers
+              For whoever&apos;s asking
             </h3>
             <p className="font-inter text-lg text-gray-700 leading-relaxed">
-              Hiring managers are buried under thousands of identical applications. LinkedIn sees
-              11,000 submissions every minute. The signal is gone. The screening call backlog never
-              ends.
+              They wanted the story, the proof, the reason to call. Instead they got a static
+              profile that cannot answer a single question. Most people stop digging, and the
+              conversation that mattered never happens.
             </p>
           </motion.div>
         </motion.div>
@@ -72,7 +73,7 @@ export default function ProblemSection() {
           className="text-center"
         >
           <p className="font-jakarta text-2xl md:text-3xl font-bold text-[#1E3A5F]">
-            The resume is dead. We built what comes next.
+            The static profile is dead. We built the one that answers back.
           </p>
         </motion.div>
       </div>

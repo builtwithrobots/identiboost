@@ -11,7 +11,7 @@ const RECRUITER_VARIANTS: HeroContent[] = [
     headlineLine1: 'Stop guessing.',
     headlineLine2: 'Talk to their AI.',
     subheadline:
-      "Every RoleBoost candidate comes with a personal career AI you can interrogate 24/7, plus audio, video, infographic, and deck Boosts behind one link. Know who you're calling before you pick up the phone.",
+      "Every IdentiBoost candidate comes with a personal career AI you can interrogate 24/7, plus audio, video, infographic, and deck Boosts behind one link. Know who you're calling before you pick up the phone.",
     primaryCTA: 'Start hiring free',
     primaryHref: '/sign-up',
     secondaryCTA: 'See a candidate profile',
@@ -24,7 +24,7 @@ const RECRUITER_VARIANTS: HeroContent[] = [
     headlineLine1: 'Know your shortlist',
     headlineLine2: 'before the first call.',
     subheadline:
-      'RoleBoost candidates give you a live AI you can question, a podcast-style career overview, an infographic, and a full resume, all from one link. The screening call becomes a confirmation, not an interrogation.',
+      'IdentiBoost candidates give you a live AI you can question, a podcast-style career overview, an infographic, and a full resume, all from one link. The screening call becomes a confirmation, not an interrogation.',
     primaryCTA: 'Start hiring free',
     primaryHref: '/sign-up',
     secondaryCTA: 'Browse example profiles',
@@ -37,7 +37,7 @@ const RECRUITER_VARIANTS: HeroContent[] = [
     headlineLine1: 'The best candidates',
     headlineLine2: "don't always look it on paper.",
     subheadline:
-      'RoleBoost surfaces the story behind the resume: a career AI that answers your toughest questions directly, backed by audio, video, and infographic Boosts. Find the candidates worth calling.',
+      'IdentiBoost surfaces the story behind the resume: a career AI that answers your toughest questions directly, backed by audio, video, and infographic Boosts. Find the candidates worth calling.',
     primaryCTA: 'Start hiring free',
     primaryHref: '/sign-up',
     secondaryCTA: 'See a live example',

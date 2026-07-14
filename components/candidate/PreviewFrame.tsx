@@ -230,7 +230,7 @@ export default function PreviewFrame({ previewUrl, liveUrl, slug, isPublished }:
                 <span className="size-3 rounded-full bg-[#28c840]" />
               </span>
               <div className="mx-auto max-w-xs flex-1 truncate rounded-full bg-[var(--rb-bg-surface-sunken)] px-3 py-1 text-center text-xs text-[var(--rb-text-muted)] font-data">
-                roleboost.app/c/{slug}
+                identiboost.com/i/{slug}
               </div>
             </div>
             <div className="min-h-0 flex-1">{iframe}</div>

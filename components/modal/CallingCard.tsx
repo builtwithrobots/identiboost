@@ -34,10 +34,10 @@ interface Props {
 }
 
 const OPENERS = [
-  'Why are you exploring new roles?',
-  'Walk me through your most recent role.',
+  'Walk me through your most recent work.',
   "What's a win you're proud of?",
-  'What are you looking for next?',
+  'What do you do best?',
+  'What are you focused on right now?',
 ];
 
 function getInitials(name: string): string {
@@ -85,8 +85,8 @@ export default function CallingCard({
 
       <div className="absolute right-4 top-4 z-10">
         <ShareButton
-          title={`${fullName} on RoleBoost`}
-          text={`Ask ${firstName}'s Personal Assistant anything about their career`}
+          title={`${fullName} on IdentiBoost`}
+          text={`Ask ${firstName}'s AI anything`}
           iconOnly
           className="inline-flex size-11 items-center justify-center rounded-full border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] text-[var(--rb-text-secondary)] shadow-[var(--shadow-card)] transition-colors duration-[var(--duration-fast)] hover:border-[var(--rb-brand)] hover:text-[var(--rb-text)]"
         />
@@ -161,7 +161,7 @@ export default function CallingCard({
             <div className="mt-6 rounded-[var(--radius-2xl)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface)] p-6">
               <MessageCircle className="mb-2 size-6 text-[var(--rb-text-muted)]" />
               <p className="text-sm text-[var(--rb-text-secondary)]">
-                {firstName}&apos;s Personal Assistant is offline right now.
+                {firstName}&apos;s AI is offline right now.
                 {linkedinUrl ? ' Reach out directly:' : ' Check back soon.'}
               </p>
               {linkedinUrl && (
@@ -185,7 +185,7 @@ export default function CallingCard({
             {hasBullets && (
               <details open className="rb-card group [&_summary::-webkit-details-marker]:hidden">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-2 p-4">
-                  <span className="rb-section-label">Career snapshot</span>
+                  <span className="rb-section-label">Professional snapshot</span>
                   <ChevronDown className="size-4 text-[var(--rb-text-muted)] transition-transform group-open:rotate-180" />
                 </summary>
                 <ul className="flex flex-col gap-2 px-4 pb-4">

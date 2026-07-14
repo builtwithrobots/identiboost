@@ -78,14 +78,14 @@ export default async function EmployerTranscriptsPage() {
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Transcripts"
-        description="Every conversation your team has had with a candidate's Personal Assistant, kept for your reference and to prep for the live meeting."
+        description="Every conversation your team has had with a professional's AI, kept for your reference and to prep for the live meeting."
       />
       <div className="mx-auto max-w-6xl px-6 py-8">
         {transcripts.length === 0 ? (
           <EmptyState
             icon={MessagesSquare}
             title="No conversations yet"
-            description="When you or a teammate chats with a candidate's Personal Assistant while signed in, the transcript lands here and in your inbox."
+            description="When you or a teammate chats with a professional's AI while signed in, the transcript lands here and in your inbox."
           />
         ) : (
           <EmployerTranscriptsList transcripts={transcripts} />

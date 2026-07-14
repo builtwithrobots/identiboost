@@ -8,7 +8,7 @@ import Link from 'next/link'
 const steps = [
   {
     number: '1',
-    heading: 'Receive a candidate\'s RoleBoost link',
+    heading: 'Receive a candidate\'s IdentiBoost link',
     body: 'Candidates share their link in applications, email signatures, and LinkedIn. Click it and a rich profile modal opens instantly.',
   },
   {

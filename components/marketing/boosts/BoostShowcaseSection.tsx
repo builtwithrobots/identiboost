@@ -32,7 +32,7 @@ export interface BoostShowcaseSectionProps {
   avatarInitials?: string
   /** Industry icon for the audio player avatar; falls back to initials when absent. */
   avatarIcon?: PersonaIconKey
-  /** Avatar background color. Defaults to the RoleBoost candidate teal. */
+  /** Avatar background color. Defaults to the IdentiBoost candidate teal. */
   avatarColor?: string
 }
 
@@ -126,7 +126,7 @@ function DisabledSaveButton() {
     <button
       type="button"
       disabled
-      title="Saving candidates is available inside RoleBoost"
+      title="Saving candidates is available inside IdentiBoost"
       className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-[#E8E0D0] bg-[#F5F0E8] px-3 py-2 font-jakarta text-sm font-semibold text-[#8FA3B8] cursor-not-allowed min-h-[44px]"
     >
       <svg

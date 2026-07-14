@@ -3,7 +3,7 @@ import Link from 'next/link'
 const footerLinks = [
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#pricing', label: 'Pricing' },
-  { href: '#for-employers', label: 'For Employers' },
+  { href: '#for-employers', label: 'For Teams' },
   { href: '#', label: 'Contact' },
 ]
 
@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <p className="font-jakarta text-xl font-bold text-white mb-3">RoleBoost</p>
+            <p className="font-jakarta text-xl font-bold text-white mb-3">IdentiBoost</p>
             <p className="font-inter text-sm text-gray-400 leading-relaxed max-w-xs">
-              The world&apos;s first AI-powered candidate intelligence platform.
+              The universal professional presence platform.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-inter text-sm text-gray-500">
-            © {new Date().getFullYear()} RoleBoost. All rights reserved.
+            © {new Date().getFullYear()} IdentiBoost. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link

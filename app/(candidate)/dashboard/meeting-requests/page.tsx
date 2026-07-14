@@ -66,14 +66,14 @@ export default async function MeetingRequestsPage() {
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Meeting requests"
-        description="Recruiters who asked to meet through your Personal Assistant. Reach out to lock in a time."
+        description="Contacts who asked to meet through your AI. Reach out to lock in a time."
       />
       <div className="mx-auto max-w-6xl px-6 py-8">
         {requests.length === 0 ? (
           <EmptyState
             icon={CalendarClock}
             title="No meeting requests yet"
-            description="When your Personal Assistant cannot answer a recruiter's question, it offers to set up a live conversation. Those requests show up here."
+            description="When your AI cannot answer a contact's question, it offers to set up a live conversation. Those requests show up here."
           />
         ) : (
           <MeetingRequestsList requests={requests} transcripts={transcripts} />

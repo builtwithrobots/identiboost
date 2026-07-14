@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import RoleBoostLogo from '@/components/layout/RoleBoostLogo';
+import IdentiBoostLogo from '@/components/layout/IdentiBoostLogo';
 import { Mic2, Bot, BarChart3, Share2, CheckCircle, ArrowRight, Zap, Sparkles } from 'lucide-react';
 
 function Header() {
   return (
     <header className="sticky top-0 z-[--z-sticky] border-b border-[--rb-border] bg-[--rb-bg-surface]/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <RoleBoostLogo />
+        <IdentiBoostLogo />
         <nav className="hidden items-center gap-8 md:flex">
           {['#features', '#how-it-works', '#pricing'].map((href, i) => (
             <Link
@@ -146,7 +146,7 @@ function Features() {
             Stand out before the first interview
           </h2>
           <p className="mx-auto max-w-2xl text-[--rb-text-secondary]">
-            When everyone sounds the same on paper, RoleBoost makes sure you&apos;re heard.
+            When everyone sounds the same on paper, IdentiBoost makes sure you&apos;re heard.
           </p>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -353,7 +353,7 @@ function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
           <div>
-            <RoleBoostLogo />
+            <IdentiBoostLogo />
             <p className="mt-2 max-w-xs text-sm text-[--rb-text-muted]">
               When everyone sounds the same on paper, be heard.
             </p>
@@ -377,7 +377,7 @@ function Footer() {
           </nav>
         </div>
         <div className="mt-10 border-t border-[--rb-border] pt-6 text-sm text-[--rb-text-muted]">
-          © {new Date().getFullYear()} RoleBoost. All rights reserved.
+          © {new Date().getFullYear()} IdentiBoost. All rights reserved.
         </div>
       </div>
     </footer>

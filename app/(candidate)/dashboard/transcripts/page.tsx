@@ -80,7 +80,7 @@ export default async function TranscriptsPage() {
             ? company
               ? `${name} · ${company}`
               : name
-            : company || (s.viewer_clerk_user_id ? 'Signed-in recruiter' : 'Recruiter');
+            : company || (s.viewer_clerk_user_id ? 'Signed-in contact' : 'Contact');
         return {
           id: s.id,
           kind: s.is_sandbox ? ('test' as const) : ('recruiter' as const),
@@ -107,14 +107,14 @@ export default async function TranscriptsPage() {
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Transcripts"
-        description="Every conversation with your Personal Assistant, kept so you can review it, teach your AI a better answer, and walk into any meeting with the full context. Yours alone."
+        description="Every conversation with your AI, kept so you can review it, teach your AI a better answer, and walk into any meeting with the full context. Yours alone."
       />
       <div className="mx-auto max-w-6xl px-6 py-8">
         {transcripts.length === 0 ? (
           <EmptyState
             icon={MessagesSquare}
             title="No conversations yet"
-            description="When a recruiter chats with your Personal Assistant, the transcript lands here and in your inbox. Your own tests show up here too. Share your profile link to get started."
+            description="When a contact chats with your AI, the transcript lands here and in your inbox. Your own tests show up here too. Share your profile link to get started."
           />
         ) : (
           <TranscriptsList

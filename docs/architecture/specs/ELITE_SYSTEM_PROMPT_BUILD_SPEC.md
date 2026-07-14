@@ -1,4 +1,4 @@
-# RoleBoost -- Elite System Prompt Build Spec
+# IdentiBoost -- Elite System Prompt Build Spec
 ## Upgrade `lib/ai/build-system-prompt.ts` and `app/api/chat/route.ts`
 **Version:** 1.0
 **Date:** June 2026
@@ -769,4 +769,4 @@ Before this goes live, run the following tests in the candidate AI testing sandb
 
 ---
 
-*RoleBoost Elite System Prompt Build Spec v1.0 -- roleboost.app -- Built by Rob Ramos -- June 2026*
+*IdentiBoost Elite System Prompt Build Spec v1.0 -- identiboost.com -- Built by Rob Ramos -- June 2026*

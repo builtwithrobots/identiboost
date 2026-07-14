@@ -211,7 +211,7 @@ export default function JobsTable({ jobs: initialJobs }: Props) {
                   <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)]">Title</th>
                   <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)] hidden sm:table-cell">Department</th>
                   <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)] hidden md:table-cell">Location</th>
-                  <th className="text-center px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)]">Candidates</th>
+                  <th className="text-center px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)]">Professionals</th>
                   <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)] hidden lg:table-cell">Created</th>
                   <th className="text-left px-4 py-3 text-xs font-semibold text-[var(--rb-text-secondary)]">Status</th>
                   <th className="px-4 py-3" />

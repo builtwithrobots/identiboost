@@ -1,4 +1,4 @@
-# RoleBoost, AI Brain & Chatbot Architecture Snapshot
+# IdentiBoost, AI Brain & Chatbot Architecture Snapshot
 
 > Generated 2026-07-11 from the live working tree (branch `claude/plugin-development-q66sgp`, in sync with `main` for these files). Every piece of content below is copied verbatim from the repo and labeled with its file path. Where only part of a file is relevant, the line range is given.
 
@@ -607,10 +607,10 @@ The single `context_package_md` slot, the active career-context document the bra
 -- Asset Package -- the candidate's career-context Markdown document.
 --
 -- A polished, single-file context doc (generated externally for now -- e.g. a
--- Fiverr service / Claude skill) that the candidate uploads to RoleBoost to
+-- Fiverr service / Claude skill) that the candidate uploads to IdentiBoost to
 -- store, download, and reuse (NotebookLM source, AI chat context, etc.). Stored
 -- as text on the profile; private (not granted to anon). A future one-time
--- roleboost.app charge will gate generation/download.
+-- identiboost.com charge will gate generation/download.
 
 ALTER TABLE candidate_profiles
   ADD COLUMN IF NOT EXISTS context_package_md TEXT,
@@ -625,7 +625,7 @@ Two-angle draft staging for self-serve career-context generation. NOTE: retired 
 ````sql
 -- Career Context Document -- self-serve generation staging.
 --
--- The candidate can generate their career-context document in-app (the RoleBoost
+-- The candidate can generate their career-context document in-app (the IdentiBoost
 -- Candidate Asset Production Skill, Section 1 only) from their résumé + career
 -- sources. The generator produces TWO narrative angles; the candidate picks one,
 -- whose rendered markdown becomes the active context_package_md (added in the
@@ -883,7 +883,7 @@ The asset-package staging column whose chosen perspective renders the active `co
 ````sql
 -- Asset Package -- the candidate's full career asset package (self-serve, in-app).
 --
--- The AI Studio "Asset Package" tab runs the RoleBoost Candidate Asset Production
+-- The AI Studio "Asset Package" tab runs the IdentiBoost Candidate Asset Production
 -- Skill in full (Section 1 Narrative Guide Block + Section 2, two narrative
 -- perspectives each with four ready-to-run NotebookLM prompts: Deep Dive, Brief,
 -- Infographic, Short Video), strategized toward a target role + optional job
@@ -1967,8 +1967,8 @@ import 'server-only';
 import { getResend } from './client';
 import type { ChatTurn } from '@/lib/types';
 
-const FROM = 'RoleBoost <transcripts@roleboost.app>';
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app';
+const FROM = 'IdentiBoost <transcripts@identiboost.com>';
+const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com';
 
 function esc(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -1989,7 +1989,7 @@ function shell(inner: string): string {
     <div style="max-width:560px;margin:0 auto;background:#fff;border:1px solid #E8E0D4;border-radius:16px;padding:28px">
       ${inner}
       <hr style="border:none;border-top:1px solid #E8E0D4;margin:20px 0"/>
-      <p style="font-size:12px;color:#8FA3B8;margin:0">Powered by RoleBoost AI · honest by design</p>
+      <p style="font-size:12px;color:#8FA3B8;margin:0">Powered by IdentiBoost AI · honest by design</p>
     </div>
   </div>`;
 }
@@ -2014,28 +2014,28 @@ export async function sendTranscriptEmails(args: DeliverArgs): Promise<void> {
 
   if (args.candidateEmail) {
     const inner = `
-      <h2 style="${heading}">A recruiter just chatted with your RoleBoost AI</h2>
+      <h2 style="${heading}">A recruiter just chatted with your IdentiBoost AI</h2>
       <p style="margin:0 0 16px;color:#4B6580">${esc(company)} asked your AI ${qCount} question${qCount === 1 ? '' : 's'}.</p>
       ${transcript}
       <p style="margin:16px 0 0"><a href="${APP_URL}/dashboard/ai" style="${link}">Fine-tune your AI →</a></p>`;
     await resend.emails.send({
       from: FROM,
       to: args.candidateEmail,
-      subject: 'A recruiter just chatted with your RoleBoost AI',
+      subject: 'A recruiter just chatted with your IdentiBoost AI',
       html: shell(inner),
     });
   }
 
   if (args.employerEmail) {
     const inner = `
-      <h2 style="${heading}">Your RoleBoost conversation with ${esc(args.candidateName)}</h2>
+      <h2 style="${heading}">Your IdentiBoost conversation with ${esc(args.candidateName)}</h2>
       <p style="margin:0 0 16px;color:#4B6580">${qCount} question${qCount === 1 ? '' : 's'} asked.</p>
       ${transcript}
       <p style="margin:16px 0 0"><a href="${APP_URL}/c/${esc(args.candidateSlug)}" style="${link}">View ${esc(args.candidateName)}&rsquo;s profile →</a></p>`;
     await resend.emails.send({
       from: FROM,
       to: args.employerEmail,
-      subject: `Your RoleBoost conversation with ${args.candidateName}`,
+      subject: `Your IdentiBoost conversation with ${args.candidateName}`,
       html: shell(inner),
     });
   }
@@ -5002,7 +5002,7 @@ import type {
   IntakeDocument,
 } from '@/lib/types';
 
-// Runs the RoleBoost Candidate Asset Production Skill (Section 1 -- the Narrative
+// Runs the IdentiBoost Candidate Asset Production Skill (Section 1 -- the Narrative
 // Guide Block only; the NotebookLM prompt sets in Section 2 are intentionally
 // omitted here). Reads the candidate's résumé + career sources, applies the AI
 // Mirror, selects a story type, and produces TWO distinct narrative angles plus a
@@ -5122,7 +5122,7 @@ const SUBMIT_SCHEMA = {
   additionalProperties: false,
 };
 
-const SYSTEM = `You are running the RoleBoost Candidate Asset Production Skill (the career-context document portion only). You are given a candidate's résumé and any supporting career sources about the same person. Produce the narrative foundation for their career-context document.
+const SYSTEM = `You are running the IdentiBoost Candidate Asset Production Skill (the career-context document portion only). You are given a candidate's résumé and any supporting career sources about the same person. Produce the narrative foundation for their career-context document.
 
 Workflow:
 1. Read everything in full.
@@ -5731,7 +5731,7 @@ Inventory of every UI file referencing the chatbot, brain, or recruiter chat. Fu
 |---|---|
 | `components/chat/ChatPanel.tsx` | The recruiter chat interface (759 lines, full contents below) |
 | `components/chat/ChatOverlay.tsx` | Dialog wrapper, currently dead code (nothing imports it, see todo.md) |
-| `app/c/[slug]/page.tsx` | Public candidate calling card page, chat-first (full contents below) |
+| `app/i/[slug]/page.tsx` | Public candidate calling card page, chat-first (full contents below) |
 | `lib/candidate/calling-card.ts` | Server data assembly for the public card (full contents below) |
 | `components/candidate/AIStudio.tsx` | AI Studio: custom QA editing, redirect topics, ai_enabled, tab shell (545 lines) |
 | `components/candidate/PromptBot.tsx` | Gap review + one-click adopt of suggested answers (full contents below) |
@@ -6074,7 +6074,7 @@ export default function ChatPanel({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `roleboost-conversation-${candidateSlug}.md`;
+    a.download = `identiboost-conversation-${candidateSlug}.md`;
     document.body.appendChild(a);
     a.click();
     a.remove();
@@ -6504,7 +6504,7 @@ export default function ChatPanel({
           </button>
         </div>
         <p className="mt-2 text-center text-[11px] text-[var(--rb-text-muted)]">
-          Powered by RoleBoost. {assistantName} represents {firstName}&apos;s career history and may
+          Powered by IdentiBoost. {assistantName} represents {firstName}&apos;s career history and may
           not reflect every detail.
         </p>
       </form>
@@ -6514,7 +6514,7 @@ export default function ChatPanel({
 ````
 
 
-#### `app/c/[slug]/page.tsx`
+#### `app/i/[slug]/page.tsx`
 
 The public calling-card page hosting the chat.
 
@@ -6547,10 +6547,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!data) return { title: 'Profile not found', robots: { index: false, follow: false } };
 
-  const title = `${data.full_name} on RoleBoost`;
+  const title = `${data.full_name} on IdentiBoost`;
   const description =
     data.headline ??
-    (data.target_role ? `${data.target_role} on RoleBoost` : 'Career profile on RoleBoost');
+    (data.target_role ? `${data.target_role} on IdentiBoost` : 'Career profile on IdentiBoost');
 
   // Calling cards are noindex by default so a candidate's career data does not
   // surface in search. A candidate can opt in via Settings (search_discoverable),
@@ -6570,7 +6570,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    // `absolute` avoids the "| RoleBoost" title template (the name already reads well).
+    // `absolute` avoids the "| IdentiBoost" title template (the name already reads well).
     title: { absolute: title },
     description,
     // Indexable only when the candidate opted in. Otherwise the page stays fully
@@ -6622,8 +6622,8 @@ export default async function CandidateProfilePage({ params }: Props) {
   return (
     <div className="min-h-screen bg-[var(--rb-bg-page)]">
       {/* No marketing header here: this is the recruiter-facing calling card, kept
-          focused on the conversation and the candidate. RoleBoost is credited
-          subtly inside the chat panel ("Powered by RoleBoost AI"). */}
+          focused on the conversation and the candidate. IdentiBoost is credited
+          subtly inside the chat panel ("Powered by IdentiBoost AI"). */}
       <CallingCard
         slug={slug}
         fullName={profileData.full_name}
@@ -6676,7 +6676,7 @@ export interface SignedCallingCardAssets {
 
 /**
  * Signs the active assets for a candidate profile for the calling card, shared by
- * the public `/c/[slug]` page and the owner preview. The avatar is returned
+ * the public `/i/[slug]` page and the owner preview. The avatar is returned
  * separately so the header can render it; every other asset flows into the
  * gallery. Assets that can't be signed (e.g. a bucket that doesn't exist yet) are
  * skipped rather than failing the whole card.
@@ -7039,7 +7039,7 @@ time.
 
 | File | Original scope |
 |---|---|
-| `ROLEBOOST_AI_BRAIN_SPEC.md` | The AI-brain + calling-card product reframe; intake, transcript loop, sandbox, hardening specs |
+| `IDENTIBOOST_AI_BRAIN_SPEC.md` | The AI-brain + calling-card product reframe; intake, transcript loop, sandbox, hardening specs |
 | `ELITE_SYSTEM_PROMPT_BUILD_SPEC.md` | The layered system-prompt builder design |
 | `CANDIDATE_TOOLS_BUILD.md` | Candidate dashboard tooling build spec |
 | `DASHBOARD_POLISH_BUILD.md` | Dashboard polish/UX build spec |
@@ -7054,12 +7054,12 @@ none of it is architecture.
 ````
 
 
-#### `docs/architecture/specs/ROLEBOOST_AI_BRAIN_SPEC.md`
+#### `docs/architecture/specs/IDENTIBOOST_AI_BRAIN_SPEC.md`
 
 The original full AI-brain build spec (phases A-E: minimum viable brain, elite chat route, sandbox, intake, transcript loops).
 
 ````md
-# RoleBoost -- AI Brain and Calling Card
+# IdentiBoost -- AI Brain and Calling Card
 ## Product Vision and Scope Update
 **Version:** 1.1
 **Date:** June 2026
@@ -7082,7 +7082,7 @@ No em dashes anywhere in any output. Use commas, semicolons, or periods instead.
 
 ### The Old Framing
 
-The previous product framing positioned RoleBoost as a career asset platform -- audio overviews, infographics, slide decks, ATS resumes -- supported by a personal AI chatbot. The asset suite was the flagship. The chatbot was a feature.
+The previous product framing positioned IdentiBoost as a career asset platform -- audio overviews, infographics, slide decks, ATS resumes -- supported by a personal AI chatbot. The asset suite was the flagship. The chatbot was a feature.
 
 ### The New Framing
 
@@ -7100,7 +7100,7 @@ Every existing candidate tool -- Jobscan, Teal, Rezi, Kickresume -- optimizes a 
 
 Employer-side AI (Paradox/Olivia acquired by Workday for $1 billion, Eightfold, HiredScore) is entirely focused on processing candidates faster for employers. None of it serves the candidate.
 
-The market gap is not a gap in resume tools. It is a gap in candidate representation. RoleBoost fills it.
+The market gap is not a gap in resume tools. It is a gap in candidate representation. IdentiBoost fills it.
 
 ---
 
@@ -7114,7 +7114,7 @@ A personal AI trained on each candidate's verified career data that represents t
 
 Every AI resume tool optimizes a document without knowing the person behind it. They produce plausible-sounding content -- including invented metrics -- because they have no access to the candidate's real story. A chatbot built on a resume scrape is a FAQ bot. It can answer "where did you work" but not "why did you leave" or "walk me through that gap."
 
-RoleBoost's brain is built from three layers of verified context that no other tool collects:
+IdentiBoost's brain is built from three layers of verified context that no other tool collects:
 
 **Layer 1 -- Document analysis.** The candidate uploads their resume, LinkedIn export, Indeed profile, or any combination. Claude Sonnet reads all uploaded documents simultaneously and does three things: extracts verified career facts, flags inconsistencies across documents (LinkedIn says VP, resume says Director; dates do not match; gap appears on one but not another), and identifies the 8 to 12 questions a recruiter would most likely ask based on what it found.
 
@@ -7170,7 +7170,7 @@ The skill -- the AI's ability to read documents, spot inconsistencies, generate 
 
 ### What It Is
 
-A mobile-optimized public profile page at `roleboost.app/c/[slug]` that functions as a digital calling card. No login required. No friction. The chat interface is the first thing a recruiter sees.
+A mobile-optimized public profile page at `identiboost.com/i/[slug]` that functions as a digital calling card. No login required. No friction. The chat interface is the first thing a recruiter sees.
 
 The candidate drops this link everywhere: LinkedIn contact info, LinkedIn About section, resume header, email signature, Indeed profile bio, job application follow-up emails. One link. Every context.
 
@@ -7318,7 +7318,7 @@ None of these are the flagship. They are all reasons the flagship works better.
 | Eightfold / HiredScore | Employer AI ranking | Scores candidates against employer criteria. No candidate control. |
 | DIY chatbots (Curry, Patil) | Individual developers building their own | Requires technical ability. Not available to non-technical candidates. |
 
-**RoleBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.**
+**IdentiBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.**
 
 ---
 
@@ -7326,11 +7326,11 @@ None of these are the flagship. They are all reasons the flagship works better.
 
 **Moat 1 -- The brain depth.** Context built from documents plus layered AI intake plus recruiter conversation transcripts. Nobody else collects all three. The brain after six months of recruiter conversations is something that cannot be replicated by a document tool.
 
-**Moat 2 -- The growth loop.** The brain compounds with every recruiter interaction. Time on platform equals brain depth. A candidate who has been on RoleBoost for six months has a fundamentally more capable AI than one who joined yesterday. That gap widens over time.
+**Moat 2 -- The growth loop.** The brain compounds with every recruiter interaction. Time on platform equals brain depth. A candidate who has been on IdentiBoost for six months has a fundamentally more capable AI than one who joined yesterday. That gap widens over time.
 
 **Moat 3 -- The transcript layer.** Every conversation generates data. That data feeds the brain. The brain feeds better conversations. Better conversations generate better data. This loop is impossible to replicate without the conversation history it depends on.
 
-**Moat 4 -- The honest read.** Every other AI tool inflates. RoleBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one. That positioning is defensible as long as the platform enforces it.
+**Moat 4 -- The honest read.** Every other AI tool inflates. IdentiBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one. That positioning is defensible as long as the platform enforces it.
 
 ---
 
@@ -7377,7 +7377,7 @@ One shareable link. A brain that grows. Your AI available around the clock.
 3. **AI intake interview** -- The candidate is interviewed by an AI that already read their documents. Questions are specific to their history. 8 to 12 questions per pass, 2 to 3 passes deep, maximum 20 questions total. Candidate answers by typing or speaking (voice transcribed and editable before submit).
 4. **Brain assembled** -- All verified context becomes the system prompt powering the personal career AI. The chatbot can only answer from verified context -- it never invents, guesses, or inflates.
 5. **Candidate tests the brain** -- In a sandbox, the candidate asks their own AI the hard questions. Verifies accuracy. The link does not go live until the candidate confirms the brain is honest.
-6. **One link goes live** -- `roleboost.app/c/[slug]` -- shareable anywhere. Mobile-optimized calling card with chat front and center. No login required for recruiters.
+6. **One link goes live** -- `identiboost.com/i/[slug]` -- shareable anywhere. Mobile-optimized calling card with chat front and center. No login required for recruiters.
 7. **Recruiters interact** -- Ask questions directly from the calling card on any device. Full transcript delivered to both sides after every session.
 8. **Brain grows** -- Transcript analysis identifies gaps. Prompt bot surfaces expansion questions. Candidate adds context. Loop repeats.
 ```
@@ -7390,7 +7390,7 @@ One shareable link. A brain that grows. Your AI available around the clock.
 1. **The brain depth** -- Context from documents plus layered AI intake plus recruiter conversation transcripts. Nobody else collects all three. The brain after six months of recruiter interactions cannot be replicated by a document tool.
 2. **The growth loop** -- The brain compounds with every recruiter interaction. Time on platform equals brain depth. That gap widens over time and raises the switching cost without locking anyone in.
 3. **The transcript layer** -- Every conversation generates data that feeds the next. Impossible to replicate without the conversation history it depends on.
-4. **The honest read** -- Every other AI tool inflates. RoleBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one.
+4. **The honest read** -- Every other AI tool inflates. IdentiBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one.
 ```
 
 **Replace the Fiverr/Done-For-You table** with the following:
@@ -7413,7 +7413,7 @@ The done-for-you service sells a live AI brain, not a document package.
 ```
 ## The Calling Card
 
-The public profile at `roleboost.app/c/[slug]` is designed as a mobile-first digital calling card. When a recruiter clicks the link from any context -- LinkedIn, a resume header, an email signature, an Indeed profile -- they land on a page that communicates three things in under five seconds: who this person is, what this page does, and an immediate invitation to start a conversation.
+The public profile at `identiboost.com/i/[slug]` is designed as a mobile-first digital calling card. When a recruiter clicks the link from any context -- LinkedIn, a resume header, an email signature, an Indeed profile -- they land on a page that communicates three things in under five seconds: who this person is, what this page does, and an immediate invitation to start a conversation.
 
 The chat input is open and ready above the fold on every device. No tabs to find. No buttons to click first. One thumb.
 
@@ -7768,9 +7768,9 @@ Three new product concepts developed June 2026 are documented below. Each requir
 
 ### Why This Matters
 
-Rob Ramos is the first RoleBoost candidate. His profile is the live proof of concept, the platform demo, and the first documented recruiter interaction -- all in one.
+Rob Ramos is the first IdentiBoost candidate. His profile is the live proof of concept, the platform demo, and the first documented recruiter interaction -- all in one.
 
-The founder brings 20+ years of operations and logistics experience from floor to VP. That is the exact beachhead market. When a logistics recruiter or warehouse VP clicks Rob's RoleBoost link, they are not reading marketing copy -- they are experiencing the product firsthand from someone they recognize as credible in their domain.
+The founder brings 20+ years of operations and logistics experience from floor to VP. That is the exact beachhead market. When a logistics recruiter or warehouse VP clicks Rob's IdentiBoost link, they are not reading marketing copy -- they are experiencing the product firsthand from someone they recognize as credible in their domain.
 
 ### What This Unlocks Immediately
 
@@ -7782,7 +7782,7 @@ This is also the fastest path to catching product friction. Every confusing ques
 
 Rob goes through the intake interview as a candidate. No shortcuts. Full document upload (resume, LinkedIn export). Full cross-document analysis. Full 2 to 3 pass AI intake interview using voice input. Complete sandbox testing against the 20 hardest recruiter questions from 20 years of operations hiring experience. Brain does not go live until every hard question produces an answer Rob would be satisfied receiving from a strong candidate.
 
-The target outcome: a live chatbot at `roleboost.app/c/rob-ramos` that any operations or logistics recruiter can interrogate and receive a full transcript from. That profile is the platform's first and most important asset.
+The target outcome: a live chatbot at `identiboost.com/i/rob-ramos` that any operations or logistics recruiter can interrogate and receive a full transcript from. That profile is the platform's first and most important asset.
 
 ---
 
@@ -8006,11 +8006,11 @@ This is the most powerful brain growth mechanism because it feeds verified exter
 
 ### Why It Is More Powerful Than Internal Sandbox Testing
 
-The sandbox tests the brain against predicted questions. External transcript hardening tests it against questions that actually happened. A candidate who brings transcripts from 15 screening calls they had before discovering RoleBoost arrives with a fully mapped set of their real weaknesses. The brain hardens specifically against what real recruiters in their target market actually ask -- not what a question library predicts they will ask.
+The sandbox tests the brain against predicted questions. External transcript hardening tests it against questions that actually happened. A candidate who brings transcripts from 15 screening calls they had before discovering IdentiBoost arrives with a fully mapped set of their real weaknesses. The brain hardens specifically against what real recruiters in their target market actually ask -- not what a question library predicts they will ask.
 
 ### Scenarios Where This Is Enormously Valuable
 
-**Pre-platform job search history.** A candidate who has been searching for three months before finding RoleBoost has had 10 to 20 screening calls. They know which questions hurt them. They bring those transcripts. The brain immediately hardens against the specific gaps that real recruiters already found.
+**Pre-platform job search history.** A candidate who has been searching for three months before finding IdentiBoost has had 10 to 20 screening calls. They know which questions hurt them. They bring those transcripts. The brain immediately hardens against the specific gaps that real recruiters already found.
 
 **Other AI practice tools.** Candidates using ChatGPT or Claude directly to practice interview answers paste those transcripts in. All prior practice becomes brain fuel rather than wasted effort.
 
@@ -8199,7 +8199,7 @@ Build sequence within Phase 3:
 
 ---
 
-*RoleBoost AI Brain and Calling Card Spec v1.1 -- roleboost.app -- Built by Rob Ramos -- June 2026*
+*IdentiBoost AI Brain and Calling Card Spec v1.1 -- identiboost.com -- Built by Rob Ramos -- June 2026*
 ````
 
 
@@ -8208,7 +8208,7 @@ Build sequence within Phase 3:
 The elite system-prompt + chat-route spec: prompt layer design, complexity routing, grounding validation.
 
 ````md
-# RoleBoost -- Elite System Prompt Build Spec
+# IdentiBoost -- Elite System Prompt Build Spec
 ## Upgrade `lib/ai/build-system-prompt.ts` and `app/api/chat/route.ts`
 **Version:** 1.0
 **Date:** June 2026
@@ -8979,7 +8979,7 @@ Before this goes live, run the following tests in the candidate AI testing sandb
 
 ---
 
-*RoleBoost Elite System Prompt Build Spec v1.0 -- roleboost.app -- Built by Rob Ramos -- June 2026*
+*IdentiBoost Elite System Prompt Build Spec v1.0 -- identiboost.com -- Built by Rob Ramos -- June 2026*
 ````
 
 ### 8.2 Living architecture docs (`docs/architecture/`)
@@ -9627,7 +9627,7 @@ Rate limiting on the public chat pipeline.
 ````md
 # 11 · Anti-Spam & Abuse Control
 
-The public chatbot (`/c/[slug]` → `/api/chat`) is open to anonymous recruiters,
+The public chatbot (`/i/[slug]` → `/api/chat`) is open to anonymous recruiters,
 which makes it an abuse surface: each message triggers up to three Anthropic
 calls, and each conversation can email the candidate. Three layers protect it,
 all low-friction for real recruiters and all fail-open so an infra blip or
@@ -9700,7 +9700,7 @@ that pattern ever appears).
 
 The hard interaction caps are the abuse backstop; the meeting nudge is the
 low-friction ceiling that real recruiters actually hit first. It reframes "stop
-spending tokens" as "book a meeting," which is what RoleBoost wants anyway.
+spending tokens" as "book a meeting," which is what IdentiBoost wants anyway.
 
 - **Trigger:** `/api/chat` counts completed exchanges from the server-rebuilt
   history. Once past `NUDGE_AFTER_EXCHANGES` (3), it passes
@@ -9746,7 +9746,7 @@ Security posture incl. chat trust boundaries and anon grants.
 ````md
 # 12 · Security
 
-> **Living document.** RoleBoost holds candidates' career data and private
+> **Living document.** IdentiBoost holds candidates' career data and private
 > recruiter conversations, so security is a first-class concern, not a
 > bolt-on. This page is the durable, evolving picture of how the platform is
 > protected. Update it whenever the posture changes; log the change in the
@@ -9776,7 +9776,7 @@ Security posture incl. chat trust boundaries and anon grants.
   metadata, and is always looked up server-side. Client-side role claims are
   never trusted.
 - `middleware.ts` runs Clerk on every route and `auth.protect()`s everything
-  except an explicit public allowlist (marketing, `/c/[slug]`, `/api/chat`,
+  except an explicit public allowlist (marketing, `/i/[slug]`, `/api/chat`,
   `/api/transcripts`, `/api/cron`, webhooks). Public API routes re-check auth
   themselves where they need identity.
 
@@ -9823,7 +9823,7 @@ exposed to anon.
 
 ## Public endpoints & abuse control
 
-The public chatbot (`/c/[slug]` → `/api/chat`, `/api/chat/schedule`,
+The public chatbot (`/i/[slug]` → `/api/chat`, `/api/chat/schedule`,
 `/api/transcripts/deliver`) is open to anonymous recruiters and is the primary
 abuse surface. Each message can trigger up to three Anthropic calls, so **token
 burn** is the core risk. It is protected by layered controls, all fail-open:
@@ -9928,7 +9928,7 @@ What the skill does and how it is triggered. Only Section 1 of its output (the N
 ````md
 ## What This Skill Does
 
-This skill runs the RoleBoost candidate asset production workflow. It is designed for superadmin use -- either directly in Claude chat today, or triggered from the superadmin dashboard once that is built.
+This skill runs the IdentiBoost candidate asset production workflow. It is designed for superadmin use -- either directly in Claude chat today, or triggered from the superadmin dashboard once that is built.
 
 Given a candidate's resume and any available supporting context, this skill:
 
@@ -9949,7 +9949,7 @@ Paste the following prompt into a new Claude chat session to begin:
 
 ---
 
-> I am starting a RoleBoost candidate asset production session. You are running the RoleBoost Candidate Asset Production Skill. Your job is to read everything I give you, apply the AI Mirror, determine this candidate's story, and produce their complete asset package.
+> I am starting a IdentiBoost candidate asset production session. You are running the IdentiBoost Candidate Asset Production Skill. Your job is to read everything I give you, apply the AI Mirror, determine this candidate's story, and produce their complete asset package.
 >
 > Before you begin, ask me for the following:
 > 1. The candidate's resume (upload as PDF, Word doc, or paste as text)
@@ -10018,9 +10018,9 @@ Claude produces the full output as a single `.md` document with two sections.
 Follows the exact format used in `PERSONA_NARRATIVE_GUIDE.md`. Six subsections:
 
 **1. Identity Snapshot**
-Name, slug (firstname-lastname, lowercase, hyphenated), public URL (roleboost.app/c/[slug]), location, target role, headline, avatar color (assign from RoleBoost palette below), initials.
+Name, slug (firstname-lastname, lowercase, hyphenated), public URL (identiboost.com/i/[slug]), location, target role, headline, avatar color (assign from IdentiBoost palette below), initials.
 
-RoleBoost avatar color palette:
+IdentiBoost avatar color palette:
 
 | Name | Hex | Primary feel |
 |---|---|---|
@@ -10081,7 +10081,7 @@ Claude selects the avatar color using two axes: the candidate's industry or func
 Example Identity Snapshot output: "Slate Blue -- Technology/SaaS lane, tone reads precise and data-driven. Infographic background: Light."
 
 **2. The Narrative**
-2-3 sentences. This is the human story, not a resume summary. It must answer: what does this person's career actually show, what can their resume not say about them, and what does RoleBoost specifically do for this person that no other tool could. Write from the AI Mirror read -- grounded in evidence, free of inflation.
+2-3 sentences. This is the human story, not a resume summary. It must answer: what does this person's career actually show, what can their resume not say about them, and what does IdentiBoost specifically do for this person that no other tool could. Write from the AI Mirror read -- grounded in evidence, free of inflation.
 
 **3. The Hook**
 One line only. The single most credible and compelling fact in the file. The thing that makes a recruiter stop. Must be specific -- a number, a moment, a result. No generalities.
@@ -10093,7 +10093,7 @@ The one question every recruiter will ask and the AI chatbot must handle perfect
 A bulleted list of 5-8 metrics and specifics that must appear in every asset -- audio, infographic, chatbot, everything. These are the facts that cannot be wrong or missing. Include: career span, scale metrics (team size, revenue, volume, portfolio size), the most impressive quantified result, any certifications or credentials worth noting, and anything that directly addresses the likely hard question.
 
 **6. NotebookLM Prompt Mapping**
-A table showing which prompts from the RoleBoost NotebookLM Elite Prompt Library fit this candidate, with a one-line rationale and a tone note for each. Separate rows for Deep Dive, Brief, Infographic, and Short Video.
+A table showing which prompts from the IdentiBoost NotebookLM Elite Prompt Library fit this candidate, with a one-line rationale and a tone note for each. Separate rows for Deep Dive, Brief, Infographic, and Short Video.
 
 ---
 
@@ -10124,11 +10124,11 @@ The industry has named this the ["resume illusion"](https://blog.theinterviewguy
 
 Every tool in the market is making this worse. AI resume builders help candidates optimize, polish, and keyword-match -- which produces more look-alike documents with less signal and more risk of inflation. The candidate who uses these tools gains a short-term ATS advantage and a long-term credibility problem.
 
-RoleBoost goes the opposite direction.
+IdentiBoost goes the opposite direction.
 
 Most candidates have a meaningful disconnect between how they perceive their own career and what their documented experience actually shows. The story they tell in interviews is often bigger, more polished, or differently framed than what appears on paper. Sometimes it is the opposite: a candidate undersells because their resume was never built to reflect the full scope of what they actually did.
 
-RoleBoost uses AI to create a non-biased mirror.
+IdentiBoost uses AI to create a non-biased mirror.
 
 When a candidate uploads their resume and career context, the platform reads what is actually there -- without ego, without the narrative the candidate has been telling themselves for years, without the inflation of a sales pitch or the deflation of imposter syndrome. It makes a clear, evidence-based determination of who this person is based on what they have documented.
 
@@ -10140,7 +10140,7 @@ Second, it gives the candidate something they rarely get: an objective reflectio
 
 Third, it trains the AI chatbot on the same honest read. So when a recruiter asks the chatbot anything -- at any hour, before any call -- they get a consistent, grounded answer in the candidate's voice that matches what the evidence supports. Not the inflated pitch. Not the thin resume. The real person.
 
-This is not a feature. It is the foundation of trust that makes the entire platform work -- for candidates, for recruiters, and for the employers who need to make real hiring decisions. In a market drowning in AI-generated noise, the honest candidate is the differentiated one. RoleBoost makes that possible.
+This is not a feature. It is the foundation of trust that makes the entire platform work -- for candidates, for recruiters, and for the employers who need to make real hiring decisions. In a market drowning in AI-generated noise, the honest candidate is the differentiated one. IdentiBoost makes that possible.
 
 ---
 
@@ -10207,7 +10207,7 @@ The platform gets smarter the longer they use it. Every recruiter interaction im
 
 ## 9. PRD.md: AI brain and chat sections
 
-The PRD (`docs/PRD.md`) predates parts of the build; where it conflicts with the architecture docs or code, the repo is the source of truth (e.g. the "modal" became the chat-first calling card at `/c/[slug]`).
+The PRD (`docs/PRD.md`) predates parts of the build; where it conflicts with the architecture docs or code, the repo is the source of truth (e.g. the "modal" became the chat-first calling card at `/i/[slug]`).
 
 #### `docs/PRD.md` (lines 170-256)
 
@@ -10318,7 +10318,7 @@ The AI chat interface embedded in the modal.
 - Message input field
 - Send button
 - Conversation history in chat bubbles
-- "Powered by RoleBoost AI" footer label
+- "Powered by IdentiBoost AI" footer label
 - Disclaimer: "This AI represents [Name]'s career history and may not reflect all details"
 
 **Behavior:**
@@ -10395,7 +10395,7 @@ Section 6: Email Delivery, the transcript system (session lifecycle, both emails
 
 ### 6.2 Candidate Transcript Email
 
-**Subject:** A recruiter just chatted with your RoleBoost AI
+**Subject:** A recruiter just chatted with your IdentiBoost AI
 
 **Body:**
 - Company name (or "An anonymous recruiter") viewed your profile
@@ -10407,7 +10407,7 @@ Section 6: Email Delivery, the transcript system (session lifecycle, both emails
 
 ### 6.3 Employer Transcript Email
 
-**Subject:** Your RoleBoost conversation with [Candidate Name]
+**Subject:** Your IdentiBoost conversation with [Candidate Name]
 
 **Body:**
 - Summary -- N questions asked, duration
@@ -10418,7 +10418,7 @@ Section 6: Email Delivery, the transcript system (session lifecycle, both emails
 
 ### 6.4 Feedback Notification Email
 
-**Subject:** You have new feedback from [Company Name] on RoleBoost
+**Subject:** You have new feedback from [Company Name] on IdentiBoost
 
 **Body:**
 - Company name and message preview
@@ -10428,7 +10428,7 @@ Section 6: Email Delivery, the transcript system (session lifecycle, both emails
 - [ ] Transcript email sent to candidate after every session
 - [ ] Transcript email sent to logged-in employer after every session
 - [ ] Feedback email sent to candidate on every feedback submission
-- [ ] All emails from `transcripts@roleboost.app`
+- [ ] All emails from `transcripts@identiboost.com`
 - [ ] Email templates mobile responsive
 - [ ] Unsubscribe link included per CAN-SPAM
 
@@ -11192,7 +11192,7 @@ sequential draft PRs into `main`.
   per-turn `model_used`/`was_complex`/`was_validated` tracking.
 - **C, Sandbox self-testing:** `sandbox_sessions`; 20-question library; `analyze-sandbox.ts`;
   `/api/sandbox/analyze`; `SandboxPanel` with verdicts + "Strengthen <field>" deep-links.
-- **Calling card (UX):** chat-first public `/c/[slug]`; replaced the old modal. No token streaming.
+- **Calling card (UX):** chat-first public `/i/[slug]`; replaced the old modal. No token streaming.
 - **D, AI intake interview:** `intake_answers` + readiness columns; `lib/ai/intake.ts`;
   `/api/intake/analyze` + `/assemble`; `IntakeInterview` dialog.
 - **E1, Transcript email:** Resend client + branded candidate/employer emails;
@@ -11217,7 +11217,7 @@ sequential draft PRs into `main`.
   `lib/security/`; `docs/architecture/11-anti-spam.md`.
 - **Candidate self-management (July 2026):** transcript archive/delete (`chat_sessions.archived_at`),
   Settings page with data export (`/api/candidate/data-export`) and fresh-start controls.
-- **Design system:** `design-system/roleboost/MASTER.md` now committed as the visual reference.
+- **Design system:** `design-system/identiboost/MASTER.md` now committed as the visual reference.
 
 ### Next-session TODO (in order)
 1. **A11y + empty/loading-states audit** *(partially done: chat/calling-card/AI-Studio surfaces +
@@ -11225,7 +11225,7 @@ sequential draft PRs into `main`.
 2. **Brain intelligence follow-ups** *(designed, not built)*: voice profile column (Sonnet-derived
    tone descriptors injected into `<voice>`); cross-session question clustering + answer-rate metric;
    returning-recruiter memory (needs founder steer on privacy).
-3. **Distinctive visual refresh** *(design system committed at `design-system/roleboost/MASTER.md`;
+3. **Distinctive visual refresh** *(design system committed at `design-system/identiboost/MASTER.md`;
    apply, don't redesign)*, roll the documented direction across surfaces; propose before any
    deviation from MASTER.md.
 4. **Phase F, voice input (Whisper)** *(held)*, browser audio → `/api/transcribe` (OpenAI Whisper) →
@@ -11305,7 +11305,7 @@ export interface CandidateProfile extends CandidateBrain {
 }
 
 // ── Career Context Document (self-serve generation) ─────────────────────────
-// The "RoleBoost Candidate Asset Production Skill" (Section 1 only) run in-app:
+// The "IdentiBoost Candidate Asset Production Skill" (Section 1 only) run in-app:
 // the candidate's résumé + career sources synthesized into a polished, elite
 // career-context document. Two narrative angles are generated; the candidate
 // picks one, whose markdown becomes the active context_package_md.
@@ -11362,7 +11362,7 @@ export interface CareerContextDrafts {
 }
 
 // ── Asset Package (self-serve, in-app) ──────────────────────────────────────
-// The full RoleBoost Candidate Asset Production Skill run in AI Studio: résumé +
+// The full IdentiBoost Candidate Asset Production Skill run in AI Studio: résumé +
 // career sources, strategized toward a target role + optional job description,
 // producing TWO narrative perspectives, each a self-contained narrative (Section
 // 1) plus its four ready-to-run NotebookLM prompts (Section 2). The candidate
@@ -11650,7 +11650,7 @@ The active build plan is almost entirely about the recruiter chat conversion loo
 #### `todo.md`
 
 ````md
-# RoleBoost TODO: complete the recruiter conversation loop
+# IdentiBoost TODO: complete the recruiter conversation loop
 
 Build plan from the flagship review (the recruiter-facing personal career AI).
 The brain itself is well aligned with the vision; this list closes the conversion
@@ -11803,8 +11803,8 @@ The SEO foundation is shipped in code (site metadata + title template, `robots.t
 JSON-LD, canonical URLs). Candidate calling cards are `noindex` by default, with a
 per-candidate "Discoverable in search" opt-in in Settings. Remaining manual steps:
 
-- [x] Set `NEXT_PUBLIC_APP_URL=https://roleboost.app` in the Vercel production env.
-- [ ] Submit `https://roleboost.app/sitemap.xml` in **Google Search Console** (and
+- [x] Set `NEXT_PUBLIC_APP_URL=https://identiboost.com` in the Vercel production env.
+- [ ] Submit `https://identiboost.com/sitemap.xml` in **Google Search Console** (and
       **Bing Webmaster Tools**). Then use Search Console's URL Inspection to request
       indexing of `/` and `/boosts` so they are picked up quickly.
 - [ ] After a candidate opts into discovery, their `/c/<slug>` becomes indexable and
@@ -11820,10 +11820,10 @@ they are drafts, not legal advice. Before relying on them publicly:
 
 - [ ] Have a lawyer review both `/privacy` and `/terms` (confirm GDPR / CCPA-CPRA
       coverage for your user base).
-- [ ] Confirm the contact addresses forward to a real inbox: `privacy@roleboost.app`
-      and `legal@roleboost.app`.
+- [ ] Confirm the contact addresses forward to a real inbox: `privacy@identiboost.com`
+      and `legal@identiboost.com`.
 - [ ] Fill in specifics in Terms: your governing-law **state** (currently "the state in
-      which RoleBoost is established") and your formal **legal entity** name.
+      which IdentiBoost is established") and your formal **legal entity** name.
 - [ ] Confirm the defaults suit you: liability cap (greater of 12-month fees or $100)
       and the no-refund-by-default clause.
 - [ ] Keep both pages' "Last updated" date current whenever the policy/terms change.

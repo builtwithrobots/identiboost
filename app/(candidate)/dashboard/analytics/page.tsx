@@ -221,14 +221,14 @@ async function loadAnalyticsData(userId: string, rangeKey: RangeKey): Promise<An
     ...views
       .filter((v) => new Date(v.viewed_at).getTime() >= windowStart)
       .slice(0, 20)
-      .map((v) => ({ kind: 'view' as const, at: v.viewed_at, label: 'A recruiter opened your profile' })),
+      .map((v) => ({ kind: 'view' as const, at: v.viewed_at, label: 'A contact opened your profile' })),
     ...sessions
       .filter((s) => new Date(s.started_at).getTime() >= windowStart)
       .slice(0, 20)
       .map((s) => ({
         kind: 'chat' as const,
         at: s.started_at,
-        label: `${s.employer_company_name?.trim() || (s.viewer_clerk_user_id ? 'A signed-in recruiter' : 'A recruiter')} chatted with your AI`,
+        label: `${s.employer_company_name?.trim() || (s.viewer_clerk_user_id ? 'A signed-in contact' : 'A contact')} chatted with your AI`,
       })),
     ...meetings
       .filter((m) => new Date(m.created_at).getTime() >= windowStart)
@@ -283,7 +283,7 @@ export default async function CandidateAnalyticsPage({
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Analytics"
-        description="How recruiters are finding, engaging with, and reaching out through your profile."
+        description="How your contacts are finding, engaging with, and reaching out through your profile."
       />
       <div className="mx-auto max-w-6xl px-6 py-8">
         <AnalyticsDashboard data={data} />

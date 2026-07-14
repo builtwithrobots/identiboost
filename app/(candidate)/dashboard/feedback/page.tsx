@@ -8,14 +8,14 @@ export default function CandidateFeedbackPage() {
     <DashboardPage className="min-h-full">
       <PageHeader
         title="Feedback"
-        description="Notes and feedback that employers send you after viewing your profile."
+        description="Notes and feedback that businesses send you after viewing your profile."
       />
 
       <div className="mx-auto max-w-6xl px-6 py-8">
         <EmptyState
           icon={Inbox}
           title="No feedback yet"
-          description="When an employer sends feedback through RoleBoost, it lands here and in your inbox. Share your profile link to get the conversation started."
+          description="When a business sends feedback through IdentiBoost, it lands here and in your inbox. Share your profile link to get the conversation started."
         />
       </div>
     </DashboardPage>

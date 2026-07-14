@@ -2,13 +2,13 @@ import type { MetadataRoute } from 'next';
 import { FEATURED_PERSONAS } from '@/lib/boosts/personas';
 import { adminClient } from '@/lib/supabase/admin';
 
-const BASE_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app').replace(/\/$/, '');
+const BASE_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com').replace(/\/$/, '');
 
 // Refresh at most hourly so candidates who newly opt into discovery are picked up
 // without a redeploy, while avoiding a DB read on every crawler request.
 export const revalidate = 3600;
 
-// Only public, indexable pages belong here. Candidate calling cards (/c/[slug])
+// Only public, indexable pages belong here. Candidate calling cards (/i/[slug])
 // are excluded by default (they are noindex), and included only for candidates
 // who opted into search discoverability. Read defensively: the search_discoverable
 // column is added by the 20260715 migration, so a not-yet-migrated DB (or any
@@ -21,7 +21,7 @@ async function discoverableCandidateRoutes(): Promise<MetadataRoute.Sitemap> {
       .eq('search_discoverable', true);
 
     return ((data ?? []) as { slug: string; updated_at?: string | null }[]).map((c) => ({
-      url: `${BASE_URL}/c/${c.slug}`,
+      url: `${BASE_URL}/i/${c.slug}`,
       lastModified: c.updated_at ? new Date(c.updated_at) : undefined,
       changeFrequency: 'weekly',
       priority: 0.5,
