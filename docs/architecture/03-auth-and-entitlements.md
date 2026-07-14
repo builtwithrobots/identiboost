@@ -46,14 +46,14 @@ const { userId, supabase, role, isAdmin, user } = await getUserContext('candidat
 | Client | File | RLS | Use it for |
 |---|---|---|---|
 | `getRequestClient()` | `server.ts` | **Enforced** (forwards the Clerk JWT as Bearer) | Default. Every API route, Server Action, Server Component read/write. |
-| `adminClient` | `admin.ts` | **Bypassed** (service role) | Only where RLS bypass is genuinely required: the `getUserContext` bootstrap read, webhooks, the public chat path (anonymous recruiters), server-side signed-URL generation, transcript delivery. Every import carries a comment explaining why. |
+| `adminClient` | `admin.ts` | **Bypassed** (service role) | Only where RLS bypass is genuinely required: the `getUserContext` bootstrap read, webhooks, the public chat path (anonymous contacts), server-side signed-URL generation, transcript delivery. Every import carries a comment explaining why. |
 | `getBrowserClient()` | `browser.ts` | Anon role | `"use client"` reads of public data (calling-card profile fields, view tracking). |
 
 Hard rules: `SUPABASE_SERVICE_ROLE_KEY` is read **only** in `admin.ts`; never
 import `admin.ts` from anything that can reach the browser bundle; treat every
 admin-client use as security-review-worthy.
 
-Why the chat path uses the admin client: recruiters are anonymous (no Clerk JWT),
+Why the chat path uses the admin client: contacts are anonymous (no Clerk JWT),
 and the brain spans columns the anon role can't read. `getCandidateBrainBySlug`
 therefore reads server-side via the service-role client and the route enforces
 visibility itself (`is_published` or owner-preview). See

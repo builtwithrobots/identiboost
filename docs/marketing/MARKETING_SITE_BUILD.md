@@ -1,7 +1,10 @@
-# RoleBoost Marketing Site, Claude Code Build Prompt
+# IdentiBoost Marketing Site, Claude Code Build Prompt
+
+*Positioning note: this document predates the IdentiBoost pivot to the universal professional presence platform. Brand and domain references are updated; the market framing below is the original recruiting-vertical analysis.*
+
 **Version:** 1.4
 **Date:** June 2026
-**Purpose:** Drop this file into Claude Code to build the roleboost.app marketing homepage.
+**Purpose:** Drop this file into Claude Code to build the identiboost.com marketing homepage.
 
 ---
 
@@ -10,8 +13,8 @@
 Read CLAUDE.md before starting. This task is the public-facing marketing homepage only. It does not touch the candidate dashboard, employer dashboard, auth flows, or any Supabase/Clerk/Paddle integration. This is a standalone Next.js page at `app/page.tsx`.
 
 **Brand:**
-- Name: RoleBoost
-- Domain: roleboost.app
+- Name: IdentiBoost
+- Domain: identiboost.com
 - One-line pitch: "Your career. Your AI. Finally heard."
 - Brand colors: Navy (#1E3A5F) and Gold (#B8860B)
 - Background: White (#FFFFFF) with light gray (#F9FAFB) alternating sections
@@ -28,7 +31,7 @@ This section defines the exact visual language for the entire page. Follow it pr
 
 The two reference sites share the same core principles:
 - **Whitespace is the design.** Sections breathe. Content is never cramped. When in doubt, add more padding.
-- **The product is the hero.** Real UI screenshots and mock interfaces outperform stock photography every time. Show what RoleBoost actually looks like.
+- **The product is the hero.** Real UI screenshots and mock interfaces outperform stock photography every time. Show what IdentiBoost actually looks like.
 - **Bold headlines, quiet body copy.** Section headings are large and confident. Body text is comfortable and readable, never competing with headings for attention.
 - **One action per section.** Every section has one primary CTA. Never two competing buttons at the same visual weight.
 - **Clean over clever.** No decorative gradients, no glassmorphism, no drop shadows on everything. Restraint is the brand.
@@ -52,7 +55,7 @@ Use these exact values as Tailwind arbitrary values (`text-[#1E3A5F]`) or extend
 | Navy hover | Navy Dark | `#162d4a` | Navy button hover state |
 | Amber hover | Amber Dark | `#B45309` | Amber button hover state |
 
-**Why this palette:** Deep navy anchors the brand with credibility and authority. Amber replaces the previous gold -- it is a darker, warmer tone that passes WCAG AA contrast checks on the warm white base (unlike the previous `#B8860B` which failed on white). The warm white and warm gray surfaces give the page a human, editorial feel that distinguishes RoleBoost from cold blue-and-white SaaS tools -- which is intentional. This platform was built by a person who has done the work, and the palette should reflect that warmth.
+**Why this palette:** Deep navy anchors the brand with credibility and authority. Amber replaces the previous gold -- it is a darker, warmer tone that passes WCAG AA contrast checks on the warm white base (unlike the previous `#B8860B` which failed on white). The warm white and warm gray surfaces give the page a human, editorial feel that distinguishes IdentiBoost from cold blue-and-white SaaS tools -- which is intentional. This platform was built by a person who has done the work, and the palette should reflect that warmth.
 
 **Contrast rule:** Amber (`#D97706`) on warm white (`#FFFBF5`) passes 4.5:1 contrast for normal text -- it is safe to use for functional text and buttons. Never use the previous `#B8860B` value anywhere. Never place secondary text (`#6B7280`) on any surface darker than `#F5F0E8`.
 
@@ -437,7 +440,7 @@ This skips all animation for users who have enabled "reduce motion" in their OS 
 
 ### What Loom Does That We Are Copying
 
-1. **Product UI as the visual.** Loom never uses lifestyle photography. The UI is the image. For RoleBoost, the mock chat interface in Section 8 and any product screenshots carry all the visual weight. Make them look polished and real.
+1. **Product UI as the visual.** Loom never uses lifestyle photography. The UI is the image. For IdentiBoost, the mock chat interface in Section 8 and any product screenshots carry all the visual weight. Make them look polished and real.
 
 2. **Minimal nav.** Loom's nav has a logo, 3-4 links, and one button. Ours matches this exactly. No mega-menus, no dropdowns, no utility links cluttering the bar.
 
@@ -465,17 +468,17 @@ This skips all animation for users who have enabled "reduce motion" in their OS 
 
 ## First Task Before Writing Any Code
 
-Before building anything, write the entire Design System section above out to `design-system/roleboost/MASTER.md`. Create the file and any missing directories. Overwrite if the file already exists.
+Before building anything, write the entire Design System section above out to `design-system/identiboost/MASTER.md`. Create the file and any missing directories. Overwrite if the file already exists.
 
 The file should contain everything under the "Design System" heading above -- philosophy, color tokens, typography scale, spacing scale, button styles, card styles, section wrapper pattern, section heading pattern, icon style, animation system, and both reference sections ("What Loom Does" and "What Homerun Does").
 
 Format it as a standalone markdown file with this header:
 
 ```
-# RoleBoost Design System, MASTER
+# IdentiBoost Design System, MASTER
 **Version:** 1.0
 **Last updated:** June 2026
-**Source of truth for all RoleBoost UI decisions. Read this before building any page or component.**
+**Source of truth for all IdentiBoost UI decisions. Read this before building any page or component.**
 ```
 
 Once the file is written, proceed to building the homepage.
@@ -500,7 +503,7 @@ The page must be:
 
 ### 1. Navigation (`components/marketing/Nav.tsx`)
 
-- Logo left: "RoleBoost" wordmark in navy, bold
+- Logo left: "IdentiBoost" wordmark in navy, bold
 - Three nav links center or right: "How It Works", "Pricing", "For Employers"
 - One CTA button far right: "Get Started Free" -- gold background, white text, links to `/sign-up`
 - Sticky on scroll
@@ -515,7 +518,7 @@ The page must be:
 > "Your career, finally heard. Your next hire, finally found."
 
 **Subheadline (gray, medium weight):**
-> "RoleBoost replaces the resume with a rich AI-powered candidate profile -- audio, video, infographic, slide deck, and a personal career AI that answers recruiter questions 24/7."
+> "IdentiBoost replaces the resume with a rich AI-powered candidate profile -- audio, video, infographic, slide deck, and a personal career AI that answers recruiter questions 24/7."
 
 **Dual-path cards (two side-by-side cards, full-width on mobile stacked):**
 
@@ -577,7 +580,7 @@ Background: White.
 > "One link. Every version of you."
 
 **Subheading:**
-> "Upload your resume and career context. RoleBoost produces a complete professional asset suite -- then gives you a personal career AI that works for you around the clock."
+> "Upload your resume and career context. IdentiBoost produces a complete professional asset suite -- then gives you a personal career AI that works for you around the clock."
 
 **Card grid (2 columns on mobile, 4 columns on desktop):**
 
@@ -617,12 +620,12 @@ Step 1:
 Step 2:
 - Number badge: "2" in navy circle
 - Heading: "Get your complete asset suite"
-- Body: "RoleBoost produces your audio overview, video, infographic, slide deck, AI summary, and ATS resume -- all from one upload."
+- Body: "IdentiBoost produces your audio overview, video, infographic, slide deck, AI summary, and ATS resume -- all from one upload."
 
 Step 3:
 - Number badge: "3" in navy circle
 - Heading: "Share one link. Let your AI do the talking."
-- Body: "Paste your RoleBoost link anywhere. Employers click it, explore your assets, and chat with your career AI -- before they ever schedule a call."
+- Body: "Paste your IdentiBoost link anywhere. Employers click it, explore your assets, and chat with your career AI -- before they ever schedule a call."
 
 Steps connected by a horizontal line (desktop) or vertical line (mobile) between the number badges.
 
@@ -643,7 +646,7 @@ Background: White.
 
 Step 1:
 - Number badge: "1"
-- Heading: "Receive a candidate's RoleBoost link"
+- Heading: "Receive a candidate's IdentiBoost link"
 - Body: "Candidates share their link in applications, email signatures, and LinkedIn. Click it and a rich profile modal opens instantly."
 
 Step 2:
@@ -678,7 +681,7 @@ Heading (large, navy):
 > "A personal career AI, available to recruiters 24/7."
 
 Body:
-> "Every RoleBoost candidate gets a career AI trained on their specific data. Recruiters chat with it directly from the candidate's profile -- no scheduling, no waiting, no screening call required."
+> "Every IdentiBoost candidate gets a career AI trained on their specific data. Recruiters chat with it directly from the candidate's profile -- no scheduling, no waiting, no screening call required."
 
 Three bullet points with checkmark icons (gold checkmarks):
 - "Answers questions in the candidate's voice, from their real career data"
@@ -706,7 +709,7 @@ Build a static visual that looks like a chat interface. Use a white card with a 
   AI bubble:
   > "The expansion I was brought in to execute was complete. The site was stable, the team was self-managing, and my value was in building -- not maintaining. I look for environments where the next hard thing is waiting."
 
-- Footer text (small gray): "Powered by RoleBoost AI"
+- Footer text (small gray): "Powered by IdentiBoost AI"
 
 Background: Navy (`bg-[#1E3A5F]`) to make this section stand out visually. Adjust text colors accordingly -- white/light for the left column copy.
 
@@ -799,7 +802,7 @@ Background: Light gray (`bg-gray-50`).
 > "Want us to build it for you?"
 
 **Body:**
-> "Not ready to DIY? We build RoleBoost profiles for candidates directly -- the same way we built our own. Specialized in operations, logistics, and warehouse leadership. Available through Fiverr or direct."
+> "Not ready to DIY? We build IdentiBoost profiles for candidates directly -- the same way we built our own. Specialized in operations, logistics, and warehouse leadership. Available through Fiverr or direct."
 
 **Two paths side by side (stacked on mobile):**
 
@@ -838,7 +841,7 @@ Full-width section, navy background.
 > "Your story deserves to be told the way it deserves to be told."
 
 **Subheading (light blue-gray, centered):**
-> "Join RoleBoost free. Build your profile in under an hour. Share one link that gives hiring managers everything they need."
+> "Join IdentiBoost free. Build your profile in under an hour. Share one link that gives hiring managers everything they need."
 
 **Two buttons centered:**
 - "Build My Profile Free" -- gold background, white text, links to `/sign-up`
@@ -850,10 +853,10 @@ Full-width section, navy background.
 
 Simple, clean.
 
-- Left: RoleBoost wordmark + "The world's first AI-powered candidate intelligence platform."
+- Left: IdentiBoost wordmark + "The world's first AI-powered candidate intelligence platform."
 - Center: Links -- How It Works / Pricing / For Employers / Contact
 - Right: "Built by Rob Ramos -- 20+ years in operations and logistics."
-- Bottom bar: "© 2026 RoleBoost. All rights reserved." + Privacy Policy + Terms of Service (links to `#` placeholders)
+- Bottom bar: "© 2026 IdentiBoost. All rights reserved." + Privacy Policy + Terms of Service (links to `#` placeholders)
 
 Background: Near-black (`bg-gray-900`). Text: white and gray.
 

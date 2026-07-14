@@ -8,18 +8,18 @@ import Link from 'next/link'
 const steps = [
   {
     number: '1',
-    heading: 'Receive a candidate\'s RoleBoost link',
-    body: 'Candidates share their link in applications, email signatures, and LinkedIn. Click it and a rich profile modal opens instantly.',
+    heading: 'Receive a professional\'s IdentiBoost link',
+    body: 'Professionals share their link in intros, email signatures, and LinkedIn. Click it and a rich profile modal opens instantly.',
   },
   {
     number: '2',
-    heading: 'Explore their full career narrative',
+    heading: 'Explore their full professional story',
     body: 'Listen to their audio overview, watch their video, review their infographic and slide deck, in the format that works for you.',
   },
   {
     number: '3',
-    heading: 'Chat with their career AI',
-    body: 'Ask the candidate\'s AI anything, their leadership style, why they left their last role, how they handled their toughest challenge. Get instant answers, 24/7.',
+    heading: 'Chat with their AI',
+    body: 'Ask the professional\'s AI anything, how they work, what they have built, how they handled their toughest challenge. Get instant answers, 24/7.',
   },
 ]
 
@@ -52,7 +52,7 @@ export default function HowItWorksEmployer() {
             id="employer-how-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug"
           >
-            For hiring teams: know your candidates before the first call.
+            For teams: know who you&apos;re meeting before the first call.
           </h2>
         </motion.div>
 
@@ -104,7 +104,7 @@ export default function HowItWorksEmployer() {
             href="/sign-up"
             className="inline-flex items-center justify-center px-8 py-3 rounded-lg bg-[#D97706] text-white font-jakarta text-[15px] font-semibold hover:bg-[#B45309] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F5F0E8] transition-colors min-h-[44px]"
           >
-            Start Hiring Free
+            Start Evaluating Free
           </Link>
           <p className="font-inter text-sm text-gray-500 mt-3">
             Free tier available. No credit card required.

@@ -8,7 +8,7 @@ const navLinks = [
   { href: '/boosts', label: 'Boosts' },
   { href: '/#how-it-works', label: 'How It Works' },
   { href: '/#pricing', label: 'Pricing' },
-  { href: '/recruiters', label: 'For Recruiters' },
+  { href: '/recruiters', label: 'For Teams' },
 ]
 
 export default function LandingNav() {
@@ -18,9 +18,9 @@ export default function LandingNav() {
   const pathname = usePathname()
 
   const onRecruitersPage = pathname?.startsWith('/recruiters') ?? false
-  // The recruiter page gets a way back to the candidate story in the center links
+  // The teams page gets a way back to the professional story in the center links
   const links = onRecruitersPage
-    ? [...navLinks.slice(0, 3), { href: '/', label: 'For Candidates' }, navLinks[3]]
+    ? [...navLinks.slice(0, 3), { href: '/', label: 'For Professionals' }, navLinks[3]]
     : navLinks
   const isActive = (href: string) => href === '/recruiters' && onRecruitersPage
 
@@ -56,9 +56,9 @@ export default function LandingNav() {
           <Link
             href="/"
             className="font-jakarta text-xl font-extrabold text-[#1E3A5F] rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A5F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5]"
-            aria-label="RoleBoost home"
+            aria-label="IdentiBoost home"
           >
-            RoleBoost
+            IdentiBoost
           </Link>
 
           {/* Desktop links */}

@@ -5,9 +5,9 @@ import type { MetadataRoute } from 'next';
 // the app/icons/[size] route (no binary assets in the repo).
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'RoleBoost',
-    short_name: 'RoleBoost',
-    description: 'Your career. Your AI. Finally heard.',
+    name: 'IdentiBoost',
+    short_name: 'IdentiBoost',
+    description: 'Your identity. Boosted.',
     start_url: '/',
     display: 'standalone',
     background_color: '#F5F0E8',

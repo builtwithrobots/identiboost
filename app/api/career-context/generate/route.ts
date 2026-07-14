@@ -67,7 +67,7 @@ export async function POST(_req: NextRequest) {
       {
         error: {
           code: 'INVALID_INPUT',
-          message: 'Add a résumé or a career source before generating a context document.',
+          message: 'Add a résumé or a professional source before generating a context document.',
         },
       },
       { status: 400 },

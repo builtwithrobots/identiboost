@@ -79,7 +79,7 @@ export interface CandidateProfile extends CandidateBrain {
 }
 
 // ── Career Context Document (self-serve generation) ─────────────────────────
-// The "RoleBoost Candidate Asset Production Skill" (Section 1 only) run in-app:
+// The "IdentiBoost Candidate Asset Production Skill" (Section 1 only) run in-app:
 // the candidate's résumé + career sources synthesized into a polished, elite
 // career-context document. Two narrative angles are generated; the candidate
 // picks one, whose markdown becomes the active context_package_md.
@@ -136,7 +136,7 @@ export interface CareerContextDrafts {
 }
 
 // ── Asset Package (self-serve, in-app) ──────────────────────────────────────
-// The full RoleBoost Candidate Asset Production Skill run in AI Studio: résumé +
+// The full IdentiBoost Candidate Asset Production Skill run in AI Studio: résumé +
 // career sources, strategized toward a target role + optional job description,
 // producing TWO narrative perspectives, each a self-contained narrative (Section
 // 1) plus its four ready-to-run NotebookLM prompts (Section 2). The candidate
@@ -180,7 +180,7 @@ export interface AssetPackageIdentity {
   location: string;
   target_role: string;
   headline: string;
-  /** Avatar color chosen from the RoleBoost palette, with a one-line rationale. */
+  /** Avatar color chosen from the IdentiBoost palette, with a one-line rationale. */
   avatar_color: { name: string; hex: string; rationale: string };
   initials: string;
 }
@@ -295,7 +295,7 @@ export interface CandidateAsset {
   created_at: string;
 }
 
-// A recruiter's request to meet, captured when the Personal Assistant redirects.
+// A contact's request to meet, captured when the AI redirects.
 // Lightweight inbound pipeline: new -> contacted -> scheduled -> closed.
 export type MeetingRequestStatus = 'new' | 'contacted' | 'scheduled' | 'closed';
 

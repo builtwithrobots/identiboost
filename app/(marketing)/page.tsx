@@ -15,20 +15,20 @@ import PricingSection from '@/components/marketing/PricingSection';
 import DoneForYouSection from '@/components/marketing/DoneForYouSection';
 import FinalCTA from '@/components/marketing/FinalCTA';
 
-const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app').replace(/\/$/, '');
+const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com').replace(/\/$/, '');
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'RoleBoost: AI candidate profiles recruiters can interrogate 24/7',
+    absolute: 'IdentiBoost: The professional profile that answers back',
   },
   description:
-    'Upload your resume and career context; RoleBoost builds a personal career AI that represents you to recruiters 24/7, plus audio, video, infographic, and slide-deck Boosts. Share one link and be heard.',
+    'IdentiBoost builds a verified personal AI that represents you to anyone who asks, whether they are hiring, buying, booking, or just curious, plus audio, video, and infographic Boosts. Share one link and be understood.',
   alternates: { canonical: '/' },
   openGraph: {
     url: '/',
-    title: 'RoleBoost: AI candidate profiles recruiters can interrogate 24/7',
+    title: 'IdentiBoost: The professional profile that answers back',
     description:
-      'A personal career AI that represents you to recruiters 24/7, plus audio, video, infographic, and slide-deck Boosts. Your career. Your AI. Finally heard.',
+      'A verified personal AI that represents you to anyone who asks, plus audio, video, and infographic Boosts. Your identity. Boosted.',
   },
 };
 
@@ -38,15 +38,15 @@ const structuredData = {
   '@graph': [
     {
       '@type': 'Organization',
-      name: 'RoleBoost',
+      name: 'IdentiBoost',
       url: APP_URL,
       logo: `${APP_URL}/icons/512`,
       description:
-        'AI-powered candidate intelligence platform. A personal career AI, plus audio, video, infographic, and slide-deck Boosts, shared over one link.',
+        'The universal professional presence platform. A verified personal AI plus audio, video, and infographic Boosts, shared over one link.',
     },
     {
       '@type': 'WebSite',
-      name: 'RoleBoost',
+      name: 'IdentiBoost',
       url: APP_URL,
     },
   ],

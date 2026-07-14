@@ -55,20 +55,20 @@ export default function AIChatbotSpotlight() {
               id="ai-spotlight-heading"
               className="font-jakarta text-3xl md:text-4xl font-bold text-white leading-snug mb-6"
             >
-              A personal career AI, available to recruiters 24/7.
+              A personal Identity AI, available to anyone 24/7.
             </h2>
 
             <p className="font-inter text-lg text-blue-100 leading-relaxed mb-8">
-              Every RoleBoost candidate gets a career AI trained on their specific data. Recruiters
-              chat with it directly from the candidate&apos;s profile, no scheduling, no waiting, no
-              screening call required.
+              Every IdentiBoost professional gets an Identity AI trained on their specific data.
+              Contacts chat with it directly from the profile, no scheduling, no waiting, no
+              back-and-forth required.
             </p>
 
             <ul className="space-y-4 mb-10">
               {[
-                'Answers questions in the candidate\'s voice, from their real career data',
+                'Answers in their own voice, grounded in their real professional data',
                 'Full conversation transcript delivered by email to both sides',
-                'Candidates fine-tune their AI based on what recruiters actually ask',
+                'Professionals fine-tune their AI based on what contacts actually ask',
               ].map((point) => (
                 <li key={point} className="flex items-start gap-3">
                   <svg
@@ -110,7 +110,7 @@ export default function AIChatbotSpotlight() {
             <div
               className="bg-white rounded-2xl shadow-xl overflow-hidden"
               role="img"
-              aria-label="Example conversation with Marcus Wheeler's career AI"
+              aria-label="Example conversation with Marcus Wheeler's AI"
             >
               {/* Chat header */}
               <div className="flex items-center gap-3 px-5 py-4 border-b border-[#E8E0D0]">
@@ -122,7 +122,7 @@ export default function AIChatbotSpotlight() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-jakarta text-sm font-semibold text-[#1E3A5F]">
-                    Marcus Wheeler&apos;s Career AI
+                    Marcus Wheeler&apos;s AI
                   </p>
                 </div>
                 <div className="flex items-center gap-1.5" aria-label="Online">
@@ -161,7 +161,7 @@ export default function AIChatbotSpotlight() {
               {/* Footer */}
               <div className="px-5 py-3 border-t border-[#E8E0D0] bg-white">
                 <p className="font-inter text-xs text-gray-400 text-center">
-                  Powered by RoleBoost AI
+                  Powered by IdentiBoost AI
                 </p>
               </div>
             </div>

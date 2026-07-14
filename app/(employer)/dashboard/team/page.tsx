@@ -19,8 +19,8 @@ export default function EmployerTeamPage() {
       <div className="mx-auto max-w-6xl px-6 py-8">
         <EmptyState
           icon={UserPlus}
-          title="Build your hiring team"
-          description="Team invites and role management are on the way. Soon you'll be able to add members, assign owner or member access, and collaborate on candidates together."
+          title="Build your team"
+          description="Team invites and role management are on the way. Soon you'll be able to add members, assign owner or member access, and collaborate on professionals together."
         />
       </div>
     </DashboardPage>

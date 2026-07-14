@@ -11,11 +11,11 @@ const stats = [
   },
   {
     number: '99.99%',
-    description: 'Order accuracy, the standard we hold our candidates to',
+    description: 'Order accuracy, the standard we bring to every profile we build',
   },
   {
-    number: 'Both sides',
-    description: 'Built by someone who has sat on both sides of the hiring table',
+    number: '24/7',
+    description: 'Your AI answers while you sleep, travel, or take the day off',
   },
 ]
 

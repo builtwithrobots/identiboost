@@ -12,6 +12,8 @@ const isPublicRoute = createRouteMatcher([
   '/sign-in(.*)',
   '/sign-up(.*)',
   '/onboarding(.*)',
+  '/i/(.*)',
+  // Legacy public-profile URLs; /c/[slug] permanently redirects to /i/[slug].
   '/c/(.*)',
   // SEO / crawler + metadata asset routes. Their .txt/.xml/no-extension paths are
   // not covered by the matcher's static-file exclusion, so without this a

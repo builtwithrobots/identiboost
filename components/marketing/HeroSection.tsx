@@ -19,9 +19,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: baseDelay ?? 0 }}
           >
-            Your career, finally heard.{' '}
+            Your identity. Boosted.{' '}
             <br className="hidden sm:block" />
-            Your next hire, finally found.
+            The profile that answers back.
           </motion.h1>
 
           <motion.p
@@ -30,8 +30,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: baseDelay ?? 0.15 }}
           >
-            RoleBoost replaces the resume with a rich AI-powered candidate profile, audio, video,
-            infographic, slide deck, and a personal career AI that answers recruiter questions 24/7.
+            The business card has not changed in 150 years. IdentiBoost is the first one that
+            answers back: a rich professional profile with audio, video, infographic, slide deck,
+            and a personal Identity AI that answers questions 24/7.
           </motion.p>
 
           {/* Dual-path cards */}
@@ -63,10 +64,10 @@ export default function HeroSection() {
                 </svg>
               </div>
               <h2 className="font-jakarta text-xl font-semibold text-[#1E3A5F] mb-3">
-                I&apos;m looking for my next role
+                I want to represent myself
               </h2>
               <p className="font-inter text-base text-gray-600 leading-relaxed mb-6 flex-1">
-                Upload your resume. Get a complete AI-powered career profile. Share one link.
+                Build your verified Identity AI. Share one link that tells your whole story.
               </p>
               <Link
                 href="/sign-up"
@@ -101,17 +102,17 @@ export default function HeroSection() {
                 </svg>
               </div>
               <h2 className="font-jakarta text-xl font-semibold text-[#1E3A5F] mb-3">
-                I&apos;m hiring for my team
+                I want to find and evaluate professionals
               </h2>
               <p className="font-inter text-base text-gray-600 leading-relaxed mb-6 flex-1">
-                Find candidates, chat with their career AI, and manage your pipeline, all in one
-                place.
+                Open any IdentiBoost link, chat with the person&apos;s AI, and keep everyone you
+                meet in one place.
               </p>
               <Link
                 href="/sign-up"
                 className="inline-flex items-center justify-center w-full px-6 py-3 rounded-lg bg-[#D97706] text-white font-jakarta text-[15px] font-semibold hover:bg-[#B45309] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]"
               >
-                Start Hiring Free
+                Start Evaluating Free
               </Link>
             </motion.div>
           </div>

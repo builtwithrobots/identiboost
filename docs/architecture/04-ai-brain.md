@@ -20,7 +20,7 @@ server-side via the service-role client:
    highest-priority + few-shot treatment.
 
 What does **not** reach the live prompt: `candidate_assets` (audio/video/etc. are
-recruiter-facing media, not brain text) and `career_sources` raw text (those feed
+contact-facing media, not brain text) and `career_sources` raw text (those feed
 the *intake interview* and *context-document generation*, not every chat turn).
 
 `getCandidateBrainBySlug` returns `{ candidateProfileId, ownerClerkUserId,
@@ -59,7 +59,7 @@ Philosophy: **data near the top, rules near the bottom.** Order:
 1. Zod-validate input (`candidateSlug`, `message`, `sessionId?`, up to 20 history
    turns).
 2. `getCandidateBrainBySlug`; 404 if missing or `ai_enabled = false`.
-3. **Visibility:** anonymous recruiters may only chat with published profiles; the
+3. **Visibility:** anonymous contacts may only chat with published profiles; the
    owner (authenticated) may preview their own unpublished AI.
 4. **Complexity router**, `detectComplexQuestion(message)`, a fast string
    heuristic (no API call): adversarial phrasing, multi-fact synthesis, or
@@ -90,7 +90,7 @@ roughly $0.01 per 10-turn session.
 ## Where the brain is also used
 
 The same `buildCandidateSystemPrompt` powers the **sandbox** self-test
-(`/api/sandbox/analyze`) so the candidate tests exactly what a recruiter would
+(`/api/sandbox/analyze`) so the candidate tests exactly what a contact would
 hit. The brain assembly is also read (without building the chat prompt) by the
 transcript-deliver and hardening flows for gap analysis.
 
@@ -98,7 +98,7 @@ transcript-deliver and hardening flows for gap analysis.
 
 | Constant | Model | Use |
 |---|---|---|
-| `CHAT_MODEL` | `claude-haiku-4-5-20251001` | Live recruiter chat; sandbox answer generation |
+| `CHAT_MODEL` | `claude-haiku-4-5-20251001` | Live contact chat; sandbox answer generation |
 | `GENERATION_MODEL` | `claude-sonnet-4-6` | All one-time generation/analysis: prompt/context generation, intake, sandbox analysis, transcript gap analysis, hardening, role recommendation, grounding validation |
 
 IDs are imported from this file everywhere, never hardcoded. The Anthropic client

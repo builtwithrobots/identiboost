@@ -4,7 +4,7 @@ import { FEATURED_PERSONAS, getPersona } from '@/lib/boosts/personas';
 // A per-persona social card, so a shared /boosts/[slug] link previews the actual
 // candidate (monogram, name, role, career stage) instead of the generic site
 // card. Generated with next/og; prerendered for the known personas below.
-export const alt = 'A RoleBoost candidate example, shown through three Boosts.';
+export const alt = 'A IdentiBoost professional example, shown through three Boosts.';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -16,9 +16,9 @@ export default async function OpengraphImage({ params }: { params: Promise<{ slu
   const { slug } = await params;
   const persona = getPersona(slug);
 
-  const name = persona?.name ?? 'RoleBoost';
-  const role = persona?.role ?? 'AI candidate profiles, finally heard';
-  const stage = persona?.careerStage ?? 'Every kind of career';
+  const name = persona?.name ?? 'IdentiBoost';
+  const role = persona?.role ?? 'The profile that answers back';
+  const stage = persona?.careerStage ?? 'Every kind of professional';
   const initials = persona?.initials ?? 'RB';
   const avatarColor = persona?.avatarColor ?? '#1E3A5F';
 
@@ -39,7 +39,7 @@ export default async function OpengraphImage({ params }: { params: Promise<{ slu
         <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
           <div style={{ width: 26, height: 26, borderRadius: 9999, backgroundColor: '#D97706' }} />
           <div style={{ fontSize: 30, fontWeight: 700, color: '#1E3A5F', letterSpacing: -0.5 }}>
-            RoleBoost
+            IdentiBoost
           </div>
         </div>
 

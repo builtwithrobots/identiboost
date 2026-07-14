@@ -43,7 +43,7 @@ On `candidate_profiles` (all anon-excluded by the column-grant pattern):
   ```
   Types live in `lib/types/index.ts`. Only the **selected** angle reaches the
   brain; until one is picked the document is inert (no half-baked default shown to
-  recruiters).
+  contacts).
 
 ## Generation, two angles (`lib/ai/career-context.ts`)
 
@@ -89,7 +89,7 @@ Endpoint: **`POST /api/career-context/augment`**, entitlement-gated; requires a
 and promotes its new markdown to `context_package_md`, so the brain picks it up on
 the next chat. Revalidates `/dashboard/ai` and `/dashboard/assets`.
 
-## How it reaches recruiters
+## How it reaches contacts
 
 `getCandidateBrainBySlug` loads `context_package_md` as `careerContextMarkdown` and
 the selected angle's hard question is promoted into `custom_qa_pairs`.

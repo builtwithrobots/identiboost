@@ -40,7 +40,7 @@ export function parseGitHubUsername(input: string): string | null {
 
 async function gh<T>(path: string): Promise<T> {
   const res = await fetch(`https://api.github.com${path}`, {
-    headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'RoleBoost' },
+    headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'IdentiBoost' },
     // Profile data changes rarely; let the platform cache briefly.
     next: { revalidate: 3600 },
   });

@@ -30,7 +30,7 @@ interface Props {
 }
 
 const STORY_TYPE_LABELS: Record<CareerContextStoryType, string> = {
-  career_arc: 'The Career Arc',
+  career_arc: 'The Professional Arc',
   builder: 'The Builder',
   problem_solver: 'The Problem Solver',
   leadership: 'The Leadership Story',
@@ -82,7 +82,7 @@ export default function ContextDocumentPanel({ initialDrafts, hasResume = false 
           | { error?: { code?: string; message?: string } }
           | null;
         if (res.status === 402) {
-          setError('Generating your career story needs an active subscription or trial.');
+          setError('Generating your professional story needs an active subscription or trial.');
         } else if (body?.error?.message) {
           setError(body.error.message);
         } else {
@@ -123,11 +123,11 @@ export default function ContextDocumentPanel({ initialDrafts, hasResume = false 
       <header>
         <h2 className="flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
           <Sparkles className="size-4 text-[var(--rb-brand)]" />
-          Your career story
+          Your professional story
         </h2>
         <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
-          A professionally written story built from your résumé and career sources. Generate two
-          versions, pick the one that sounds most like you, your AI leads from it when recruiters
+          A professionally written story built from your résumé and professional sources. Generate
+          two versions, pick the one that sounds most like you, your AI leads from it when contacts
           ask about your background.
         </p>
       </header>
@@ -205,7 +205,7 @@ function ResumeFallback() {
       <div className="max-w-md">
         <h3 className="text-sm font-semibold text-[var(--rb-text)]">Upload your résumé first</h3>
         <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
-          Your career story is written from your résumé and career sources. Add your résumé in the
+          Your professional story is written from your résumé and professional sources. Add your résumé in the
           Assets section, then come back here to generate it.
         </p>
       </div>
@@ -228,11 +228,11 @@ function EmptyState({ onGenerate, generating }: { onGenerate: () => void; genera
       </span>
       <div className="max-w-md">
         <h3 className="text-sm font-semibold text-[var(--rb-text)]">
-          Generate your career story
+          Generate your professional story
         </h3>
         <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
-          We read your résumé and any career sources, then write two distinct versions of your
-          career story. Pick the one that fits, it becomes the foundation your AI reasons from.
+          We read your résumé and any professional sources, then write two distinct versions of
+          your story. Pick the one that fits, it becomes the foundation your AI reasons from.
         </p>
       </div>
       <button
@@ -245,7 +245,7 @@ function EmptyState({ onGenerate, generating }: { onGenerate: () => void; genera
       </button>
       {generating && (
         <p className="text-xs text-[var(--rb-text-muted)]">
-          This takes a moment, we&apos;re synthesizing your whole career.
+          This takes a moment, we&apos;re synthesizing your whole story.
         </p>
       )}
     </div>

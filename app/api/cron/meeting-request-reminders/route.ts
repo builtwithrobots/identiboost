@@ -38,7 +38,7 @@ export async function GET(req: NextRequest) {
   const now = Date.now();
   const newerThan = new Date(now - MAX_AGE_DAYS * DAY_MS).toISOString();
   const olderThan = new Date(now - MIN_AGE_DAYS * DAY_MS).toISOString();
-  const appUrl = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app').replace(/\/$/, '');
+  const appUrl = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com').replace(/\/$/, '');
 
   const { data: requests, error } = await (adminClient.from('meeting_requests') as any)
     .select('id, candidate_profile_id, recruiter_email, recruiter_name, availability, created_at')

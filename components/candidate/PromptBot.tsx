@@ -19,7 +19,7 @@ const FIELD_LABELS: Record<string, string> = {
   ideal_environment: 'ideal environment',
   manager_needs: 'what you need from a manager',
   honest_weaknesses: 'honest weaknesses',
-  wish_questions: 'questions you wish recruiters asked',
+  wish_questions: 'questions you wish contacts asked',
   custom_qa: 'custom answers',
 };
 
@@ -64,7 +64,7 @@ export default function PromptBot({ gaps, focusBrainField }: Props) {
     <section className="rb-card p-6">
       <h2 className="mb-1 flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
         <Inbox className="size-4 text-[var(--rb-brand)]" />
-        What recruiters asked
+        What contacts asked
       </h2>
       <p className="mb-4 text-xs text-[var(--rb-text-muted)]">
         Your AI came up short on these in real conversations. Approve a drafted answer or strengthen

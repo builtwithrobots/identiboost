@@ -70,14 +70,14 @@ export default function AdminCommandPalette({
     },
     {
       id: 'preview-candidate',
-      label: 'Preview as Candidate',
+      label: 'Preview as Professional',
       hint: 'your own data',
       Icon: Eye,
       run: () => startTransition(() => void setAdminPreviewRole('candidate')),
     },
     {
       id: 'preview-employer',
-      label: 'Preview as Employer',
+      label: 'Preview as Business',
       hint: 'your own data',
       Icon: Eye,
       run: () => startTransition(() => void setAdminPreviewRole('employer')),

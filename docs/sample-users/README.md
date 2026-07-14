@@ -1,6 +1,6 @@
 # Sample Users
 
-Reference material for the 8 example personas used across RoleBoost (NotebookLM prompts, AI chatbot system prompts, infographic briefs, demos, and testing). Sourced from the "Candidate Examples" folder in Google Drive.
+Reference material for the 8 example personas used across IdentiBoost (NotebookLM prompts, AI chatbot system prompts, infographic briefs, demos, and testing). Sourced from the "Candidate Examples" folder in Google Drive.
 
 Start with [`PERSONA_NARRATIVE_GUIDE.md`](PERSONA_NARRATIVE_GUIDE.md): the single reference for the human story behind each resume (narrative, hook, hard question, key numbers, and NotebookLM prompt mapping per persona).
 

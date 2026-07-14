@@ -150,8 +150,8 @@ export default async function CandidateAssetsPage() {
   return (
     <DashboardPage className="min-h-full">
       <PageHeader
-        title="Career Assets"
-        description="Your résumé, your three Boosts (Short Boost Audio, Visual Boost, Podcast Style Boost), and your Asset Package, the materials that power your RoleBoost profile."
+        title="Assets"
+        description="Your résumé, your three Boosts (Short Boost Audio, Visual Boost, Podcast Style Boost), and your Asset Package, the materials that power your IdentiBoost profile."
       />
 
       {/* ATS résumé builder */}
@@ -182,8 +182,8 @@ export default async function CandidateAssetsPage() {
         <div className="rounded-[var(--radius-xl)] border border-[var(--rb-border-brand)]/30 bg-[var(--rb-brand-subtle)] px-5 py-4">
           <p className="text-sm text-[var(--rb-text-secondary)]">
             <span className="font-semibold text-[var(--rb-text-brand)]">Tip:</span>{' '}
-            Your Boosts are produced in Google NotebookLM from your career documents, upload each one
-            here after generating. The Asset Package is your done-for-you package from RoleBoost,
+            Your Boosts are produced in Google NotebookLM from your professional documents, upload each one
+            here after generating. The Asset Package is your done-for-you package from IdentiBoost,
             drop it in when you receive it.
           </p>
         </div>

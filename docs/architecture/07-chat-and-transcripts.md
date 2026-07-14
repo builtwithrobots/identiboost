@@ -2,7 +2,7 @@
 
 ## Live chat (`app/api/chat/route.ts`)
 
-The recruiter-facing endpoint. Open to **anonymous** callers (no Clerk session),
+The contact-facing endpoint. Open to **anonymous** callers (no Clerk session),
 that is why it reads via the service-role client and enforces visibility itself.
 Full flow (router, grounding validation, no-streaming rationale) is in
 [04, The AI Brain](./04-ai-brain.md). Summary:
@@ -20,10 +20,10 @@ POST /api/chat { candidateSlug, message, sessionId?, conversationHistory? }
 
 ## Chat logging (`lib/ai/log-chat.ts`)
 
-Service-role, **best-effort** (a logging failure must never break the recruiter's
+Service-role, **best-effort** (a logging failure must never break the contact's
 reply):
 - `ensureChatSession(candidateProfileId, sessionId?, viewer)`, creates or reuses a
-  `chat_sessions` row. Anonymous recruiters log `viewer_clerk_user_id = null`;
+  `chat_sessions` row. Anonymous contacts log `viewer_clerk_user_id = null`;
   owner self-tests are marked `is_sandbox = true` so they don't pollute analytics.
 - `logChatExchange({ sessionId, question, answer, modelUsed, wasComplex,
   wasValidated })`, writes the user + assistant `chat_messages`, stamping the
@@ -38,9 +38,9 @@ When the chat closes (or after 30 min inactivity), the client fires a
   front so duplicate beacons no-op.
 - Emails **both sides** via Resend (`lib/email/client.ts`, templates in
   `lib/email/transcript.ts`; both server-only). The candidate email includes the
-  full transcript, company name (if the recruiter was logged in), pattern insights
-  at 3+ same-topic questions, and a fine-tune link; the employer email includes the
-  transcript, profile link, and save-candidate + feedback CTAs.
+  full transcript, company name (if the contact was logged in), pattern insights
+  at 3+ same-topic questions, and a fine-tune link; the contact email includes the
+  transcript, profile link, and save + feedback CTAs.
 
 ## Transcript → brain gap loop (`lib/ai/analyze-transcript.ts`)
 
@@ -57,9 +57,9 @@ the email):
 ## The growth loop
 
 ```
-recruiter chats → transcript emailed → gaps mined (transcript_gaps)
+contact chats → transcript emailed → gaps mined (transcript_gaps)
    → prompt bot surfaces expansion prompts → candidate strengthens a field
-   → brain improves → next recruiter gets a better answer  ↺
+   → brain improves → next contact gets a better answer  ↺
 ```
 
 This is the retention mechanism: the brain compounds with use, and the accumulated

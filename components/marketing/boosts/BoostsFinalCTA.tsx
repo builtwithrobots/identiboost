@@ -29,11 +29,11 @@ export default function BoostsFinalCTA() {
 
           <div className="max-w-xl mx-auto space-y-3 mb-10">
             <p className="font-inter text-lg text-gray-700 leading-relaxed">
-              If you are job hunting: upload your resume and get Boosts that make hiring managers stop
-              and pay attention.
+              Job hunting, winning clients, booking stages, or closing deals: upload your resume and
+              get Boosts that make people stop and pay attention.
             </p>
             <p className="font-inter text-lg text-gray-700 leading-relaxed">
-              If you are hiring: send one link and let every Boost do the briefing for you.
+              Evaluating someone? Ask for their link and let every Boost do the briefing for you.
             </p>
           </div>
 

@@ -57,7 +57,7 @@ export default async function EmployerCandidatesPage() {
     return (
       <DashboardPage>
         <p className="p-8 text-sm text-[var(--rb-text-secondary)]">
-          This employer has not set up their workspace yet.
+          This workspace has not been set up yet.
         </p>
       </DashboardPage>
     );

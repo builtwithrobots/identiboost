@@ -1,4 +1,4 @@
-# RoleBoost -- Candidate Asset Package
+# IdentiBoost -- Candidate Asset Package
 Candidate: Claire Hutchins
 Slug: claire-hutchins
 Date: July 9, 2026
@@ -14,7 +14,7 @@ Package tier:
 
 - **Name:** Claire Hutchins
 - **Slug:** claire-hutchins
-- **Public URL:** roleboost.app/c/claire-hutchins
+- **Public URL:** identiboost.com/i/claire-hutchins
 - **Location:** Nashville, TN
 - **Target role:** Store Manager, Specialty Retail
 - **Headline:** Specialty Retail Store Manager | $4.2M Revenue | 11 Consecutive Quarters Top-15% NPS
@@ -25,7 +25,7 @@ Package tier:
 
 ## 2. The Narrative
 
-Claire Hutchins spent nine years at a single specialty retail operation, rising from sales floor to store manager of a $4.2M location -- and the record she built there is not a series of good moments. It is a system. Eleven consecutive quarters in the top 15% of 340 stores for customer satisfaction is not luck; it is an environment she created and maintained through every staffing cycle, every seasonal rush, and every leadership transition her team went through. RoleBoost gives Claire what her resume cannot: a voice that explains the methodology behind the numbers, a chatbot that handles the career break question before a recruiter even has to ask it, and an asset package that shows a hiring manager exactly what kind of store they are getting when they bring her in.
+Claire Hutchins spent nine years at a single specialty retail operation, rising from sales floor to store manager of a $4.2M location -- and the record she built there is not a series of good moments. It is a system. Eleven consecutive quarters in the top 15% of 340 stores for customer satisfaction is not luck; it is an environment she created and maintained through every staffing cycle, every seasonal rush, and every leadership transition her team went through. IdentiBoost gives Claire what her resume cannot: a voice that explains the methodology behind the numbers, a chatbot that handles the career break question before a recruiter even has to ask it, and an asset package that shows a hiring manager exactly what kind of store they are getting when they bring her in.
 
 ---
 
@@ -86,7 +86,7 @@ Your literal first words are: "This is a Boost on Claire Hutchins." Say that exa
 
 Two hiring managers are reviewing Claire Hutchins's file after seeing her candidate profile. One of them says: eleven consecutive quarters in the top 15% of customer satisfaction scores across 340 stores. Not one quarter. Eleven in a row. That's where the conversation starts. What does it take to hold that result across three years of staffing cycles, seasonal pressure, and everything else that runs through a specialty retail operation? The other host digs into the operational layer -- Claire didn't just hit NPS numbers. She reduced shrink from 2.8% to 1.4% over 18 months and built a process systematic enough that her district manager adopted it as a template for three other stores. That's not a manager who manages. That's a manager who engineers. Walk through the full trajectory: she started as a sales associate at Vantage & Co. in June 2015, made senior associate in 14 months, moved into assistant store management in August 2017, and was promoted to store manager in April 2020. Over four years as store manager, she grew annual revenue from $3.6M to $4.2M -- a 16.7% increase -- through clienteling program expansion and traffic conversion improvements. She led a team of 28 full and part-time staff. She developed three assistant managers who were all promoted to store manager roles within the company and all three remain in those roles today. Address the career break directly and confidently: Claire left in January 2024 to provide full-time care for a parent with a progressive neurological illness. She maintained her NRF membership throughout, informally mentored two former reports during the break, and her parent passed in June 2025. She's fully available and ready to return. The question is not whether she can step back in -- it's how fast a hiring manager should move. Close the narrative with what a store gets when it brings Claire in: a manager who builds systems that outlast any one quarter, a leader who develops the next generation of store managers, and a track record of sustained performance that is the opposite of a lucky run.
 
-End with a direct closing pitch. Name the specific hiring situation: a specialty retail hiring manager who needs a store manager with a proven track record of sustained customer satisfaction, operational process improvement, and leadership pipeline development. This is the candidate to onboard. Proof facts in rapid sequence: 11 consecutive quarters top-15% NPS across 340 stores; shrink cut from 2.8% to 1.4% with the process adopted chain-wide; three AMs promoted to store manager, all three still in role; $4.2M annual revenue location, 28 staff. Close with: "Learn more about Claire at roleboost.app."
+End with a direct closing pitch. Name the specific hiring situation: a specialty retail hiring manager who needs a store manager with a proven track record of sustained customer satisfaction, operational process improvement, and leadership pipeline development. This is the candidate to onboard. Proof facts in rapid sequence: 11 consecutive quarters top-15% NPS across 340 stores; shrink cut from 2.8% to 1.4% with the process adopted chain-wide; three AMs promoted to store manager, all three still in role; $4.2M annual revenue location, 28 staff. Close with: "Learn more about Claire at identiboost.com."
 
 Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
@@ -107,7 +107,7 @@ Your literal first words are: "This is a Boost on Claire Hutchins." Say that exa
 
 Claire Hutchins ran a $4.2M specialty retail location for four years and held top-15% customer satisfaction scores across a 340-store chain for eleven consecutive quarters. That is not a peak. That is a floor. In the same period, she cut shrink from 2.8% to 1.4% -- and her district manager used her process as the template for three other stores. She grew revenue from $3.6M to $4.2M through clienteling and conversion improvements and developed three assistant managers who were all promoted to store manager roles and remain in those roles today. She left in January 2024 to provide full-time care for a parent. She maintained her NRF membership throughout and mentored former reports during the break. She is fully available now.
 
-End with a direct closing pitch, spoken in this exact sequence: the situation is a specialty retail operation that needs a store manager with a sustained track record, not just a strong quarter. Claire Hutchins. $4.2M store. 11 consecutive quarters top-15% NPS. Shrink cut in half. Three leaders developed and promoted. "Learn more about Claire at roleboost.app."
+End with a direct closing pitch, spoken in this exact sequence: the situation is a specialty retail operation that needs a store manager with a sustained track record, not just a strong quarter. Claire Hutchins. $4.2M store. 11 consecutive quarters top-15% NPS. Shrink cut in half. Three leaders developed and promoted. "Learn more about Claire at identiboost.com."
 
 Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
@@ -133,7 +133,7 @@ Section 1 -- The Performance Record. Lead with the anchor stat: 11 consecutive q
 
 Section 2 -- The Operational Impact. Shrink: 2.8% reduced to 1.4% over 18 months. District manager adopted the process as template for 3 additional stores. Revenue: $3.6M to $4.2M (16.7% growth) over 4 years through clienteling and traffic conversion improvements. These are the proof points that show how the NPS scores were earned.
 
-Section 3 -- The Leadership Legacy. Three assistant managers developed and promoted to store manager within the company. All three remain in those roles today. NRF Customer Experience Certification, 2022. NRF membership maintained through career break. Close this section with: "Learn more about Claire at roleboost.app."
+Section 3 -- The Leadership Legacy. Three assistant managers developed and promoted to store manager within the company. All three remain in those roles today. NRF Customer Experience Certification, 2022. NRF membership maintained through career break. Close this section with: "Learn more about Claire at identiboost.com."
 
 Use clean, minimal Google-style icons -- one per proof point maximum. Icons are functional, not decorative. Their job is to give the eye a landing point.
 
@@ -156,7 +156,7 @@ Claire Hutchins is a specialty retail store manager whose eleven consecutive qua
 
 Visual sequence, four beats in order: (1) Opening frame -- the anchor stat front and center: "11 consecutive quarters. Top 15% of 340 stores." No clutter. One number. Full stop. (2) Beat two -- the operational proof point: shrink reduced from 2.8% to 1.4% over 18 months; district manager adopted the process for 3 additional stores. (3) Beat three -- the leadership proof point: 3 assistant managers developed and promoted to store manager; all 3 still in role. (4) Closing frame -- candidate name, target role, and closing pitch.
 
-End with a direct closing pitch in this exact sequence: the situation is a specialty retail operation looking for a store manager with a sustained track record of customer satisfaction, operational improvement, and people development. Claire Hutchins. Store Manager. "Learn more about Claire at roleboost.app." That is the final frame. Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: the situation is a specialty retail operation looking for a store manager with a sustained track record of customer satisfaction, operational improvement, and people development. Claire Hutchins. Store Manager. "Learn more about Claire at identiboost.com." That is the final frame. Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -184,7 +184,7 @@ Your literal first words are: "This is a Boost on Claire Hutchins." Say that exa
 
 Two hiring managers are reviewing Claire Hutchins's file and one of them surfaces the detail that often gets skipped: three assistant managers developed, three promoted to store manager, all three still in those roles today. That is a talent development record most store managers never build in an entire career. Start there. The other host asks the natural question: what does it actually take to develop people to that level, and what does it say about the kind of manager Claire is? Build the people story from the beginning -- she started as a sales associate in June 2015 and made senior associate in 14 months, ranked in the top 20% for individual sales conversion across the Nashville district. She was promoted to assistant store manager in August 2017 and to store manager in April 2020. What she built at the store level over the next four years wasn't just performance -- it was a culture that produced performance. Eleven consecutive quarters in the top 15% of NPS scores across 340 stores from Q2 2021 through Q4 2023. She grew revenue from $3.6M to $4.2M over four years. She cut shrink from 2.8% to 1.4% and her process was adopted district-wide. She managed 28 full and part-time staff. The hosts connect the dots: the NPS consistency, the shrink reduction, the revenue growth -- these are downstream of the environment she created. A team that trusts its manager, understands the standards, and has a path to grow is a team that performs. Address the career break directly: Claire left in January 2024 to provide full-time care for a parent with a progressive neurological illness. She maintained her NRF membership throughout and continued to informally mentor two former reports -- including people she had previously developed and promoted -- during the break. Her parent passed in June 2025. She is fully available now. Close with the question a hiring manager should be asking: if I have a store with turnover problems, a thin bench, and inconsistent performance, is Claire Hutchins the kind of manager who changes that trajectory? Walk through the evidence and let the answer speak for itself.
 
-End with a direct closing pitch. Name the specific hiring situation: a specialty retail hiring manager who needs a store manager who builds teams that perform without being constantly managed, and who develops the next generation of store leaders. This is the candidate to onboard. Proof facts in rapid sequence: three AMs developed and promoted to store manager, all three still in role; 11 consecutive quarters top-15% NPS across 340 stores; shrink cut from 2.8% to 1.4% with process adopted district-wide; $4.2M annual revenue, 28-person team. Close with: "Learn more about Claire at roleboost.app."
+End with a direct closing pitch. Name the specific hiring situation: a specialty retail hiring manager who needs a store manager who builds teams that perform without being constantly managed, and who develops the next generation of store leaders. This is the candidate to onboard. Proof facts in rapid sequence: three AMs developed and promoted to store manager, all three still in role; 11 consecutive quarters top-15% NPS across 340 stores; shrink cut from 2.8% to 1.4% with process adopted district-wide; $4.2M annual revenue, 28-person team. Close with: "Learn more about Claire at identiboost.com."
 
 Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
@@ -205,7 +205,7 @@ Your literal first words are: "This is a Boost on Claire Hutchins." Say that exa
 
 Claire Hutchins developed three assistant managers into store managers at Vantage & Co. All three were promoted within the company. All three remain in those roles today. That is the detail that separates a manager from a leader. At the same time, she ran a $4.2M specialty retail location, held top-15% NPS scores across a 340-store chain for eleven consecutive quarters, and cut shrink in half over 18 months -- a process her district manager replicated across three other stores. She left in January 2024 to care for a parent. She stayed connected to the industry, mentored former reports throughout the break, and is fully available now.
 
-End with a direct closing pitch, spoken in this exact sequence: the situation is a specialty retail operation that needs a store manager who builds a bench, not just hits quarterly numbers. Claire Hutchins. Three leaders developed and still in role. Eleven consecutive quarters top-15% NPS. $4.2M store, 28 staff. "Learn more about Claire at roleboost.app."
+End with a direct closing pitch, spoken in this exact sequence: the situation is a specialty retail operation that needs a store manager who builds a bench, not just hits quarterly numbers. Claire Hutchins. Three leaders developed and still in role. Eleven consecutive quarters top-15% NPS. $4.2M store, 28 staff. "Learn more about Claire at identiboost.com."
 
 Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
@@ -231,7 +231,7 @@ Section 1 -- The Leadership Legacy. Lead with the talent development anchor: 3 a
 
 Section 2 -- The Performance Record. NPS: 11 consecutive quarters, top 15% of 340 stores, Q2 2021 through Q4 2023. Revenue: $3.6M to $4.2M (16.7% growth) over 4 years through clienteling and conversion improvements. Shrink: 2.8% to 1.4% over 18 months; process adopted by district manager for 3 additional stores. These results show what the team she built actually delivered.
 
-Section 3 -- The Credentials and Availability. NRF Customer Experience Certification, 2022. NRF membership maintained through career break (Jan 2024 to Aug 2025 -- family caregiving). Fully available now. Close this section with: "Learn more about Claire at roleboost.app."
+Section 3 -- The Credentials and Availability. NRF Customer Experience Certification, 2022. NRF membership maintained through career break (Jan 2024 to Aug 2025 -- family caregiving). Fully available now. Close this section with: "Learn more about Claire at identiboost.com."
 
 Use clean, minimal Google-style icons -- one per proof point maximum. Icons are functional, not decorative. Their job is to give the eye a landing point.
 
@@ -254,7 +254,7 @@ Claire Hutchins is a specialty retail store manager who developed three assistan
 
 Visual sequence, four beats in order: (1) Opening frame -- the leadership anchor stat front and center: "3 assistant managers developed. 3 promoted to store manager. 3 still in role." One beat. Full stop. (2) Beat two -- the performance proof: 11 consecutive quarters, top 15% NPS, 340-store chain. (3) Beat three -- the operational proof: shrink cut from 2.8% to 1.4%; district manager adopted the process for 3 additional stores; revenue grown from $3.6M to $4.2M. (4) Closing frame -- candidate name, target role, and closing pitch.
 
-End with a direct closing pitch in this exact sequence: the situation is a specialty retail operation that needs a store manager who builds a bench and delivers sustained performance. Claire Hutchins. Store Manager. "Learn more about Claire at roleboost.app." That is the final frame. Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: the situation is a specialty retail operation that needs a store manager who builds a bench and delivers sustained performance. Claire Hutchins. Store Manager. "Learn more about Claire at identiboost.com." That is the final frame. Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -268,4 +268,4 @@ Do NOT use the words "passionate," "journey," or "innovative."
 
 ---
 
-*RoleBoost(tm) Candidate Asset Production Skill v1.9 -- roleboost.app -- Copyright 2026 RoleBoost(tm)*
+*IdentiBoost(tm) Candidate Asset Production Skill v1.9 -- identiboost.com -- Copyright 2026 IdentiBoost(tm)*

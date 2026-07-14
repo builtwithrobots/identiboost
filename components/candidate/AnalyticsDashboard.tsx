@@ -116,13 +116,13 @@ export default function AnalyticsDashboard({ data }: { data: AnalyticsData }) {
 
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <section className="rb-card p-5">
-              <h2 className="text-sm font-semibold text-[var(--rb-text)]">What recruiters want to know</h2>
+              <h2 className="text-sm font-semibold text-[var(--rb-text)]">What contacts want to know</h2>
               <p className="mb-4 text-xs text-[var(--rb-text-muted)]">
                 Topics your AI got asked about but could answer better. Strengthen these to close the gap.
               </p>
               {data.topics.length === 0 ? (
                 <p className="rounded-[var(--radius-md)] bg-[var(--rb-bg-surface-raised)] px-3 py-4 text-center text-xs text-[var(--rb-text-muted)]">
-                  Nothing flagged yet. As recruiters chat, weak spots will surface here.
+                  Nothing flagged yet. As contacts chat, weak spots will surface here.
                 </p>
               ) : (
                 <ul className="flex flex-col gap-2.5">
@@ -190,7 +190,7 @@ function EmptyState() {
       <div>
         <p className="text-base font-semibold text-[var(--rb-text)]">No activity in this range</p>
         <p className="mt-1 max-w-sm text-sm text-[var(--rb-text-muted)]">
-          Once recruiters open your profile and chat with your AI, your views, engagement, and meeting
+          Once contacts open your profile and chat with your AI, your views, engagement, and meeting
           requests will show up here. Try a longer range, or share your link.
         </p>
       </div>

@@ -6,13 +6,13 @@ import Footer from '@/components/marketing/Footer'
 export const metadata: Metadata = {
   title: 'Terms of Service',
   description:
-    'The terms for using RoleBoost: your account and content, acceptable use, how your AI assistant works, payments, and the usual legal basics, in plain English.',
+    'The terms for using IdentiBoost: your account and content, acceptable use, how your AI assistant works, payments, and the usual legal basics, in plain English.',
   alternates: { canonical: '/terms' },
-  openGraph: { url: '/terms', title: 'Terms of Service | RoleBoost' },
+  openGraph: { url: '/terms', title: 'Terms of Service | IdentiBoost' },
 }
 
-const EFFECTIVE_DATE = 'July 9, 2026'
-const CONTACT_EMAIL = 'legal@roleboost.app'
+const EFFECTIVE_DATE = 'July 14, 2026'
+const CONTACT_EMAIL = 'legal@identiboost.com'
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
@@ -51,7 +51,7 @@ export default function TermsPage() {
           <div className="mt-8 rounded-2xl border border-[#E8E0D0] bg-white p-6 shadow-sm">
             <h2 className="font-jakarta text-base font-bold text-[#1E3A5F]">The short version</h2>
             <ul className="mt-3 space-y-2 font-inter text-[15px] leading-relaxed text-gray-700">
-              <li>Use RoleBoost honestly. Only upload information that is true and yours to share.</li>
+              <li>Use IdentiBoost honestly. Only upload information that is true and yours to share.</li>
               <li>You own your content. You let us host and process it so we can run your profile and AI.</li>
               <li>Your assistant represents the information you give it. It is a tool, not a guarantee of a job.</li>
               <li>Do not misuse the platform, other people&rsquo;s data, or the AI.</li>
@@ -61,8 +61,8 @@ export default function TermsPage() {
           </div>
 
           <p className="mt-8 font-inter text-[15px] leading-relaxed text-gray-700">
-            These Terms of Service (&ldquo;Terms&rdquo;) are an agreement between you and RoleBoost
-            (&ldquo;RoleBoost&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). They cover your use of our
+            These Terms of Service (&ldquo;Terms&rdquo;) are an agreement between you and IdentiBoost
+            (&ldquo;IdentiBoost&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). They cover your use of our
             website, apps, and services (the &ldquo;Service&rdquo;). By creating an account or using the
             Service, you agree to these Terms and to our{' '}
             <Link href="/privacy" className="font-medium text-[#B45309] hover:underline">
@@ -71,9 +71,9 @@ export default function TermsPage() {
             . If you do not agree, please do not use the Service.
           </p>
 
-          <Section id="who" title="Who can use RoleBoost">
+          <Section id="who" title="Who can use IdentiBoost">
             <p>
-              You must be at least 16 years old and able to form a binding agreement to use RoleBoost.
+              You must be at least 16 years old and able to form a binding agreement to use IdentiBoost.
               If you use the Service on behalf of a company, you confirm you are authorized to accept
               these Terms for that company.
             </p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
 
           <Section id="content" title="Your content">
             <p>
-              You keep ownership of everything you provide, including your resume, career context,
+              You keep ownership of everything you provide, including your resume, professional context,
               recommendations, uploads, and the answers you write to train your assistant (&ldquo;Your
               Content&rdquo;).
             </p>
@@ -102,14 +102,14 @@ export default function TermsPage() {
             </p>
             <p>
               You are responsible for Your Content. You confirm it is accurate, that it is yours to
-              share, and that sharing it through RoleBoost does not break any law or agreement or
+              share, and that sharing it through IdentiBoost does not break any law or agreement or
               infringe anyone&rsquo;s rights. If you include information about other people, such as
               references or recommendations, you confirm you have the right to do so.
             </p>
           </Section>
 
           <Section id="acceptable-use" title="Acceptable use">
-            <p>When using RoleBoost, you agree not to:</p>
+            <p>When using IdentiBoost, you agree not to:</p>
             <ul className="ml-5 list-disc space-y-2">
               <li>Provide false, misleading, or fraudulent information, or impersonate anyone.</li>
               <li>Upload content you do not have the right to share, or that infringes others&rsquo; rights.</li>
@@ -129,19 +129,20 @@ export default function TermsPage() {
               information you give it.
             </p>
             <p>
-              The assistant, and RoleBoost generally, is a tool to help you present your experience and
-              connect with employers. It is not a guarantee of an interview, an offer, or any hiring
-              outcome, and we are not a party to any hiring decision between you and an employer.
+              The assistant, and IdentiBoost generally, is a tool to help you present your experience and
+              connect with the people and businesses who reach out. It is not a guarantee of any
+              particular outcome, and we are not a party to any decision between you and a business.
             </p>
           </Section>
 
-          <Section id="employers" title="For employers and recruiters">
+          <Section id="employers" title="For businesses and contacts">
             <p>
-              If you use RoleBoost to evaluate candidates, you agree to use the Service and any candidate
-              information only for legitimate hiring purposes, to respect candidates&rsquo; privacy, and
-              to comply with all laws that apply to your hiring, including equal-opportunity and
-              anti-discrimination laws. Candidate assistants reflect information provided by the
-              candidate and may not be complete or perfectly accurate.
+              If you use IdentiBoost to evaluate professionals, you agree to use the Service and any
+              personal information only for legitimate evaluation purposes, to respect professionals&rsquo;
+              privacy, and to comply with all laws that apply to your evaluation, including
+              equal-opportunity and anti-discrimination laws where they apply. A professional&rsquo;s
+              assistant reflects information provided by that professional and may not be complete or
+              perfectly accurate.
             </p>
           </Section>
 
@@ -161,7 +162,7 @@ export default function TermsPage() {
 
           <Section id="ip" title="Our intellectual property">
             <p>
-              The Service, including its software, design, and the RoleBoost name and logo, belongs to
+              The Service, including its software, design, and the IdentiBoost name and logo, belongs to
               us and is protected by law. These Terms do not give you any right to our intellectual
               property beyond using the Service as intended.
             </p>
@@ -169,7 +170,7 @@ export default function TermsPage() {
 
           <Section id="third-parties" title="Third-party services">
             <p>
-              RoleBoost relies on third-party providers to operate, and the Service may link to or work
+              IdentiBoost relies on third-party providers to operate, and the Service may link to or work
               with other services. We are not responsible for third-party services, and your use of them
               may be subject to their own terms.
             </p>
@@ -187,7 +188,7 @@ export default function TermsPage() {
 
           <Section id="liability" title="Limitation of liability">
             <p>
-              To the fullest extent permitted by law, RoleBoost will not be liable for any indirect,
+              To the fullest extent permitted by law, IdentiBoost will not be liable for any indirect,
               incidental, special, consequential, or punitive damages, or for any lost profits, data, or
               goodwill. Our total liability for any claim relating to the Service will not exceed the
               greater of the amount you paid us in the twelve months before the claim, or one hundred US
@@ -197,7 +198,7 @@ export default function TermsPage() {
 
           <Section id="indemnity" title="Indemnification">
             <p>
-              You agree to indemnify and hold RoleBoost harmless from claims, losses, and expenses
+              You agree to indemnify and hold IdentiBoost harmless from claims, losses, and expenses
               arising out of Your Content, your use of the Service, or your violation of these Terms or
               of any law or the rights of others.
             </p>
@@ -205,7 +206,7 @@ export default function TermsPage() {
 
           <Section id="termination" title="Suspension and termination">
             <p>
-              You can stop using RoleBoost and delete your account at any time. We may suspend or end
+              You can stop using IdentiBoost and delete your account at any time. We may suspend or end
               your access if you violate these Terms, misuse the Service, or create risk or legal
               exposure for us or others. When your account ends, your right to use the Service stops, and
               we will handle your data as described in our Privacy Policy.
@@ -222,7 +223,7 @@ export default function TermsPage() {
 
           <Section id="law" title="Governing law">
             <p>
-              These Terms are governed by the laws of the United States and the state in which RoleBoost
+              These Terms are governed by the laws of the United States and the state in which IdentiBoost
               is established, without regard to conflict-of-laws rules. Any dispute will be handled in
               the courts located there, unless the law that applies to you provides otherwise.
             </p>

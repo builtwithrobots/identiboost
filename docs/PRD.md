@@ -1,19 +1,21 @@
-# PRD.md -- RoleBoost Product Requirements Document
+# PRD.md -- IdentiBoost Product Requirements Document
 
 **Version:** 3.0
 **Last updated:** June 2026
 **Author:** Rob Ramos
-**Domain:** roleboost.app
+**Domain:** identiboost.com
 
 ---
 
 ## 1. Overview
 
-RoleBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Candidates upload their resume and career context, receive a full suite of AI-produced career assets, and get a personal career AI chatbot that represents them to recruiters 24/7. Resume Intelligence analyzes the resume and coaches candidates on exactly what context to add so their AI is armed before the first recruiter question. Every AI conversation generates a transcript delivered by email to both sides. Candidates fine-tune their AI over time. Employers get a candidate management dashboard with pipeline tracking, job postings, stage assignment, team collaboration, and AI chat access.
+IdentiBoost is the universal professional presence platform. Your identity. Boosted. Professionals upload their resume and professional context, receive a full suite of AI-produced professional assets, and get a personal Identity AI chatbot that represents them to their contacts 24/7 -- the profile that answers back. Resume Intelligence analyzes their documents and coaches them on exactly what context to add so their AI is armed before the first hard question. Every AI conversation generates a transcript delivered by email to both sides. Professionals fine-tune their AI over time. Businesses that evaluate professionals get a management dashboard with pipeline tracking, postings, stage assignment, team collaboration, and AI chat access.
+
+The platform serves job candidates, sales professionals, consultants, freelancers, speakers, trade show exhibitors, coaches, advisors, and founders -- anyone who has ever handed someone a card and wondered what happened next.
 
 **Core user types:**
-- **Candidate** -- job seeker uploading career assets, managing their AI, and sharing their profile link
-- **Employer** -- hiring manager or recruiter saving candidates, managing pipeline, and chatting with candidate AIs
+- **Professional** -- the primary user uploading assets, managing their Identity AI, and sharing their profile link (stored as role `candidate`)
+- **Business** -- the evaluating side: a contact or team saving professionals, managing pipeline, and chatting with their AIs (stored as role `employer`)
 
 ---
 
@@ -37,16 +39,16 @@ RoleBoost empowers the candidate's voice to be heard before easy or automatic el
 
 After first sign-up, every user lands on the onboarding screen before any dashboard.
 
-**Screen:** "How are you using RoleBoost?"
+**Screen:** "How are you using IdentiBoost?"
 
 Two large tappable cards:
-- "I am looking for my next role" -- sets role to `candidate`
-- "I am hiring for my team" -- sets role to `employer`
+- "I want to represent myself" -- sets role to `candidate`
+- "I want to find and evaluate professionals" -- sets role to `employer`
 
 On selection:
 - Insert row into `users` with `clerk_user_id`, `email`, `role`
-- Candidate: redirect to candidate onboarding (2.3)
-- Employer: redirect to employer onboarding (2.4)
+- Professional (`candidate` role): redirect to professional onboarding (2.3)
+- Business (`employer` role): redirect to business onboarding (2.4)
 
 **Acceptance criteria:**
 - [ ] Shown on first login only
@@ -54,7 +56,7 @@ On selection:
 - [ ] Role stored in `users.role` in Supabase
 - [ ] Correct redirect after selection
 
-### 2.3 Candidate Onboarding
+### 2.3 Professional Onboarding
 
 Three-step flow before reaching the dashboard.
 
@@ -71,7 +73,7 @@ Three-step flow before reaching the dashboard.
 **Step 3 -- Profile slug:**
 - Auto-generated from full name (e.g. `robert-ramos`)
 - Editable -- unique, lowercase, alphanumeric and hyphens only
-- Live preview: `roleboost.app/c/[slug]`
+- Live preview: `identiboost.com/i/[slug]`
 
 On completion:
 - Insert row into `candidate_profiles`
@@ -86,7 +88,7 @@ On completion:
 - [ ] Profile row created in Supabase on completion
 - [ ] Redirect to `/dashboard/profile`
 
-### 2.4 Employer Onboarding
+### 2.4 Business Onboarding
 
 Two-step flow before reaching the dashboard.
 
@@ -113,7 +115,7 @@ On completion:
 
 ---
 
-## 3. Candidate Features
+## 3. Professional Features
 
 ### 3.1 Profile Tab
 
@@ -126,10 +128,10 @@ The main hub for managing profile content and sharing.
 - Profile visibility toggle (Published / Draft)
 
 **Shareable assets section:**
-- Full public URL: `roleboost.app/c/[slug]`
+- Full public URL: `identiboost.com/i/[slug]`
 - Copy link button with confirmation toast
 - QR code download button
-- RoleBoost badge download button
+- IdentiBoost badge download button
 
 **Acceptance criteria:**
 - [ ] All fields editable and auto-saved on blur
@@ -142,7 +144,7 @@ The main hub for managing profile content and sharing.
 
 ### 3.2 Assets Tab
 
-Where candidates upload career assets produced in NotebookLM.
+Where professionals upload assets produced in NotebookLM.
 
 **Asset types:**
 
@@ -155,7 +157,7 @@ Where candidates upload career assets produced in NotebookLM.
 | Career Infographic | PNG, JPG, WEBP | 10MB |
 | ATS Resume | PDF | 5MB |
 
-Per asset: upload, preview, replace, delete. All candidates can upload all asset types.
+Per asset: upload, preview, replace, delete. All professionals can upload all asset types.
 
 **Acceptance criteria:**
 - [ ] All six asset types uploadable
@@ -167,9 +169,9 @@ Per asset: upload, preview, replace, delete. All candidates can upload all asset
 - [ ] Delete removes from storage and database
 - [ ] All asset previews functional
 
-### 3.3 AI Tab -- Career AI Management
+### 3.3 AI Tab -- Identity AI
 
-The core candidate AI management interface. This is where candidates arm their chatbot.
+The core Identity AI management interface. This is where professionals arm their chatbot.
 
 **Resume Intelligence Panel (top of AI tab):**
 
@@ -194,11 +196,11 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 - Why you left each of your last 3 roles
 - Biggest professional challenge and what you did about it
 - What you are not good at -- honest answer
-- Questions you wish recruiters would ask you
+- Questions you wish contacts would ask you
 - What defines your career in one sentence
 
 **Custom answers:**
-- List of question-answer pairs the candidate has refined based on recruiter transcript patterns
+- List of question-answer pairs the professional has refined based on contact transcript patterns
 - Add, edit, and delete custom answers
 - Custom answers are injected into the system prompt with highest priority
 
@@ -209,11 +211,11 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 
 **Testing interface:**
 - "Test your AI" sandbox
-- Candidate asks their own AI questions
+- The professional asks their own AI questions
 - Sees exactly how it responds before going live
-- Preview mode label: "This is how your AI responds to recruiters"
+- Preview mode label: "This is how your AI responds to contacts"
 
-**Pattern insights (shown after first recruiter conversations):**
+**Pattern insights (shown after first contact conversations):**
 - Most asked questions this week
 - Questions your AI redirected
 - Suggestions for new custom answers based on patterns
@@ -227,16 +229,16 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 - [ ] Custom QA pairs stored as JSONB in `custom_qa_pairs`
 - [ ] Privacy toggle updates `ai_enabled`
 - [ ] Redirect topics stored in `redirect_topics` array
-- [ ] Testing interface calls the same chat endpoint as recruiter chat
+- [ ] Testing interface calls the same chat endpoint as contact chat
 - [ ] Pattern insights shown after minimum 1 completed session
 - [ ] All changes reflected immediately in AI responses
 
 ### 3.4 Transcripts Tab
 
-Full history of all recruiter AI conversations.
+Full history of all contact AI conversations.
 
 **List view:**
-- Company name (if employer logged in) or "Anonymous recruiter"
+- Company name (if a business user was logged in) or "Anonymous contact"
 - Date and time
 - Number of questions asked
 - Duration
@@ -249,7 +251,7 @@ Full history of all recruiter AI conversations.
 
 **Acceptance criteria:**
 - [ ] All chat sessions shown reverse chronological
-- [ ] Company name shown when employer was logged in
+- [ ] Company name shown when a business user was logged in
 - [ ] Anonymous shown for unauthenticated viewers
 - [ ] Full transcript readable inline
 - [ ] Direct link from each question to AI fine-tuning interface
@@ -267,27 +269,27 @@ Full history of all recruiter AI conversations.
 **Acceptance criteria:**
 - [ ] All metrics pulled from `profile_views` and `chat_sessions` tables
 - [ ] Asset play counts tracked per asset type
-- [ ] Anonymous views shown separately from employer views
+- [ ] Anonymous views shown separately from business-user views
 
 ### 3.6 Preview Tab
 
-Shows the candidate exactly what recruiters see.
+Shows the professional exactly what contacts see.
 
 - Full modal rendered in preview frame
-- "This is how recruiters see your profile" label
+- "This is how contacts see your profile" label
 - Draft banner if profile is unpublished
-- Chat tab functional in preview using candidate's own AI
+- Chat tab functional in preview using the professional's own AI
 
 **Acceptance criteria:**
-- [ ] Modal renders identically to public `/c/[slug]`
+- [ ] Modal renders identically to public `/i/[slug]`
 - [ ] Chat interface functional in preview mode
 - [ ] Draft banner shown for unpublished profiles
 
 ---
 
-## 4. Public Candidate Profile -- The Modal
+## 4. Public Professional Profile -- The Modal
 
-Core recruiter-facing experience at `/c/[slug]`.
+Core contact-facing experience at `/i/[slug]`.
 
 ### 4.1 Modal Behavior
 
@@ -298,7 +300,7 @@ Core recruiter-facing experience at `/c/[slug]`.
 
 ### 4.2 Modal Header
 
-- Candidate initials avatar (colored circle, generated from name)
+- Professional's initials avatar (colored circle, generated from name)
 - Full name
 - Headline
 - Location and target role
@@ -324,27 +326,27 @@ Only tabs with uploaded assets are shown.
 
 All assets stream from signed Supabase Storage URLs (1-hour TTL, generated server-side).
 
-### 4.5 Chat Tab -- Career AI
+### 4.5 Chat Tab -- Identity AI
 
 The AI chat interface embedded in the modal.
 
 **Interface:**
-- "Ask [Name]'s career AI anything" header
+- "Ask [Name]'s AI anything" header
 - Message input field
 - Send button
 - Conversation history in chat bubbles
-- "Powered by RoleBoost AI" footer label
-- Disclaimer: "This AI represents [Name]'s career history and may not reflect all details"
+- "Powered by IdentiBoost AI" footer label
+- Disclaimer: "This AI represents [Name]'s verified professional identity and may not reflect every detail"
 
 **Behavior:**
 - Chat session created on first message
 - All messages logged to `chat_messages`
-- System prompt built from candidate's career data and custom QA pairs
+- System prompt built from the professional's data and custom QA pairs
 - Claude Haiku generates all responses (fast, cheap, conversational)
 - Session ends on modal close or 30 minutes of inactivity
 - Transcript delivered by email to both sides on session end
 
-**If AI disabled by candidate:**
+**If AI disabled by the professional:**
 - Chat tab hidden entirely
 
 **Acceptance criteria:**
@@ -353,15 +355,15 @@ The AI chat interface embedded in the modal.
 - [ ] Conversation history persists within session
 - [ ] Session logged to `chat_sessions`
 - [ ] All messages logged to `chat_messages`
-- [ ] Transcript email sent to candidate after session ends
-- [ ] Transcript email sent to logged-in employer after session ends
-- [ ] Tab hidden if candidate has disabled AI
+- [ ] Transcript email sent to the professional after session ends
+- [ ] Transcript email sent to logged-in business user after session ends
+- [ ] Tab hidden if the professional has disabled AI
 - [ ] Fully keyboard navigable
 - [ ] Screen reader accessible
 
-### 4.6 Employer Actions
+### 4.6 Business User Actions
 
-Shown when employer is logged in:
+Shown when a business user is logged in:
 - Save button -- saves to pool, changes to Saved with filled icon
 - Connect button -- opens feedback compose
 - Status dropdown -- assign stage (shown if already saved)
@@ -372,7 +374,7 @@ Unauthenticated viewers see Save and Connect -- clicking prompts sign up first.
 ### 4.7 View and Chat Tracking
 
 Every modal open logs a view in `profile_views`.
-Every chat session logs to `chat_sessions` with `employer_account_id` if logged in.
+Every chat session logs to `chat_sessions` with `employer_account_id` if a business user is logged in.
 Duration tracked on modal close.
 
 **Acceptance criteria:**
@@ -387,67 +389,67 @@ Duration tracked on modal close.
 
 ---
 
-## 5. Employer Features
+## 5. Business Features
 
-### 5.1 Candidates Tab
+### 5.1 Saved Professionals Tab
 
-Saved candidate pool. Grid of candidate cards.
+Saved professional pool. Grid of profile cards.
 
-**Card shows:** Avatar, name, headline, stage badge, job posting, asset indicators, date saved
+**Card shows:** Avatar, name, headline, stage badge, posting, asset indicators, date saved
 
-**Filters:** By job posting, by stage, by date saved
+**Filters:** By posting, by stage, by date saved
 **Search:** By name or headline
 
-Clicking card opens candidate modal inline.
+Clicking card opens the profile modal inline.
 
 **Acceptance criteria:**
-- [ ] All saved candidates shown
+- [ ] All saved professionals shown
 - [ ] Filter and search functional
 - [ ] Modal opens inline on card click
-- [ ] Free tier limited to 5 saved candidates
+- [ ] Free tier limited to 5 saved professionals
 
 ### 5.2 Jobs Tab
 
-**Job postings list:** Title, department, location, candidate count, active status
+**Job postings list:** Title, department, location, saved-professional count, active status
 
 **Create/Edit form:** Title (required), department, location, description, active toggle
 
 **Acceptance criteria:**
-- [ ] All postings shown for employer account
+- [ ] All postings shown for the business account
 - [ ] Create and edit functional
 - [ ] Free tier limited to 1 posting
 
 ### 5.3 Board Tab
 
-Candidate pool filtered by job posting, grouped by stage.
+Saved professionals filtered by posting, grouped by stage.
 
-**Per candidate row:** Name, headline, asset indicators, date added, stage dropdown, notes field
+**Per row:** Name, headline, asset indicators, date added, stage dropdown, notes field
 
 Stage dropdown: Saved / Screening / Interview / Offer / Passed -- updates `saved_candidates.stage`
 
 Notes auto-save on blur. Visible to all team members.
 
 **Acceptance criteria:**
-- [ ] Board shows candidates for selected posting only
+- [ ] Board shows saved professionals for selected posting only
 - [ ] Stage dropdown updates database
 - [ ] Notes auto-save
 - [ ] Clicking name opens modal inline
 
 ### 5.4 Transcripts Tab
 
-History of all AI chat conversations by employer team members.
+History of all AI chat conversations by business team members.
 
-**List view:** Candidate name, team member who chatted, date, question count
-**Full transcript:** All questions and answers, link to save candidate, link to send feedback
+**List view:** Professional's name, team member who chatted, date, question count
+**Full transcript:** All questions and answers, link to save the professional, link to send feedback
 
 **Acceptance criteria:**
-- [ ] All chat sessions shown for employer account
+- [ ] All chat sessions shown for the business account
 - [ ] Full transcript readable
-- [ ] Save candidate and send feedback CTAs functional
+- [ ] Save-professional and send-feedback CTAs functional
 
 ### 5.5 Team Tab
 
-Available on Growth and Scale tiers.
+Available on the paid team tiers (Team, Growth, Scale).
 
 **Team list:** Name, email, role, date added
 **Invite flow:** Email input, Clerk invite email, auto-add on sign-up
@@ -456,20 +458,20 @@ Available on Growth and Scale tiers.
 - [ ] All `employer_members` shown
 - [ ] Invite sends via Clerk
 - [ ] Owner can remove members but not self
-- [ ] Free and Starter tiers see locked state with upgrade CTA
+- [ ] Free accounts see locked state with upgrade CTA
 
 ### 5.6 Sending Feedback
 
-From candidate modal (Connect button) or candidate card action menu.
+From the profile modal (Connect button) or the saved-profile card action menu.
 
 **Compose:** Text area (max 1000 chars) with character counter, send button
 
 **Acceptance criteria:**
 - [ ] Compose accessible from modal and card
 - [ ] Send creates feedback row
-- [ ] Candidate receives email notification
-- [ ] Candidate sees feedback in their dashboard
-- [ ] Employer sees confirmation toast
+- [ ] The professional receives email notification
+- [ ] The professional sees feedback in their dashboard
+- [ ] Business user sees confirmation toast
 
 ---
 
@@ -477,51 +479,51 @@ From candidate modal (Connect button) or candidate card action menu.
 
 ### 6.1 Chat Session Lifecycle
 
-1. Recruiter opens modal and sends first message -- `chat_sessions` row created
+1. Contact opens modal and sends first message -- `chat_sessions` row created
 2. Messages logged in real time to `chat_messages`
 3. Session ends when modal closes OR 30 minutes of inactivity
 4. `POST /api/transcripts/deliver` called
 5. Transcript built from all `chat_messages` in session
-6. Email sent to candidate via Resend
-7. Email sent to employer if logged in via Resend
+6. Email sent to the professional via Resend
+7. Email sent to the business user if logged in via Resend
 8. `chat_sessions.transcript_sent` set to true
 
-### 6.2 Candidate Transcript Email
+### 6.2 Professional Transcript Email
 
-**Subject:** A recruiter just chatted with your RoleBoost AI
+**Subject:** Someone just chatted with your IdentiBoost AI
 
 **Body:**
-- Company name (or "An anonymous recruiter") viewed your profile
+- Company name (or "An anonymous contact") viewed your profile
 - Date and time, number of questions asked
 - Full conversation transcript
 - Pattern insight if same question asked 3+ times this week
 - CTA: Fine-tune your AI
 - CTA: View full analytics
 
-### 6.3 Employer Transcript Email
+### 6.3 Contact Transcript Email
 
-**Subject:** Your RoleBoost conversation with [Candidate Name]
+**Subject:** Your IdentiBoost conversation with [Name]
 
 **Body:**
 - Summary -- N questions asked, duration
 - Full conversation transcript
 - CTA: View full profile
-- CTA: Save candidate
+- CTA: Save this professional
 - CTA: Send feedback
 
 ### 6.4 Feedback Notification Email
 
-**Subject:** You have new feedback from [Company Name] on RoleBoost
+**Subject:** You have new feedback from [Company Name] on IdentiBoost
 
 **Body:**
 - Company name and message preview
 - CTA: Read full feedback
 
 **Acceptance criteria:**
-- [ ] Transcript email sent to candidate after every session
-- [ ] Transcript email sent to logged-in employer after every session
-- [ ] Feedback email sent to candidate on every feedback submission
-- [ ] All emails from `transcripts@roleboost.app`
+- [ ] Transcript email sent to the professional after every session
+- [ ] Transcript email sent to the logged-in business user after every session
+- [ ] Feedback email sent to the professional on every feedback submission
+- [ ] All emails from `transcripts@identiboost.com`
 - [ ] Email templates mobile responsive
 - [ ] Unsubscribe link included per CAN-SPAM
 
@@ -601,9 +603,9 @@ Custom answers injected into system prompt above base career data -- they take p
 
 ---
 
-## 8. Candidate Context Form -- Deep Career Questions
+## 8. Professional Context Form -- Deep Career Questions
 
-The intake form that trains the AI. Shown after initial onboarding. Guided by Resume Intelligence recommendations so candidates know which fields matter most for their specific resume.
+The intake form that trains the AI. Shown after initial onboarding. Guided by Resume Intelligence recommendations so professionals know which fields matter most for their specific resume.
 
 **Section 1 -- Career highlights:**
 - Paste your full resume or upload it (required)
@@ -616,11 +618,11 @@ The intake form that trains the AI. Shown after initial onboarding. Guided by Re
 - What does your ideal team look like?
 - What do you need from a manager to do your best work?
 
-**Section 3 -- Honest answers recruiters appreciate:**
+**Section 3 -- Honest answers contacts appreciate:**
 - Why did you leave each of your last 3 roles?
 - What is your biggest professional failure and what did you learn?
 - What are you not good at -- be honest?
-- What question do you wish recruiters would ask you?
+- What question do you wish contacts would ask you?
 
 **Section 4 -- Your story:**
 - What defines your career in one sentence?
@@ -641,19 +643,19 @@ The intake form that trains the AI. Shown after initial onboarding. Guided by Re
 
 ### 8A.1 Overview
 
-Resume Intelligence is the layer between resume upload and the context form. When a candidate uploads or pastes their resume, Claude Sonnet analyzes it through the lens of what recruiters and ATS systems flag -- gaps, short tenures, career pivots, layoffs, missing degrees, title mismatches, skills without evidence, missing metrics -- and returns a targeted set of context-building recommendations.
+Resume Intelligence is the layer between resume upload and the context form. It serves every vertical whose evaluators read resumes, sharpest in the job-search vertical. When a professional uploads or pastes their resume, Claude Sonnet analyzes it through the lens of what recruiters and ATS systems flag -- gaps, short tenures, career pivots, layoffs, missing degrees, title mismatches, skills without evidence, missing metrics -- and returns a targeted set of context-building recommendations.
 
-The output is not a resume score. It is a prioritized list of questions the candidate's AI chatbot needs to be able to answer, derived directly from what is in the resume.
+The output is not a resume score. It is a prioritized list of questions the professional's AI chatbot needs to be able to answer, derived directly from what is in the resume.
 
-The framing to the candidate:
+The framing to the professional:
 
 **"Based on your resume, here are the questions recruiters are likely to ask. Let's make sure your AI has the answers before they do."**
 
-This is what empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Every context field filled in based on a Resume Intelligence recommendation is one fewer time a candidate has to answer that question defensively on a screening call.
+This is what empowers the professional's voice to be heard before anyone decides they are not worth a conversation. Every context field filled in based on a Resume Intelligence recommendation is one fewer time a professional has to answer that question defensively on a first call.
 
 ### 8A.2 How It Works
 
-**Trigger:** Candidate uploads or pastes resume text for the first time, or re-uploads an updated resume.
+**Trigger:** The professional uploads or pastes resume text for the first time, or re-uploads an updated resume.
 
 **Process:**
 1. Resume text extracted from uploaded PDF or taken from paste field
@@ -662,8 +664,8 @@ This is what empowers the candidate's voice to be heard before easy or automatic
 4. Returns structured JSON containing flagged items and recommended context fields
 5. Recommendations displayed in AI tab as prioritized list
 6. Each recommendation links directly to the relevant context field
-7. Completed recommendations marked with checkmark as candidate fills in context
-8. Recommendations persist and update when candidate uploads a new resume
+7. Completed recommendations marked with checkmark as the professional fills in context
+8. Recommendations persist and update when the professional uploads a new resume
 
 **API endpoint:** `POST /api/resume-intelligence`
 
@@ -791,7 +793,7 @@ RULES:
 - "Add context" CTA linking directly to the relevant context field
 - Checkmark when context field is filled in (50+ characters)
 
-**Completion bar:** "X of Y recruiter questions covered" -- fills as candidate addresses flags.
+**Completion bar:** "X of Y recruiter questions covered" -- fills as the professional addresses flags.
 
 ### 8A.5 Data Model Additions
 
@@ -841,55 +843,56 @@ This is an enhancement layer, not a prerequisite.
 
 ## 9. Pricing and Feature Gates
 
-### Candidate Tiers
+### Professional Tiers -- Individual
 
-Pricing TBD. Candidates generate real API costs at two points:
+Professionals generate real API costs at two points:
 - Resume Intelligence (Claude Sonnet): approximately $0.02 per resume upload/re-analysis
-- AI chatbot (Claude Haiku): approximately $0.0008 per recruiter chat session
+- AI chatbot (Claude Haiku): approximately $0.0008 per contact chat session
 
-The supply-side economics favor keeping candidates free or near-free to maximize profile volume and employer-side value. Final structure will be determined once usage patterns are understood from Fiverr validation.
+The free Starter tier maximizes profile volume; Pro and Business monetize professionals who use their Identity AI as a working tool. The embed widget and CRM export are roadmap features and must be labeled "coming soon" wherever they appear.
 
-| Feature | Free | Pro (TBD) |
-|---|---|---|
-| Full profile and all media assets | Yes | Yes |
-| Shareable link, QR code, badge | Yes | Yes |
-| Resume Intelligence | Yes | Yes |
-| Basic AI chatbot | Yes | Yes |
-| Transcript delivery by email | Yes | Yes |
-| Basic fine-tuning -- edit custom answers | Yes | Yes |
-| Advanced conversation analytics | No | Yes |
-| Pattern recognition -- most asked questions | No | Yes |
-| Custom chatbot personality settings | No | Yes |
-| Priority profile placement | No | Yes |
+| Feature | Starter (Free) | Pro $29 | Business $99 |
+|---|---|---|---|
+| Full profile and all media assets | Yes | Yes | Yes |
+| Shareable link, QR code, badge | Yes | Yes | Yes |
+| Resume Intelligence | Yes | Yes | Yes |
+| Basic AI chatbot | Yes | Yes | Yes |
+| Transcript delivery by email | Yes | Yes | Yes |
+| Custom Q&A and fine-tuning | No | Yes | Yes |
+| Conversation analytics | No | Yes | Yes |
+| Embed widget (coming soon) | No | Yes | Yes |
+| CRM export (coming soon) | No | No | Yes |
+| Advanced analytics | No | No | Yes |
+| Priority support | No | No | Yes |
 
-### Employer Tiers
+### Team Tiers -- Company Deployment
 
-| Feature | Free | Starter $49 | Growth $99 | Scale $249 |
-|---|---|---|---|---|
-| AI chat with candidates | Yes | Yes | Yes | Yes |
-| Transcript delivery by email | Yes | Yes | Yes | Yes |
-| Saved candidates | 5 | 50 | Unlimited | Unlimited |
-| Job postings | 1 | 5 | Unlimited | Unlimited |
-| Transcript history in dashboard | No | Yes | Yes | Yes |
-| Pipeline notes | No | Yes | Yes | Yes |
-| Team collaboration | No | No | Yes | Yes |
-| Chat analytics | No | No | Yes | Yes |
-| API access | No | No | No | Yes |
-| Priority support | No | No | No | Yes |
+For companies deploying IdentiBoost across their people: sales teams, consulting benches, exhibitor rosters, and hiring pipelines.
+
+| Feature | Team $299 | Growth $699 | Scale $1,499 |
+|---|---|---|---|
+| Profiles included | Up to 10 | Up to 25 | Unlimited |
+| Company-level AI layer | Yes | Yes | Yes |
+| Aggregate analytics | Yes | Yes | Yes |
+| CRM integration | No | Yes | Yes |
+| White label option | No | No | Yes |
+| Dedicated onboarding | No | No | Yes |
+
+The free business-side account keeps its existing limits: 5 saved professionals, 1 posting, AI chat, and transcript delivery.
 
 ---
 
 ## 10. Paddle Integration
 
-Candidate tier pricing TBD -- Paddle setup for candidate billing deferred until tier structure is finalized.
-
-Employer billing active from launch.
+Individual professional billing (Pro $29 / Business $99) and team billing (Team $299 / Growth $699 / Scale $1,499) run through Paddle. New Paddle price IDs for the individual professional tiers are pending setup; team billing is active from launch.
 
 | Variable | Tier |
 |---|---|
-| `PADDLE_EMPLOYER_STARTER_PRICE_ID` | Employer Starter $49/mo |
-| `PADDLE_EMPLOYER_GROWTH_PRICE_ID` | Employer Growth $99/mo |
-| `PADDLE_EMPLOYER_SCALE_PRICE_ID` | Employer Scale $249/mo |
+| `PADDLE_EMPLOYER_STARTER_PRICE_ID` | Team $299/mo |
+| `PADDLE_EMPLOYER_GROWTH_PRICE_ID` | Growth $699/mo |
+| `PADDLE_EMPLOYER_SCALE_PRICE_ID` | Scale $1,499/mo |
+
+The environment variable names keep the legacy `EMPLOYER` prefix; renaming them requires a code change and is out of scope for the rebrand.
 
 Webhook handler at `/api/webhooks/paddle`.
 
@@ -1237,22 +1240,22 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Set up Vercel under `builtwithrobots`
 - [ ] Configure all environment variables
 
-### Phase 1 -- Candidate Profiles and Modal (Week 2-4)
+### Phase 1 -- Professional Profiles and Modal (Week 2-4)
 - [ ] Onboarding -- role selection
-- [ ] Candidate onboarding -- 3 steps
-- [ ] Candidate dashboard layout and navigation
+- [ ] Professional onboarding -- 3 steps
+- [ ] Professional dashboard layout and navigation
 - [ ] Profile editor (Section 3.1)
 - [ ] Asset upload (Section 3.2)
-- [ ] Public modal at `/c/[slug]` (Section 4, without chat tab)
+- [ ] Public modal at `/i/[slug]` (Section 4, without chat tab)
 - [ ] View tracking
 - [ ] QR code generation
 - [ ] Badge download
 
-### Phase 2 -- Employer Dashboard (Week 4-7)
-- [ ] Employer onboarding -- 2 steps
-- [ ] Employer dashboard layout
-- [ ] Candidates tab (Section 5.1)
-- [ ] Save candidate from modal
+### Phase 2 -- Business Dashboard (Week 4-7)
+- [ ] Business onboarding -- 2 steps
+- [ ] Business dashboard layout
+- [ ] Saved professionals tab (Section 5.1)
+- [ ] Save professional from modal
 - [ ] Jobs tab (Section 5.2)
 - [ ] Board tab (Section 5.3)
 - [ ] Stage assignment
@@ -1261,29 +1264,29 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Feedback notification email via Resend
 
 ### Phase 3 -- AI Chatbot, Transcripts, Resume Intelligence (Week 7-10)
-- [ ] Candidate context form (Section 8)
+- [ ] Professional context form (Section 8)
 - [ ] Resume Intelligence -- Claude Sonnet analysis (Section 8A)
 - [ ] Resume Intelligence panel UI in AI tab
 - [ ] System prompt builder -- `lib/ai/build-system-prompt.ts`
 - [ ] Claude Haiku chat endpoint -- `/api/chat`
 - [ ] Chat UI in modal -- Chat tab (Section 4.5)
 - [ ] Chat session and message logging
-- [ ] Candidate AI tab -- full management interface (Section 3.3)
+- [ ] Identity AI tab -- full management interface (Section 3.3)
 - [ ] Fine-tuning interface -- custom QA pairs
 - [ ] Privacy controls -- redirect topics and `ai_enabled` toggle
-- [ ] Testing sandbox -- candidate tests their own AI
+- [ ] Testing sandbox -- the professional tests their own AI
 - [ ] Transcript delivery endpoint -- `/api/transcripts/deliver`
-- [ ] Candidate transcript email template
-- [ ] Employer transcript email template
-- [ ] Transcripts tab for candidates (Section 3.4)
-- [ ] Transcripts tab for employers (Section 5.4)
+- [ ] Professional transcript email template
+- [ ] Contact transcript email template
+- [ ] Transcripts tab for professionals (Section 3.4)
+- [ ] Transcripts tab for businesses (Section 5.4)
 - [ ] Pattern recognition -- most asked questions
 - [ ] Mobile responsive audit
 - [ ] WCAG 2.1 AA audit
 
 ### Phase 4 -- Payments and Polish (Week 10-12)
-- [ ] Paddle JS integration for employer tiers
-- [ ] Employer upgrade prompts at free tier limits
+- [ ] Paddle JS integration for team tiers
+- [ ] Business-side upgrade prompts at free tier limits
 - [ ] Checkout flow
 - [ ] Paddle webhook handler (Section 10)
 - [ ] Subscription status gates on features
@@ -1291,7 +1294,7 @@ All UI must meet WCAG 2.1 AA. Non-negotiable.
 - [ ] Error states and empty states for all screens
 - [ ] Loading and skeleton screens
 - [ ] Analytics tab (Section 3.5)
-- [ ] Candidate pricing decision and tier implementation (TBD)
+- [ ] Individual professional tier implementation (Pro $29 / Business $99)
 
 ---
 
@@ -1301,7 +1304,7 @@ Do not build. Push back if asked.
 
 - AI asset generation on platform -- NotebookLM is the production engine
 - Drag and drop Kanban -- dropdown stage assignment only
-- Employer candidate browse directory -- save via shared links only
+- Business-side browse directory -- professionals are saved via shared links only
 - Resume parsing or ATS keyword optimization (distinct from Resume Intelligence)
 - Video or audio recording in browser
 - Real-time chat notifications -- email transcripts are the delivery mechanism

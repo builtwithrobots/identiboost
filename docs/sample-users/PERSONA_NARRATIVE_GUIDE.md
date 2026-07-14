@@ -1,4 +1,4 @@
-# RoleBoost -- Persona Narrative Guide
+# IdentiBoost -- Persona Narrative Guide
 
 **Version:** 1.0 **Date:** June 2026 **Author:** Rob Ramos **Purpose:** Single reference document for all 8 example personas. Use this file when writing NotebookLM prompts, building AI chatbot system prompts, briefing infographic production, or handing off persona work to anyone else. This is not a resume file -- it is the human story behind each resume.
 
@@ -29,7 +29,7 @@
 | :-- | :-- |
 | Full name | Jordan Mills |
 | Slug | jordan-mills |
-| Public URL | getroleboost.com/c/jordan-mills |
+| Public URL | identiboost.com/i/jordan-mills |
 | Location | Phoenix, AZ |
 | Target role | Customer Service Team Lead |
 | Headline | Customer Service Representative, 2 years retail banking, ready for team lead |
@@ -38,7 +38,7 @@
 
 ### The Narrative
 
-Jordan has been the best CSR in the branch for almost two years -- 97% CSAT when the branch average is 91%, promoted 2 months ahead of schedule, and the only non-lead ever trusted to run the floor for three weeks when the supervisor was out. Their resume looks like every other entry-level candidate in the stack. RoleBoost's job is to take a thin document and surface the through-line that a hiring manager cannot see: this person operates above their title and has been doing so since month one. The AI chatbot exists to answer the degree question with confidence and pivot to the evidence before a recruiter has a chance to move on.
+Jordan has been the best CSR in the branch for almost two years -- 97% CSAT when the branch average is 91%, promoted 2 months ahead of schedule, and the only non-lead ever trusted to run the floor for three weeks when the supervisor was out. Their resume looks like every other entry-level candidate in the stack. IdentiBoost's job is to take a thin document and surface the through-line that a hiring manager cannot see: this person operates above their title and has been doing so since month one. The AI chatbot exists to answer the degree question with confidence and pivot to the evidence before a recruiter has a chance to move on.
 
 ### The Hook
 
@@ -83,7 +83,7 @@ A: Jordan is 14 months into an associate's program and will have it in 2027 -- b
 | :-- | :-- |
 | Full name | Ray Castillo |
 | Slug | ray-castillo |
-| Public URL | getroleboost.com/c/ray-castillo |
+| Public URL | identiboost.com/i/ray-castillo |
 | Location | Denver, CO |
 | Target role | Electrical Foreman |
 | Headline | Journeyman Electrician, 12 years commercial and industrial, ready for foreman |
@@ -92,7 +92,7 @@ A: Jordan is 14 months into an associate's program and will have it in 2027 -- b
 
 ### The Narrative
 
-Ray's resume is a list of job sites. Twelve years, two companies, one apprenticeship, a short list of certifications. On paper he looks identical to every other journeyman in the pile. What the resume cannot show is that he has been doing foreman work for three years -- leading crews of 4 to 8, being requested by name by GC superintendents, running night shift adjacent to active rail infrastructure without a single recordable incident. RoleBoost turns a thin document into a full voice. The AI chatbot needs to answer the reliability and safety questions first, because that is what foreman hiring managers ask before anything else.
+Ray's resume is a list of job sites. Twelve years, two companies, one apprenticeship, a short list of certifications. On paper he looks identical to every other journeyman in the pile. What the resume cannot show is that he has been doing foreman work for three years -- leading crews of 4 to 8, being requested by name by GC superintendents, running night shift adjacent to active rail infrastructure without a single recordable incident. IdentiBoost turns a thin document into a full voice. The AI chatbot needs to answer the reliability and safety questions first, because that is what foreman hiring managers ask before anything else.
 
 ### The Hook
 
@@ -136,7 +136,7 @@ A: Not with the title -- but the work is the same. On three major projects over 
 | :-- | :-- |
 | Full name | Tanya Patel, BSN, RN, CCRN |
 | Slug | tanya-patel |
-| Public URL | getroleboost.com/c/tanya-patel |
+| Public URL | identiboost.com/i/tanya-patel |
 | Location | Chicago, IL |
 | Target role | Nurse Manager |
 | Headline | Registered Nurse, 7 years Level I trauma, transitioning to nurse manager |
@@ -145,7 +145,7 @@ A: Not with the title -- but the work is the same. On three major projects over 
 
 ### The Narrative
 
-Tanya has seven years of clinical excellence and her resume makes her look like a nurse applying for a nursing job. The through-line her resume cannot tell is that she has been leading for three years without a management title -- charge nurse coverage coordinating 12 nurses and 2 techs, a preceptorship program with an 87.5% 12-month retention rate when the hospital average is 70%, and a unit-based initiative she designed and ran that dropped near-miss events 23%. RoleBoost's job here is to reframe the clinical record as a leadership record. The AI chatbot needs to handle the "no management experience" objection before the recruiter has a chance to raise it.
+Tanya has seven years of clinical excellence and her resume makes her look like a nurse applying for a nursing job. The through-line her resume cannot tell is that she has been leading for three years without a management title -- charge nurse coverage coordinating 12 nurses and 2 techs, a preceptorship program with an 87.5% 12-month retention rate when the hospital average is 70%, and a unit-based initiative she designed and ran that dropped near-miss events 23%. IdentiBoost's job here is to reframe the clinical record as a leadership record. The AI chatbot needs to handle the "no management experience" objection before the recruiter has a chance to raise it.
 
 ### The Hook
 
@@ -191,7 +191,7 @@ A: Because she has already been managing one -- informally, for three years. Cha
 | :-- | :-- |
 | Full name | Derek Kim, PMP |
 | Slug | derek-kim |
-| Public URL | getroleboost.com/c/derek-kim |
+| Public URL | identiboost.com/i/derek-kim |
 | Location | Austin, TX |
 | Target role | PMO Director |
 | Headline | Senior Program Manager, 10 years SaaS program delivery, building toward PMO Director |
@@ -200,7 +200,7 @@ A: Because she has already been managing one -- informally, for three years. Cha
 
 ### The Narrative
 
-Derek has been doing PMO Director work for two years without the title. He built the portfolio intake process, the prioritization framework, and the executive reporting cadence that the CPO and CTO at Vela now use as standard operating procedure across 6 product lines and 40+ active projects per quarter. He presents monthly portfolio health to the executive team. He interviewed PM candidates. He manages 3 PMs and 2 scrum masters. The company's org structure does not have a PMO Director title, and he is done waiting for it. RoleBoost needs to make that case before a hiring manager asks why a Senior PM thinks he is ready for a director role.
+Derek has been doing PMO Director work for two years without the title. He built the portfolio intake process, the prioritization framework, and the executive reporting cadence that the CPO and CTO at Vela now use as standard operating procedure across 6 product lines and 40+ active projects per quarter. He presents monthly portfolio health to the executive team. He interviewed PM candidates. He manages 3 PMs and 2 scrum masters. The company's org structure does not have a PMO Director title, and he is done waiting for it. IdentiBoost needs to make that case before a hiring manager asks why a Senior PM thinks he is ready for a director role.
 
 ### The Hook
 
@@ -245,7 +245,7 @@ A: The PMO Director role is defined by portfolio visibility and governance -- wh
 | :-- | :-- |
 | Full name | Michelle Foster |
 | Slug | michelle-foster |
-| Public URL | getroleboost.com/c/michelle-foster |
+| Public URL | identiboost.com/i/michelle-foster |
 | Location | New York, NY |
 | Target role | Chief Marketing Officer |
 | Headline | Chief Marketing Officer, 18 years consumer goods, selectively looking post-acquisition |
@@ -254,7 +254,7 @@ A: The PMO Director role is defined by portfolio visibility and governance -- wh
 
 ### The Narrative
 
-Michelle spent 7 years as CMO at Ardent Consumer Brands and grew revenue from $420M to $780M. She built the DTC channel from zero to $48M -- a channel that was a material factor in the acquisition premium Vanguard Capital Partners paid in 2025. After the acquisition closed, her role was consolidated into the acquirer's leadership structure and she departed. She is not urgently looking. She is selectively evaluating. RoleBoost demonstrates the product working at C-suite level and signals to executive search firms that the platform is serious. The AI chatbot needs to handle the departure question immediately and pivot to the scale of what she actually built before the recruiter has a chance to read anything into it.
+Michelle spent 7 years as CMO at Ardent Consumer Brands and grew revenue from $420M to $780M. She built the DTC channel from zero to $48M -- a channel that was a material factor in the acquisition premium Vanguard Capital Partners paid in 2025. After the acquisition closed, her role was consolidated into the acquirer's leadership structure and she departed. She is not urgently looking. She is selectively evaluating. IdentiBoost demonstrates the product working at C-suite level and signals to executive search firms that the platform is serious. The AI chatbot needs to handle the departure question immediately and pivot to the scale of what she actually built before the recruiter has a chance to read anything into it.
 
 ### The Hook
 
@@ -300,7 +300,7 @@ A: She did not leave -- the role did. After Vanguard Capital Partners acquired A
 | :-- | :-- |
 | Full name | Marcus Webb |
 | Slug | marcus-webb |
-| Public URL | getroleboost.com/c/marcus-webb |
+| Public URL | identiboost.com/i/marcus-webb |
 | Location | Columbus, OH |
 | Target role | Director of Fulfillment Operations |
 | Headline | Fulfillment Operations Manager, 14 years e-commerce and distribution, ready for Director |
@@ -309,7 +309,7 @@ A: She did not leave -- the role did. After Vanguard Capital Partners acquired A
 
 ### The Narrative
 
-Marcus started pick/pack in 2012 and is now running a 312,000 square foot fulfillment center processing up to 24,000 orders per day across three shifts and 200 people. No degree. He has never needed one -- his results are the credential. Two consecutive peak seasons above company accuracy targets, an 18% labor cost reduction through process redesign he built with the WMS team, a third-shift operation he built from scratch in 8 weeks, and a site P&L he has averaged 4% under budget for 3 years. His resume is a list of headcounts and square footage. RoleBoost turns it into the story of someone who built real systems, developed real people, and ran a real operation -- which is exactly what a VP of Operations needs to hear before the interview.
+Marcus started pick/pack in 2012 and is now running a 312,000 square foot fulfillment center processing up to 24,000 orders per day across three shifts and 200 people. No degree. He has never needed one -- his results are the credential. Two consecutive peak seasons above company accuracy targets, an 18% labor cost reduction through process redesign he built with the WMS team, a third-shift operation he built from scratch in 8 weeks, and a site P&L he has averaged 4% under budget for 3 years. His resume is a list of headcounts and square footage. IdentiBoost turns it into the story of someone who built real systems, developed real people, and ran a real operation -- which is exactly what a VP of Operations needs to hear before the interview.
 
 ### The Hook
 
@@ -353,7 +353,7 @@ A: Marcus has 14 years of results where a degree would have given you 4 years of
 | :-- | :-- |
 | Full name | Claire Hutchins |
 | Slug | claire-hutchins |
-| Public URL | getroleboost.com/c/claire-hutchins |
+| Public URL | identiboost.com/i/claire-hutchins |
 | Location | Nashville, TN |
 | Target role | Senior Store Manager / District Manager |
 | Headline | Retail Store Manager, 9 years specialty retail, returning after caregiving leave |
@@ -362,7 +362,7 @@ A: Marcus has 14 years of results where a degree would have given you 4 years of
 
 ### The Narrative
 
-Claire has a 20-month gap on her resume and there is nothing she can do about that on paper. What she can do -- through RoleBoost -- is tell that story on her own terms, in her own voice, before a recruiter picks up the phone. The record before the gap is strong: $4.2M location, top 15% NPS in a 340-store company for 11 consecutive quarters, 3 assistant managers developed and promoted, shrink cut in half. She left to care for a parent with a progressive neurological illness. Her parent passed away in June 2025. She is fully available and she is not diminished. The gap is not the story -- the career before it and the return after it is.
+Claire has a 20-month gap on her resume and there is nothing she can do about that on paper. What she can do -- through IdentiBoost -- is tell that story on her own terms, in her own voice, before a recruiter picks up the phone. The record before the gap is strong: $4.2M location, top 15% NPS in a 340-store company for 11 consecutive quarters, 3 assistant managers developed and promoted, shrink cut in half. She left to care for a parent with a progressive neurological illness. Her parent passed away in June 2025. She is fully available and she is not diminished. The gap is not the story -- the career before it and the return after it is.
 
 ### The Hook
 
@@ -405,7 +405,7 @@ A: The 20 months did not erase 9 years of retail instincts or the results she bu
 | :-- | :-- |
 | Full name | Ryan Kowalski |
 | Slug | ryan-kowalski |
-| Public URL | getroleboost.com/c/ryan-kowalski |
+| Public URL | identiboost.com/i/ryan-kowalski |
 | Location | Austin, TX |
 | Target role | Senior Data Analyst / Analytics Manager |
 | Headline | Senior Data Analyst, 6 years SaaS and B2B, available after company-wide RIF |
@@ -414,7 +414,7 @@ A: The 20 months did not erase 9 years of retail instincts or the results she bu
 
 ### The Narrative
 
-Ryan has a strong, clean 6-year track record and the first question every recruiter asks is about the layoff. That conversation should not start with an apology or an explanation -- it should start with what he built. At Veritas Labs he was the sole analyst supporting a $12M ARR product line, built a self-serve analytics layer with 47 dashboards used by 90% of a 140-person company, reduced executive reporting time from 6 hours to 45 minutes, and built a customer health scoring model that contributed to a 14% improvement in net revenue retention. His role was eliminated in a company-wide RIF driven by funding contraction. RoleBoost exists for exactly this person: someone with real credentials and a clean record whose first conversation keeps starting in the wrong place.
+Ryan has a strong, clean 6-year track record and the first question every recruiter asks is about the layoff. That conversation should not start with an apology or an explanation -- it should start with what he built. At Veritas Labs he was the sole analyst supporting a $12M ARR product line, built a self-serve analytics layer with 47 dashboards used by 90% of a 140-person company, reduced executive reporting time from 6 hours to 45 minutes, and built a customer health scoring model that contributed to a 14% improvement in net revenue retention. His role was eliminated in a company-wide RIF driven by funding contraction. IdentiBoost exists for exactly this person: someone with real credentials and a clean record whose first conversation keeps starting in the wrong place.
 
 ### The Hook
 
@@ -468,4 +468,4 @@ Use this table when you open NotebookLM and need to pick a prompt without re-rea
 
 ---
 
-*RoleBoost Persona Narrative Guide v1.0 -- getroleboost.com -- Built by Rob Ramos*
+*IdentiBoost Persona Narrative Guide v1.0 -- identiboost.com -- Built by Rob Ramos*

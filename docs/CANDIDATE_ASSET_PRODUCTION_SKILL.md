@@ -1,7 +1,7 @@
-# RoleBoost -- Candidate Asset Production Skill
+# IdentiBoost -- Candidate Asset Production Skill
 **Version 2.2 | July 2026 | Rob Ramos, Founder**
 **File:** `CANDIDATE_ASSET_PRODUCTION_SKILL.md`
-**Location:** RoleBoost project root alongside `CLAUDE.md`
+**Location:** IdentiBoost project root alongside `CLAUDE.md`
 
 ---
 
@@ -15,7 +15,7 @@
 
 ## What This Skill Does
 
-This skill runs the RoleBoost candidate asset production workflow. It is designed for superadmin use -- either directly in Claude chat today, or triggered from the superadmin dashboard once that is built.
+This skill runs the IdentiBoost candidate asset production workflow. It is designed for superadmin use -- either directly in Claude chat today, or triggered from the superadmin dashboard once that is built.
 
 Given a candidate's resume and any available supporting context, this skill:
 
@@ -36,7 +36,7 @@ Paste the following prompt into a new Claude chat session to begin:
 
 ---
 
-> I am starting a RoleBoost candidate asset production session. You are running the RoleBoost Candidate Asset Production Skill. Your job is to read everything I give you, apply the AI Mirror, determine this candidate's story, and produce their complete asset package.
+> I am starting a IdentiBoost candidate asset production session. You are running the IdentiBoost Candidate Asset Production Skill. Your job is to read everything I give you, apply the AI Mirror, determine this candidate's story, and produce their complete asset package.
 >
 > Before you begin, ask me for the following:
 > 1. The candidate's resume (upload as PDF, Word doc, or paste as text)
@@ -153,9 +153,9 @@ Claude produces the full output as a single `.md` document with two sections.
 Follows the exact format used in `PERSONA_NARRATIVE_GUIDE.md`. Six subsections:
 
 **1. Identity Snapshot**
-Name, slug (firstname-lastname, lowercase, hyphenated), public URL (roleboost.app/c/[slug]), location, target role, headline, avatar color (assign from RoleBoost palette below), initials.
+Name, slug (firstname-lastname, lowercase, hyphenated), public URL (identiboost.com/i/[slug]), location, target role, headline, avatar color (assign from IdentiBoost palette below), initials.
 
-RoleBoost avatar color palette:
+IdentiBoost avatar color palette:
 
 | Name | Hex | Primary feel |
 |---|---|---|
@@ -216,7 +216,7 @@ Claude selects the avatar color using two axes: the candidate's industry or func
 Example Identity Snapshot output: "Slate Blue -- Technology/SaaS lane, tone reads precise and data-driven. Infographic background: Light."
 
 **2. The Narrative**
-2-3 sentences. This is the human story, not a resume summary. It must answer: what does this person's career actually show, what can their resume not say about them, and what does RoleBoost specifically do for this person that no other tool could. Write from the AI Mirror read -- grounded in evidence, free of inflation.
+2-3 sentences. This is the human story, not a resume summary. It must answer: what does this person's career actually show, what can their resume not say about them, and what does IdentiBoost specifically do for this person that no other tool could. Write from the AI Mirror read -- grounded in evidence, free of inflation.
 
 **3. The Hook**
 One line only. The single most credible and compelling fact in the file. The thing that makes a recruiter stop. Must be specific -- a number, a moment, a result. No generalities.
@@ -228,7 +228,7 @@ The one question every recruiter will ask and the AI chatbot must handle perfect
 A bulleted list of 5-8 metrics and specifics that must appear in every asset -- audio, infographic, chatbot, everything. These are the facts that cannot be wrong or missing. Include: career span, scale metrics (team size, revenue, volume, portfolio size), the most impressive quantified result, any certifications or credentials worth noting, and anything that directly addresses the likely hard question.
 
 **6. NotebookLM Prompt Mapping**
-A table showing which prompts from the RoleBoost NotebookLM Elite Prompt Library fit this candidate, with a one-line rationale and a tone note for each. Separate rows for Deep Dive, Brief, Infographic, and Short Video.
+A table showing which prompts from the IdentiBoost NotebookLM Elite Prompt Library fit this candidate, with a one-line rationale and a tone note for each. Separate rows for Deep Dive, Brief, Infographic, and Short Video.
 
 ---
 
@@ -251,7 +251,7 @@ Line 1 differs by format. Deep Dive uses a two-host framing. Brief uses a single
 **Line 2 -- Opening line instruction:**
 "Your literal first words are: 'This is a Boost on [candidate full name].' Say that exact line out loud before anything else. Then go directly into the content with no additional intro phrase. Do not use the word 'Brief' or reference this as a brief at any point."
 
-This line locks the spoken opening to the RoleBoost format, prevents the hosts from defaulting to a format label mid-script, and blocks any Brief framing from appearing in the Deep Dive output.
+This line locks the spoken opening to the IdentiBoost format, prevents the hosts from defaulting to a format label mid-script, and blocks any Brief framing from appearing in the Deep Dive output.
 
 **Critical guardrail -- this must appear in every audio prompt without exception:**
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening line is "This is a Boost on [candidate full name]." Any other opening is wrong.
@@ -264,7 +264,7 @@ Every audio prompt must end with an explicit closing pitch instruction before th
 - Name the specific situation where this candidate is the right hire (be explicit -- what problem, what environment, what need)
 - State plainly that this candidate is the person to onboard to get those results
 - Deliver the top proof facts in rapid sequence (3-4 facts, no full sentences needed)
-- Close with one action sentence: "Learn more about [candidate first name] at roleboost.app."
+- Close with one action sentence: "Learn more about [candidate first name] at identiboost.com."
 - Add: "Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears."
 
 **Do NOT lines -- required at the close of every audio prompt:**
@@ -338,7 +338,7 @@ Four beats in order: (1) hook stat presented as the opening visual, (2) first pr
 Every Short Video prompt must end with an explicit closing pitch instruction. Use "End with a direct closing pitch in this exact sequence:" to open it, then:
 - Name the specific situation where this candidate is the right hire
 - Deliver the top proof facts in rapid sequence (2-3 facts, no full sentences needed)
-- Final frame: candidate full name, target role, and "Learn more about [candidate first name] at roleboost.app"
+- Final frame: candidate full name, target role, and "Learn more about [candidate first name] at identiboost.com"
 - Add: "Do not soften this. The closing frame is the last thing the hiring manager sees."
 
 **Do NOT lines -- required at the close of every Short Video prompt:**
@@ -383,7 +383,7 @@ The output file is saved as `[slug]-asset-package.md`. Example: `jordan-mills-as
 The file opens with a header block:
 
 ```
-# RoleBoost -- Candidate Asset Package
+# IdentiBoost -- Candidate Asset Package
 Candidate: [Full Name]
 Slug: [slug]
 Date: [date]
@@ -397,7 +397,7 @@ Then Section 1 (Narrative Guide Block) followed by Section 2 (Personalized Noteb
 The file closes with this exact footer line:
 
 ```
-*RoleBoost™ Candidate Asset Production Skill v2.2 -- roleboost.app -- Copyright 2026 RoleBoost™*
+*IdentiBoost™ Candidate Asset Production Skill v2.2 -- identiboost.com -- Copyright 2026 IdentiBoost™*
 ```
 
 ---
@@ -407,7 +407,7 @@ The file closes with this exact footer line:
 Claude must meet these standards before delivering the output:
 
 **HALLUCINATION IS A DISQUALIFYING FAILURE.**
-Every fact, metric, result, title, date, and claim in every NotebookLM prompt must be traceable to the candidate's uploaded resume or supporting documents. If it is not in the file, it does not go in the prompt. Not as a paraphrase. Not as a reasonable assumption. Not as context-filling. NotebookLM will treat whatever is in these prompts as true and build audio, infographic, and video assets from it. Those assets will be heard and seen by real recruiters evaluating a real candidate. A single invented fact is a credibility failure for the candidate and for RoleBoost. There are no exceptions.
+Every fact, metric, result, title, date, and claim in every NotebookLM prompt must be traceable to the candidate's uploaded resume or supporting documents. If it is not in the file, it does not go in the prompt. Not as a paraphrase. Not as a reasonable assumption. Not as context-filling. NotebookLM will treat whatever is in these prompts as true and build audio, infographic, and video assets from it. Those assets will be heard and seen by real recruiters evaluating a real candidate. A single invented fact is a credibility failure for the candidate and for IdentiBoost. There are no exceptions.
 
 - Every claim in the narrative and hard question answer is supported by something in the uploaded material. No invented details, no assumed metrics, no plausible-sounding additions.
 - The AI Mirror read is stated plainly in two tiers -- document read and market read -- one paragraph each. It is for the superadmin only and does not appear in the candidate asset package.
@@ -419,7 +419,7 @@ Every fact, metric, result, title, date, and claim in every NotebookLM prompt mu
 - Every audio prompt opens with "This is a Boost on [candidate full name]." No other opening is acceptable.
 - Every audio prompt ends with an explicit closing pitch instruction followed by the Do NOT lines.
 - Every infographic prompt includes a design intent statement and explicit whitespace requirements.
-- Every Short Video prompt includes an anchor statement, a four-beat visual sequence, an explicit closing pitch with candidate name, target role, and "Learn more about [candidate first name] at roleboost.app" as the final frame, and the full Do NOT list.
+- Every Short Video prompt includes an anchor statement, a four-beat visual sequence, an explicit closing pitch with candidate name, target role, and "Learn more about [candidate first name] at identiboost.com" as the final frame, and the full Do NOT list.
 - No em dashes anywhere in the output. Use commas, semicolons, or periods instead.
 
 ---
@@ -430,7 +430,7 @@ This skill is designed to run in Claude chat today and plug into the superadmin 
 
 - Accept resume upload and optional URL list via form inputs
 - Trigger this workflow automatically on submission
-- Store the output `.md` file in the candidate's asset locker (roleboost.app/storage/[slug])
+- Store the output `.md` file in the candidate's asset locker (identiboost.com/storage/[slug])
 - Display the two narrative perspectives for superadmin review and selection before asset production begins
 - Track which NotebookLM prompts were run and which assets were delivered per package tier
 
@@ -444,4 +444,4 @@ See `CLAUDE.md` for project-wide Claude Code instructions.
 
 ---
 
-*RoleBoost™ Candidate Asset Production Skill v2.2 -- roleboost.app -- Copyright 2026 RoleBoost™*
+*IdentiBoost™ Candidate Asset Production Skill v2.2 -- identiboost.com -- Copyright 2026 IdentiBoost™*

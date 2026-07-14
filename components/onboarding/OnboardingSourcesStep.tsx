@@ -132,7 +132,7 @@ export default function OnboardingSourcesStep({ onContinue }: Props) {
           <Library className="size-5 text-[var(--rb-brand)]" strokeWidth={1.5} />
         </span>
         <h1 className="font-display text-2xl font-bold tracking-tight text-[var(--rb-text)]">
-          Bring your other career sources
+          Bring your other professional sources
         </h1>
         <p className="mt-2 text-sm text-[var(--rb-text-secondary)]">
           Add your LinkedIn or Indeed export, a GitHub profile, or a recommendation. Your AI uses them

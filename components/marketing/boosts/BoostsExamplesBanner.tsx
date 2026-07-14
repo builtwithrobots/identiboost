@@ -99,11 +99,11 @@ export default function BoostsExamplesBanner() {
             id="boosts-examples-banner-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug mb-4"
           >
-            A Boost for every kind of career
+            A Boost for every kind of professional
           </h2>
           <p className="font-inter text-lg text-gray-700 leading-relaxed">
             From the shop floor to the C-suite, and every turn in between. See how Boosts tell the
-            story a resume flattens, whatever the career and wherever it stands.
+            story a static page flattens, whatever the work and wherever it stands.
           </p>
         </motion.div>
       </div>

@@ -36,7 +36,7 @@ const FIELD_LABELS: Record<string, string> = {
   ideal_environment: 'ideal environment',
   manager_needs: 'what you need from a manager',
   honest_weaknesses: 'honest weaknesses',
-  wish_questions: 'questions you wish recruiters asked',
+  wish_questions: 'questions you wish contacts asked',
   custom_qa: 'custom answers',
 };
 
@@ -148,8 +148,8 @@ export default function HardenPanel({ candidateSlug, focusBrainField, sessions }
         Harden against real conversations
       </h2>
       <p className="mb-4 text-xs text-[var(--rb-text-muted)]">
-        Paste a transcript from a real recruiter call, a practice session with another AI, or your
-        interview notes. We find the questions your AI would fumble and build a plan to fix them.
+        Paste a transcript from a real call, a client screen, a practice session with another AI, or
+        your interview notes. We find the questions your AI would fumble and build a plan to fix them.
       </p>
 
       {/* Privacy disclosure */}
@@ -157,8 +157,8 @@ export default function HardenPanel({ candidateSlug, focusBrainField, sessions }
         <ShieldCheck className="mt-0.5 size-3.5 shrink-0 text-[var(--rb-brand)]" />
         <span>
           Anything you paste here is analyzed in the moment and <strong>never stored</strong>, only
-          the resulting plan is saved, and no recruiter names or companies are kept. (Your live
-          recruiter conversations are different: those are saved to your Transcripts so you can
+          the resulting plan is saved, and no contact names or companies are kept. (Your live
+          contact conversations are different: those are saved to your Transcripts so you can
           review them and keep training your AI.)
         </span>
       </div>

@@ -21,7 +21,7 @@ function sanitizeFileName(name: string): string {
 }
 
 /**
- * "Download my data": a complete, self-serve export of everything RoleBoost
+ * "Download my data": a complete, self-serve export of everything IdentiBoost
  * holds for the signed-in candidate.
  *
  *   ?format=json  → a single JSON document with every record plus a manifest of
@@ -123,7 +123,7 @@ export async function GET(req: NextRequest) {
   const exportObject = {
     export_version: 1,
     exported_at_note:
-      'Complete export of your RoleBoost data. Media download links expire in one hour; export again to refresh them.',
+      'Complete export of your IdentiBoost data. Media download links expire in one hour; export again to refresh them.',
     account: { clerk_user_id: userId },
     profile,
     resume_documents: resumeDocs.data ?? [],
@@ -147,7 +147,7 @@ export async function GET(req: NextRequest) {
     return new NextResponse(json, {
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
-        'Content-Disposition': `attachment; filename="roleboost-export-${slug}-${stamp}.json"`,
+        'Content-Disposition': `attachment; filename="identiboost-export-${slug}-${stamp}.json"`,
         'Cache-Control': 'no-store',
       },
     });
@@ -155,7 +155,7 @@ export async function GET(req: NextRequest) {
 
   // ZIP: the JSON document plus the real media files, grouped by asset type.
   const zip = new JSZip();
-  zip.file('roleboost-data.json', json);
+  zip.file('identiboost-data.json', json);
   const assetsFolder = zip.folder('assets');
 
   await Promise.all(
@@ -179,7 +179,7 @@ export async function GET(req: NextRequest) {
   return new NextResponse(body, {
     headers: {
       'Content-Type': 'application/zip',
-      'Content-Disposition': `attachment; filename="roleboost-export-${slug}-${stamp}.zip"`,
+      'Content-Disposition': `attachment; filename="identiboost-export-${slug}-${stamp}.zip"`,
       'Cache-Control': 'no-store',
     },
   });

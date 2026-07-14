@@ -193,7 +193,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
     markDirty('snapshot');
   };
 
-  const profileUrl = `${process.env.NEXT_PUBLIC_APP_URL ?? ''}/c/${profile.slug}`;
+  const profileUrl = `${process.env.NEXT_PUBLIC_APP_URL ?? ''}/i/${profile.slug}`;
   const inputClass =
     'w-full rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-input)] px-3 py-2 text-sm text-[var(--rb-text)] placeholder:text-[var(--rb-text-muted)] focus:outline-none focus:border-[var(--rb-border-focus)] focus:shadow-[var(--shadow-focus)] transition-shadow duration-[var(--duration-fast)]';
 
@@ -205,7 +205,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
           <div className="min-w-0">
             <h1 className="font-display text-xl font-bold tracking-tight text-[var(--rb-text)]">Profile</h1>
             <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-              Your public career page · roleboost.app/c/{profile.slug}
+              Your public professional page · identiboost.com/i/{profile.slug}
             </p>
           </div>
 
@@ -388,7 +388,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             </h2>
             <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
               Other roles you&apos;re open to. Add them from Recommended roles below. Your AI mentions
-              these when a recruiter&apos;s opportunity fits.
+              these when a contact&apos;s opportunity fits.
             </p>
             {secondaryRoles.length === 0 ? (
               <p className="mt-3 rounded-[var(--radius-md)] bg-[var(--rb-bg-surface-sunken)] px-3 py-2 text-xs text-[var(--rb-text-muted)]">
@@ -436,7 +436,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
               Headline
             </h2>
             <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-              One punchy sentence a recruiter reads in 5 seconds. What makes you different?
+              One punchy sentence a contact reads in 5 seconds. What makes you different?
             </p>
             <div>
               <textarea
@@ -469,19 +469,19 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             <SaveBar state={status.headline} dirty={dirty.headline} onSave={() => saveSection('headline')} />
           </section>
 
-          {/* Career Snapshot */}
+          {/* Professional Snapshot */}
           <section className="rb-card p-6">
             <div className="flex items-start justify-between mb-1">
               <h2 className="flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
                 <CheckCircle2 className="size-4 text-[var(--rb-brand)]" />
-                Career Snapshot
+                Professional Snapshot
               </h2>
               <span className="text-xs text-[var(--rb-text-muted)] font-data">
                 {bullets.filter((b) => b.trim()).length} / 7
               </span>
             </div>
             <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-              Your top 3–7 career highlights. What would you put on a one-page summary?
+              Your top 3–7 professional highlights. What would you put on a one-page summary?
             </p>
 
             <div className="flex flex-col gap-2">
@@ -492,7 +492,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
                     type="text"
                     value={bullet}
                     onChange={(e) => updateBullet(i, e.target.value)}
-                    placeholder={`Career highlight ${i + 1}…`}
+                    placeholder={`Highlight ${i + 1}…`}
                     className={`flex-1 ${inputClass}`}
                   />
                   {bullets.length > 1 && (
@@ -537,7 +537,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
                   setAdditionalContext(e.target.value);
                   markDirty('context');
                 }}
-                placeholder="Share anything else recruiters should know, your story, what you're looking for, what you care about…"
+                placeholder="Share anything else contacts should know, your story, what you're looking for, what you care about…"
                 rows={4}
                 maxLength={2000}
                 className={`${inputClass} resize-none`}
@@ -563,10 +563,10 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             </h2>
             <div className="flex items-center gap-2">
               <div className="flex-1 rounded-[var(--radius-md)] border border-[var(--rb-border)] bg-[var(--rb-bg-surface-raised)] px-3 py-2 text-sm text-[var(--rb-text-secondary)] font-data truncate">
-                roleboost.app/c/{profile.slug}
+                identiboost.com/i/{profile.slug}
               </div>
               <button
-                onClick={() => navigator.clipboard.writeText(`https://roleboost.app/c/${profile.slug}`)}
+                onClick={() => navigator.clipboard.writeText(`https://identiboost.com/i/${profile.slug}`)}
                 className="shrink-0 rounded-[var(--radius-md)] bg-[var(--rb-brand)] px-3 py-2 text-xs font-semibold text-white hover:bg-[var(--rb-brand-hover)] transition-colors duration-[var(--duration-fast)]"
               >
                 Copy
@@ -574,7 +574,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             </div>
             {!isPublished && (
               <p className="mt-2 text-xs text-[var(--rb-text-muted)]">
-                Publish your profile so employers can view it at this link.
+                Publish your profile so your contacts can view it at this link.
               </p>
             )}
           </section>
@@ -596,7 +596,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
               avatar={avatar}
             />
             <p className="mt-3 text-xs text-[var(--rb-text-muted)] text-center">
-              This is how your modal header appears to employers.
+              This is how your modal header appears to your contacts.
             </p>
           </div>
         </div>
@@ -672,7 +672,7 @@ function ProfilePreviewCard({
       {!isPublished && (
         <div className="bg-[var(--color-warning-bg)] border-b border-amber-200 px-4 py-2 flex items-center gap-2">
           <EyeOff className="size-3 text-[var(--color-warning)]" />
-          <span className="text-xs font-medium text-[var(--color-warning)]">Draft, not visible to employers</span>
+          <span className="text-xs font-medium text-[var(--color-warning)]">Draft, not visible to your contacts</span>
         </div>
       )}
 

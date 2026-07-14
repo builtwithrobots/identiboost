@@ -1,4 +1,4 @@
-# RoleBoost -- Candidate Asset Package
+# IdentiBoost -- Candidate Asset Package
 Candidate: Ryan Kowalski
 Slug: ryan-kowalski
 Date: July 10, 2026
@@ -14,7 +14,7 @@ Package tier:
 
 **Name:** Ryan Kowalski
 **Slug:** ryan-kowalski
-**Public URL:** roleboost.app/c/ryan-kowalski
+**Public URL:** identiboost.com/i/ryan-kowalski
 **Location:** Austin, TX
 **Target Role:** Senior Data Analyst / Lead Data Analyst
 **Headline:** The analyst who builds the infrastructure, not just the reports.
@@ -25,7 +25,7 @@ Package tier:
 
 ## 2. The Narrative
 
-Ryan Kowalski's six-year career shows a consistent pattern that most data analyst resumes cannot claim: he does not just produce reports, he builds the infrastructure that makes an entire organization self-sufficient. At Veritas Labs, he was the only analyst supporting a $12M ARR product line across every department, and he responded by building a Looker system that 90% of the company used weekly and that cut ad hoc requests to his team by 63%. What a resume cannot show is that this kind of adoption is not a technical achievement -- it is a trust and design achievement; Ryan built something that 126 people across a 140-person company chose to use without being required to. RoleBoost exists to surface exactly that layer: the judgment, the organizational instinct, and the builder identity that a standard resume lists as bullet points but never actually argues for.
+Ryan Kowalski's six-year career shows a consistent pattern that most data analyst resumes cannot claim: he does not just produce reports, he builds the infrastructure that makes an entire organization self-sufficient. At Veritas Labs, he was the only analyst supporting a $12M ARR product line across every department, and he responded by building a Looker system that 90% of the company used weekly and that cut ad hoc requests to his team by 63%. What a resume cannot show is that this kind of adoption is not a technical achievement -- it is a trust and design achievement; Ryan built something that 126 people across a 140-person company chose to use without being required to. IdentiBoost exists to surface exactly that layer: the judgment, the organizational instinct, and the builder identity that a standard resume lists as bullet points but never actually argues for.
 
 ---
 
@@ -99,7 +99,7 @@ Address the question a hiring manager will ask: Ryan was the sole analyst at Ver
 
 Close the narrative by naming what Ryan represents for any growth-stage SaaS company hiring for Senior or Lead analyst: he has already functioned as a one-person analytics department at a $12M ARR business and left behind infrastructure that an entire organization adopted. The question is not whether he can do the work. The question is how fast you want to move.
 
-End with a direct closing pitch. If you are a SaaS company between $10M and $100M ARR and you need someone who can own the analytics function, build infrastructure that sticks, and partner with every department at the same time, Ryan Kowalski is the hire. Six years, three companies, one pattern: he builds things that organizations actually use. 47 dashboards, 90% adoption, 63% fewer requests, 14% improvement in net revenue retention. Learn more about Ryan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch. If you are a SaaS company between $10M and $100M ARR and you need someone who can own the analytics function, build infrastructure that sticks, and partner with every department at the same time, Ryan Kowalski is the hire. Six years, three companies, one pattern: he builds things that organizations actually use. 47 dashboards, 90% adoption, 63% fewer requests, 14% improvement in net revenue retention. Learn more about Ryan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Ryan Kowalski."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -121,7 +121,7 @@ Your literal first words are: "This is a Boost on Ryan Kowalski." Say that exact
 
 Ryan Kowalski is a Senior Data Analyst who spent three years as the sole analyst at a Series C SaaS company supporting a $12M ARR product line -- and his response was to build a Looker analytics layer of 47 dashboards used weekly by 90% of a 140-person organization, cutting ad hoc data requests to his team by 63%. That is not a number that happens by accident. It is the result of someone who understands that the job is not producing reports -- it is building something an entire organization will actually use. He also automated executive reporting prep from 6 hours to 45 minutes, built a Python customer health scoring model that surfaced at-risk accounts 2 to 3 weeks earlier than manual review, and contributed to a 14% improvement in net revenue retention over two quarters.
 
-End with a direct closing pitch, spoken in this exact sequence: If your SaaS company needs a Senior or Lead analyst who can own the function, build infrastructure from scratch, and serve every department at once -- Ryan Kowalski has already done it. 47 dashboards. 90% adoption. $12M ARR, one analyst. Learn more about Ryan at roleboost.app.
+End with a direct closing pitch, spoken in this exact sequence: If your SaaS company needs a Senior or Lead analyst who can own the function, build infrastructure from scratch, and serve every department at once -- Ryan Kowalski has already done it. 47 dashboards. 90% adoption. $12M ARR, one analyst. Learn more about Ryan at identiboost.com.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Ryan Kowalski."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -187,7 +187,7 @@ Beat 3 (second proof point): Cut to business impact. Title card: "6 hours to 45 
 
 Beat 4 (closing frame): See closing pitch below.
 
-End with a direct closing pitch in this exact sequence: For the SaaS company that needs a Senior or Lead analyst who can own the function from day one -- Ryan Kowalski. 47 dashboards. 90% adoption. $12M ARR. Solo. Final frame: "Ryan Kowalski | Senior Data Analyst | Learn more about Ryan at roleboost.app." Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: For the SaaS company that needs a Senior or Lead analyst who can own the function from day one -- Ryan Kowalski. 47 dashboards. 90% adoption. $12M ARR. Solo. Final frame: "Ryan Kowalski | Senior Data Analyst | Learn more about Ryan at identiboost.com." Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -227,7 +227,7 @@ Address the departure question directly. The role at Veritas Labs was eliminated
 
 Close with the argument for the hiring manager sitting in front of you right now. If you are hiring a Senior or Lead Data Analyst and you want someone who has already operated as a one-person analytics department at scale -- who has owned product analytics, revenue reporting, and customer health scoring for a $12M ARR SaaS business, built the infrastructure from scratch, and delivered results that are quantified and traceable -- Ryan Kowalski has already done that job. The only question is whether you are ready to move.
 
-End with a direct closing pitch. The company that needs a Senior or Lead analyst who can carry the full analytics function from day one, Ryan Kowalski is that hire. One analyst, $12M ARR, 140-person company, 47 dashboards, 90% adoption, 63% fewer requests, 14% improvement in net revenue retention. Learn more about Ryan at roleboost.app. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
+End with a direct closing pitch. The company that needs a Senior or Lead analyst who can carry the full analytics function from day one, Ryan Kowalski is that hire. One analyst, $12M ARR, 140-person company, 47 dashboards, 90% adoption, 63% fewer requests, 14% improvement in net revenue retention. Learn more about Ryan at identiboost.com. Do not soften this. Do not add qualifiers. The pitch is the last thing the hiring manager hears.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Ryan Kowalski."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -249,7 +249,7 @@ Your literal first words are: "This is a Boost on Ryan Kowalski." Say that exact
 
 Ryan Kowalski spent three years as the only data analyst at a Series C SaaS company -- one analyst carrying product analytics, revenue reporting, and customer health scoring for a $12M ARR product line across a 140-person organization. Not a team. One person. In that role he built a Looker self-serve layer of 47 dashboards with 90% weekly adoption, automated executive reporting prep from 6 hours to 45 minutes, built a Python customer health model that surfaced at-risk accounts 2 to 3 weeks earlier than manual review, and contributed to a 14% improvement in net revenue retention over two quarters. His role was eliminated in a company-wide RIF. The work is still running.
 
-End with a direct closing pitch, spoken in this exact sequence: If you are hiring a Senior or Lead analyst and you want someone who has already done the job at scale -- Ryan Kowalski. $12M ARR. One analyst. 47 dashboards. 90% adoption. Learn more about Ryan at roleboost.app.
+End with a direct closing pitch, spoken in this exact sequence: If you are hiring a Senior or Lead analyst and you want someone who has already done the job at scale -- Ryan Kowalski. $12M ARR. One analyst. 47 dashboards. 90% adoption. Learn more about Ryan at identiboost.com.
 
 Do NOT begin with "This is a Brief," "This is a Deep Dive," or any other format label. The only permitted opening is "This is a Boost on Ryan Kowalski."
 Do NOT use casual or informal language, analogies, or editorial commentary -- the tone is confident and direct, like a trusted colleague briefing a hiring manager, not a podcast host.
@@ -309,7 +309,7 @@ Beat 3 (second proof point): Cut to results proof. Two stats on screen with clea
 
 Beat 4 (closing frame): See closing pitch below.
 
-End with a direct closing pitch in this exact sequence: For the company that needs a Senior or Lead analyst who can own the function from day one, without a ramp -- Ryan Kowalski. $12M ARR. One analyst. Six years. Final frame: "Ryan Kowalski | Senior Data Analyst | Learn more about Ryan at roleboost.app." Do not soften this. The closing frame is the last thing the hiring manager sees.
+End with a direct closing pitch in this exact sequence: For the company that needs a Senior or Lead analyst who can own the function from day one, without a ramp -- Ryan Kowalski. $12M ARR. One analyst. Six years. Final frame: "Ryan Kowalski | Senior Data Analyst | Learn more about Ryan at identiboost.com." Do not soften this. The closing frame is the last thing the hiring manager sees.
 
 Do NOT use casual, consumer, or lifestyle visuals -- the register is professional and recruiter-facing.
 Do NOT use animated text effects that distract from the content -- transitions should support the message, not call attention to themselves.
@@ -323,4 +323,4 @@ Do NOT use the words "passionate," "journey," or "innovative."
 
 ---
 
-*RoleBoost™ Candidate Asset Production Skill v2.1 -- roleboost.app -- Copyright 2026 RoleBoost™*
+*IdentiBoost™ Candidate Asset Production Skill v2.1 -- identiboost.com -- Copyright 2026 IdentiBoost™*

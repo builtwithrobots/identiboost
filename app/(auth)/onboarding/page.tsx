@@ -20,14 +20,14 @@ const ROLES: {
   {
     role: 'candidate',
     Icon: UserRound,
-    title: "I'm looking for my next role",
-    blurb: 'Build your AI-powered career profile and share one link that tells your whole story.',
+    title: 'I want to represent myself',
+    blurb: 'Build your verified Identity AI and share one link that tells your whole story.',
   },
   {
     role: 'employer',
     Icon: Briefcase,
-    title: "I'm hiring for my team",
-    blurb: 'Save candidates, chat with their career AI, and move the right people forward faster.',
+    title: 'I want to find and evaluate professionals',
+    blurb: 'Save professionals, chat with their AI, and move the right people forward faster.',
   },
 ];
 
@@ -101,10 +101,10 @@ export default function OnboardingPage() {
             <span className="font-display text-base font-extrabold leading-none">R</span>
           </div>
           <h1 className="mt-6 font-display text-3xl font-bold tracking-tight text-[var(--rb-text)]">
-            Welcome to RoleBoost
+            Welcome to IdentiBoost
           </h1>
           <p className="mt-2 text-sm text-[var(--rb-text-secondary)]">
-            Tell us how you&apos;ll use RoleBoost so we can set up the right experience.
+            Tell us how you&apos;ll use IdentiBoost so we can set up the right experience.
           </p>
         </div>
 

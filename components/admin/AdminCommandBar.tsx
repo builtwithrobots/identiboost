@@ -51,7 +51,7 @@ export default function AdminCommandBar({ previewRole, impersonating }: Props) {
     </>
   ) : (
     <>
-      Previewing dashboard as <strong className="font-semibold">{previewRole}</strong>
+      Previewing dashboard as <strong className="font-semibold">{previewRole === 'employer' ? 'business' : 'professional'}</strong>
       <span className="ml-2 text-[12px] text-slate-400">your own data</span>
     </>
   );

@@ -7,42 +7,42 @@ import HeroDemoCard, { type QaPair } from './HeroDemoCard'
 const RECRUITER_VARIANTS: HeroContent[] = [
   // Variant 0 -- AI interrogation (leads with the core mechanic)
   {
-    kicker: 'For hiring teams',
+    kicker: 'For teams',
     headlineLine1: 'Stop guessing.',
     headlineLine2: 'Talk to their AI.',
     subheadline:
-      "Every RoleBoost candidate comes with a personal career AI you can interrogate 24/7, plus audio, video, infographic, and deck Boosts behind one link. Know who you're calling before you pick up the phone.",
-    primaryCTA: 'Start hiring free',
+      "Every IdentiBoost professional comes with a personal Identity AI you can question 24/7, plus audio, video, infographic, and deck Boosts behind one link. Know who you're calling before you pick up the phone.",
+    primaryCTA: 'Start evaluating free',
     primaryHref: '/sign-up',
-    secondaryCTA: 'See a candidate profile',
+    secondaryCTA: 'See a live profile',
     secondaryHref: '/boosts',
     proofLine: 'Full transcript delivered to your inbox after every AI session.',
   },
-  // Variant 1 -- time savings (busy hiring managers)
+  // Variant 1 -- time savings (busy evaluators)
   {
-    kicker: 'Screen smarter. Hire faster.',
+    kicker: 'Screen smarter. Decide faster.',
     headlineLine1: 'Know your shortlist',
     headlineLine2: 'before the first call.',
     subheadline:
-      'RoleBoost candidates give you a live AI you can question, a podcast-style career overview, an infographic, and a full resume, all from one link. The screening call becomes a confirmation, not an interrogation.',
-    primaryCTA: 'Start hiring free',
+      'IdentiBoost professionals give you a live AI you can question, a podcast-style overview, an infographic, and a full resume, all from one link. The first call becomes a confirmation, not an interrogation.',
+    primaryCTA: 'Start evaluating free',
     primaryHref: '/sign-up',
     secondaryCTA: 'Browse example profiles',
     secondaryHref: '/boosts',
     proofLine: 'One link. Every format. Zero back-and-forth.',
   },
-  // Variant 2 -- signal over noise (sourcing-heavy teams)
+  // Variant 2 -- signal over noise (evaluation-heavy teams)
   {
-    kicker: 'For recruiters tired of resume theater.',
-    headlineLine1: 'The best candidates',
+    kicker: 'For teams tired of paper theater.',
+    headlineLine1: 'The best people',
     headlineLine2: "don't always look it on paper.",
     subheadline:
-      'RoleBoost surfaces the story behind the resume: a career AI that answers your toughest questions directly, backed by audio, video, and infographic Boosts. Find the candidates worth calling.',
-    primaryCTA: 'Start hiring free',
+      'IdentiBoost surfaces the story behind the page: an Identity AI that answers your toughest questions directly, backed by audio, video, and infographic Boosts. Find the professionals worth calling.',
+    primaryCTA: 'Start evaluating free',
     primaryHref: '/sign-up',
     secondaryCTA: 'See a live example',
     secondaryHref: '/boosts',
-    proofLine: 'No camera required from candidates. No performance anxiety. Just the real story.',
+    proofLine: 'No camera required. No performance anxiety. Just the real story.',
   },
 ]
 

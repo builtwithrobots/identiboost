@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
   }
 
   const since = new Date(Date.now() - 7 * DAY_MS).toISOString();
-  const appUrl = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app').replace(/\/$/, '');
+  const appUrl = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com').replace(/\/$/, '');
 
   // 1) Views per candidate.
   const viewsByCandidate = new Map<string, number>();

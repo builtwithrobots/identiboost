@@ -27,13 +27,13 @@ export default function AdminViewLaunchers() {
       <form action={viewAsCandidate}>
         <button type="submit" className={itemClass}>
           <UserRound strokeWidth={1.5} aria-hidden="true" />
-          Candidate view
+          Professional view
         </button>
       </form>
       <form action={viewAsEmployer}>
         <button type="submit" className={itemClass}>
           <Briefcase strokeWidth={1.5} aria-hidden="true" />
-          Employer view
+          Business view
         </button>
       </form>
     </SidebarSection>

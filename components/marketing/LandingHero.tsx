@@ -7,42 +7,42 @@ import HeroDemoCard from './HeroDemoCard'
 const CANDIDATE_VARIANTS: HeroContent[] = [
   // Variant 0 -- emotional (first-time visitors, social)
   {
-    kicker: 'Your career. Your AI.',
-    headlineLine1: 'Finally, a resume',
-    headlineLine2: 'that talks back.',
+    kicker: 'The profile that answers back.',
+    headlineLine1: 'Your identity.',
+    headlineLine2: 'Boosted.',
     subheadline:
-      'Upload your resume once. RoleBoost builds a personal career AI that answers recruiter questions around the clock, plus audio, video, infographic, and slide-deck Boosts, all behind one link.',
+      'Tell your story once. IdentiBoost builds a verified Identity AI that answers questions from anyone around the clock, plus audio, video, infographic, and slide-deck Boosts, all behind one link.',
     primaryCTA: 'Build My Profile Free',
     primaryHref: '/sign-up',
     secondaryCTA: 'See a live example',
     secondaryHref: '/boosts',
-    proofLine: 'Always advocating for you. 24/7/365.',
+    proofLine: 'Always representing you. 24/7/365.',
   },
   // Variant 1 -- direct, mechanic-first (paid traffic, SEO)
   {
-    kicker: 'Stop losing to less qualified candidates.',
-    headlineLine1: 'Recruiters have questions.',
+    kicker: 'Stop repeating your story in every conversation.',
+    headlineLine1: 'They have questions.',
     headlineLine2: 'Your AI has answers, 24/7.',
     subheadline:
-      'RoleBoost turns your career into a personal AI that fields recruiter questions any hour, backed by audio, video, infographic, and slide-deck Boosts behind one shareable link.',
+      'IdentiBoost turns your professional story into a personal Identity AI that fields questions any hour, backed by audio, video, infographic, and slide-deck Boosts behind one shareable link.',
     primaryCTA: 'Build My Profile Free',
     primaryHref: '/sign-up',
     secondaryCTA: 'See a live example',
     secondaryHref: '/boosts',
-    proofLine: "No resume black hole. No 2am screen calls you can't take.",
+    proofLine: 'No follow-ups lost to a static page. No questions you miss while you sleep.',
   },
-  // Variant 2 -- candidate pain (job seeker communities, referral)
+  // Variant 2 -- professional pain (communities, referral)
   {
-    kicker: 'Built for candidates who are done being overlooked.',
+    kicker: 'Built for professionals who are done being overlooked.',
     headlineLine1: 'Your results deserve',
-    headlineLine2: 'more than a keyword match.',
+    headlineLine2: 'more than a static page.',
     subheadline:
-      'Stop letting a one-page resume speak for years of results. RoleBoost builds your complete career profile and gives you a personal AI that represents you to recruiters around the clock.',
+      'Stop letting one flat page speak for years of results. Whether you are a job candidate, consultant, founder, or speaker, IdentiBoost builds your complete professional profile and gives you a personal AI that represents you around the clock.',
     primaryCTA: 'Get started free',
     primaryHref: '/sign-up',
     secondaryCTA: 'Watch how it works',
     secondaryHref: '/boosts',
-    proofLine: 'One link. Every version of you. Your AI. Finally heard.',
+    proofLine: 'One link. Every version of you. Your identity. Boosted.',
   },
 ]
 

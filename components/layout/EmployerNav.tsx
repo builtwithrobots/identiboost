@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/sidebar'
 
 const workflowItems = [
-  { href: '/dashboard/candidates', label: 'Candidates', Icon: Users },
+  { href: '/dashboard/candidates', label: 'Professionals', Icon: Users },
   { href: '/dashboard/board',      label: 'Board',      Icon: Columns3 },
   { href: '/dashboard/jobs',       label: 'Jobs',       Icon: Briefcase },
 ]
@@ -33,7 +33,7 @@ export default function EmployerNav() {
   return (
     <>
       <SidebarSection>
-        <SidebarHeading>Hiring</SidebarHeading>
+        <SidebarHeading>Evaluating</SidebarHeading>
         {workflowItems.map(({ href, label, Icon }) => (
           <SidebarItem key={href} href={href} current={pathname === href}>
             <Icon data-slot="icon" strokeWidth={1.5} />

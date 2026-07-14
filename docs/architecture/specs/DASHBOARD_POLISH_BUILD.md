@@ -1,4 +1,4 @@
-# RoleBoost Dashboard, Token + Motion Polish
+# IdentiBoost Dashboard, Token + Motion Polish
 **Version:** 1.0
 **Date:** June 2026
 **Purpose:** Drop this file into the repository root and reference it in Claude Code to apply the design token overhaul and Framer Motion layer to the candidate and employer dashboards.
@@ -10,7 +10,7 @@
 Read `CLAUDE.md` before starting. This task is the dashboard shell and content components only. It does not touch the marketing homepage, auth flows, Supabase schema, API routes, or any server-side logic. All changes are visual and motion-only.
 
 The goal is two things in one pass:
-1. Replace the generic indigo/slate token palette in the dashboard with the exact RoleBoost brand tokens used on the marketing site (`FFFBF5`, `1E3A5F`, `D97706`, `F5F0E8`)
+1. Replace the generic indigo/slate token palette in the dashboard with the exact IdentiBoost brand tokens used on the marketing site (`FFFBF5`, `1E3A5F`, `D97706`, `F5F0E8`)
 2. Add Framer Motion to the dashboard shell and content components at the same intensity as the marketing landing page
 
 After this task the dashboard should feel like a continuation of the marketing site -- not a different product bolted on.
@@ -39,7 +39,7 @@ Do not modify any of the following. If a change would require touching these, st
 
 Edit the `:root` light mode block only. Replace the values listed below with the new values. Touch nothing else in the file.
 
-The indigo/violet brand palette is being replaced with the RoleBoost marketing palette throughout the dashboard. The logic: `--rb-brand` becomes Amber (the marketing CTA and accent color), Deep Navy replaces slate for primary text, and all surface/border tokens shift from cool-toned slate to warm-toned values that match the marketing page backgrounds.
+The indigo/violet brand palette is being replaced with the IdentiBoost marketing palette throughout the dashboard. The logic: `--rb-brand` becomes Amber (the marketing CTA and accent color), Deep Navy replaces slate for primary text, and all surface/border tokens shift from cool-toned slate to warm-toned values that match the marketing page backgrounds.
 
 | Token | Old value | New value | Reason |
 |---|---|---|---|
@@ -75,7 +75,7 @@ Create this file. Do not edit `lib/motion.ts`. The dashboard variants are tuned 
 ```ts
 // lib/motion-dashboard.ts
 // v1.0.0
-// Framer Motion variants for the RoleBoost dashboard shell and content components.
+// Framer Motion variants for the IdentiBoost dashboard shell and content components.
 // Separate from lib/motion.ts (marketing page variants) -- do not merge.
 // All variants respect prefers-reduced-motion via useReducedMotion() at the call site.
 

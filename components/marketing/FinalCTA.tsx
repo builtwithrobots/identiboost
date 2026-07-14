@@ -31,8 +31,8 @@ export default function FinalCTA() {
             transition={{ delay: prefersReduced ? 0 : 0.15 }}
             className="font-inter text-lg text-blue-200 leading-relaxed mb-10"
           >
-            Join RoleBoost free. Build your profile in under an hour. Share one link that gives
-            hiring managers everything they need.
+            Join IdentiBoost free. Build your profile in under an hour. Share one link that gives
+            whoever&apos;s asking everything they need.
           </motion.p>
 
           <motion.div
@@ -52,7 +52,7 @@ export default function FinalCTA() {
               href="/sign-up"
               className="inline-flex items-center justify-center px-8 py-3 rounded-lg border-2 border-white text-white font-jakarta text-[15px] font-semibold hover:bg-white hover:text-[#1E3A5F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#1E3A5F] transition-colors min-h-[44px]"
             >
-              I&apos;m Hiring
+              I&apos;m Evaluating
             </Link>
           </motion.div>
         </div>

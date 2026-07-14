@@ -127,7 +127,7 @@ function CandidateCard({ candidate }: { candidate: Candidate }) {
       {/* View profile link */}
       <div className="border-t border-[var(--rb-border)] px-4 py-2.5">
         <Link
-          href={`/c/${profile.slug}`}
+          href={`/i/${profile.slug}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 text-xs font-medium text-[var(--rb-brand)] hover:underline"
@@ -163,9 +163,9 @@ export default function CandidateGrid({ candidates }: Props) {
       {/* Header */}
       <div className="border-b border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-6 py-4">
         <div className="mx-auto max-w-6xl">
-          <h1 className="text-xl font-bold text-[var(--rb-text)]">Candidates</h1>
+          <h1 className="text-xl font-bold text-[var(--rb-text)]">Professionals</h1>
           <p className="mt-1 text-sm text-[var(--rb-text-muted)]">
-            Your saved candidate pool.{' '}
+            Your saved professionals.{' '}
             <span className="font-data text-[var(--rb-text-secondary)]">{candidates.length}</span> total.
           </p>
         </div>
@@ -210,22 +210,22 @@ export default function CandidateGrid({ candidates }: Props) {
             <div className="size-16 rounded-full bg-[var(--rb-brand-subtle)] flex items-center justify-center mb-4">
               <Users className="size-8 text-[var(--rb-brand)]" strokeWidth={1.5} />
             </div>
-            <h2 className="text-lg font-semibold text-[var(--rb-text)] mb-2">No candidates yet</h2>
+            <h2 className="text-lg font-semibold text-[var(--rb-text)] mb-2">No professionals yet</h2>
             <p className="text-sm text-[var(--rb-text-muted)] max-w-sm mb-6">
-              Ask candidates to share their RoleBoost profile link with you. When you open their profile, you&apos;ll be able to save them here.
+              Ask professionals to share their IdentiBoost profile link with you. When you open their profile, you&apos;ll be able to save them here.
             </p>
             <div className="rounded-[var(--radius-xl)] border border-[var(--rb-border-brand)]/30 bg-[var(--rb-brand-subtle)] px-5 py-4 max-w-sm text-left">
               <p className="text-sm text-[var(--rb-text-secondary)]">
                 <span className="font-semibold text-[var(--rb-text-brand)]">How it works:</span>{' '}
-                Candidates share a link like{' '}
-                <code className="text-xs bg-white/60 rounded px-1 py-0.5">roleboost.app/c/jane-smith</code>.
-                You open it, listen to their career story, and save them to your pool.
+                Professionals share a link like{' '}
+                <code className="text-xs bg-white/60 rounded px-1 py-0.5">identiboost.com/i/jane-smith</code>.
+                You open it, hear their professional story, and save them to your pool.
               </p>
             </div>
           </div>
         ) : filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-16 text-center">
-            <p className="text-sm text-[var(--rb-text-muted)]">No candidates match your filters.</p>
+            <p className="text-sm text-[var(--rb-text-muted)]">No professionals match your filters.</p>
             <button
               onClick={() => { setSearch(''); setStageFilter('all'); }}
               className="mt-2 text-xs text-[var(--rb-brand)] hover:underline"

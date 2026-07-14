@@ -1,4 +1,4 @@
-# RoleBoost -- AI Brain and Calling Card
+# IdentiBoost -- AI Brain and Calling Card
 ## Product Vision and Scope Update
 **Version:** 1.1
 **Date:** June 2026
@@ -21,7 +21,7 @@ No em dashes anywhere in any output. Use commas, semicolons, or periods instead.
 
 ### The Old Framing
 
-The previous product framing positioned RoleBoost as a career asset platform -- audio overviews, infographics, slide decks, ATS resumes -- supported by a personal AI chatbot. The asset suite was the flagship. The chatbot was a feature.
+The previous product framing positioned IdentiBoost as a career asset platform -- audio overviews, infographics, slide decks, ATS resumes -- supported by a personal AI chatbot. The asset suite was the flagship. The chatbot was a feature.
 
 ### The New Framing
 
@@ -39,7 +39,7 @@ Every existing candidate tool -- Jobscan, Teal, Rezi, Kickresume -- optimizes a 
 
 Employer-side AI (Paradox/Olivia acquired by Workday for $1 billion, Eightfold, HiredScore) is entirely focused on processing candidates faster for employers. None of it serves the candidate.
 
-The market gap is not a gap in resume tools. It is a gap in candidate representation. RoleBoost fills it.
+The market gap is not a gap in resume tools. It is a gap in candidate representation. IdentiBoost fills it.
 
 ---
 
@@ -53,7 +53,7 @@ A personal AI trained on each candidate's verified career data that represents t
 
 Every AI resume tool optimizes a document without knowing the person behind it. They produce plausible-sounding content -- including invented metrics -- because they have no access to the candidate's real story. A chatbot built on a resume scrape is a FAQ bot. It can answer "where did you work" but not "why did you leave" or "walk me through that gap."
 
-RoleBoost's brain is built from three layers of verified context that no other tool collects:
+IdentiBoost's brain is built from three layers of verified context that no other tool collects:
 
 **Layer 1 -- Document analysis.** The candidate uploads their resume, LinkedIn export, Indeed profile, or any combination. Claude Sonnet reads all uploaded documents simultaneously and does three things: extracts verified career facts, flags inconsistencies across documents (LinkedIn says VP, resume says Director; dates do not match; gap appears on one but not another), and identifies the 8 to 12 questions a recruiter would most likely ask based on what it found.
 
@@ -109,7 +109,7 @@ The skill -- the AI's ability to read documents, spot inconsistencies, generate 
 
 ### What It Is
 
-A mobile-optimized public profile page at `roleboost.app/c/[slug]` that functions as a digital calling card. No login required. No friction. The chat interface is the first thing a recruiter sees.
+A mobile-optimized public profile page at `identiboost.com/i/[slug]` that functions as a digital calling card. No login required. No friction. The chat interface is the first thing a recruiter sees.
 
 The candidate drops this link everywhere: LinkedIn contact info, LinkedIn About section, resume header, email signature, Indeed profile bio, job application follow-up emails. One link. Every context.
 
@@ -257,7 +257,7 @@ None of these are the flagship. They are all reasons the flagship works better.
 | Eightfold / HiredScore | Employer AI ranking | Scores candidates against employer criteria. No candidate control. |
 | DIY chatbots (Curry, Patil) | Individual developers building their own | Requires technical ability. Not available to non-technical candidates. |
 
-**RoleBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.**
+**IdentiBoost is the only platform that gives non-technical candidates a personal AI that represents them accurately in live recruiter conversations, gets smarter from every interaction, and delivers a transcript to both sides.**
 
 ---
 
@@ -265,11 +265,11 @@ None of these are the flagship. They are all reasons the flagship works better.
 
 **Moat 1 -- The brain depth.** Context built from documents plus layered AI intake plus recruiter conversation transcripts. Nobody else collects all three. The brain after six months of recruiter conversations is something that cannot be replicated by a document tool.
 
-**Moat 2 -- The growth loop.** The brain compounds with every recruiter interaction. Time on platform equals brain depth. A candidate who has been on RoleBoost for six months has a fundamentally more capable AI than one who joined yesterday. That gap widens over time.
+**Moat 2 -- The growth loop.** The brain compounds with every recruiter interaction. Time on platform equals brain depth. A candidate who has been on IdentiBoost for six months has a fundamentally more capable AI than one who joined yesterday. That gap widens over time.
 
 **Moat 3 -- The transcript layer.** Every conversation generates data. That data feeds the brain. The brain feeds better conversations. Better conversations generate better data. This loop is impossible to replicate without the conversation history it depends on.
 
-**Moat 4 -- The honest read.** Every other AI tool inflates. RoleBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one. That positioning is defensible as long as the platform enforces it.
+**Moat 4 -- The honest read.** Every other AI tool inflates. IdentiBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one. That positioning is defensible as long as the platform enforces it.
 
 ---
 
@@ -316,7 +316,7 @@ One shareable link. A brain that grows. Your AI available around the clock.
 3. **AI intake interview** -- The candidate is interviewed by an AI that already read their documents. Questions are specific to their history. 8 to 12 questions per pass, 2 to 3 passes deep, maximum 20 questions total. Candidate answers by typing or speaking (voice transcribed and editable before submit).
 4. **Brain assembled** -- All verified context becomes the system prompt powering the personal career AI. The chatbot can only answer from verified context -- it never invents, guesses, or inflates.
 5. **Candidate tests the brain** -- In a sandbox, the candidate asks their own AI the hard questions. Verifies accuracy. The link does not go live until the candidate confirms the brain is honest.
-6. **One link goes live** -- `roleboost.app/c/[slug]` -- shareable anywhere. Mobile-optimized calling card with chat front and center. No login required for recruiters.
+6. **One link goes live** -- `identiboost.com/i/[slug]` -- shareable anywhere. Mobile-optimized calling card with chat front and center. No login required for recruiters.
 7. **Recruiters interact** -- Ask questions directly from the calling card on any device. Full transcript delivered to both sides after every session.
 8. **Brain grows** -- Transcript analysis identifies gaps. Prompt bot surfaces expansion questions. Candidate adds context. Loop repeats.
 ```
@@ -329,7 +329,7 @@ One shareable link. A brain that grows. Your AI available around the clock.
 1. **The brain depth** -- Context from documents plus layered AI intake plus recruiter conversation transcripts. Nobody else collects all three. The brain after six months of recruiter interactions cannot be replicated by a document tool.
 2. **The growth loop** -- The brain compounds with every recruiter interaction. Time on platform equals brain depth. That gap widens over time and raises the switching cost without locking anyone in.
 3. **The transcript layer** -- Every conversation generates data that feeds the next. Impossible to replicate without the conversation history it depends on.
-4. **The honest read** -- Every other AI tool inflates. RoleBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one.
+4. **The honest read** -- Every other AI tool inflates. IdentiBoost grounds. In a market where 91% of hiring managers have caught AI misrepresentation, the honest candidate is the differentiated one.
 ```
 
 **Replace the Fiverr/Done-For-You table** with the following:
@@ -352,7 +352,7 @@ The done-for-you service sells a live AI brain, not a document package.
 ```
 ## The Calling Card
 
-The public profile at `roleboost.app/c/[slug]` is designed as a mobile-first digital calling card. When a recruiter clicks the link from any context -- LinkedIn, a resume header, an email signature, an Indeed profile -- they land on a page that communicates three things in under five seconds: who this person is, what this page does, and an immediate invitation to start a conversation.
+The public profile at `identiboost.com/i/[slug]` is designed as a mobile-first digital calling card. When a recruiter clicks the link from any context -- LinkedIn, a resume header, an email signature, an Indeed profile -- they land on a page that communicates three things in under five seconds: who this person is, what this page does, and an immediate invitation to start a conversation.
 
 The chat input is open and ready above the fold on every device. No tabs to find. No buttons to click first. One thumb.
 
@@ -707,9 +707,9 @@ Three new product concepts developed June 2026 are documented below. Each requir
 
 ### Why This Matters
 
-Rob Ramos is the first RoleBoost candidate. His profile is the live proof of concept, the platform demo, and the first documented recruiter interaction -- all in one.
+Rob Ramos is the first IdentiBoost candidate. His profile is the live proof of concept, the platform demo, and the first documented recruiter interaction -- all in one.
 
-The founder brings 20+ years of operations and logistics experience from floor to VP. That is the exact beachhead market. When a logistics recruiter or warehouse VP clicks Rob's RoleBoost link, they are not reading marketing copy -- they are experiencing the product firsthand from someone they recognize as credible in their domain.
+The founder brings 20+ years of operations and logistics experience from floor to VP. That is the exact beachhead market. When a logistics recruiter or warehouse VP clicks Rob's IdentiBoost link, they are not reading marketing copy -- they are experiencing the product firsthand from someone they recognize as credible in their domain.
 
 ### What This Unlocks Immediately
 
@@ -721,7 +721,7 @@ This is also the fastest path to catching product friction. Every confusing ques
 
 Rob goes through the intake interview as a candidate. No shortcuts. Full document upload (resume, LinkedIn export). Full cross-document analysis. Full 2 to 3 pass AI intake interview using voice input. Complete sandbox testing against the 20 hardest recruiter questions from 20 years of operations hiring experience. Brain does not go live until every hard question produces an answer Rob would be satisfied receiving from a strong candidate.
 
-The target outcome: a live chatbot at `roleboost.app/c/rob-ramos` that any operations or logistics recruiter can interrogate and receive a full transcript from. That profile is the platform's first and most important asset.
+The target outcome: a live chatbot at `identiboost.com/i/rob-ramos` that any operations or logistics recruiter can interrogate and receive a full transcript from. That profile is the platform's first and most important asset.
 
 ---
 
@@ -945,11 +945,11 @@ This is the most powerful brain growth mechanism because it feeds verified exter
 
 ### Why It Is More Powerful Than Internal Sandbox Testing
 
-The sandbox tests the brain against predicted questions. External transcript hardening tests it against questions that actually happened. A candidate who brings transcripts from 15 screening calls they had before discovering RoleBoost arrives with a fully mapped set of their real weaknesses. The brain hardens specifically against what real recruiters in their target market actually ask -- not what a question library predicts they will ask.
+The sandbox tests the brain against predicted questions. External transcript hardening tests it against questions that actually happened. A candidate who brings transcripts from 15 screening calls they had before discovering IdentiBoost arrives with a fully mapped set of their real weaknesses. The brain hardens specifically against what real recruiters in their target market actually ask -- not what a question library predicts they will ask.
 
 ### Scenarios Where This Is Enormously Valuable
 
-**Pre-platform job search history.** A candidate who has been searching for three months before finding RoleBoost has had 10 to 20 screening calls. They know which questions hurt them. They bring those transcripts. The brain immediately hardens against the specific gaps that real recruiters already found.
+**Pre-platform job search history.** A candidate who has been searching for three months before finding IdentiBoost has had 10 to 20 screening calls. They know which questions hurt them. They bring those transcripts. The brain immediately hardens against the specific gaps that real recruiters already found.
 
 **Other AI practice tools.** Candidates using ChatGPT or Claude directly to practice interview answers paste those transcripts in. All prior practice becomes brain fuel rather than wasted effort.
 
@@ -1138,4 +1138,4 @@ Build sequence within Phase 3:
 
 ---
 
-*RoleBoost AI Brain and Calling Card Spec v1.1 -- roleboost.app -- Built by Rob Ramos -- June 2026*
+*IdentiBoost AI Brain and Calling Card Spec v1.1 -- identiboost.com -- Built by Rob Ramos -- June 2026*

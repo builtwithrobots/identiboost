@@ -11,13 +11,13 @@ import { DEFAULT_PERSONA, buildBoostSections } from '@/lib/boosts/personas'
 export const metadata: Metadata = {
   title: 'Boosts',
   description:
-    'See the three Boosts RoleBoost makes: the Visual Boost, the Short Boost Audio, and the Podcast Style Boost, shown through real candidates across every kind of career.',
+    'See the three Boosts IdentiBoost makes: the Visual Boost, the Short Boost Audio, and the Podcast Style Boost, shown through real professionals across every kind of work.',
   alternates: { canonical: '/boosts' },
   openGraph: {
     url: '/boosts',
-    title: 'Boosts | RoleBoost',
+    title: 'Boosts | IdentiBoost',
     description:
-      'See the three Boosts RoleBoost makes, shown through real candidates across every kind of career.',
+      'See the three Boosts IdentiBoost makes, shown through real professionals across every kind of work.',
   },
 }
 

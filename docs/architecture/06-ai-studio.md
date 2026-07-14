@@ -60,7 +60,7 @@ library across six categories (`gap_departure`, `commitment_tenure`,
 mapped to the brain fields it probes.
 
 `POST /api/sandbox/analyze`: if no answer is supplied it first generates one with
-**Haiku + the real system prompt** (exactly what a recruiter would get), then
+**Haiku + the real system prompt** (exactly what a contact would get), then
 `analyzeSandboxAnswer` (Sonnet) returns a **verdict**
 (`strong`/`adequate`/`weak`/`hallucinated`), a diagnosis, a prescription, and a
 **`brain_field_target`** that deep-links the candidate to the field to fix.
@@ -78,7 +78,7 @@ closed). Privacy is the headline design rule.
 
 ## The prompt bot & the growth loop
 
-`PromptBot` surfaces open `transcript_gaps` (mined from real recruiter chats, see
+`PromptBot` surfaces open `transcript_gaps` (mined from real contact chats, see
 [07](./07-chat-and-transcripts.md)) as specific expansion prompts that deep-link to
 the field to strengthen; `markGapAddressed` clears them. Sandbox, hardening, and
 transcript gaps all feed the same "find a gap → strengthen a field" loop, and the

@@ -58,7 +58,7 @@ function BoardCard({ candidate, onStageChange }: { candidate: Candidate; onStage
           </div>
         </div>
         <Link
-          href={`/c/${profile.slug}`}
+          href={`/i/${profile.slug}`}
           target="_blank"
           rel="noopener noreferrer"
           className="shrink-0 text-[var(--rb-text-muted)] hover:text-[var(--rb-brand)] transition-colors"
@@ -113,21 +113,21 @@ export default function CandidateBoard({ candidates: initialCandidates }: Props)
       <div className="min-h-full">
         <div className="border-b border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-6 py-4">
           <h1 className="text-xl font-bold text-[var(--rb-text)]">Board</h1>
-          <p className="mt-1 text-sm text-[var(--rb-text-muted)]">Stage-based candidate pipeline.</p>
+          <p className="mt-1 text-sm text-[var(--rb-text-muted)]">Stage-based pipeline of professionals.</p>
         </div>
         <div className="flex flex-col items-center justify-center py-20 text-center px-6">
           <div className="size-16 rounded-full bg-[var(--rb-brand-subtle)] flex items-center justify-center mb-4">
             <Columns3 className="size-8 text-[var(--rb-brand)]" strokeWidth={1.5} />
           </div>
-          <h2 className="text-lg font-semibold text-[var(--rb-text)] mb-2">No candidates on your board</h2>
+          <h2 className="text-lg font-semibold text-[var(--rb-text)] mb-2">No professionals on your board</h2>
           <p className="text-sm text-[var(--rb-text-muted)] max-w-sm">
-            Save candidates from the Candidates page to move them through your pipeline here.
+            Save professionals from the Professionals page to move them through your pipeline here.
           </p>
           <Link
             href="/dashboard/candidates"
             className="mt-4 text-sm font-medium text-[var(--rb-brand)] hover:underline"
           >
-            Go to Candidates →
+            Go to Professionals →
           </Link>
         </div>
       </div>
@@ -140,7 +140,7 @@ export default function CandidateBoard({ candidates: initialCandidates }: Props)
       <div className="border-b border-[var(--rb-border)] bg-[var(--rb-bg-surface)] px-6 py-4 shrink-0">
         <h1 className="text-xl font-bold text-[var(--rb-text)]">Board</h1>
         <p className="mt-1 text-sm text-[var(--rb-text-muted)]">
-          Move candidates through your pipeline.{' '}
+          Move professionals through your pipeline.{' '}
           <span className={isPending ? 'text-[var(--rb-text-muted)] italic' : 'hidden'}>Saving…</span>
         </p>
       </div>

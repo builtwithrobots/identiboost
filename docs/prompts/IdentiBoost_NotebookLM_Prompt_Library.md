@@ -1,10 +1,10 @@
-# RoleBoost NotebookLM Elite Prompt Library
+# IdentiBoost NotebookLM Elite Prompt Library
 
 **Version 1.1 | June 2026**
-**Purpose:** Use these prompts when generating career assets in NotebookLM for RoleBoost candidates.
+**Purpose:** Use these prompts when generating career assets in NotebookLM for IdentiBoost candidates.
 **Instructions:** Upload the candidate's resume and career context document to NotebookLM first. Then select the format and paste the matching prompt into the customization field.
 
-> **Branding note:** All prompts are engineered to produce RoleBoost branded output. Every audio asset opens with "This is a Boost on..." to establish consistent brand identity across all candidate profiles.
+> **Branding note:** All prompts are engineered to produce IdentiBoost branded output. Every audio asset opens with "This is a Boost on..." to establish consistent brand identity across all candidate profiles.
 
 ---
 
@@ -230,7 +230,7 @@ Run 2-3 prompt variations per format and compare:
 - Which infographic layout tells the story most clearly?
 - Which short-form audio hooks a hiring manager fastest?
 
-Let the candidate choose their preferred version. Giving candidates choice is part of the RoleBoost value proposition.
+Let the candidate choose their preferred version. Giving candidates choice is part of the IdentiBoost value proposition.
 
 ---
 
@@ -244,4 +244,4 @@ Let the candidate choose their preferred version. Giving candidates choice is pa
 
 ---
 
-*RoleBoost Prompt Library v1.1 -- roleboost.app -- Built by Rob Ramos*
+*IdentiBoost Prompt Library v1.1 -- identiboost.com -- Built by Rob Ramos*

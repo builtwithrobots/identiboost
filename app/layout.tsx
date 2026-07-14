@@ -24,42 +24,41 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://roleboost.app').replace(/\/$/, '');
+const APP_URL = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://identiboost.com').replace(/\/$/, '');
 
 const SITE_DESCRIPTION =
-  'RoleBoost turns your resume and career context into a shareable AI candidate profile: a personal career AI recruiters can interrogate 24/7, plus audio, video, infographic, and slide-deck Boosts. Your career. Your AI. Finally heard.';
+  'Your identity, boosted. The professional presence platform that answers back. A verified personal AI anyone can ask questions, plus audio, video, and infographic Boosts, all behind one link.';
 
 export const metadata: Metadata = {
   // Resolves every relative OG/canonical URL and the file-based OG images.
   metadataBase: new URL(APP_URL),
   title: {
-    default: 'RoleBoost: Your career. Your AI. Finally heard.',
-    // Child pages set just their name; this frames it as "Name | RoleBoost".
-    template: '%s | RoleBoost',
+    default: 'IdentiBoost: Your identity. Boosted.',
+    // Child pages set just their name; this frames it as "Name | IdentiBoost".
+    template: '%s | IdentiBoost',
   },
   description: SITE_DESCRIPTION,
-  applicationName: 'RoleBoost',
+  applicationName: 'IdentiBoost',
   keywords: [
-    'AI candidate profile',
-    'career AI',
-    'candidate intelligence',
-    'resume alternative',
-    'job search',
-    'hiring',
-    'recruiter tools',
+    'professional presence platform',
+    'identity AI',
+    'AI profile',
+    'digital business card',
+    'professional profile',
+    'AI business card',
   ],
-  authors: [{ name: 'RoleBoost' }],
+  authors: [{ name: 'IdentiBoost' }],
   manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
-    siteName: 'RoleBoost',
-    title: 'RoleBoost: Your career. Your AI. Finally heard.',
+    siteName: 'IdentiBoost',
+    title: 'IdentiBoost: Your identity. Boosted.',
     description: SITE_DESCRIPTION,
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RoleBoost: Your career. Your AI. Finally heard.',
+    title: 'IdentiBoost: Your identity. Boosted.',
     description: SITE_DESCRIPTION,
   },
   robots: {
@@ -73,7 +72,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     capable: true,
-    title: 'RoleBoost',
+    title: 'IdentiBoost',
     statusBarStyle: 'default',
   },
 };
