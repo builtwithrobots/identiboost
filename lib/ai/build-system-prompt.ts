@@ -1,5 +1,5 @@
 // lib/ai/build-system-prompt.ts
-// Layered XML system prompt for the candidate's Personal Assistant: the assistant
+// Layered XML system prompt for the professional's personal AI: the assistant
 // speaks ABOUT the candidate in third person, grounded strictly in the provided
 // information. It never offers a plausible-but-unsupported answer; when it cannot
 // answer it emits the [[REDIRECT]] sentinel, which the chat route turns into the

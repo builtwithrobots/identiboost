@@ -8,7 +8,7 @@ import { checkBotId } from 'botid/server';
 import type { ChatTurn } from '@/lib/types';
 
 // Public endpoint. A recruiter (usually anonymous) submits availability + email
-// from the chat when the Personal Assistant offered to schedule. Stores the
+// from the chat when the AI offered to schedule. Stores the
 // request for the candidate and emails them. Service-role: the recruiter has no
 // Clerk session, and the candidate row is resolved by public slug.
 export const runtime = 'nodejs';

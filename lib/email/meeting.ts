@@ -16,7 +16,7 @@ interface MeetingRequestEmail {
 
 /**
  * Emails the candidate when a recruiter requests a live meeting through their
- * Personal Assistant. Best-effort: callers should not fail the request if this
+ * AI. Best-effort: callers should not fail the request if this
  * throws. No-op when there is no candidate email.
  */
 export async function sendMeetingRequestEmail({

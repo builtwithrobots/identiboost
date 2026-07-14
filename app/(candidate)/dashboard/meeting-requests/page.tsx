@@ -11,7 +11,7 @@ import type { MeetingRequest } from '@/lib/types';
 // Always render fresh so a just-submitted request appears immediately.
 export const dynamic = 'force-dynamic';
 
-// Live meeting requests recruiters submit when the Personal Assistant offers to
+// Live meeting requests contacts submit when the AI offers to
 // schedule. Reads go through the service-role client scoped explicitly to the
 // authenticated owner's candidate_profile_id (resolved from their verified
 // clerk_user_id), matching the Transcripts page -- the linked chat_messages are

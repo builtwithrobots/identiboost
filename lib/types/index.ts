@@ -295,7 +295,7 @@ export interface CandidateAsset {
   created_at: string;
 }
 
-// A recruiter's request to meet, captured when the Personal Assistant redirects.
+// A contact's request to meet, captured when the AI redirects.
 // Lightweight inbound pipeline: new -> contacted -> scheduled -> closed.
 export type MeetingRequestStatus = 'new' | 'contacted' | 'scheduled' | 'closed';
 

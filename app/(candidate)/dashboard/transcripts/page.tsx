@@ -11,7 +11,7 @@ import { MessagesSquare } from 'lucide-react';
 // next load, never a cached-empty page.
 export const dynamic = 'force-dynamic';
 
-// Candidate-facing record of every conversation with their Personal Assistant,
+// Candidate-facing record of every conversation with their AI,
 // recruiter chats and their own preview tests (tagged and filterable). Retained
 // so the candidate can review, teach a better answer, and carry context into a
 // meeting.
