@@ -40,7 +40,7 @@ export async function sendMeetingRequestEmail({
       <div style="background: #fff; border: 1px solid #E8E0D4; border-radius: 8px; padding: 14px;">
         ${messages
           .map((m) => {
-            const label = m.role === 'user' ? 'Recruiter' : `${candidateName}'s AI`;
+            const label = m.role === 'user' ? 'Contact' : `${candidateName}'s AI`;
             const color = m.role === 'user' ? '#4B6580' : '#1E3A5F';
             return `<p style="margin:0 0 12px;line-height:1.5"><strong style="color:${color}">${escapeHtml(label)}</strong><br>${escapeHtml(m.content).replace(/\n/g, '<br>')}</p>`;
           })
@@ -51,7 +51,7 @@ export async function sendMeetingRequestEmail({
   const html = `
     <div style="font-family: ui-sans-serif, system-ui, sans-serif; color: #1E3A5F; line-height: 1.6;">
       <h2 style="margin: 0 0 12px;">New meeting request</h2>
-      <p>A recruiter asked to meet with you through your IdentiBoost Personal Assistant.</p>
+      <p>A contact asked to meet with you through your IdentiBoost AI.</p>
       <p><strong>From:</strong> ${escapeHtml(who)}</p>
       <p><strong>Their availability:</strong></p>
       <p style="white-space: pre-wrap; background: #F5F0E8; padding: 12px; border-radius: 8px;">${escapeHtml(availability)}</p>

@@ -474,14 +474,14 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             <div className="flex items-start justify-between mb-1">
               <h2 className="flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
                 <CheckCircle2 className="size-4 text-[var(--rb-brand)]" />
-                Career Snapshot
+                Professional Snapshot
               </h2>
               <span className="text-xs text-[var(--rb-text-muted)] font-data">
                 {bullets.filter((b) => b.trim()).length} / 7
               </span>
             </div>
             <p className="text-xs text-[var(--rb-text-muted)] mb-4">
-              Your top 3–7 career highlights. What would you put on a one-page summary?
+              Your top 3–7 professional highlights. What would you put on a one-page summary?
             </p>
 
             <div className="flex flex-col gap-2">
@@ -492,7 +492,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
                     type="text"
                     value={bullet}
                     onChange={(e) => updateBullet(i, e.target.value)}
-                    placeholder={`Career highlight ${i + 1}…`}
+                    placeholder={`Highlight ${i + 1}…`}
                     className={`flex-1 ${inputClass}`}
                   />
                   {bullets.length > 1 && (
@@ -537,7 +537,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
                   setAdditionalContext(e.target.value);
                   markDirty('context');
                 }}
-                placeholder="Share anything else recruiters should know, your story, what you're looking for, what you care about…"
+                placeholder="Share anything else contacts should know, your story, what you're looking for, what you care about…"
                 rows={4}
                 maxLength={2000}
                 className={`${inputClass} resize-none`}
@@ -574,7 +574,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
             </div>
             {!isPublished && (
               <p className="mt-2 text-xs text-[var(--rb-text-muted)]">
-                Publish your profile so employers can view it at this link.
+                Publish your profile so your contacts can view it at this link.
               </p>
             )}
           </section>
@@ -596,7 +596,7 @@ export default function ProfileEditor({ profile, avatarUrl }: Props) {
               avatar={avatar}
             />
             <p className="mt-3 text-xs text-[var(--rb-text-muted)] text-center">
-              This is how your modal header appears to employers.
+              This is how your modal header appears to your contacts.
             </p>
           </div>
         </div>
@@ -672,7 +672,7 @@ function ProfilePreviewCard({
       {!isPublished && (
         <div className="bg-[var(--color-warning-bg)] border-b border-amber-200 px-4 py-2 flex items-center gap-2">
           <EyeOff className="size-3 text-[var(--color-warning)]" />
-          <span className="text-xs font-medium text-[var(--color-warning)]">Draft, not visible to employers</span>
+          <span className="text-xs font-medium text-[var(--color-warning)]">Draft, not visible to your contacts</span>
         </div>
       )}
 

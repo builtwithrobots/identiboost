@@ -56,7 +56,7 @@ export default function RoleSuggestions({ onUseRole, added = [] }: Props) {
             Recommended roles
           </h2>
           <p className="mt-1 text-xs text-[var(--rb-text-muted)]">
-            AI suggestions based on your résumé and career sources. Tap Use to add one to your
+            AI suggestions based on your résumé and professional sources. Tap Use to add one to your
             secondary target roles.
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function RoleSuggestions({ onUseRole, added = [] }: Props) {
       {/* Needs uploads */}
       {needsUploads && (
         <p className="mt-4 rounded-[var(--radius-md)] bg-[var(--rb-bg-surface-sunken)] px-3 py-2 text-xs text-[var(--rb-text-muted)]">
-          Upload your résumé or add a career source first, then I can suggest roles that fit your
+          Upload your résumé or add a professional source first, then I can suggest roles that fit your
           background.
         </p>
       )}
@@ -122,7 +122,7 @@ export default function RoleSuggestions({ onUseRole, added = [] }: Props) {
       {/* Empty result */}
       {roles !== null && roles.length === 0 && !needsUploads && (
         <p className="mt-4 text-xs text-[var(--rb-text-muted)]">
-          No clear suggestions yet, add more detail to your résumé or career sources and try again.
+          No clear suggestions yet, add more detail to your résumé or professional sources and try again.
         </p>
       )}
 

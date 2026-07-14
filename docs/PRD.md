@@ -9,11 +9,13 @@
 
 ## 1. Overview
 
-IdentiBoost empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Candidates upload their resume and career context, receive a full suite of AI-produced career assets, and get a personal career AI chatbot that represents them to recruiters 24/7. Resume Intelligence analyzes the resume and coaches candidates on exactly what context to add so their AI is armed before the first recruiter question. Every AI conversation generates a transcript delivered by email to both sides. Candidates fine-tune their AI over time. Employers get a candidate management dashboard with pipeline tracking, job postings, stage assignment, team collaboration, and AI chat access.
+IdentiBoost is the universal professional presence platform. Your identity. Boosted. Professionals upload their resume and professional context, receive a full suite of AI-produced professional assets, and get a personal Identity AI chatbot that represents them to their contacts 24/7 -- the profile that answers back. Resume Intelligence analyzes their documents and coaches them on exactly what context to add so their AI is armed before the first hard question. Every AI conversation generates a transcript delivered by email to both sides. Professionals fine-tune their AI over time. Businesses that evaluate professionals get a management dashboard with pipeline tracking, postings, stage assignment, team collaboration, and AI chat access.
+
+The platform serves job candidates, sales professionals, consultants, freelancers, speakers, trade show exhibitors, coaches, advisors, and founders -- anyone who has ever handed someone a card and wondered what happened next.
 
 **Core user types:**
-- **Candidate** -- job seeker uploading career assets, managing their AI, and sharing their profile link
-- **Employer** -- hiring manager or recruiter saving candidates, managing pipeline, and chatting with candidate AIs
+- **Professional** -- the primary user uploading assets, managing their Identity AI, and sharing their profile link (stored as role `candidate`)
+- **Business** -- the evaluating side: a contact or team saving professionals, managing pipeline, and chatting with their AIs (stored as role `employer`)
 
 ---
 
@@ -40,13 +42,13 @@ After first sign-up, every user lands on the onboarding screen before any dashbo
 **Screen:** "How are you using IdentiBoost?"
 
 Two large tappable cards:
-- "I am looking for my next role" -- sets role to `candidate`
-- "I am hiring for my team" -- sets role to `employer`
+- "I want to represent myself" -- sets role to `candidate`
+- "I want to find and evaluate professionals" -- sets role to `employer`
 
 On selection:
 - Insert row into `users` with `clerk_user_id`, `email`, `role`
-- Candidate: redirect to candidate onboarding (2.3)
-- Employer: redirect to employer onboarding (2.4)
+- Professional (`candidate` role): redirect to professional onboarding (2.3)
+- Business (`employer` role): redirect to business onboarding (2.4)
 
 **Acceptance criteria:**
 - [ ] Shown on first login only
@@ -54,7 +56,7 @@ On selection:
 - [ ] Role stored in `users.role` in Supabase
 - [ ] Correct redirect after selection
 
-### 2.3 Candidate Onboarding
+### 2.3 Professional Onboarding
 
 Three-step flow before reaching the dashboard.
 
@@ -86,7 +88,7 @@ On completion:
 - [ ] Profile row created in Supabase on completion
 - [ ] Redirect to `/dashboard/profile`
 
-### 2.4 Employer Onboarding
+### 2.4 Business Onboarding
 
 Two-step flow before reaching the dashboard.
 

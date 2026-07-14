@@ -120,13 +120,13 @@ function ImageAsset({ src, alt, title }: { src: string | null; alt: string; titl
 }
 
 function DisabledSaveButton() {
-  // Example-only affordance: previews the recruiter "save candidate" action that
+  // Example-only affordance: previews the "save professional" action that
   // exists in the real product. Disabled here since /boosts is a public demo.
   return (
     <button
       type="button"
       disabled
-      title="Saving candidates is available inside IdentiBoost"
+      title="Saving professionals is available inside IdentiBoost"
       className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-[#E8E0D0] bg-[#F5F0E8] px-3 py-2 font-jakarta text-sm font-semibold text-[#8FA3B8] cursor-not-allowed min-h-[44px]"
     >
       <svg

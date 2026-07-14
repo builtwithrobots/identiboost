@@ -119,7 +119,7 @@ function TypingDots() {
 function RecruiterBubble({ text }: { text: string }) {
   return (
     <div className="max-w-[85%]">
-      <p className="font-inter text-[10px] font-medium text-[#1E3A5F]/70 mb-1">Recruiter</p>
+      <p className="font-inter text-[10px] font-medium text-[#1E3A5F]/70 mb-1">Contact</p>
       <div className="bg-white border border-[rgba(30,58,95,0.08)] text-[#1E3A5F] rounded-lg rounded-tl-none px-3 py-2 font-inter text-[12px] leading-relaxed shadow-sm">
         &ldquo;{text}&rdquo;
       </div>
@@ -236,7 +236,7 @@ function ChatPreview({ pairs }: { pairs: QaPair[] }) {
           </span>
           <div>
             <p className="font-jakarta text-[12px] font-semibold leading-tight text-white">
-              Jordan&apos;s Career AI
+              Jordan&apos;s AI
             </p>
             <p className="mt-0.5 font-inter text-[10px] leading-tight text-white/70">
               Typically replies in seconds
@@ -317,7 +317,7 @@ function ChatPreview({ pairs }: { pairs: QaPair[] }) {
         aria-hidden="true"
       >
         <span className="flex-1 truncate rounded-full bg-[#F5F0E8] px-3.5 py-2 font-inter text-[11px] text-[#1E3A5F]/60">
-          Ask anything about Jordan&apos;s career...
+          Ask Jordan&apos;s AI anything...
         </span>
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#D97706] text-white">
           <Send size={13} strokeWidth={2} />
@@ -339,7 +339,7 @@ export default function HeroDemoCard({ chatPairs = QA_PAIRS }: { chatPairs?: QaP
   return (
     <div
       className="bg-[#FFFBF5] border border-[rgba(30,58,95,0.1)] rounded-xl shadow-md p-4 sm:p-6"
-      aria-label="Preview of a IdentiBoost candidate profile: career Boost assets and an AI chat"
+      aria-label="Preview of an IdentiBoost professional profile: Boost assets and an AI chat"
     >
       {/* Boost asset stack, full-width tiles matching the chat window */}
       <div className="space-y-3">
@@ -381,7 +381,7 @@ export default function HeroDemoCard({ chatPairs = QA_PAIRS }: { chatPairs?: QaP
               Visual Boost
             </p>
             <p className="font-inter text-[11px] text-[#1E3A5F]/70 leading-tight mt-0.5">
-              Career Infographic &middot; 2023-2025
+              Professional Infographic &middot; 2023-2025
             </p>
           </div>
           <div className="flex flex-col items-end gap-1 sm:flex-row sm:items-center sm:gap-1.5">
@@ -406,7 +406,7 @@ export default function HeroDemoCard({ chatPairs = QA_PAIRS }: { chatPairs?: QaP
           </span>
           <div className="min-w-0 flex-1">
             <p className="font-jakarta text-[13px] font-semibold text-[#1E3A5F] leading-tight">
-              Career AI
+              Identity AI
             </p>
             <p className="font-inter text-[11px] text-[#1E3A5F]/70 leading-tight mt-0.5">
               Available 24/7

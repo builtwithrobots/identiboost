@@ -134,7 +134,7 @@ export default function PreviewFrame({ previewUrl, liveUrl, slug, isPublished }:
     <iframe
       key={reloadKey}
       src={previewUrl}
-      title="Your profile as employers see it"
+      title="Your profile as your contacts see it"
       className="size-full border-0 bg-[var(--rb-bg-page)]"
     />
   );

@@ -57,7 +57,7 @@ const FIELD_LABELS: Record<string, string> = {
   ideal_environment: 'ideal environment',
   manager_needs: 'what you need from a manager',
   honest_weaknesses: 'honest weaknesses',
-  wish_questions: 'questions you wish recruiters asked',
+  wish_questions: 'questions you wish contacts asked',
   custom_qa: 'custom answers',
 };
 

@@ -80,26 +80,26 @@ export const BOOST_FORMATS: BoostFormat[] = [
     name: 'Visual Boost',
     kicker: 'The career at a glance',
     description:
-      'A single career infographic that shows the whole story in one look: the numbers, the trajectory, and the case for the next role.',
-    why: 'For the hiring manager who skims first. In a few seconds they see where a candidate is heading and the proof behind it, before they read a single line of a resume.',
+      'A single professional infographic that shows the whole story in one look: the numbers, the trajectory, and the case for what comes next.',
+    why: 'For the decision maker who skims first. In a few seconds they see where a professional is heading and the proof behind it, before they read a single line of a resume.',
   },
   {
     key: 'short',
     kind: 'audio',
     name: 'Short Boost Audio',
-    kicker: 'A colleague briefs the hiring manager',
+    kicker: "A colleague briefs whoever's asking",
     description:
-      'A single-host audio overview, under two minutes, that sounds like a trusted colleague explaining why this candidate is worth a conversation.',
-    why: 'For the recruiter between meetings. They press play, and by the time the coffee is poured they know who the candidate is and what they are ready for.',
+      'A single-host audio overview, under two minutes, that sounds like a trusted colleague explaining why this professional is worth a conversation.',
+    why: 'For the contact between meetings. They press play, and by the time the coffee is poured they know who the professional is and what they are ready for.',
   },
   {
     key: 'podcast',
     kind: 'audio',
     name: 'Podcast Style Boost',
-    kicker: 'Two voices talk you through the candidate',
+    kicker: 'Two voices talk you through the professional',
     description:
-      'A two-host conversation, in the familiar podcast format, where two people discuss the candidate and what they would bring to a hiring team.',
-    why: 'For the team that decides together. The back and forth surfaces the questions a panel would ask, and answers them, so the candidate walks in already understood.',
+      'A two-host conversation, in the familiar podcast format, where two people discuss the professional and what they would bring to the table.',
+    why: 'For the team that decides together. The back and forth surfaces the questions a panel would ask, and answers them, so the professional walks in already understood.',
   },
 ]
 
@@ -116,7 +116,7 @@ export const PERSONAS: Persona[] = [
     categoryTag: 'Retail Banking | Early Career',
     careerStage: 'Early career',
     blurb:
-      'Entry-level retail banking, two years in, strong performance numbers, no degree. Jordan is exactly the kind of candidate a resume flattens. Here is what Jordan looks and sounds like through three Boosts.',
+      'Entry-level retail banking, two years in, strong performance numbers, no degree. Jordan is exactly the kind of professional a resume flattens. Here is what Jordan looks and sounds like through three Boosts.',
     // Jordan is the featured example inline on /boosts, so he is not repeated in
     // the banner or given a duplicate standalone page.
     featured: false,
@@ -270,7 +270,7 @@ export function buildBoostSections(persona: Persona): BoostShowcaseSectionProps[
     why: format.why,
     assetSrc: persona.assets[format.key],
     assetAlt:
-      format.kind === 'image' ? `${format.name} career infographic for ${persona.name}` : undefined,
+      format.kind === 'image' ? `${format.name} professional infographic for ${persona.name}` : undefined,
     audioLabel: format.kind === 'audio' ? `${format.name} for ${persona.name}` : undefined,
     candidateName: persona.name,
     avatarInitials: persona.initials,

@@ -201,7 +201,7 @@ function renderAngleMarkdown(a: GeneratedAngle, fullName: string): string {
   ].filter(Boolean);
 
   const lines = [
-    `# ${fullName}: Career Context Document`,
+    `# ${fullName}: Professional Context Document`,
     `**Story type:** ${STORY_TYPE_LABELS[a.story_type]}  ·  **Angle:** ${a.name}`,
     '',
     '## Identity',

@@ -159,7 +159,7 @@ export default function CareerSourcesCard({ sources, maxSources }: Props) {
     <section className="rb-card p-6">
       <h2 className="mb-1 flex items-center gap-2 text-sm font-semibold text-[var(--rb-text)]">
         <Library className="size-4 text-[var(--rb-brand)]" />
-        Career sources
+        Professional sources
         <span className="ml-1 text-xs font-normal text-[var(--rb-text-muted)]">
           {sources.length}/{maxSources}
         </span>
@@ -167,7 +167,7 @@ export default function CareerSourcesCard({ sources, maxSources }: Props) {
       <p className="mb-4 text-xs text-[var(--rb-text-muted)]">
         Bring what you already have, your LinkedIn or Indeed export, a GitHub profile, a performance
         review or recommendation. Your AI uses them as grounding and the guided interview cross-checks
-        them against your résumé. They&apos;re private to your AI, never shown raw to recruiters.
+        them against your résumé. They&apos;re private to your AI, never shown raw to your contacts.
       </p>
 
       {/* Existing sources */}

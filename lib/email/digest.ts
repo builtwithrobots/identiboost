@@ -46,7 +46,7 @@ export async function sendWeeklyDigestEmail({
   const html = `
     <div style="font-family: ui-sans-serif, system-ui, sans-serif; color: #1E3A5F; line-height: 1.6;">
       <h2 style="margin: 0 0 6px;">Your week on IdentiBoost</h2>
-      <p style="margin: 0 0 18px;">Hi ${escapeHtml(firstName)}, here's what recruiters did with your profile over the last 7 days.</p>
+      <p style="margin: 0 0 18px;">Hi ${escapeHtml(firstName)}, here's what your contacts did with your profile over the last 7 days.</p>
       <table style="border-collapse: collapse; background: #F5F0E8; border-radius: 10px; margin: 0 0 20px;">
         <tr>
           ${stat(views, views === 1 ? 'profile view' : 'profile views')}

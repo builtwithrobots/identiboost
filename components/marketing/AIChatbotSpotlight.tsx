@@ -122,7 +122,7 @@ export default function AIChatbotSpotlight() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-jakarta text-sm font-semibold text-[#1E3A5F]">
-                    Marcus Wheeler&apos;s Career AI
+                    Marcus Wheeler&apos;s AI
                   </p>
                 </div>
                 <div className="flex items-center gap-1.5" aria-label="Online">

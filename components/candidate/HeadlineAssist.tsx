@@ -77,7 +77,7 @@ export default function HeadlineAssist({ onUse }: Props) {
 
       {needsUploads && (
         <p className="mt-2 rounded-[var(--radius-md)] bg-[var(--rb-bg-surface-sunken)] px-3 py-2 text-xs text-[var(--rb-text-muted)]">
-          Upload your résumé or add a career source first, then I can write a headline that fits your background.
+          Upload your résumé or add a professional source first, then I can write a headline that fits your background.
         </p>
       )}
 
@@ -113,7 +113,7 @@ export default function HeadlineAssist({ onUse }: Props) {
 
       {headlines !== null && headlines.length === 0 && !needsUploads && (
         <p className="mt-2 text-xs text-[var(--rb-text-muted)]">
-          Could not draft one yet, add more detail to your résumé or career sources and try again.
+          Could not draft one yet, add more detail to your résumé or professional sources and try again.
         </p>
       )}
 

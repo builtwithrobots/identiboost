@@ -27,7 +27,7 @@ export default function BoostsHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: baseDelay ?? 0.1 }}
           >
-            Three Boosts. One unforgettable candidate.
+            Three Boosts. One unforgettable professional.
           </motion.h1>
 
           <motion.p
@@ -36,9 +36,9 @@ export default function BoostsHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1], delay: baseDelay ?? 0.2 }}
           >
-            A Boost is an AI-generated career asset built from your real experience. Each one gives a
-            hiring manager a different way to get you fast: see you, hear you, and hear you discussed.
-            Below are three real Boosts made for one candidate.
+            A Boost is an AI-generated professional asset built from your real experience. Each one
+            gives whoever&apos;s looking a different way to get you fast: see you, hear you, and hear
+            you discussed. Below are three real Boosts made for one professional.
           </motion.p>
 
           <motion.div

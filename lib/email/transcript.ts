@@ -12,7 +12,7 @@ function esc(s: string): string {
 function renderTranscript(messages: ChatTurn[], candidateName: string): string {
   return messages
     .map((m) => {
-      const who = m.role === 'user' ? 'Recruiter' : `${candidateName}'s AI`;
+      const who = m.role === 'user' ? 'Contact' : `${candidateName}'s AI`;
       const color = m.role === 'user' ? '#4B6580' : '#1E3A5F';
       return `<p style="margin:0 0 14px;line-height:1.5"><strong style="color:${color}">${esc(who)}</strong><br>${esc(m.content).replace(/\n/g, '<br>')}</p>`;
     })
@@ -43,20 +43,20 @@ export async function sendTranscriptEmails(args: DeliverArgs): Promise<void> {
   const resend = getResend();
   const transcript = renderTranscript(args.messages, args.candidateName);
   const qCount = args.messages.filter((m) => m.role === 'user').length;
-  const company = args.employerCompany || 'An anonymous recruiter';
+  const company = args.employerCompany || 'An anonymous contact';
   const heading = `font-family:'Plus Jakarta Sans',Arial,sans-serif;color:#1E3A5F;font-size:18px;margin:0 0 8px`;
   const link = `color:#B45309;font-weight:600;text-decoration:none`;
 
   if (args.candidateEmail) {
     const inner = `
-      <h2 style="${heading}">A recruiter just chatted with your IdentiBoost AI</h2>
+      <h2 style="${heading}">Someone just chatted with your IdentiBoost AI</h2>
       <p style="margin:0 0 16px;color:#4B6580">${esc(company)} asked your AI ${qCount} question${qCount === 1 ? '' : 's'}.</p>
       ${transcript}
       <p style="margin:16px 0 0"><a href="${APP_URL}/dashboard/ai" style="${link}">Fine-tune your AI →</a></p>`;
     await resend.emails.send({
       from: FROM,
       to: args.candidateEmail,
-      subject: 'A recruiter just chatted with your IdentiBoost AI',
+      subject: 'Someone just chatted with your IdentiBoost AI',
       html: shell(inner),
     });
   }

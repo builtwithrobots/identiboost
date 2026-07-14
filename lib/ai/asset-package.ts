@@ -310,7 +310,7 @@ export function renderBrainContextMarkdown(
   ].filter(Boolean);
 
   const lines = [
-    `# ${fullName}: Career Context Document`,
+    `# ${fullName}: Professional Context Document`,
     `**Story type:** ${ASSET_PACKAGE_STORY_TYPE_LABELS[storyType]}  ·  **Perspective:** ${p.name}`,
     '',
     '## Identity',

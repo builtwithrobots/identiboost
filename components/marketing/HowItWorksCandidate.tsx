@@ -8,7 +8,7 @@ import Link from 'next/link'
 const steps = [
   {
     number: '1',
-    heading: 'Upload your resume and career context',
+    heading: 'Upload your resume and professional context',
     body: 'Answer a few deep questions about your wins, your leadership style, and what makes you different. Takes about 20 minutes.',
   },
   {
@@ -19,7 +19,7 @@ const steps = [
   {
     number: '3',
     heading: 'Share one link. Let your AI do the talking.',
-    body: 'Paste your IdentiBoost link anywhere. Employers click it, explore your assets, and chat with your career AI, before they ever schedule a call.',
+    body: 'Paste your IdentiBoost link anywhere. Your contacts click it, explore your assets, and chat with your AI, before they ever schedule a call.',
   },
 ]
 
@@ -52,7 +52,7 @@ export default function HowItWorksCandidate() {
             id="candidate-how-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug"
           >
-            For job seekers: your story, told the way it deserves to be.
+            For professionals: your story, told the way it deserves to be.
           </h2>
         </motion.div>
 
@@ -114,7 +114,7 @@ export default function HowItWorksCandidate() {
           >
             Build My Profile Free
           </Link>
-          <p className="font-inter text-sm text-gray-500 mt-3">Free forever for candidates.</p>
+          <p className="font-inter text-sm text-gray-500 mt-3">Free to start.</p>
         </motion.div>
       </div>
     </section>

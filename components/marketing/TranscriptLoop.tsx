@@ -13,8 +13,8 @@ const candidateItems = [
 
 const employerItems = [
   'Full transcript of every question asked',
-  'Direct link to the candidate\'s full profile',
-  'One-click save to their candidate pipeline',
+  'Direct link to the professional\'s full profile',
+  'One-click save to their contact list',
   'Option to send direct feedback',
 ]
 
@@ -61,12 +61,12 @@ export default function TranscriptLoop() {
             id="transcript-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug mb-4"
           >
-            The first feedback loop in hiring history.
+            The first two-sided conversation loop.
           </h2>
           <p className="font-inter text-lg text-gray-600 leading-relaxed">
-            Every recruiter conversation is logged and delivered by email to both sides,
-            immediately. Candidates learn exactly what recruiters are curious about. Recruiters get a
-            full transcript with a direct link to save the candidate or send feedback.
+            Every conversation is logged and delivered by email to both sides, immediately. You
+            learn exactly what your contacts are curious about. They get a full transcript with a
+            direct link back to your profile.
           </p>
         </motion.div>
 

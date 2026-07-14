@@ -25,59 +25,161 @@ function CheckIcon({ className }: { className?: string }) {
   )
 }
 
-const candidateFeatures = [
-  'Full profile with all 7 asset types',
-  'Shareable link, QR code, and profile badge',
-  'Personal career AI chatbot',
-  'Transcript delivery after every recruiter conversation',
-  'AI fine-tuning interface',
-]
+type PricingTier = {
+  name: string
+  price: string
+  period?: string
+  features: string[]
+  cta: string
+  ctaStyle: 'amber' | 'outline'
+  popular: boolean
+}
 
-const employerTiers = [
+const candidateTiers: PricingTier[] = [
   {
-    name: 'Free',
-    price: '$0',
+    name: 'Starter',
+    price: 'Free',
     features: [
-      '5 saved candidates',
-      '1 job posting',
-      'AI chat with candidates',
-      'Transcript delivery',
+      'Your professional profile',
+      'Shareable link and QR code',
+      'Basic Identity AI chat',
+      'Transcript delivery after every conversation',
     ],
     cta: 'Get Started Free',
-    ctaStyle: 'outline' as const,
+    ctaStyle: 'outline',
     popular: false,
   },
   {
-    name: 'Starter',
-    price: '$49',
-    period: '/mo',
-    features: [
-      'Everything in Free',
-      '50 saved candidates',
-      '5 job postings',
-      'Candidate notes',
-      'Transcript history in dashboard',
-    ],
-    cta: 'Start Free Trial',
-    ctaStyle: 'amber' as const,
-    popular: true,
-  },
-  {
-    name: 'Growth',
-    price: '$99',
+    name: 'Pro',
+    price: '$29',
     period: '/mo',
     features: [
       'Everything in Starter',
-      'Unlimited candidates',
-      'Unlimited postings',
-      'Team collaboration',
-      'Chat analytics',
+      'Embed widget (coming soon)',
+      'Conversation analytics',
+      'Custom Q&A',
+      'AI fine-tuning',
     ],
-    cta: 'Start Free Trial',
-    ctaStyle: 'outline' as const,
+    cta: 'Go Pro',
+    ctaStyle: 'amber',
+    popular: true,
+  },
+  {
+    name: 'Business',
+    price: '$99',
+    period: '/mo',
+    features: [
+      'Everything in Pro',
+      'CRM export (coming soon)',
+      'Advanced analytics',
+      'Priority support',
+    ],
+    cta: 'Get Business',
+    ctaStyle: 'outline',
     popular: false,
   },
 ]
+
+const employerTiers: PricingTier[] = [
+  {
+    name: 'Team',
+    price: '$299',
+    period: '/mo',
+    features: [
+      'Up to 10 profiles',
+      'Company AI layer',
+      'Aggregate analytics',
+    ],
+    cta: 'Start with Team',
+    ctaStyle: 'outline',
+    popular: false,
+  },
+  {
+    name: 'Growth',
+    price: '$699',
+    period: '/mo',
+    features: [
+      'Up to 25 profiles',
+      'Everything in Team',
+      'CRM integration (coming soon)',
+    ],
+    cta: 'Start with Growth',
+    ctaStyle: 'amber',
+    popular: true,
+  },
+  {
+    name: 'Scale',
+    price: '$1,499',
+    period: '/mo',
+    features: [
+      'Unlimited profiles',
+      'White label',
+      'Dedicated onboarding',
+    ],
+    cta: 'Talk to Us',
+    ctaStyle: 'outline',
+    popular: false,
+  },
+]
+
+function TierCard({ tier }: { tier: PricingTier }) {
+  return (
+    <motion.div
+      variants={scaleIn}
+      className={`relative bg-[#FFFBF5] rounded-2xl shadow-sm p-8 flex flex-col ${
+        tier.popular
+          ? 'border-2 border-[#D97706]'
+          : 'border border-[#E8E0D0]'
+      }`}
+    >
+      {tier.popular && (
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#D97706] font-jakarta text-[12px] font-semibold text-white">
+            Most Popular
+          </span>
+        </div>
+      )}
+
+      <div className="mb-6">
+        <p className="font-jakarta text-[13px] font-semibold text-[#6B7280] uppercase tracking-wide mb-3">
+          {tier.name}
+        </p>
+        <div className="flex items-baseline gap-1">
+          <span className="font-jakarta text-4xl font-bold text-[#1E3A5F]">
+            {tier.price}
+          </span>
+          {tier.period && (
+            <span className="font-inter text-sm text-gray-500">{tier.period}</span>
+          )}
+        </div>
+      </div>
+
+      <ul className="space-y-3 mb-8 flex-1">
+        {tier.features.map((feature) => (
+          <li key={feature} className="flex items-start gap-3">
+            <CheckIcon
+              className={
+                tier.popular ? 'text-[#D97706] flex-shrink-0 mt-0.5' : 'text-[#1E3A5F] flex-shrink-0 mt-0.5'
+              }
+            />
+            <span className="font-inter text-sm text-gray-700">{feature}</span>
+          </li>
+        ))}
+      </ul>
+
+      <Link
+        href="/sign-up"
+        className={
+          tier.ctaStyle === 'amber'
+            ? 'flex items-center justify-center px-6 py-3 rounded-lg bg-[#D97706] text-white font-jakarta text-[15px] font-semibold hover:bg-[#B45309] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]'
+            : 'flex items-center justify-center px-6 py-3 rounded-lg border-2 border-[#1E3A5F] text-[#1E3A5F] font-jakarta text-[15px] font-semibold hover:bg-[#1E3A5F] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A5F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]'
+        }
+      >
+        {tier.cta}
+      </Link>
+    </motion.div>
+  )
+}
 
 export default function PricingSection() {
   const [_billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly')
@@ -105,50 +207,32 @@ export default function PricingSection() {
             id="pricing-heading"
             className="font-jakarta text-3xl md:text-4xl font-bold text-[#1E3A5F] leading-snug mb-4"
           >
-            Simple pricing. Candidates are always free.
+            Start free. Upgrade when you&apos;re ready.
           </h2>
         </motion.div>
 
-        {/* Candidate card */}
-        <motion.div
-          ref={candidateRef}
-          variants={fadeUp}
-          initial="hidden"
-          animate={prefersReduced || candidateInView ? 'visible' : 'hidden'}
-          className="max-w-[480px] mx-auto mb-20"
-        >
-          <div className="bg-[#FFFBF5] rounded-2xl border border-[#E8E0D0] shadow-sm p-8">
-            <p className="font-jakarta text-[13px] font-semibold text-[#D97706] uppercase tracking-wide mb-2">
-              For Job Seekers
-            </p>
-            <div className="flex items-baseline gap-1 mb-2">
-              <span className="font-jakarta text-5xl font-bold text-[#1E3A5F]">$0</span>
-              <span className="font-inter text-base text-gray-500">/ forever</span>
-            </div>
-            <p className="font-inter text-sm text-gray-600 mb-6">
-              Every candidate gets the full suite. No credit card. No trial. No catch.
-            </p>
-            <ul className="space-y-3 mb-8">
-              {candidateFeatures.map((feature) => (
-                <li key={feature} className="flex items-start gap-3">
-                  <CheckIcon className="text-[#D97706] flex-shrink-0 mt-0.5" />
-                  <span className="font-inter text-sm text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/sign-up"
-              className="flex w-full items-center justify-center px-6 py-3 rounded-lg bg-[#D97706] text-white font-jakarta text-[15px] font-semibold hover:bg-[#B45309] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]"
-            >
-              Build My Profile Free
-            </Link>
+        {/* Professional section */}
+        <div ref={candidateRef} className="mb-20">
+          <div className="flex flex-col items-center mb-10">
+            <h3 className="font-jakarta text-2xl font-bold text-[#1E3A5F]">For Professionals</h3>
           </div>
-        </motion.div>
 
-        {/* Employer section */}
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            animate={prefersReduced || candidateInView ? 'visible' : 'hidden'}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          >
+            {candidateTiers.map((tier) => (
+              <TierCard key={tier.name} tier={tier} />
+            ))}
+          </motion.div>
+        </div>
+
+        {/* Team section */}
         <div ref={employerRef}>
           <div className="flex flex-col items-center mb-10 gap-4">
-            <h3 className="font-jakarta text-2xl font-bold text-[#1E3A5F]">For Hiring Teams</h3>
+            <h3 className="font-jakarta text-2xl font-bold text-[#1E3A5F]">For Teams</h3>
 
             {/* Billing toggle */}
             <div className="flex items-center gap-3">
@@ -194,66 +278,12 @@ export default function PricingSection() {
             className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {employerTiers.map((tier) => (
-              <motion.div
-                key={tier.name}
-                variants={scaleIn}
-                className={`relative bg-[#FFFBF5] rounded-2xl shadow-sm p-8 flex flex-col ${
-                  tier.popular
-                    ? 'border-2 border-[#D97706]'
-                    : 'border border-[#E8E0D0]'
-                }`}
-              >
-                {tier.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#D97706] font-jakarta text-[12px] font-semibold text-white">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                <div className="mb-6">
-                  <p className="font-jakarta text-[13px] font-semibold text-[#6B7280] uppercase tracking-wide mb-3">
-                    {tier.name}
-                  </p>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-jakarta text-4xl font-bold text-[#1E3A5F]">
-                      {tier.price}
-                    </span>
-                    {tier.period && (
-                      <span className="font-inter text-sm text-gray-500">{tier.period}</span>
-                    )}
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-8 flex-1">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <CheckIcon
-                        className={
-                          tier.popular ? 'text-[#D97706] flex-shrink-0 mt-0.5' : 'text-[#1E3A5F] flex-shrink-0 mt-0.5'
-                        }
-                      />
-                      <span className="font-inter text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Link
-                  href="/sign-up"
-                  className={
-                    tier.ctaStyle === 'amber'
-                      ? 'flex items-center justify-center px-6 py-3 rounded-lg bg-[#D97706] text-white font-jakarta text-[15px] font-semibold hover:bg-[#B45309] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D97706] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]'
-                      : 'flex items-center justify-center px-6 py-3 rounded-lg border-2 border-[#1E3A5F] text-[#1E3A5F] font-jakarta text-[15px] font-semibold hover:bg-[#1E3A5F] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A5F] focus-visible:ring-offset-2 focus-visible:ring-offset-[#FFFBF5] transition-colors min-h-[44px]'
-                  }
-                >
-                  {tier.cta}
-                </Link>
-              </motion.div>
+              <TierCard key={tier.name} tier={tier} />
             ))}
           </motion.div>
 
           <p className="font-inter text-sm text-gray-500 text-center mt-8">
-            Scale plan at $249/mo available for enterprise teams.{' '}
+            Rolling out something bigger?{' '}
             <a
               href="#"
               className="text-[#1E3A5F] underline underline-offset-2 hover:text-[#162d4a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E3A5F] rounded"

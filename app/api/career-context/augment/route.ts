@@ -24,7 +24,7 @@ const FIELD_LABELS: { key: string; label: string }[] = [
   { key: 'ideal_environment', label: 'Ideal team and work environment' },
   { key: 'manager_needs', label: 'What I need from a manager' },
   { key: 'honest_weaknesses', label: 'Honest weaknesses' },
-  { key: 'wish_questions', label: 'Questions I wish recruiters asked' },
+  { key: 'wish_questions', label: 'Questions I wish people asked' },
   { key: 'additional_context', label: 'Additional context' },
 ];
 

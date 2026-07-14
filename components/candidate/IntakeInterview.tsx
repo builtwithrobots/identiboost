@@ -218,14 +218,14 @@ export default function IntakeInterview({ open, onClose, onComplete }: Props) {
                     Let&apos;s build your brain from your documents
                   </h2>
                   <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-                    I&apos;ll read your résumé and any career sources you&apos;ve saved, then ask the
-                    questions a recruiter actually would, and flag anything that doesn&apos;t line up
+                    I&apos;ll read your résumé and any professional sources you&apos;ve saved, then ask
+                    the questions a contact actually would, and flag anything that doesn&apos;t line up
                     across them. Paste one more source below for this session if you like.
                   </p>
                 </div>
                 <div>
                   <label htmlFor="intake-extra" className="mb-1.5 block text-xs font-medium text-[var(--rb-text-secondary)]">
-                    Paste extra career text, optional
+                    Paste extra professional text, optional
                   </label>
                   <textarea
                     id="intake-extra"
@@ -249,7 +249,7 @@ export default function IntakeInterview({ open, onClose, onComplete }: Props) {
               <div className="flex h-full flex-col items-center justify-center gap-3 text-center">
                 <Loader2 className="size-6 animate-spin text-[var(--rb-brand)]" />
                 <p className="text-sm text-[var(--rb-text-secondary)]">
-                  {phase === 'analyzing' ? 'Reading your career and preparing questions…' : 'Assembling your brain…'}
+                  {phase === 'analyzing' ? 'Reading your story and preparing questions…' : 'Assembling your brain…'}
                 </p>
               </div>
             )}
@@ -261,7 +261,7 @@ export default function IntakeInterview({ open, onClose, onComplete }: Props) {
                     A few things don&apos;t line up
                   </h2>
                   <p className="mt-1 text-sm text-[var(--rb-text-secondary)]">
-                    Recruiters and background checks catch these. Note the ones you&apos;ll fix, then
+                    Contacts and background checks catch these. Note the ones you&apos;ll fix, then
                     continue.
                   </p>
                 </div>

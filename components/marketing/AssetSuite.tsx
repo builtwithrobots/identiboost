@@ -14,7 +14,7 @@ type Asset = {
 const assets: Asset[] = [
   {
     name: 'Audio Overview',
-    description: '2-3 min podcast-style career narrative. Perfect for commuters.',
+    description: '2-3 min podcast-style professional story. Perfect for commuters.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
@@ -26,7 +26,7 @@ const assets: Asset[] = [
   },
   {
     name: 'Debate Audio',
-    description: 'A hiring committee debates your candidacy. Handles objections before they\'re asked.',
+    description: 'Two voices debate what you bring to the table. Handles objections before they\'re asked.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
@@ -35,7 +35,7 @@ const assets: Asset[] = [
   },
   {
     name: 'Video Overview',
-    description: '90-second cinematic career story for visual reviewers.',
+    description: '90-second cinematic professional story for visual reviewers.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <polygon points="23 7 16 12 23 17 23 7" />
@@ -45,7 +45,7 @@ const assets: Asset[] = [
   },
   {
     name: 'Slide Deck',
-    description: 'Structured career presentation for detail-oriented hiring managers.',
+    description: 'Structured professional presentation for the detail-oriented.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
@@ -55,7 +55,7 @@ const assets: Asset[] = [
     ),
   },
   {
-    name: 'Career Infographic',
+    name: 'Professional Infographic',
     description: 'Visual timeline and key stats. Built for skimmers.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -80,7 +80,7 @@ const assets: Asset[] = [
   },
   {
     name: 'AI Bullet Summary',
-    description: '5-7 career highlights for the 10-second first impression.',
+    description: '5-7 professional highlights for the 10-second first impression.',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <line x1="8" y1="6" x2="21" y2="6" />
@@ -93,8 +93,8 @@ const assets: Asset[] = [
     ),
   },
   {
-    name: 'Personal Career AI',
-    description: 'A 24/7 chatbot trained on your career data. Recruiters ask it anything.',
+    name: 'Identity AI',
+    description: 'A 24/7 chatbot trained on your professional data. Anyone can ask it anything.',
     featured: true,
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -132,8 +132,8 @@ export default function AssetSuite() {
             One link. Every version of you.
           </h2>
           <p className="font-inter text-lg text-gray-600 leading-relaxed">
-            Upload your resume and career context. IdentiBoost produces a complete professional asset
-            suite, then gives you a personal career AI that works for you around the clock.
+            Upload your resume and professional context. IdentiBoost produces a complete asset
+            suite, then gives you a personal Identity AI that works for you around the clock.
           </p>
         </motion.div>
 

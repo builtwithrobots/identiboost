@@ -53,7 +53,7 @@ const ASSET_META: Record<AssetType, {
   audio: {
     icon: Headphones,
     label: 'Short Boost Audio',
-    description: 'A single-host audio overview, under two minutes, like a trusted colleague briefing the hiring manager. Produced via NotebookLM.',
+    description: 'A single-host audio overview, under two minutes, like a trusted colleague briefing whoever wants to know you. Produced via NotebookLM.',
     accept: 'audio/mpeg,audio/mp4,audio/wav,audio/webm,audio/ogg,.mp3,.m4a,.wav,.ogg',
     hint: 'MP3, M4A, WAV up to 50MB',
     maxSize: '50MB',
@@ -61,7 +61,7 @@ const ASSET_META: Record<AssetType, {
   debate_audio: {
     icon: MessageSquare,
     label: 'Podcast Style Boost',
-    description: 'A two-host conversation, in the familiar podcast format, about you and what you would bring to a hiring team. Produced via NotebookLM.',
+    description: 'A two-host conversation, in the familiar podcast format, about you and what you would bring to the table. Produced via NotebookLM.',
     accept: 'audio/mpeg,audio/mp4,audio/wav,audio/webm,audio/ogg,.mp3,.m4a,.wav,.ogg',
     hint: 'MP3, M4A, WAV up to 50MB',
     maxSize: '50MB',
@@ -69,7 +69,7 @@ const ASSET_META: Record<AssetType, {
   video: {
     icon: Video,
     label: 'Video Overview',
-    description: 'Optional short video overview of your career narrative.',
+    description: 'Optional short video overview of your professional story.',
     accept: 'video/mp4,video/webm,video/quicktime,.mp4,.webm,.mov',
     hint: 'MP4, WebM up to 500MB',
     maxSize: '500MB',
@@ -77,7 +77,7 @@ const ASSET_META: Record<AssetType, {
   deck: {
     icon: Layout,
     label: 'Slide Deck',
-    description: 'Career snapshot deck, 5–10 slides in PDF format.',
+    description: 'Professional snapshot deck, 5–10 slides in PDF format.',
     accept: 'application/pdf,.pdf',
     hint: 'PDF up to 25MB',
     maxSize: '25MB',
@@ -85,7 +85,7 @@ const ASSET_META: Record<AssetType, {
   infographic: {
     icon: ImageIcon,
     label: 'Visual Boost',
-    description: 'A single career infographic that shows the whole story in one look: the numbers, the trajectory, and the case for the next role.',
+    description: 'A single infographic that shows your whole story in one look: the numbers, the trajectory, and the case for what comes next.',
     accept: 'image/png,image/jpeg,image/webp,.png,.jpg,.jpeg,.webp',
     hint: 'PNG, JPG, WebP up to 10MB',
     maxSize: '10MB',
