@@ -389,63 +389,63 @@ Duration tracked on modal close.
 
 ---
 
-## 5. Employer Features
+## 5. Business Features
 
-### 5.1 Candidates Tab
+### 5.1 Saved Professionals Tab
 
-Saved candidate pool. Grid of candidate cards.
+Saved professional pool. Grid of profile cards.
 
-**Card shows:** Avatar, name, headline, stage badge, job posting, asset indicators, date saved
+**Card shows:** Avatar, name, headline, stage badge, posting, asset indicators, date saved
 
-**Filters:** By job posting, by stage, by date saved
+**Filters:** By posting, by stage, by date saved
 **Search:** By name or headline
 
-Clicking card opens candidate modal inline.
+Clicking card opens the profile modal inline.
 
 **Acceptance criteria:**
-- [ ] All saved candidates shown
+- [ ] All saved professionals shown
 - [ ] Filter and search functional
 - [ ] Modal opens inline on card click
-- [ ] Free tier limited to 5 saved candidates
+- [ ] Free tier limited to 5 saved professionals
 
 ### 5.2 Jobs Tab
 
-**Job postings list:** Title, department, location, candidate count, active status
+**Job postings list:** Title, department, location, saved-professional count, active status
 
 **Create/Edit form:** Title (required), department, location, description, active toggle
 
 **Acceptance criteria:**
-- [ ] All postings shown for employer account
+- [ ] All postings shown for the business account
 - [ ] Create and edit functional
 - [ ] Free tier limited to 1 posting
 
 ### 5.3 Board Tab
 
-Candidate pool filtered by job posting, grouped by stage.
+Saved professionals filtered by posting, grouped by stage.
 
-**Per candidate row:** Name, headline, asset indicators, date added, stage dropdown, notes field
+**Per row:** Name, headline, asset indicators, date added, stage dropdown, notes field
 
 Stage dropdown: Saved / Screening / Interview / Offer / Passed -- updates `saved_candidates.stage`
 
 Notes auto-save on blur. Visible to all team members.
 
 **Acceptance criteria:**
-- [ ] Board shows candidates for selected posting only
+- [ ] Board shows saved professionals for selected posting only
 - [ ] Stage dropdown updates database
 - [ ] Notes auto-save
 - [ ] Clicking name opens modal inline
 
 ### 5.4 Transcripts Tab
 
-History of all AI chat conversations by employer team members.
+History of all AI chat conversations by business team members.
 
-**List view:** Candidate name, team member who chatted, date, question count
-**Full transcript:** All questions and answers, link to save candidate, link to send feedback
+**List view:** Professional's name, team member who chatted, date, question count
+**Full transcript:** All questions and answers, link to save the professional, link to send feedback
 
 **Acceptance criteria:**
-- [ ] All chat sessions shown for employer account
+- [ ] All chat sessions shown for the business account
 - [ ] Full transcript readable
-- [ ] Save candidate and send feedback CTAs functional
+- [ ] Save-professional and send-feedback CTAs functional
 
 ### 5.5 Team Tab
 
@@ -462,16 +462,16 @@ Available on Growth and Scale tiers.
 
 ### 5.6 Sending Feedback
 
-From candidate modal (Connect button) or candidate card action menu.
+From the profile modal (Connect button) or the saved-profile card action menu.
 
 **Compose:** Text area (max 1000 chars) with character counter, send button
 
 **Acceptance criteria:**
 - [ ] Compose accessible from modal and card
 - [ ] Send creates feedback row
-- [ ] Candidate receives email notification
-- [ ] Candidate sees feedback in their dashboard
-- [ ] Employer sees confirmation toast
+- [ ] The professional receives email notification
+- [ ] The professional sees feedback in their dashboard
+- [ ] Business user sees confirmation toast
 
 ---
 
