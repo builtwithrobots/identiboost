@@ -115,7 +115,7 @@ On completion:
 
 ---
 
-## 3. Candidate Features
+## 3. Professional Features
 
 ### 3.1 Profile Tab
 
@@ -144,7 +144,7 @@ The main hub for managing profile content and sharing.
 
 ### 3.2 Assets Tab
 
-Where candidates upload career assets produced in NotebookLM.
+Where professionals upload assets produced in NotebookLM.
 
 **Asset types:**
 
@@ -157,7 +157,7 @@ Where candidates upload career assets produced in NotebookLM.
 | Career Infographic | PNG, JPG, WEBP | 10MB |
 | ATS Resume | PDF | 5MB |
 
-Per asset: upload, preview, replace, delete. All candidates can upload all asset types.
+Per asset: upload, preview, replace, delete. All professionals can upload all asset types.
 
 **Acceptance criteria:**
 - [ ] All six asset types uploadable
@@ -169,9 +169,9 @@ Per asset: upload, preview, replace, delete. All candidates can upload all asset
 - [ ] Delete removes from storage and database
 - [ ] All asset previews functional
 
-### 3.3 AI Tab -- Career AI Management
+### 3.3 AI Tab -- Identity AI
 
-The core candidate AI management interface. This is where candidates arm their chatbot.
+The core Identity AI management interface. This is where professionals arm their chatbot.
 
 **Resume Intelligence Panel (top of AI tab):**
 
@@ -196,11 +196,11 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 - Why you left each of your last 3 roles
 - Biggest professional challenge and what you did about it
 - What you are not good at -- honest answer
-- Questions you wish recruiters would ask you
+- Questions you wish contacts would ask you
 - What defines your career in one sentence
 
 **Custom answers:**
-- List of question-answer pairs the candidate has refined based on recruiter transcript patterns
+- List of question-answer pairs the professional has refined based on contact transcript patterns
 - Add, edit, and delete custom answers
 - Custom answers are injected into the system prompt with highest priority
 
@@ -211,11 +211,11 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 
 **Testing interface:**
 - "Test your AI" sandbox
-- Candidate asks their own AI questions
+- The professional asks their own AI questions
 - Sees exactly how it responds before going live
-- Preview mode label: "This is how your AI responds to recruiters"
+- Preview mode label: "This is how your AI responds to contacts"
 
-**Pattern insights (shown after first recruiter conversations):**
+**Pattern insights (shown after first contact conversations):**
 - Most asked questions this week
 - Questions your AI redirected
 - Suggestions for new custom answers based on patterns
@@ -229,16 +229,16 @@ Guided by Resume Intelligence recommendations. Fields listed below. All optional
 - [ ] Custom QA pairs stored as JSONB in `custom_qa_pairs`
 - [ ] Privacy toggle updates `ai_enabled`
 - [ ] Redirect topics stored in `redirect_topics` array
-- [ ] Testing interface calls the same chat endpoint as recruiter chat
+- [ ] Testing interface calls the same chat endpoint as contact chat
 - [ ] Pattern insights shown after minimum 1 completed session
 - [ ] All changes reflected immediately in AI responses
 
 ### 3.4 Transcripts Tab
 
-Full history of all recruiter AI conversations.
+Full history of all contact AI conversations.
 
 **List view:**
-- Company name (if employer logged in) or "Anonymous recruiter"
+- Company name (if a business user was logged in) or "Anonymous contact"
 - Date and time
 - Number of questions asked
 - Duration
@@ -251,7 +251,7 @@ Full history of all recruiter AI conversations.
 
 **Acceptance criteria:**
 - [ ] All chat sessions shown reverse chronological
-- [ ] Company name shown when employer was logged in
+- [ ] Company name shown when a business user was logged in
 - [ ] Anonymous shown for unauthenticated viewers
 - [ ] Full transcript readable inline
 - [ ] Direct link from each question to AI fine-tuning interface
