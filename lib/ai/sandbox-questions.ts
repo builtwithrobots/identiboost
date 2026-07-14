@@ -40,7 +40,7 @@ export const SANDBOX_QUESTIONS: SandboxQuestion[] = [
     id: 'tenure-1',
     category: 'commitment_tenure',
     question: 'Your average tenure is under two years. What guarantees you will stay?',
-    whyItMatters: 'Hiring is expensive; recruiters screen hard for flight risk.',
+    whyItMatters: 'Commitment questions come up everywhere; people screen hard for flight risk.',
     brainFields: ['departure_reasons', 'ideal_environment'],
   },
   {
@@ -63,7 +63,7 @@ export const SANDBOX_QUESTIONS: SandboxQuestion[] = [
     id: 'metric-1',
     category: 'metric_verification',
     question: 'Walk me through exactly how you calculated that cost-savings figure.',
-    whyItMatters: 'Recruiters pressure-test big numbers; vague math kills credibility.',
+    whyItMatters: 'Skeptical contacts pressure-test big numbers; vague math kills credibility.',
     brainFields: ['key_wins'],
   },
   {

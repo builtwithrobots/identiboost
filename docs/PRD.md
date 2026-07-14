@@ -449,7 +449,7 @@ History of all AI chat conversations by business team members.
 
 ### 5.5 Team Tab
 
-Available on Growth and Scale tiers.
+Available on the paid team tiers (Team, Growth, Scale).
 
 **Team list:** Name, email, role, date added
 **Invite flow:** Email input, Clerk invite email, auto-add on sign-up
@@ -458,7 +458,7 @@ Available on Growth and Scale tiers.
 - [ ] All `employer_members` shown
 - [ ] Invite sends via Clerk
 - [ ] Owner can remove members but not self
-- [ ] Free and Starter tiers see locked state with upgrade CTA
+- [ ] Free accounts see locked state with upgrade CTA
 
 ### 5.6 Sending Feedback
 
@@ -643,19 +643,19 @@ The intake form that trains the AI. Shown after initial onboarding. Guided by Re
 
 ### 8A.1 Overview
 
-Resume Intelligence is the layer between resume upload and the context form. When a candidate uploads or pastes their resume, Claude Sonnet analyzes it through the lens of what recruiters and ATS systems flag -- gaps, short tenures, career pivots, layoffs, missing degrees, title mismatches, skills without evidence, missing metrics -- and returns a targeted set of context-building recommendations.
+Resume Intelligence is the layer between resume upload and the context form. It serves every vertical whose evaluators read resumes, sharpest in the job-search vertical. When a professional uploads or pastes their resume, Claude Sonnet analyzes it through the lens of what recruiters and ATS systems flag -- gaps, short tenures, career pivots, layoffs, missing degrees, title mismatches, skills without evidence, missing metrics -- and returns a targeted set of context-building recommendations.
 
-The output is not a resume score. It is a prioritized list of questions the candidate's AI chatbot needs to be able to answer, derived directly from what is in the resume.
+The output is not a resume score. It is a prioritized list of questions the professional's AI chatbot needs to be able to answer, derived directly from what is in the resume.
 
-The framing to the candidate:
+The framing to the professional:
 
 **"Based on your resume, here are the questions recruiters are likely to ask. Let's make sure your AI has the answers before they do."**
 
-This is what empowers the candidate's voice to be heard before easy or automatic elimination by algorithm. Every context field filled in based on a Resume Intelligence recommendation is one fewer time a candidate has to answer that question defensively on a screening call.
+This is what empowers the professional's voice to be heard before anyone decides they are not worth a conversation. Every context field filled in based on a Resume Intelligence recommendation is one fewer time a professional has to answer that question defensively on a first call.
 
 ### 8A.2 How It Works
 
-**Trigger:** Candidate uploads or pastes resume text for the first time, or re-uploads an updated resume.
+**Trigger:** The professional uploads or pastes resume text for the first time, or re-uploads an updated resume.
 
 **Process:**
 1. Resume text extracted from uploaded PDF or taken from paste field
@@ -664,8 +664,8 @@ This is what empowers the candidate's voice to be heard before easy or automatic
 4. Returns structured JSON containing flagged items and recommended context fields
 5. Recommendations displayed in AI tab as prioritized list
 6. Each recommendation links directly to the relevant context field
-7. Completed recommendations marked with checkmark as candidate fills in context
-8. Recommendations persist and update when candidate uploads a new resume
+7. Completed recommendations marked with checkmark as the professional fills in context
+8. Recommendations persist and update when the professional uploads a new resume
 
 **API endpoint:** `POST /api/resume-intelligence`
 
@@ -793,7 +793,7 @@ RULES:
 - "Add context" CTA linking directly to the relevant context field
 - Checkmark when context field is filled in (50+ characters)
 
-**Completion bar:** "X of Y recruiter questions covered" -- fills as candidate addresses flags.
+**Completion bar:** "X of Y recruiter questions covered" -- fills as the professional addresses flags.
 
 ### 8A.5 Data Model Additions
 
@@ -843,55 +843,56 @@ This is an enhancement layer, not a prerequisite.
 
 ## 9. Pricing and Feature Gates
 
-### Candidate Tiers
+### Professional Tiers -- Individual
 
-Pricing TBD. Candidates generate real API costs at two points:
+Professionals generate real API costs at two points:
 - Resume Intelligence (Claude Sonnet): approximately $0.02 per resume upload/re-analysis
-- AI chatbot (Claude Haiku): approximately $0.0008 per recruiter chat session
+- AI chatbot (Claude Haiku): approximately $0.0008 per contact chat session
 
-The supply-side economics favor keeping candidates free or near-free to maximize profile volume and employer-side value. Final structure will be determined once usage patterns are understood from Fiverr validation.
+The free Starter tier maximizes profile volume; Pro and Business monetize professionals who use their Identity AI as a working tool. The embed widget and CRM export are roadmap features and must be labeled "coming soon" wherever they appear.
 
-| Feature | Free | Pro (TBD) |
-|---|---|---|
-| Full profile and all media assets | Yes | Yes |
-| Shareable link, QR code, badge | Yes | Yes |
-| Resume Intelligence | Yes | Yes |
-| Basic AI chatbot | Yes | Yes |
-| Transcript delivery by email | Yes | Yes |
-| Basic fine-tuning -- edit custom answers | Yes | Yes |
-| Advanced conversation analytics | No | Yes |
-| Pattern recognition -- most asked questions | No | Yes |
-| Custom chatbot personality settings | No | Yes |
-| Priority profile placement | No | Yes |
+| Feature | Starter (Free) | Pro $29 | Business $99 |
+|---|---|---|---|
+| Full profile and all media assets | Yes | Yes | Yes |
+| Shareable link, QR code, badge | Yes | Yes | Yes |
+| Resume Intelligence | Yes | Yes | Yes |
+| Basic AI chatbot | Yes | Yes | Yes |
+| Transcript delivery by email | Yes | Yes | Yes |
+| Custom Q&A and fine-tuning | No | Yes | Yes |
+| Conversation analytics | No | Yes | Yes |
+| Embed widget (coming soon) | No | Yes | Yes |
+| CRM export (coming soon) | No | No | Yes |
+| Advanced analytics | No | No | Yes |
+| Priority support | No | No | Yes |
 
-### Employer Tiers
+### Team Tiers -- Company Deployment
 
-| Feature | Free | Starter $49 | Growth $99 | Scale $249 |
-|---|---|---|---|---|
-| AI chat with candidates | Yes | Yes | Yes | Yes |
-| Transcript delivery by email | Yes | Yes | Yes | Yes |
-| Saved candidates | 5 | 50 | Unlimited | Unlimited |
-| Job postings | 1 | 5 | Unlimited | Unlimited |
-| Transcript history in dashboard | No | Yes | Yes | Yes |
-| Pipeline notes | No | Yes | Yes | Yes |
-| Team collaboration | No | No | Yes | Yes |
-| Chat analytics | No | No | Yes | Yes |
-| API access | No | No | No | Yes |
-| Priority support | No | No | No | Yes |
+For companies deploying IdentiBoost across their people: sales teams, consulting benches, exhibitor rosters, and hiring pipelines.
+
+| Feature | Team $299 | Growth $699 | Scale $1,499 |
+|---|---|---|---|
+| Profiles included | Up to 10 | Up to 25 | Unlimited |
+| Company-level AI layer | Yes | Yes | Yes |
+| Aggregate analytics | Yes | Yes | Yes |
+| CRM integration | No | Yes | Yes |
+| White label option | No | No | Yes |
+| Dedicated onboarding | No | No | Yes |
+
+The free business-side account keeps its existing limits: 5 saved professionals, 1 posting, AI chat, and transcript delivery.
 
 ---
 
 ## 10. Paddle Integration
 
-Candidate tier pricing TBD -- Paddle setup for candidate billing deferred until tier structure is finalized.
-
-Employer billing active from launch.
+Individual professional billing (Pro $29 / Business $99) and team billing (Team $299 / Growth $699 / Scale $1,499) run through Paddle. New Paddle price IDs for the individual professional tiers are pending setup; team billing is active from launch.
 
 | Variable | Tier |
 |---|---|
-| `PADDLE_EMPLOYER_STARTER_PRICE_ID` | Employer Starter $49/mo |
-| `PADDLE_EMPLOYER_GROWTH_PRICE_ID` | Employer Growth $99/mo |
-| `PADDLE_EMPLOYER_SCALE_PRICE_ID` | Employer Scale $249/mo |
+| `PADDLE_EMPLOYER_STARTER_PRICE_ID` | Team $299/mo |
+| `PADDLE_EMPLOYER_GROWTH_PRICE_ID` | Growth $699/mo |
+| `PADDLE_EMPLOYER_SCALE_PRICE_ID` | Scale $1,499/mo |
+
+The environment variable names keep the legacy `EMPLOYER` prefix; renaming them requires a code change and is out of scope for the rebrand.
 
 Webhook handler at `/api/webhooks/paddle`.
 
