@@ -1,7 +1,7 @@
 # 12 · Security
 
-> **Living document.** IdentiBoost holds candidates' career data and private
-> recruiter conversations, so security is a first-class concern, not a
+> **Living document.** IdentiBoost holds professionals' career data and private
+> contact conversations, so security is a first-class concern, not a
 > bolt-on. This page is the durable, evolving picture of how the platform is
 > protected. Update it whenever the posture changes; log the change in the
 > Changelog at the bottom. Detailed anti-abuse mechanics live in

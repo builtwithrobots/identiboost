@@ -55,7 +55,7 @@ generate/select path write the **same** column.
 
 ## The public calling card (`app/i/[slug]/page.tsx`)
 
-The core employer-facing experience, chat-first, no login, no page navigation.
+The core contact-facing experience, chat-first, no login, no page navigation.
 
 - **Profile fetch** uses the anon client (RLS: `is_published`); OG metadata is
   built from the safe public columns.
@@ -69,6 +69,6 @@ The core employer-facing experience, chat-first, no login, no page navigation.
   WCAG-compliant dialog (full-screen on mobile) that talks to `/api/chat`.
 
 PWA support (`app/manifest.ts`, code-generated icons) and a native `ShareButton`
-let recruiters add the card to their home screen and share the link onward.
+let contacts add the card to their home screen and share the link onward.
 Accessibility target across these surfaces is **WCAG 2.1 AA** (≥44px targets,
 ≥4.5:1 contrast, full keyboard nav, focus management).

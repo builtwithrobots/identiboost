@@ -1,9 +1,9 @@
 # 11 · Anti-Spam & Abuse Control
 
-The public chatbot (`/i/[slug]` → `/api/chat`) is open to anonymous recruiters,
+The public chatbot (`/i/[slug]` → `/api/chat`) is open to anonymous contacts,
 which makes it an abuse surface: each message triggers up to three Anthropic
 calls, and each conversation can email the candidate. Three layers protect it,
-all low-friction for real recruiters and all fail-open so an infra blip or
+all low-friction for real contacts and all fail-open so an infra blip or
 missing config never blocks a legitimate conversation.
 
 ## Layers
@@ -13,7 +13,7 @@ missing config never blocks a legitimate conversation.
 | **Vercel BotID** | `checkBotId()` in `/api/chat`, `/api/chat/schedule` | Invisible bot detection (Kasada). Blocks Playwright/Puppeteer, scrapers, credential-stuffers. |
 | **Vercel WAF rate limiting** | `@vercel/firewall` `checkRateLimit()` in `/api/chat`, `/api/chat/schedule`, `/api/transcripts/deliver` | Per-IP flood control at the edge, before the function runs (no compute cost on blocked requests). |
 | **App-level interaction caps** | `checkAppRateLimit()` in `/api/chat` | Durable, DB-backed ceilings on token burn: per conversation and per source IP. Enforced in-app, so they hold even when the WAF rule is unpublished, and they degrade gracefully in-thread rather than as an HTTP error. |
-| **Meeting-invitation nudge** | `buildCandidateSystemPrompt(..., meetingInvitation)` in `/api/chat` | Soft, conversion-first throttle: after a few exchanges the assistant warmly invites a live meeting, so real conversations resolve to a booking well before the hard cap. Doubles as the product's core recruiter-conversion loop. |
+| **Meeting-invitation nudge** | `buildCandidateSystemPrompt(..., meetingInvitation)` in `/api/chat` | Soft, conversion-first throttle: after a few exchanges the assistant warmly invites a live meeting, so real conversations resolve to a booking well before the hard cap. Doubles as the product's core contact-conversion loop. |
 | **Per-candidate email throttle** | `checkAppRateLimit()` in `lib/transcripts/deliver.ts` | Caps transcript emails per candidate per hour so session-flooding can't bury an inbox. The one dimension the WAF can't express. |
 
 ## BotID
@@ -36,8 +36,8 @@ safe to ship ahead of configuration. Recommended starting values (per IP):
 | Rule ID | Recommended limit | Window | Rationale |
 |---|---|---|---|
 | `chat` | 30 requests | 60s | A human sends a handful of messages per minute; 30/min is generous headroom while blocking automated floods. |
-| `schedule` | 5 requests | 300s | Emails the candidate; a real recruiter schedules once. Tight. |
-| `identify` | 20 requests | 300s | Optional recruiter self-introduction; cheap, but capped so a session cannot be spammed. |
+| `schedule` | 5 requests | 300s | Emails the candidate; a real contact schedules once. Tight. |
+| `identify` | 20 requests | 300s | Optional contact self-introduction; cheap, but capped so a session cannot be spammed. |
 | `deliver` | 60 requests | 60s | Idempotent beacon, fired ~once per conversation; only needs a ceiling on hammering. |
 
 Notes:
@@ -53,9 +53,9 @@ burn on `/api/chat` also has two durable, DB-backed ceilings (constants at the t
 of `app/api/chat/route.ts`, backed by the `rate_limits` table + `check_rate_limit()`
 RPC). Both fail open, both skip the owner's own preview (`isOwner`), and neither
 returns an HTTP error: a tripped cap comes back as a normal in-thread assistant
-message plus a `degraded` flag, so the recruiter always has a next step.
+message plus a `degraded` flag, so the contact always has a next step.
 
-| Cap | Key | Default | Recruiter's next step |
+| Cap | Key | Default | Contact's next step |
 |---|---|---|---|
 | **Per conversation** | `chat-session:{sessionId}` | 40 / hour | `degraded: 'session_limit'` → the chat surfaces a one-tap **Start a new conversation** button; a fresh session clears the cap, so a genuine long conversation is never dead-ended. |
 | **Per source IP** | `chat-ip:{ip}` | 100 / hour | `degraded: 'rate_limited'` → a restart won't help the same IP, so the message points to the follow-up path (leave email / schedule). Set high enough to clear a shared office IP (corporate NAT) while still stopping a script. |
@@ -72,7 +72,7 @@ that pattern ever appears).
 ## Meeting-invitation nudge (soft, conversion-first throttle)
 
 The hard interaction caps are the abuse backstop; the meeting nudge is the
-low-friction ceiling that real recruiters actually hit first. It reframes "stop
+low-friction ceiling that real contacts actually hit first. It reframes "stop
 spending tokens" as "book a meeting," which is what IdentiBoost wants anyway.
 
 - **Trigger:** `/api/chat` counts completed exchanges from the server-rebuilt
@@ -98,7 +98,7 @@ spending tokens" as "book a meeting," which is what IdentiBoost wants anyway.
 `MAX_TRANSCRIPT_EMAILS_PER_HOUR` (currently 12) in `lib/transcripts/deliver.ts`,
 keyed by `candidate_profile_id`, backed by the `rate_limits` table +
 `check_rate_limit()` RPC (migration `20260709000000_rate_limits.sql`). When the
-cap is hit, the recruiter still gets their copy; only the candidate-bound email
+cap is hit, the contact still gets their copy; only the candidate-bound email
 is suppressed for that window.
 
 ## Recording observability
